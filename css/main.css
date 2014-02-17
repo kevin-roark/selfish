@@ -1,0 +1,41 @@
+html, body {
+  margin-right: 15px;
+}
+
+body {
+  background: url(../images/porkfat_logo/porkfat.png) top right repeat-y;
+  background-size: 70%;
+  background-color: #eee;
+}
+
+#page-header {
+  font-size: 1.3em;
+  color: #520052;
+}
+
+.thing-header {
+  font-size: 1.25em;
+  color: #CC4422;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.thing-list {
+  list-style: none;
+  font-size: 1.2em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+  .thing-list li {
+
+  }
+
+    .thing-list li a {
+      color: #3366FF;
+      text-decoration: none;
+    }
+    
+      .thing-list li a:hover, .thing-list li a:focus {
+        color: #2447B2;
+      }

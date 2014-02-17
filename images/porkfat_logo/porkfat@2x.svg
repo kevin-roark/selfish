@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="952px" height="317px" viewBox="0 0 952 317" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>porkfat@2x</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs>
+        <filter x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetInner1" result="shadowBlurInner1"></feGaussianBlur>
+            <feComposite in="shadowBlurInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.7 0" in="shadowInnerInner1" type="matrix" result="shadowMatrixInner1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+                <feMergeNode in="shadowMatrixInner1"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetInner1" result="shadowBlurInner1"></feGaussianBlur>
+            <feComposite in="shadowBlurInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.7 0" in="shadowInnerInner1" type="matrix" result="shadowMatrixInner1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+                <feMergeNode in="shadowMatrixInner1"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Logo" sketch:type="MSLayerGroup" transform="translate(-24.000000, 3.000000)">
+            <text id="p---rkfat" sketch:type="MSTextLayer" font-family="DIN 30640 Std" font-size="320" font-weight="260" letter-spacing="-19.0400009" fill="#FF5555">
+                <tspan x="0" y="243">p   r</tspan>
+                <tspan x="485.919995" y="243" letter-spacing="-6.53999996">k</tspan>
+                <tspan x="645.459995" y="243" letter-spacing="-14.04">f</tspan>
+                <tspan x="726.139995" y="243">at</tspan>
+            </text>
+            <path d="M308.44,247.84 C362.84,247.84 398.68,208.48 398.68,160.8 C398.68,113.76 360.92,73.44 308.44,73.44 C255.96,73.44 218.2,113.76 218.2,160.8 C218.2,208.48 254.04,247.84 308.44,247.84 Z" id="o" stroke="#FF5555" stroke-width="8" fill="#FFA79B" sketch:type="MSShapeGroup"></path>
+            <path d="M264.869884,181.666163 C250.092484,182.151507 249.596571,163.794548 249.596571,163.794548 C249.596571,163.794548 251.272524,160.478018 254.741066,159.14943 C258.209608,157.820841 263.965336,154.270397 264.869884,150.625802 C267.363955,140.576714 277.219467,134.910156 287.56024,149.908083 C293.209876,158.102137 279.647284,181.180819 264.869884,181.666163 Z" id="Path-2" stroke="#F6A623" stroke-width="4" fill="#AF8B82" filter="url(#filter-1)" sketch:type="MSShapeGroup"></path>
+            <path d="M344.869884,181.666163 C330.092484,182.151507 329.596571,163.794548 329.596571,163.794548 C329.596571,163.794548 331.272524,160.478018 334.741066,159.14943 C338.209608,157.820841 343.965336,154.270397 344.869884,150.625802 C347.363955,140.576714 357.219467,134.910156 367.56024,149.908083 C373.209876,158.102137 359.647284,181.180819 344.869884,181.666163 Z" id="Path-2" stroke="#F6A623" stroke-width="4" fill="#AF8B82" filter="url(#filter-2)" sketch:type="MSShapeGroup" transform="translate(349.000000, 160.000000) scale(-1, 1) translate(-349.000000, -160.000000) "></path>
+        </g>
+    </g>
+</svg>
