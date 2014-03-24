@@ -3,7 +3,7 @@ html, body {
 }
 
 body {
-  background: url(../images/porkfat_logo/porkfat.png) top right repeat-y;
+  background: url(../images/porkfat_logo/porkfat.png) top right;
   background-size: 70%;
   background-color: #eee;
 }
