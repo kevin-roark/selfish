@@ -3,7 +3,7 @@ html, body {
 }
 
 body {
-  background: url(../images/porkfat_logo/porkfat.png) top right;
+  background: url(../images/porkfat_logo/porkfat.png) top right no-repeat;
   background-size: 70%;
   background-color: #eee;
 }
@@ -15,6 +15,14 @@ body {
   line-height: 1.35em;
   color: #520052;
 }
+  #page-header a {
+    color: #3366FF;
+    text-decoration: none;
+  }
+    
+    #page-header a:hover, #page-header a:focus {
+      color: #2447B2;
+    }
 
 .thing-header {
   font-size: 1.25em;
@@ -43,3 +51,4 @@ body {
       .thing-list li a:hover, .thing-list li a:focus {
         color: #2447B2;
       }
+
