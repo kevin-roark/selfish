@@ -1,5 +1,4 @@
 html, body {
-  margin-right: 15px;
 }
 
 body {
@@ -8,21 +7,43 @@ body {
   background-color: #eee;
 }
 
+body  a {
+  color: #3366FF;
+  text-decoration: none;
+}
+
+  body a:hover, body a:focus {
+    color: #2447B2;
+  }
+
 #page-header {
-  padding-left: 5px;
+  padding-left: 10px;
+  margin-bottom: 7px;
   letter-spacing: 1px;
-  font-size: 3em;
+  font-size: 2.5em;
   line-height: 1.35em;
   color: rgb(140, 20, 140);
+  background-color: rgba(230, 245, 0, 0.7);
 }
-  #page-header a {
-    color: #3366FF;
-    text-decoration: none;
-  }
-    
-    #page-header a:hover, #page-header a:focus {
-      color: #2447B2;
-    }
+
+#miller {
+  font-size: 2.4em;
+  padding: 0px 10px;
+  background-color: rgba(30, 255, 30, 0.6);
+  margin-bottom: 7px;
+}
+
+#shane {
+  font-size: 2.75em;
+  padding: 0px 10px;
+  background-color: rgba(255, 30, 30, 0.4);
+  color: rgb(100, 0, 200);
+  margin-bottom: 7px;
+}
+
+#other-header {
+  font-size: 4em;
+}
 
 .thing-header {
   font-size: 1.25em;
@@ -39,16 +60,17 @@ body {
   margin-bottom: 5px;
 }
 
-  .thing-list li {
+.center {
+  text-align: center;
+}
 
-  }
+.intro {
+  padding: 0;
+  color: rgb(240, 30, 30);
+  font-size: 3em;
+}
 
-    .thing-list li a {
-      color: #3366FF;
-      text-decoration: none;
-    }
-    
-      .thing-list li a:hover, .thing-list li a:focus {
-        color: #2447B2;
-      }
-
+.bar {
+  height: 8px;
+  border-top: 1px solid black;
+}
