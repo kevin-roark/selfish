@@ -46,7 +46,7 @@ body  a {
 }
 
 .thing-header {
-  font-size: 1.25em;
+  font-size: 1.5em;
   color: #CC4422;
   margin-top: 10px;
   margin-bottom: 5px;
@@ -58,6 +58,15 @@ body  a {
   font-size: 1.2em;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.thing-list li a {
+  font-size: 25px;
+  margin-right: 5px;
+}
+
+.thing-date {
+  font-weight: bold;
 }
 
 .center {
