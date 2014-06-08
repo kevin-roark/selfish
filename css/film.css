@@ -8,6 +8,21 @@ body {
   height: 100%;
 }
 
+.film-header {
+  font-size: 44px;
+  text-align: center;
+  margin: 20px;
+}
+
+.film-series {
+  margin-left: 40px;
+  font-size: 30px;
+}
+
+.film-series a {
+  color: rgb(120, 120, 40);
+}
+
 .title {
   margin-left: 30px;
   font-size: 200px;
