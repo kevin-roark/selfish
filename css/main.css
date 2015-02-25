@@ -60,6 +60,10 @@ body  a {
   margin-bottom: 5px;
 }
 
+.thing-list li {
+  margin: 12px 0px;
+}
+
 .thing-list li a {
   font-size: 25px;
   margin-right: 5px;
@@ -67,6 +71,12 @@ body  a {
 
 .thing-date {
   font-weight: bold;
+}
+
+.sub-list {
+  margin: 7px;
+  background-color: #ffeee3;
+  color: #46544a;
 }
 
 .center {
