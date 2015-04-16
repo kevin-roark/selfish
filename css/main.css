@@ -5,6 +5,8 @@ body {
   background: url(../images/porkfat_logo/porkfat@0.25x.png) bottom right no-repeat;
   background-size: 70%;
   background-color: #fefefe;
+
+  opacity: 0;
 }
 
 body  a {
