@@ -14,14 +14,10 @@ Content.prototype.render = function() {
   var view = '<div class="content-item">';
 
   if (this.link) {
-    view += '<div class="content-title"><a href="' + this.link + '">';
+    view += '<a href="' + this.link + '">';
   }
 
-  view += this.title;
-
-  if (this.link) {
-    view += '</a></div>';
-  }
+  view += '<div class="content-title">' + this.title + '</div>';
 
   if (this.date) {
     view += '<div class="content-date">' + this.date + '</div>';
@@ -41,6 +37,10 @@ Content.prototype.render = function() {
     view += '<img src="' + this.image + '" alt=""></img>';
 
     view += '</div>';
+  }
+
+  if (this.link) {
+    view += '</a>';
   }
 
   view += '</div>';
@@ -108,13 +108,15 @@ var mixedMedia = new Section({
       link: 'http://wayne.porkf.at',
       title: 'wayne',
       date: 'October 2014',
-      text: 'a little little wayne model'
+      text: 'a little little wayne model',
+      image: 'images/wayne.jpg'
     }),
     new Content({
       link: 'http://www.wideopenwitharms.com',
       title: 'Wide Open With Arms',
       date: 'June 2014',
-      text: 'creed music video'
+      text: 'creed music video',
+      image: 'images/wideopenwitharms.jpg'
     }),
     new Content({
       link: 'http://www.specialmagicglasshole.com',

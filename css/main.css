@@ -78,6 +78,18 @@ body a {
   display: inline-block;
   vertical-align: middle;
 }
+  .content-item:hover {
+    font-style: italic;
+    box-shadow: 0px 0px 20px 10px #f0e747;
+    background-color: #5ee0ed;
+  }
+
+  .content-item a {
+    color: inherit;
+  }
+    .content-item a:hover {
+      color: inherit;
+    }
 
 .content-title {
   font-size: 25px;
@@ -117,6 +129,12 @@ body a {
   font-size: 3em;
 }
 
+#contact-info {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+}
+
 #contact-header {
   font-size: 20px;
   margin-bottom: 9px;
@@ -125,7 +143,7 @@ body a {
 .contact-item {
   display: inline-block;
   padding: 10px;
-  margin: 0px 4px;
+  margin-right: 8px;
 }
 
 #contact-email {
