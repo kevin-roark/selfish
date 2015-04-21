@@ -93,6 +93,15 @@ Section.prototype.render = function() {
   return view;
 };
 
+Section.prototype.menuLink = function() {
+  var view = '<div class="content-menu-link">';
+
+  view += '<a href="#' + this.id + '">' + this.id + '</a>';
+
+  view += '</div>';
+  return view;
+};
+
 var mixedMedia = new Section({
   id: 'art',
   title: 'miXXXed media w/ internet',
@@ -305,9 +314,11 @@ function divify(html) {
 
 (function() {
   var container = document.getElementById('content-container');
+  var contentMenu = document.getElementById('content-menu');
 
   function append(section) {
     container.appendChild(divify(section.render()));
+    contentMenu.appendChild(divify(section.menuLink()));
   }
 
   append(mixedMedia);

@@ -50,6 +50,8 @@ body a {
   font-size: 4em;
 }
 
+/* CONTENT */
+
 #content-container {
   margin: 24px;
 }
@@ -128,6 +130,30 @@ body a {
   color: rgb(240, 30, 30);
   font-size: 3em;
 }
+
+/* MENU */
+
+#content-menu {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  padding: 10px;
+
+  background-color: white;
+}
+
+.content-menu-link {
+  margin: 6px 0px;
+}
+
+  .content-menu-link a {
+    color: black;
+  }
+    .content-menu-link a:hover {
+      color: #41dc6f;
+    }
+
+/* CONTACT */
 
 #contact-info {
   position: fixed;
