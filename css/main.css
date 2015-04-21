@@ -8,6 +8,8 @@ body {
   background-color: white;
 
   opacity: 0;
+
+  min-width: 1024px;
 }
 
 body a {
@@ -48,32 +50,56 @@ body a {
   font-size: 4em;
 }
 
-.thing-header {
+#content-container {
+  margin: 24px;
+}
+
+.content-header {
   font-size: 1.5em;
   color: #CC4422;
   margin-top: 10px;
-  margin-bottom: 5px;
-  margin-left: 10px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.thing-list {
-  list-style: none;
-  font-size: 1.2em;
+.content-list {
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
-.thing-list li {
-  margin: 12px 0px;
+.content-group {
+  height: 400px;
 }
 
-.thing-list li a {
+.content-item {
+  height: 100%;
+  width: 30%;
+  margin-right: 3%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.content-title {
   font-size: 25px;
+  margin-bottom: 6px;
 }
 
-.thing-date {
+.content-date {
   font-weight: bold;
+  font-size: 14px;
 }
+
+.content-description {
+  font-size: 20px;
+}
+
+.content-image-container {
+  margin-top: 10px;
+}
+
+  .content-image-container img {
+    width: 100%;
+  }
 
 .sub-list {
   margin: 7px;
@@ -91,7 +117,41 @@ body a {
   font-size: 3em;
 }
 
-.bar {
-  height: 8px;
-  border-top: 1px solid black;
+#contact-header {
+  font-size: 20px;
+  margin-bottom: 9px;
 }
+
+.contact-item {
+  display: inline-block;
+  padding: 10px;
+  margin: 0px 4px;
+}
+
+#contact-email {
+  background-color: #fdff6e;
+}
+  #contact-email:hover {
+    background-color: #fcfac1;
+  }
+
+#contact-twitter {
+  background-color: #69ebbd;
+}
+  #contact-twitter:hover {
+    background-color: #9eedcd;
+  }
+
+#contact-lastfm {
+  background-color: #e9583f;
+}
+  #contact-lastfm:hover {
+    background-color: #f0877e;
+  }
+
+#contact-github {
+  background-color: #cc60f7;
+}
+  #contact-github:hover {
+    background-color: #ce7ded;
+  }

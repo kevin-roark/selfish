@@ -1,49 +1,49 @@
+
 function Content(config) {
   this.link = config.link;
   this.title = config.title;
   this.date = config.date;
   this.text = config.text;
+  this.image = config.image;
   this.sublist = config.sublist;
 
   this.config = config;
 }
 
 Content.prototype.render = function() {
-  var view = '<li>';
+  var view = '<div class="content-item">';
 
   if (this.link) {
-    view += '<a href="' + this.link + '">';
+    view += '<div class="content-title"><a href="' + this.link + '">';
   }
 
-  if (this.config.titleStyle) {
-    view += '<span style="' + this.config.titleStyle + '">';
-  }
   view += this.title;
-  if (this.config.titleStyle) {
-    view += '</span>';
-  }
 
   if (this.link) {
-    view += '</a>';
-  }
-
-  if (this.date || this.text) {
-   view += ' &ndash; ';
+    view += '</a></div>';
   }
 
   if (this.date) {
-    view += '<span class="thing-date">' + this.date + '</span>, ';
+    view += '<div class="content-date">' + this.date + '</div>';
   }
 
   if (this.text) {
-    view += this.text;
+    view += '<div class="content-description">' + this.text + '</div>';
   }
 
   if (this.sublist) {
     view += this.sublist.render();
   }
 
-  view += '</li>';
+  if (this.image) {
+    view += '<div class="content-image-container">';
+
+    view += '<img src="' + this.image + '" alt=""></img>';
+
+    view += '</div>';
+  }
+
+  view += '</div>';
   return view;
 };
 
@@ -70,14 +70,24 @@ function Section(config) {
 
 Section.prototype.render = function() {
   var view = '';
-  view += '<p class="thing-header" id="' + this.id + '">';
+  view += '<p class="content-header" id="' + this.id + '">';
   view += this.title;
 
-  view += '<ul class="thing-list">';
+  view += '<div class="content-list">';
+
   for (var i = 0; i < this.contents.length; i++) {
+    if (i % 3 === 0) {
+      if (i !== 0) {
+        view += '</div>';
+      }
+
+      view += '<div class="content-group">';
+    }
+
     view += this.contents[i].render();
   }
-  view += '</ul>';
+
+  view += '</div>';
 
   view += '</p>';
   return view;
@@ -91,7 +101,8 @@ var mixedMedia = new Section({
       link: 'http://www.9857188538.website/',
       title: '(985) 718-8538',
       date: 'November 2014',
-      text: 'translation of words to phone'
+      text: 'translation of words to phone',
+      image: 'images/9857188538.jpg'
     }),
     new Content({
       link: 'http://wayne.porkf.at',
@@ -284,29 +295,6 @@ var vids = new Section({
   ]
 });
 
-var contact = new Section({
-  id: 'contact',
-  title: 'Social Medias Lifestyles',
-  contents: [
-    new Content({
-      title: 'kevin.e.roark@gmail ;))))))))))',
-      titleStyle: 'background-color: #fdff6e; padding: 8px;'
-    }),
-    new Content({
-      link: 'https://twitter.com/LIMP__BISCUIT',
-      title: 'twister'
-    }),
-    new Content({
-      link: 'http://www.last.fm/user/latebl00mer',
-      title: 'last fm'
-    }),
-    new Content({
-      link: 'https://github.com/kevin-roark/',
-      title: 'gitbub'
-    })
-  ]
-});
-
 function divify(html) {
   var div = document.createElement('div');
   div.innerHTML = html;
@@ -326,7 +314,6 @@ function divify(html) {
   append(games);
   append(pics);
   append(vids);
-  append(contact);
 
   document.body.style.opacity = '1';
 })();
