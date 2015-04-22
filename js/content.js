@@ -143,7 +143,8 @@ var mixedMedia = new Section({
       link: 'https://raw.github.com/kevin-roark/watchpi/master/samples/square_600_pi.jpg',
       title: 'watch pi',
       date: 'January 2014',
-      text: 'turning irrational numbers into irrational images and videos'
+      text: 'turning irrational numbers into irrational images and videos',
+      image: 'images/watchpi.jpg'
     }),
     new Content({
       link: 'http://www.lollaurie.net',
@@ -161,7 +162,8 @@ var mixedMedia = new Section({
       link: 'http://lookatpi.com',
       title: 'look at pi',
       date: 'July 2013',
-      text: 'turning irrational numbers into irrational colors'
+      text: 'turning irrational numbers into irrational colors',
+      image: 'images/lookatpi.jpg'
     })
   ]
 });

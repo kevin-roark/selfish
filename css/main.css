@@ -71,14 +71,16 @@ body a {
 
 .content-group {
   height: 400px;
+  margin-bottom: 20px;
 }
 
 .content-item {
   height: 100%;
   width: 30%;
-  margin-right: 3%;
+  padding: 1.5%;
   display: inline-block;
   vertical-align: middle;
+  overflow: scroll;
 }
   .content-item:hover {
     font-style: italic;
@@ -159,6 +161,8 @@ body a {
   position: fixed;
   bottom: 15px;
   left: 15px;
+  padding: 10px;
+  background-color: white;
 }
 
 #contact-header {
