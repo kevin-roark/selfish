@@ -10,6 +10,7 @@ body {
   opacity: 0;
 
   min-width: 1024px;
+  padding-bottom: 300px;
 }
 
 body a {
@@ -53,7 +54,7 @@ body a {
 /* CONTENT */
 
 #content-container {
-  margin: 24px;
+  margin: 20px;
 }
 
 .content-header {
@@ -161,19 +162,21 @@ body a {
   position: fixed;
   bottom: 15px;
   left: 15px;
-  padding: 10px;
-  background-color: white;
 }
 
 #contact-header {
   font-size: 20px;
   margin-bottom: 9px;
+  padding: 10px;
+  background-color: white;
+  display: inline-block;
 }
 
 .contact-item {
   display: inline-block;
   padding: 10px;
   margin-right: 8px;
+  color: black;
 }
 
 #contact-email {
