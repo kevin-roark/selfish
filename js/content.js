@@ -11,12 +11,15 @@ function Content(config) {
 }
 
 Content.prototype.render = function() {
-  var view = '<div class="content-item">';
+  var view = '';
 
   if (this.link) {
-    view += '<a href="' + this.link + '">';
+    view += '<a class="content-item" href="' + this.link + '">';
+  } else {
+    view += '<div class="content-item">';
   }
 
+  view += '<div class="content-text">';
   view += '<div class="content-title">' + this.title + '</div>';
 
   if (this.date) {
@@ -26,6 +29,8 @@ Content.prototype.render = function() {
   if (this.text) {
     view += '<div class="content-description">' + this.text + '</div>';
   }
+
+  view += '</div>'; // content-text
 
   if (this.sublist) {
     view += this.sublist.render();
@@ -41,9 +46,10 @@ Content.prototype.render = function() {
 
   if (this.link) {
     view += '</a>';
+  } else {
+    view += '</div>';
   }
 
-  view += '</div>';
   return view;
 };
 

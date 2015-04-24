@@ -14,11 +14,14 @@ body {
 }
 
 body a {
-  color: #3366FF;
   text-decoration: none;
 }
 
-  body a:hover, body a:focus {
+.pre-content-section a {
+  color: #3366FF;
+}
+
+  .pre-content-section a:hover, .pre-content-section a:focus {
     color: #2447B2;
   }
 
@@ -82,40 +85,53 @@ body a {
   display: inline-block;
   vertical-align: middle;
   overflow: scroll;
+  color: inherit;
 }
-  .content-item:hover {
-    font-style: italic;
-    box-shadow: 0px 0px 20px 10px #f0e747;
-    background-color: #5ee0ed;
-  }
 
-  .content-item a {
-    color: inherit;
+.content-text {
+  padding: 10px;
+  margin-left: -10px;
+  position: relative;
+}
+
+  .content-item:hover .content-text {
+    background-color: #ff648a;
+    color: #fefefd;
   }
-    .content-item a:hover {
-      color: inherit;
-    }
 
 .content-title {
   font-size: 25px;
-  margin-bottom: 6px;
+  margin-bottom: 12px;
+  max-width: 65%;
 }
+  .content-item:hover .content-title {
+    font-style: italic;
+  }
 
 .content-date {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
   font-weight: bold;
-  font-size: 14px;
+  font-size: 12px;
+  font-family: monospace;
 }
 
 .content-description {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .content-image-container {
-  margin-top: 10px;
+  margin-top: 18px;
 }
 
   .content-image-container img {
     width: 100%;
+  }
+
+  .content-item:hover .content-image-container img {
+    box-shadow: 2px 2px 20px 9px #f0e747;
   }
 
 .sub-list {
