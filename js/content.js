@@ -4,7 +4,7 @@ function Content(config) {
   this.title = config.title;
   this.date = config.date;
   this.text = config.text;
-  this.image = config.image;
+  this.images = config.images;
   this.sublist = config.sublist;
 
   this.config = config;
@@ -36,12 +36,14 @@ Content.prototype.render = function() {
     view += this.sublist.render();
   }
 
-  if (this.image) {
-    view += '<div class="content-image-container">';
+  if (this.images) {
+    for (var i = 0; i < this.images.length; i++) {
+      view += '<div class="content-image-container">';
 
-    view += '<img src="' + this.image + '" alt=""></img>';
+      view += '<img src="' + this.images[i] + '" alt=""></img>';
 
-    view += '</div>';
+      view += '</div>';
+    }
   }
 
   if (this.link) {
@@ -117,21 +119,21 @@ var mixedMedia = new Section({
       title: '(985) 718-8538',
       date: 'November 2014',
       text: 'translation of words to phone',
-      image: 'images/9857188538.jpg'
+      images: ['images/9857188538.jpg']
     }),
     new Content({
       link: 'http://wayne.porkf.at',
       title: 'wayne',
       date: 'October 2014',
       text: 'a little little wayne model',
-      image: 'images/wayne.jpg'
+      images: ['images/wayne.jpg']
     }),
     new Content({
       link: 'http://www.wideopenwitharms.com',
       title: 'Wide Open With Arms',
       date: 'June 2014',
       text: 'creed music video',
-      image: 'images/wideopenwitharms.jpg'
+      images: ['images/wideopenwitharms.jpg']
     }),
     new Content({
       link: 'http://www.specialmagicglasshole.com',
@@ -150,7 +152,7 @@ var mixedMedia = new Section({
       title: 'watch pi',
       date: 'January 2014',
       text: 'turning irrational numbers into irrational images and videos',
-      image: 'images/watchpi.jpg'
+      images: ['images/watchpi.jpg']
     }),
     new Content({
       link: 'http://www.lollaurie.net',
@@ -169,7 +171,7 @@ var mixedMedia = new Section({
       title: 'look at pi',
       date: 'July 2013',
       text: 'turning irrational numbers into irrational colors',
-      image: 'images/lookatpi.jpg'
+      images: ['images/lookatpi.jpg']
     })
   ]
 });
@@ -239,10 +241,10 @@ var computer = new Section({
       text: 'a 100% javascript collaborative gameboy player w/ socket.io 1.0 (with mr guillermo &amp; Mr. Tony)'
     }),
     new Content({
-      link: 'http://github.com/kevin-roark/arthur',
+      link: 'http://kevin-roark.github.io/arthur',
       title: 'arthur',
       date: 'Spring 2014',
-      text: 'a programming language made for manipulating and combining various media styles. made it for a class with melody sahil henry dylan. examples <a href="http://kevin-roark.github.io/arthur">here</a>'
+      text: 'a programming language made for manipulating and combining various media styles. made it for a class with melody sahil henry dylan. check the examples.'
     }),
     new Content({
       link: 'https://github.com/sahil-ansari/boar-square',
@@ -261,19 +263,21 @@ var games = new Section({
       link: 'http://journey.porkf.at',
       title: '(Pork) Journey',
       date: 'June 2014',
-      text: 'play as a pig and get eaten'
+      text: 'play as a pig and get eaten',
+      images: ['images/porkjourney.jpg']
     }),
     new Content({
       link: 'http://www.lonelytrash.me',
       title: 'Lonely Trash',
       date: 'May 2014',
-      text: 'three minutes to win in this world i made the pictures and the music and all'
+      text: 'three minutes to win in this world i made the pictures and the music and all',
+      images: ['images/lonelytrash.jpg']
     }),
     new Content({
-      link: 'http://meatbe.at',
       title: 'Meatbeat',
       date: 'February 2013',
-      text: 'processing game for javascript where meatballs bounce in rhythm with sique beats'
+      text: 'processing game for javascript where meatballs bounce in rhythm with sique beats',
+      images: ['images/meatbeat.jpg']
     })
   ]
 });
@@ -303,7 +307,7 @@ var vids = new Section({
       link: 'cruise',
       title: 'cruise remix',
       date: 'October 2013',
-      text: 'a remix of a florida georgia line song with video too. link to html5 mp4, you can also download it <a href="media/cruise.mp4">here</a>'
+      text: 'a remix of a florida georgia line song with video too. link leads u to a movie theater'
     }),
     new Content({
       link: 'https://www.youtube.com/watch?v=Bl8wKauzzdA',
