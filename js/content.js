@@ -165,13 +165,10 @@ var mixedMedia = new Section({
       link: 'http://www.lollaurie.net',
       title: 'Laurie',
       date: 'December 2013',
-      text: 'christmas present for my special sister'
-    }),
-    new Content({
-      link: 'http://kevin-roark.github.io/serena/',
-      title: 'Serena',
-      date: 'December 2013',
-      text: 'christmas present for my special friend'
+      text: 'christmas present for my special sister come on its cute',
+      images: [
+        'images/laurie.jpg'
+      ]
     }),
     new Content({
       link: 'http://pi.porkf.at',
