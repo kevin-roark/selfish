@@ -351,13 +351,19 @@ var vids = new Section({
       link: 'cruise',
       title: 'cruise remix',
       date: 'October 2013',
-      text: 'a remix of a florida georgia line song with video too. link leads u to a movie theater'
+      text: 'a remix of a florida georgia line song with video too. link leads u to a movie theater',
+      images: [
+        'images/cruise.jpg'
+      ]
     }),
     new Content({
       link: 'https://www.youtube.com/watch?v=Bl8wKauzzdA',
       title: 'brain phlem',
       date: 'Fall 2011',
-      text: "i don't know why this is here lol I'm sorry"
+      text: "i don't know why this is here lol I'm sorry its a legacy lifestyle",
+      images: [
+        'images/brainphlem.jpg'
+      ]
     })
   ]
 });
