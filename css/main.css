@@ -35,23 +35,12 @@ body a {
   background-color: rgba(230, 245, 0, 0.7);
 }
 
-#miller {
-  font-size: 2em;
-  padding: 0px 10px;
-  background-color: rgba(30, 255, 30, 0.6);
-  margin-bottom: 7px;
-}
-
 #shane {
   font-size: 2.75em;
   padding: 0px 10px;
   background-color: rgba(255, 30, 30, 0.4);
   color: rgb(100, 0, 200);
   margin-bottom: 7px;
-}
-
-#other-header {
-  font-size: 4em;
 }
 
 /* CONTENT */

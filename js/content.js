@@ -157,6 +157,38 @@ var mixedMedia = new Section({
       text: 'a room where everyone is heard at once'
     }),
     new Content({
+      link: 'http://www.whereistimesquare.com/',
+      title: "Miller's Fantasy",
+      subtitle: "WHERE IS TIME SQUARE?",
+      date: 'February 2014',
+      text: 'Map findng application to map find time square',
+      images: ['images/miller/whereistimesquare.jpg']
+    }),
+    new Content({
+      link: 'http://www.diningatcu.com/',
+      title: "Miller's Fantasy",
+      subtitle: "Dining@CU",
+      date: 'March 2014',
+      text: 'Dining menu application to discover dining hall menus',
+      images: ['images/miller/diningatcu.jpg']
+    }),
+    new Content({
+      link: 'http://www.networkforu.com/',
+      title: "Miller's Fantasy",
+      subtitle: "Network Style",
+      date: 'March 2014',
+      text: 'Learning trade secrets',
+      images: ['images/miller/networkstyle.jpg']
+    }),
+    new Content({
+      link: 'http://www.millersfantasy.com/',
+      title: "Miller's Fantasy",
+      subtitle: "yellin",
+      date: 'April 2014',
+      text: "iOS application. Send sound at miller's fantasy founders. We send it back",
+      images: ['images/miller/yellin.jpg']
+    }),
+    new Content({
       link: 'https://raw.github.com/kevin-roark/watchpi/master/samples/square_600_pi.jpg',
       title: 'watch pi',
       date: 'January 2014',
