@@ -259,42 +259,49 @@ var computer = new Section({
       link: 'http://socket.computer/',
       title: 'Socket.IO Computer',
       date: 'May 2014',
-      text: 'a collaborative windows xp emulator that runs in browser'
-    }),
-    new Content({
-      link: 'http://wbar.org',
-      title: 'WBAR',
-      date: 'Summer 2013 - March 2015',
-      text: 'internet work at best freeform nyc college radio station a+'
-    }),
-    new Content({
-      link: 'http://adhoc.fm',
-      title: 'AdHoc',
-      text: 'i do the internet work at this diy music publication a+'
-    }),
-    new Content({
-      link: 'http://www.hifisnockuptown.com',
-      title: 'Hi Fi Snock Uptown',
-      date: 'Winter 2014 - forever',
-      text: 'made the site for this great place and thing in nyc'
-    }),
-    new Content({
-      link: 'http://www.weplay.io',
-      title: 'Weplay',
-      date: 'March 2014',
-      text: 'a 100% javascript collaborative gameboy player w/ socket.io 1.0 (with mr guillermo &amp; Mr. Tony)'
+      text: 'a collaborative windows xp emulator that runs in browser',
+      images: ['images/socketcomputer.jpg']
     }),
     new Content({
       link: 'http://kevin-roark.github.io/arthur',
       title: 'arthur',
       date: 'Spring 2014',
-      text: 'a programming language made for manipulating and combining various media styles. made it for a class with melody sahil henry dylan. check the examples.'
+      text: 'a programming language made for manipulating and combining various media styles. made it for a class with melody sahil henry dylan. check the examples.',
+      images: ['images/arthur.jpg']
+    }),
+    new Content({
+      link: 'http://wbar.org',
+      title: 'WBAR',
+      date: 'Summer 2013 - March 2015',
+      text: 'internet work at best freeform nyc college radio station a+',
+      images: ['images/wbar.jpg']
+    }),
+    new Content({
+      link: 'http://adhoc.fm',
+      title: 'AdHoc',
+      text: 'i do the internet work at this diy music publication a+',
+      images: ['images/adhoc.jpg']
+    }),
+    new Content({
+      link: 'http://www.hifisnockuptown.com',
+      title: 'Hi Fi Snock Uptown',
+      date: 'Winter 2014 - forever',
+      text: 'made the site for this great place and thing in nyc',
+      images: ['images/hifisnockuptown.jpg']
+    }),
+    new Content({
+      link: 'http://www.weplay.io',
+      title: 'Weplay',
+      date: 'March 2014',
+      text: 'a 100% javascript collaborative gameboy player w/ socket.io 1.0 (with mr guillermo &amp; Mr. Tony)',
+      images: ['images/weplay.jpg']
     }),
     new Content({
       link: 'https://github.com/sahil-ansari/boar-square',
       title: 'boar square',
       date: 'Fall 2013',
-      text: "a stupid ass project for a stupid ass class uses foursquare api don't care"
+      text: "a stupid ass project for a stupid ass class uses foursquare api don't care",
+      images: ['images/boarsquare.jpg']
     })
   ]
 });
