@@ -61,11 +61,19 @@ body a {
 }
 
 .content-header {
-  font-size: 1.5em;
-  color: #CC4422;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: 60px;
+  margin-bottom: 50px;
+  padding: 16px 30px;
   text-align: center;
+
+  font-size: 40px;
+  color: #101115;
+
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.75);
+}
+
+.content-section-buffer {
+  height: 10px;
 }
 
 .content-list {
@@ -100,10 +108,11 @@ body a {
   }
 
 .content-title {
-  font-size: 24px;
   margin-bottom: 12px;
   margin-top: 8px;
   max-width: 75%;
+
+  font-size: 24px;
 }
   .content-item:hover .content-title {
     font-style: italic;

@@ -85,7 +85,9 @@ function Section(config) {
 
 Section.prototype.render = function() {
   var view = '';
-  view += '<p class="content-header" id="' + this.id + '">';
+  view += '<div class="content-section" id="' + this.id + '">';
+  view += '<div class="content-section-buffer"></div>';
+  view += '<p class="content-header" id="' + this.id + '-header">';
   view += this.title;
 
   view += '<div class="content-list">';
@@ -102,7 +104,7 @@ Section.prototype.render = function() {
     view += this.contents[i].render();
   }
 
-  view += '</div>';
+  view += '</div></div>';
 
   view += '</p>';
   return view;
