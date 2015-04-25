@@ -166,15 +166,18 @@ body a {
 
 #content-menu {
   position: fixed;
-  right: 15px;
-  top: 15px;
+  right: 5px;
+  top: 5px;
   padding: 10px;
 
   background-color: white;
 }
 
 .content-menu-link {
-  margin: 6px 0px;
+  margin: 10px 0px;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 14px;
 }
 
   .content-menu-link a {
@@ -183,6 +186,14 @@ body a {
     .content-menu-link a:hover {
       color: #41dc6f;
     }
+
+  .content-menu-link.active-menu-button a {
+    color: #f54842;
+  }
+
+  .content-menu-link.active-menu-button a:hover {
+    color: #4296f7;
+  }
 
 /* CONTACT */
 
