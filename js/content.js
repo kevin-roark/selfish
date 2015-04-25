@@ -212,19 +212,41 @@ var music = new Section({
       ]
     }),
     new Content({
-      link: '/',
       title: 'TONY TONEHOLE',
-      text: 'WHERE ARE YOU / WE WILL FIND YOU. kinect, noise, servers, worlds. These are really awesome, I would love to show you some time.',
-      sublist: new Sublist([
-        'strength.js (oct 2014)',
-        'tony ronald (dec 2014)',
-        'jobfair (apr 2015)'
-      ])
+      subtitle: 'strengh.js',
+      date: 'October 2014',
+      text: 'tech masculinity / wrestling with kinect puppets',
+      images: [
+        'images/tony/strengthjs.jpg'
+      ]
+    }),
+    new Content({
+      title: 'TONY TONEHOLE',
+      subtitle: 'Ronald',
+      date: 'December 2014',
+      text: "can't seem to get outside of that computer trash can",
+      images: [
+        'images/tony/ronald.jpg'
+      ]
+    }),
+    new Content({
+      title: 'TONY TONEHOLE',
+      subtitle: 'Job Fair',
+      date: 'March 2015',
+      text: 'simulation of a startup job fair / earn and prove your worth',
+      images: [
+        'images/tony/jobfair.jpg'
+      ]
     }),
     new Content({
       link: 'http://sxecop.bandcamp.com',
       title: 'Straightedge Cop',
-      text: 'hardcore straightedge sermon music. one small demo lol its comin back'
+      subtitle: '2014 Demo',
+      date: 'May 2015',
+      text: 'hardcore straightedge sermon music. first small demo lol its comin back',
+      images: [
+        'images/sxecop.jpg'
+      ]
     })
   ]
 });
