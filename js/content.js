@@ -331,14 +331,24 @@ var pics = new Section({
   title: 'Pics',
   contents: [
     new Content({
-      link: 'film',
+      link: 'film/textures.html',
       title: 'Film',
-      text: 'i take most of these with a canon or a scuba cam'
+      subtitle: 'Textures',
+      text: 'natural patterns',
+      images: ['images/textures.jpg']
+    }),
+    new Content({
+      link: 'film/mouths.html',
+      title: 'Film',
+      subtitle: 'Mouths',
+      text: 'eating from a cannon',
+      images: ['images/mouths.jpg']
     }),
     new Content({
       link: 'http://kevinr.vsco.co',
       title: 'VSCO',
-      text: "these are phone pictures. I work here it's great hmu!"
+      text: "these are phone pictures. I work here it's great hmu!",
+      images: ['images/vsco.jpg']
     })
   ]
 });
