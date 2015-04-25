@@ -2,6 +2,7 @@
 function Content(config) {
   this.link = config.link;
   this.title = config.title;
+  this.subtitle = config.subtitle;
   this.date = config.date;
   this.text = config.text;
   this.images = config.images;
@@ -20,7 +21,13 @@ Content.prototype.render = function() {
   }
 
   view += '<div class="content-text">';
-  view += '<div class="content-title">' + this.title + '</div>';
+  view += '<div class="content-title">' + this.title;
+
+  if (this.subtitle) {
+    view += ': <span class="content-subtitle">' + this.subtitle + '</span>';
+  }
+
+  view += '</div>'; // for title
 
   if (this.date) {
     view += '<div class="content-date">' + this.date + '</div>';
@@ -167,7 +174,7 @@ var mixedMedia = new Section({
       text: 'christmas present for my special friend'
     }),
     new Content({
-      link: 'http://lookatpi.com',
+      link: 'http://pi.porkf.at',
       title: 'look at pi',
       date: 'July 2013',
       text: 'turning irrational numbers into irrational colors',
@@ -183,11 +190,26 @@ var music = new Section({
     new Content({
       link: 'http://www.mistershane.com',
       title: 'Mister Shane',
-      text: 'an experimental m&amp;V project. blastin out with heart and sean',
-      sublist: new Sublist([
-        'content volume 1 (spring 2014)',
-        "shane's tweet heaven (feb 2015)"
-      ])
+      subtitle: 'Content: Volume 1',
+      date: 'May 2014',
+      text: 'first collection from mister shane, experimental m&amp;v project from sean and kev man',
+      images: [
+        'images/shane/laborpain.jpg',
+        'images/shane/osteen.jpg',
+        'images/shane/pig.jpg',
+        'images/shane/birthday.jpg',
+        'images/shane/eat.jpg',
+      ]
+    }),
+    new Content({
+      link: 'http://heaven.mistershane.com',
+      title: 'Mister Shane',
+      subtitle: "Shane's Tweet Heaven",
+      date: 'February 2015',
+      text: "explore your twitter self with a museum made just 4 u",
+      images: [
+        'images/shane/heaven.jpg'
+      ]
     }),
     new Content({
       link: '/',

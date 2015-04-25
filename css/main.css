@@ -75,7 +75,7 @@ body a {
 
 .content-group {
   height: 400px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .content-item {
@@ -96,17 +96,23 @@ body a {
 
   .content-item:hover .content-text {
     background-color: #ff648a;
-    color: #fefefd;
+    color: #ffffff;
   }
 
 .content-title {
-  font-size: 25px;
+  font-size: 24px;
   margin-bottom: 12px;
-  max-width: 65%;
+  margin-top: 8px;
+  max-width: 75%;
 }
   .content-item:hover .content-title {
     font-style: italic;
   }
+
+.content-subtitle {
+  font-size: 17px;
+  font-style: italic;
+}
 
 .content-date {
   position: absolute;
@@ -120,10 +126,16 @@ body a {
 
 .content-description {
   font-size: 18px;
+  color: #292929;
 }
+
+  .content-item:hover .content-description {
+    color: #c4f3ff;
+  }
 
 .content-image-container {
   margin-top: 18px;
+  margin-bottom: 36px;
 }
 
   .content-image-container img {
