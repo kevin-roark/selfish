@@ -5,7 +5,7 @@ var Section = cms.Section;
 
 var mixedMedia = new Section({
   id: 'art',
-  title: 'miXXXed media w/ internet',
+  title: 'Multimedia (XXX)',
   contents: [
     new Content({
       link: 'http://www.9857188538.website/',
@@ -258,15 +258,13 @@ var pics = new Section({
   contents: [
     new Content({
       link: 'film/textures.html',
-      title: 'Film',
-      subtitle: 'Textures',
+      title: 'Textures',
       text: 'natural patterns',
       images: ['images/textures.jpg']
     }),
     new Content({
       link: 'film/mouths.html',
-      title: 'Film',
-      subtitle: 'Mouths',
+      title: 'Mouths',
       text: 'eating from a cannon',
       images: ['images/mouths.jpg']
     }),

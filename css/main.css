@@ -80,16 +80,15 @@ body a {
 }
 
 .content-group {
-  height: 405px;
+  height: 410px;
   margin-bottom: 40px;
 }
 
 .content-item {
-  height: 100%;
+  max-height: 100%;
   width: 30%;
-  padding: 1.5%;
+  padding: 1%;
   display: inline-block;
-  vertical-align: middle;
   overflow: scroll;
   color: inherit;
   position: relative;
@@ -262,7 +261,7 @@ body a {
 
 /* MEDIA BRAH */
 
-@media only screen and (min-width : 320px) and (max-width : 480px), (max-width : 568px) {
+@media only screen and (min-width : 320px) and (max-width : 666px) {
   .content-group {
     height: auto;
   }
