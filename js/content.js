@@ -6,6 +6,7 @@ function Content(config) {
   this.date = config.date;
   this.text = config.text;
   this.images = config.images;
+  this.unavailable = config.unavailable;
 
   this.config = config;
 }
@@ -46,6 +47,10 @@ Content.prototype.render = function() {
 
       view += '</div>';
     }
+  }
+
+  if (this.unavailable) {
+    view += '<div class="content-unavailable">TEMPORARILY MISSING</div>';
   }
 
   if (this.link) {
@@ -125,16 +130,20 @@ var mixedMedia = new Section({
       images: ['images/wideopenwitharms.jpg']
     }),
     new Content({
-      link: 'http://www.specialmagicglasshole.com',
+      //link: 'http://www.specialmagicglasshole.com',
+      unavailable: true,
       title: 'Special Magic Glass Hole',
       date: 'March 2014',
-      text: 'a hole through which all are seen'
+      text: 'a hole through which all are seen',
+      images: ['images/specialmagicglasshole.jpg']
     }),
     new Content({
-      link: 'http://www.specialmagicyellingroom.com',
+      //link: 'http://www.specialmagicyellingroom.com',
+      unavailable: true,
       title: 'Special Magic Yelling Room',
       date: 'March 2014',
-      text: 'a room where everyone is heard at once'
+      text: 'a room where everyone is heard at once',
+      images: ['images/specialmagicyellingroom.jpg'],
     }),
     new Content({
       link: 'http://www.whereistimesquare.com/',

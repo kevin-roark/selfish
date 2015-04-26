@@ -98,6 +98,7 @@ body a {
   vertical-align: middle;
   overflow: scroll;
   color: inherit;
+  position: relative;
 }
 
 .content-text {
@@ -157,6 +158,26 @@ body a {
 
   .content-item:hover .content-image-container img {
     box-shadow: 2px 2px 20px 9px #f0e747;
+  }
+
+.content-unavailable {
+  position: absolute;
+  left: 0;
+  top: 38%;
+  margin: 0px 40px;
+
+  font-size: 40px;
+  text-align: center;
+  padding: 10px 0px;
+
+  color: #003fff;
+  background-color: rgba(255, 85, 85, 0.95);
+
+  display: none;
+}
+
+  .content-item:hover .content-unavailable {
+    display: initial;
   }
 
 /* MENU */
