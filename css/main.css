@@ -10,7 +10,6 @@ body {
 
   opacity: 0;
 
-  min-width: 1024px;
   padding-bottom: 300px;
 }
 
@@ -42,10 +41,6 @@ body a {
   }
 
 #pre-content-section-about {
-  padding: 15px;
-  max-width: 300px;
-  margin: 20px;
-
   color: white;
   background-color: black;
 }
@@ -59,6 +54,7 @@ body a {
 
 #content-container {
   margin: 20px;
+  min-width: 320px;
 }
 
 .content-header {
@@ -184,11 +180,13 @@ body a {
 
 #content-menu {
   position: fixed;
-  right: 5px;
+  right: 10px;
   top: 5px;
   padding: 10px;
 
   background-color: white;
+
+  z-index: 1000;
 }
 
 .content-menu-link {
@@ -217,8 +215,8 @@ body a {
 
 #contact-info {
   position: fixed;
-  bottom: 15px;
-  left: 15px;
+  bottom: 10px;
+  left: 20px;
 }
 
 #contact-header {
@@ -263,3 +261,16 @@ body a {
   #contact-github:hover {
     background-color: #ce7ded;
   }
+
+/* MEDIA BRAH */
+
+@media only screen and (min-width : 320px) and (max-width : 480px), (max-width : 568px) {
+  .content-group {
+    height: auto;
+  }
+
+  .content-item {
+    width: 97%;
+    padding: 1.5%;
+  }
+}

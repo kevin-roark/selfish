@@ -70,10 +70,12 @@ function Section(config) {
 
 Section.prototype.render = function() {
   var view = '';
+
   view += '<div class="content-section" id="' + this.id + '">';
+
   view += '<div class="content-section-buffer"></div>';
-  view += '<p class="content-header" id="' + this.id + '-header">';
-  view += this.title;
+
+  view += '<div class="content-header" id="' + this.id + '-header">' + this.title + '</div>';
 
   view += '<div class="content-list">';
 
@@ -89,9 +91,12 @@ Section.prototype.render = function() {
     view += this.contents[i].render();
   }
 
-  view += '</div></div>';
+  view += '</div>'; // content-group
 
-  view += '</p>';
+  view += '</div>'; // content-list
+
+  view += '</div>'; // content-section
+
   return view;
 };
 
@@ -292,7 +297,7 @@ var computer = new Section({
     new Content({
       link: 'http://wbar.org',
       title: 'WBAR',
-      date: 'Summer 2013 - March 2015',
+      date: 'always',
       text: 'internet work at best freeform nyc college radio station a+',
       images: ['images/wbar.jpg']
     }),
@@ -305,7 +310,7 @@ var computer = new Section({
     new Content({
       link: 'http://www.hifisnockuptown.com',
       title: 'Hi Fi Snock Uptown',
-      date: 'Winter 2014 - forever',
+      date: '2014 - forever',
       text: 'made the site for this great place and thing in nyc',
       images: ['images/hifisnockuptown.jpg']
     }),
