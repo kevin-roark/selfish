@@ -6,7 +6,6 @@ function Content(config) {
   this.date = config.date;
   this.text = config.text;
   this.images = config.images;
-  this.sublist = config.sublist;
 
   this.config = config;
 }
@@ -39,10 +38,6 @@ Content.prototype.render = function() {
 
   view += '</div>'; // content-text
 
-  if (this.sublist) {
-    view += this.sublist.render();
-  }
-
   if (this.images) {
     for (var i = 0; i < this.images.length; i++) {
       view += '<div class="content-image-container">';
@@ -59,21 +54,6 @@ Content.prototype.render = function() {
     view += '</div>';
   }
 
-  return view;
-};
-
-function Sublist(texts) {
-  this.texts = texts;
-}
-
-Sublist.prototype.render = function() {
-  var view = '<ul class="sub-list">';
-
-  for (var i = 0; i < this.texts.length; i++) {
-    view += '<li>' + this.texts[i] + '</li>';
-  }
-
-  view += '</ul>';
   return view;
 };
 
