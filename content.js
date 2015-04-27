@@ -15,6 +15,13 @@ var mixedMedia = new Section({
       images: ['images/9857188538.jpg']
     }),
     new Content({
+      link: 'http://benkogan.github.io/corpse/',
+      title: 'Corpse',
+      date: 'October 2014',
+      text: "Computer corpse for Postcrypt's Exquisite Corpse show. Made w/ Ben, Dylan, Henry. i did the foot.",
+      images: ['images/corpse.jpg']
+    }),
+    new Content({
       link: 'http://wayne.porkf.at',
       title: 'wayne',
       date: 'October 2014',
