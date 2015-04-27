@@ -8,6 +8,13 @@ var mixedMedia = new Section({
   title: 'Multimedia (XXX)',
   contents: [
     new Content({
+      link: 'http://www.luminal.space/',
+      title: 'Luminal.space',
+      date: 'April 2015',
+      text: "An installation on Columbia's Low Steps; long-term project made with many people more talented than me. click 4 info",
+      images: ['images/luminal.jpg']
+    }),
+    new Content({
       link: 'http://www.9857188538.website/',
       title: '(985) 718-8538',
       date: 'November 2014',
