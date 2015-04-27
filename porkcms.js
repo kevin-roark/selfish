@@ -13,6 +13,7 @@ function Content(config) {
 
 Content.prototype.render = function() {
   var view = '';
+  view += '<div class="content-item-wrapper">';
 
   if (this.link) {
     view += '<a class="content-item" href="' + this.link + '">';
@@ -58,6 +59,8 @@ Content.prototype.render = function() {
   } else {
     view += '</div>';
   }
+
+  view += '</div>'; // content-item-wrapper
 
   return view;
 };

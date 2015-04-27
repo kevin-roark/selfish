@@ -50,9 +50,16 @@ body a {
 
 /* CONTENT */
 
+#content-container-wrapper {
+  text-align: center;
+  padding: 20px;
+}
+
 #content-container {
-  margin: 20px;
+  margin: auto;
+  text-align: left;
   min-width: 320px;
+  max-width: 1440px;
 }
 
 .content-header {
@@ -80,16 +87,21 @@ body a {
 }
 
 .content-group {
-  height: 410px;
-  margin-bottom: 40px;
+  min-height: 400px;
+  margin-bottom: 20px;
+}
+
+.content-item-wrapper {
+  width: 33%;
+  display: inline-block;
+  max-height: 100%;
+  overflow: scroll;
+  position: relative;
 }
 
 .content-item {
-  max-height: 100%;
-  width: 30%;
-  padding: 1%;
   display: inline-block;
-  overflow: scroll;
+  padding: 15px;
   color: inherit;
   position: relative;
 }
@@ -264,10 +276,10 @@ body a {
 @media only screen and (min-width : 320px) and (max-width : 666px) {
   .content-group {
     height: auto;
+    margin-bottom: 0px;
   }
 
-  .content-item {
-    width: 97%;
-    padding: 1.5%;
+  .content-item-wrapper {
+    width: 100%;
   }
 }
