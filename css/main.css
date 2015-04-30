@@ -273,7 +273,7 @@ body a {
 
 /* MEDIA BRAH */
 
-@media (max-width : 750px) {
+@media (max-width : 750px), (max-device-width: 750px) {
   .content-group {
     height: auto;
     margin-bottom: 0px;
