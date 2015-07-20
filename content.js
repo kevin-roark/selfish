@@ -271,6 +271,12 @@ var pics = new Section({
   title: 'Pics',
   contents: [
     new Content({
+      link: 'film/june15-1.html',
+      title: 'June 2015 1',
+      text: 'cycles',
+      images: ['images/june15-1.jpg']
+    }),
+    new Content({
       link: 'film/textures.html',
       title: 'Textures',
       text: 'natural patterns',
