@@ -271,25 +271,43 @@ var pics = new Section({
   title: 'Pics',
   contents: [
     new Content({
-      link: 'film/june15-1.html',
+      link: 'film/june15-1/',
       title: 'June 2015 1',
       text: 'cycles',
       images: ['images/june15-1.jpg']
     }),
     new Content({
-      link: 'film/june15-2.html',
+      link: 'film/june15-2/',
       title: 'June 2015 2',
       text: 'you deserve extra',
       images: ['images/june15-2.jpg']
     }),
     new Content({
-      link: 'film/textures.html',
+      link: 'film/june15-3/',
+      title: 'June 2015 3',
+      text: 'i live in a wet world',
+      images: ['images/june15-3.jpg']
+    }),
+    new Content({
+      link: 'film/june15-4/',
+      title: 'June 2015 4',
+      text: 'visions',
+      images: ['images/june15-4.jpg']
+    }),
+    new Content({
+      link: 'film/june15-5/',
+      title: 'June 2015 5',
+      text: 'Florida',
+      images: ['images/june15-5.jpg']
+    }),
+    new Content({
+      link: 'film/textures/',
       title: 'Textures',
       text: 'natural patterns',
       images: ['images/textures.jpg']
     }),
     new Content({
-      link: 'film/mouths.html',
+      link: 'film/mouths/',
       title: 'Mouths',
       text: 'eating from a cannon',
       images: ['images/mouths.jpg']
