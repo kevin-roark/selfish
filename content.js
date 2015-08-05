@@ -4,7 +4,7 @@ var Content = cms.Content;
 var Section = cms.Section;
 
 var mixedMedia = new Section({
-  id: 'art',
+  id: 'media',
   title: 'Multimedia',
   contents: [
     new Content({
@@ -124,7 +124,7 @@ var mixedMedia = new Section({
 });
 
 var music = new Section({
-  id: 'music',
+  id: 'sound',
   title: 'Sound',
   contents: [
     new Content({
@@ -192,7 +192,7 @@ var music = new Section({
 });
 
 var computer = new Section({
-  id: 'webs',
+  id: 'web',
   title: 'Computer',
   contents: [
     new Content({
