@@ -5,8 +5,15 @@ var Section = cms.Section;
 
 var mixedMedia = new Section({
   id: 'art',
-  title: 'Multimedia (XXX)',
+  title: 'Multimedia',
   contents: [
+    new Content({
+      link: 'http://www.snockplanet.website/',
+      title: 'New Snock Planet',
+      date: 'July 2015',
+      text: "A persistent new world, boiling the essence, becoming",
+      images: ['images/snockplanet.jpg']
+    }),
     new Content({
       link: 'http://www.luminal.space/',
       title: 'Luminal.space',
