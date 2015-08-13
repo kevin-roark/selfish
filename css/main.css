@@ -231,14 +231,14 @@ body a {
 #contact-header {
   font-size: 20px;
   margin-bottom: 9px;
-  padding: 10px;
-  background-color: white;
+  font-style: italic;
   display: inline-block;
 }
 
 .contact-item {
   display: inline-block;
-  padding: 10px;
+  font-size: 14px;
+  padding: 7px;
   margin-right: 8px;
   color: black;
 }
@@ -255,6 +255,13 @@ body a {
 }
   #contact-twitter:hover {
     background-color: #9eedcd;
+  }
+
+#contact-instagram {
+  background-color: #68a0eb;
+}
+  #contact-instagram:hover {
+    background-color: #9ebded;
   }
 
 #contact-lastfm {
