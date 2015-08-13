@@ -8,7 +8,14 @@ var mixedMedia = new Section({
   title: 'Multimedia',
   contents: [
     new Content({
-      link: 'http://www.snockplanet.website/',
+      link: 'http://lovepoem.porkf.at/',
+      title: '[Love Poem]',
+      date: 'August 2015',
+      text: "I made gold from a Richard Brautigan poem",
+      images: ['images/lovepoem.jpg']
+    }),
+    new Content({
+      link: 'http://www.newplanet.website/',
       title: 'New Snock Planet',
       date: 'July 2015',
       text: "A persistent new world, boiling the essence, becoming",
