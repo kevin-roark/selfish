@@ -47,7 +47,7 @@ var mixedMedia = new Section({
       title: 'Mister Shane',
       subtitle: "Shane's Tweet Heaven",
       date: 'February 2015',
-      text: "explore your twitter self with a museum made just 4 u",
+      text: "Explore your twitter self with a museum made just for u",
       images: ['images/shane/heaven.jpg']
     }),
     new Content({

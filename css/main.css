@@ -90,7 +90,6 @@ body a {
 
 .content-group {
   min-height: 400px;
-  margin-bottom: 20px;
 }
 
 .content-item-wrapper {
@@ -99,13 +98,17 @@ body a {
   max-height: 100%;
   overflow: scroll;
   position: relative;
+  margin-bottom: 20px;
 }
 
 .content-item {
   display: inline-block;
   padding: 15px;
+  margin: 5px;
   color: inherit;
   position: relative;
+
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .content-text {
@@ -161,6 +164,7 @@ body a {
 
   .content-image-container img {
     width: 100%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   }
 
   .content-item:hover .content-image-container img {
