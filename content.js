@@ -8,6 +8,13 @@ var mixedMedia = new Section({
   title: 'Multimedia',
   contents: [
     new Content({
+      link: 'http://www.onetool.website/',
+      title: 'And Rakes To Spread The Haul',
+      date: 'August 2015',
+      text: "A collection of poems hailing the One Man One Tool One Purpose ideology. Please contact me to obtain a physical book.",
+      images: ['images/andrakes.jpg']
+    }),
+    new Content({
       link: 'http://lovepoem.porkf.at/',
       title: '[Love Poem]',
       date: 'August 2015',
