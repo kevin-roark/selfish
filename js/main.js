@@ -1,12 +1,11 @@
 
 (function() {
   var $media = $('#media');
-  var $sound = $('#sound');
   var $web = $('#web');
   var $games = $('#games');
   var $pics = $('#pics');
   var $vids = $('#vids');
-  var sectionElements = [$media, $sound, $web, $games, $pics, $vids];
+  var sectionElements = [$media, $web, $games, $pics, $vids];
 
   var currentBottomElementID = null;
   var currentActiveMenuButton = null;

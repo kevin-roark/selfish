@@ -25,50 +25,109 @@ var mixedMedia = new Section({
       link: 'http://www.newplanet.website/',
       title: 'New Snock Planet',
       date: 'July 2015',
-      text: "A persistent new world, boiling the essence, becoming",
+      text: "A persistent new world, boiling the essence, becoming. Chat and interact with others and me.",
       images: ['images/snockplanet.jpg']
     }),
     new Content({
       link: 'http://www.luminal.space/',
       title: 'Luminal.space',
       date: 'April 2015',
-      text: "An installation on Columbia's Low Steps; long-term project made with many people more talented than me. click 4 info",
+      text: "An installation on Columbia's Low Steps; long-term project made with many people more talented than me. Click for info.",
       images: ['images/luminal.jpg']
+    }),
+    new Content({
+      title: 'TONY TONEHOLE',
+      subtitle: 'Job Fair',
+      date: 'March 2015',
+      text: 'Simulation of a startup job fair / earn and prove your worth',
+      images: ['images/tony/jobfair.jpg']
+    }),
+    new Content({
+      link: 'http://heaven.mistershane.com',
+      title: 'Mister Shane',
+      subtitle: "Shane's Tweet Heaven",
+      date: 'February 2015',
+      text: "explore your twitter self with a museum made just 4 u",
+      images: ['images/shane/heaven.jpg']
+    }),
+    new Content({
+      title: 'TONY TONEHOLE',
+      subtitle: 'Ronald',
+      date: 'December 2014',
+      text: "He just can't seem to get outside of that computer trash can. Help him.",
+      images: ['images/tony/ronald.jpg']
     }),
     new Content({
       link: 'http://www.9857188538.website/',
       title: '(985) 718-8538',
       date: 'November 2014',
-      text: 'translation of words to phone',
+      text: 'Translation of phone words to phone sounds using DTMF tones',
       images: ['images/9857188538.jpg']
+    }),
+    new Content({
+      title: 'TONY TONEHOLE',
+      subtitle: 'strengh.js',
+      date: 'October 2014',
+      text: 'Tech Masculinity / Wrestling Dylan with Kinect puppets',
+      images: ['images/tony/strengthjs.jpg']
     }),
     new Content({
       link: 'http://benkogan.github.io/corpse/',
       title: 'Corpse',
       date: 'October 2014',
-      text: "Computer corpse for Postcrypt's Exquisite Corpse show. Made w/ Ben, Dylan, Henry. i did the foot.",
+      text: "Computer corpse for Postcrypt's Exquisite Corpse show. Made w/ Ben, Dylan, Henry. I did the foot.",
       images: ['images/corpse.jpg']
     }),
     new Content({
       link: 'http://wayne.porkf.at',
       title: 'wayne',
       date: 'October 2014',
-      text: 'a little little wayne model',
+      text: 'A wayne model that grows sicker and sadder with you',
       images: ['images/wayne.jpg']
+    }),
+    new Content({
+      link: 'http://www.mistershane.com',
+      title: 'Mister Shane',
+      subtitle: 'Content: Volume 1',
+      date: 'May 2014',
+      text: 'First collection from Mister Shane, experimental m&amp;v project from sean and kev man',
+      images: [
+        'images/shane/laborpain.jpg',
+        'images/shane/osteen.jpg',
+        'images/shane/pig.jpg',
+        'images/shane/birthday.jpg',
+        'images/shane/eat.jpg',
+      ]
     }),
     new Content({
       link: 'http://www.wideopenwitharms.com',
       title: 'Wide Open With Arms',
       date: 'June 2014',
-      text: 'creed music video',
+      text: 'Creed Music Video',
       images: ['images/wideopenwitharms.jpg']
+    }),
+    new Content({
+      link: 'http://sxecop.bandcamp.com',
+      title: 'Straightedge Cop',
+      subtitle: '2014 Demo',
+      date: 'May 2014',
+      text: 'Hardcore straightedge sermon music. First small demo lol its coming back one day',
+      images: ['images/sxecop.jpg']
+    }),
+    new Content({
+      link: 'http://www.millersfantasy.com/',
+      title: "Miller's Fantasy",
+      subtitle: "yellin",
+      date: 'April 2014',
+      text: "An iOS application. Send sound at miller's fantasy founders. We send it back",
+      images: ['images/miller/yellin.jpg']
     }),
     new Content({
       //link: 'http://www.specialmagicglasshole.com',
       unavailable: true,
       title: 'Special Magic Glass Hole',
       date: 'March 2014',
-      text: 'a hole through which all are seen',
+      text: 'A realtime hole through which all are seen and can Share',
       images: ['images/specialmagicglasshole.jpg']
     }),
     new Content({
@@ -76,16 +135,16 @@ var mixedMedia = new Section({
       unavailable: true,
       title: 'Special Magic Yelling Room',
       date: 'March 2014',
-      text: 'a room where everyone is heard at once',
+      text: 'A realtime Ear Bucket where everyone is Heard at once',
       images: ['images/specialmagicyellingroom.jpg'],
     }),
     new Content({
-      link: 'http://www.whereistimesquare.com/',
+      link: 'http://www.networkforu.com/',
       title: "Miller's Fantasy",
-      subtitle: "WHERE IS TIME SQUARE?",
-      date: 'February 2014',
-      text: 'Map findng application to map find time square',
-      images: ['images/miller/whereistimesquare.jpg']
+      subtitle: "Network Style",
+      date: 'March 2014',
+      text: 'A seminar on Best Business Practices and learning Trade Secrets',
+      images: ['images/miller/networkstyle.jpg']
     }),
     new Content({
       link: 'http://www.diningatcu.com/',
@@ -96,111 +155,33 @@ var mixedMedia = new Section({
       images: ['images/miller/diningatcu.jpg']
     }),
     new Content({
-      link: 'http://www.networkforu.com/',
+      link: 'http://www.whereistimesquare.com/',
       title: "Miller's Fantasy",
-      subtitle: "Network Style",
-      date: 'March 2014',
-      text: 'Learning trade secrets',
-      images: ['images/miller/networkstyle.jpg']
-    }),
-    new Content({
-      link: 'http://www.millersfantasy.com/',
-      title: "Miller's Fantasy",
-      subtitle: "yellin",
-      date: 'April 2014',
-      text: "iOS application. Send sound at miller's fantasy founders. We send it back",
-      images: ['images/miller/yellin.jpg']
+      subtitle: "WHERE IS TIME SQUARE?",
+      date: 'February 2014',
+      text: 'Map findng application to map find Time Square',
+      images: ['images/miller/whereistimesquare.jpg']
     }),
     new Content({
       link: 'https://raw.github.com/kevin-roark/watchpi/master/samples/square_600_pi.jpg',
       title: 'watch pi',
       date: 'January 2014',
-      text: 'turning irrational numbers into irrational images and videos',
+      text: 'Turning irrational numbers into irrational images and videos',
       images: ['images/watchpi.jpg']
     }),
     new Content({
       link: 'http://www.lollaurie.net',
       title: 'Laurie',
       date: 'December 2013',
-      text: 'christmas present for my special sister come on its cute',
-      images: [
-        'images/laurie.jpg'
-      ]
+      text: 'Christmas present for my special and great sister, that is all.',
+      images: ['images/laurie.jpg']
     }),
     new Content({
       link: 'http://pi.porkf.at',
       title: 'look at pi',
       date: 'July 2013',
-      text: 'turning irrational numbers into irrational colors',
+      text: 'Turning irrational numbers into irrational colors.',
       images: ['images/lookatpi.jpg']
-    })
-  ]
-});
-
-var music = new Section({
-  id: 'sound',
-  title: 'Sound',
-  contents: [
-    new Content({
-      link: 'http://www.mistershane.com',
-      title: 'Mister Shane',
-      subtitle: 'Content: Volume 1',
-      date: 'May 2014',
-      text: 'first collection from mister shane, experimental m&amp;v project from sean and kev man',
-      images: [
-        'images/shane/laborpain.jpg',
-        'images/shane/osteen.jpg',
-        'images/shane/pig.jpg',
-        'images/shane/birthday.jpg',
-        'images/shane/eat.jpg',
-      ]
-    }),
-    new Content({
-      link: 'http://heaven.mistershane.com',
-      title: 'Mister Shane',
-      subtitle: "Shane's Tweet Heaven",
-      date: 'February 2015',
-      text: "explore your twitter self with a museum made just 4 u",
-      images: [
-        'images/shane/heaven.jpg'
-      ]
-    }),
-    new Content({
-      title: 'TONY TONEHOLE',
-      subtitle: 'strengh.js',
-      date: 'October 2014',
-      text: 'tech masculinity / wrestling with kinect puppets',
-      images: [
-        'images/tony/strengthjs.jpg'
-      ]
-    }),
-    new Content({
-      title: 'TONY TONEHOLE',
-      subtitle: 'Ronald',
-      date: 'December 2014',
-      text: "can't seem to get outside of that computer trash can",
-      images: [
-        'images/tony/ronald.jpg'
-      ]
-    }),
-    new Content({
-      title: 'TONY TONEHOLE',
-      subtitle: 'Job Fair',
-      date: 'March 2015',
-      text: 'simulation of a startup job fair / earn and prove your worth',
-      images: [
-        'images/tony/jobfair.jpg'
-      ]
-    }),
-    new Content({
-      link: 'http://sxecop.bandcamp.com',
-      title: 'Straightedge Cop',
-      subtitle: '2014 Demo',
-      date: 'May 2015',
-      text: 'hardcore straightedge sermon music. first small demo lol its comin back',
-      images: [
-        'images/sxecop.jpg'
-      ]
     })
   ]
 });
@@ -336,7 +317,7 @@ var pics = new Section({
     new Content({
       link: 'http://kevinr.vsco.co',
       title: 'VSCO',
-      text: "these are phone pictures. I work here it's great hmu!",
+      text: "This is where I dump phone pictures. I work here also!",
       images: ['images/vsco.jpg']
     })
   ]
@@ -350,21 +331,17 @@ var vids = new Section({
       link: 'cruise',
       title: 'cruise remix',
       date: 'October 2013',
-      text: 'a remix of a florida georgia line song with video too. link leads u to a movie theater',
-      images: [
-        'images/cruise.jpg'
-      ]
+      text: 'A remix of a florida georgia line song with video too. Link leads u to a movie theater.',
+      images: ['images/cruise.jpg']
     }),
     new Content({
       link: 'https://www.youtube.com/watch?v=Bl8wKauzzdA',
       title: 'brain phlem',
       date: 'Fall 2011',
-      text: "i don't know why this is here lol I'm sorry its a legacy lifestyle",
-      images: [
-        'images/brainphlem.jpg'
-      ]
+      text: "This is old and dumb and I'm sorry for everything.",
+      images: ['images/brainphlem.jpg']
     })
   ]
 });
 
-module.exports.sections = [mixedMedia, music, computer, games, pics, vids];
+module.exports.sections = [mixedMedia, computer, games, pics, vids];
