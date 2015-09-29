@@ -52,16 +52,12 @@ body a {
 
 /* CONTENT */
 
-#content-container-wrapper {
-  text-align: center;
-  padding: 20px;
-}
-
 #content-container {
   margin: auto;
   text-align: left;
   min-width: 320px;
   max-width: 1440px;
+  padding: 20px;
 }
 
 .content-header {
@@ -84,32 +80,51 @@ body a {
 }
 
 .content-list {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
+  margin: 5px 0px;
 
-.content-group {
-  min-height: 400px;
-}
-
-.content-item-wrapper {
-  width: 33%;
-  display: inline-block;
-  max-height: 100%;
-  overflow: scroll;
-  position: relative;
-  margin-bottom: 20px;
+  /* lol a ton of super annoying flexbox prefixes */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+      display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center; /* space-around also good */
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+      align-items: flex-start;
 }
 
 .content-item {
-  display: inline-block;
+  display: block;
   padding: 15px;
-  margin: 5px;
-  color: inherit;
-  position: relative;
+  margin: 10px 12px 20px 12px;
+  overflow: scroll;
+  width: 320px;
 
+  color: inherit;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  transition: all 500ms;
 }
+  .content-item:hover {
+    background-color: #ff648a;
+  }
 
 .content-text {
   padding: 10px;
@@ -118,13 +133,11 @@ body a {
 }
 
   .content-item:hover .content-text {
-    background-color: #ff648a;
     color: #ffffff;
   }
 
 .content-title {
   margin-bottom: 12px;
-  margin-top: 8px;
   max-width: 75%;
 
   font-size: 24px;
@@ -140,8 +153,8 @@ body a {
 
 .content-date {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0px;
+  right: 0px;
 
   font-weight: bold;
   font-size: 12px;
@@ -158,8 +171,7 @@ body a {
   }
 
 .content-image-container {
-  margin-top: 18px;
-  margin-bottom: 36px;
+  margin: 10px 0px;
 }
 
   .content-image-container img {
@@ -290,12 +302,7 @@ body a {
 /* MEDIA BRAH */
 
 @media (max-width : 750px), (max-device-width: 750px) {
-  .content-group {
-    height: auto;
-    margin-bottom: 0px;
-  }
-
-  .content-item-wrapper {
+  .content-item {
     width: 100%;
   }
 }

@@ -13,7 +13,6 @@ function Content(config) {
 
 Content.prototype.render = function() {
   var view = '';
-  view += '<div class="content-item-wrapper">';
 
   if (this.link) {
     view += '<a target="_blank" class="content-item" href="' + this.link + '">';
@@ -54,13 +53,12 @@ Content.prototype.render = function() {
     view += '<div class="content-unavailable">TEMPORARILY MISSING</div>';
   }
 
+  // content-item
   if (this.link) {
     view += '</a>';
   } else {
     view += '</div>';
   }
-
-  view += '</div>'; // content-item-wrapper
 
   return view;
 };
@@ -83,18 +81,8 @@ Section.prototype.render = function() {
   view += '<div class="content-list">';
 
   for (var i = 0; i < this.contents.length; i++) {
-    if (i % 3 === 0) {
-      if (i !== 0) {
-        view += '</div>';
-      }
-
-      view += '<div class="content-group">';
-    }
-
     view += this.contents[i].render();
   }
-
-  view += '</div>'; // content-group
 
   view += '</div>'; // content-list
 
