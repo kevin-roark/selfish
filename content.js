@@ -170,6 +170,13 @@ var mixedMedia = new Section({
       images: ['images/watchpi.jpg']
     }),
     new Content({
+      link: 'cruise',
+      title: 'cruise remix',
+      date: 'October 2013',
+      text: 'A remix of a florida georgia line song with video too. Link leads u to a movie theater.',
+      images: ['images/cruise.jpg']
+    }),
+    new Content({
       link: 'http://www.lollaurie.net',
       title: 'Laurie',
       date: 'December 2013',
@@ -182,6 +189,13 @@ var mixedMedia = new Section({
       date: 'July 2013',
       text: 'Turning irrational numbers into irrational colors.',
       images: ['images/lookatpi.jpg']
+    }),
+    new Content({
+      link: 'https://www.youtube.com/watch?v=Bl8wKauzzdA',
+      title: 'brain phlem',
+      date: 'Fall 2011',
+      text: "This is old and bad, I'm sorry for everything about me.",
+      images: ['images/brainphlem.jpg']
     })
   ]
 });
@@ -190,6 +204,13 @@ var computer = new Section({
   id: 'web',
   title: 'Computer',
   contents: [
+    new Content({
+      link: 'https://github.com/kevin-roark/sheen',
+      title: 'Sheen',
+      date: 'August 2015',
+      text: 'A small extension of THREE.js with helpful starter pack for my own projects. You are welcome to use it. You also don\'t have to.',
+      images: ['images/sheen.jpg']
+    }),
     new Content({
       link: 'http://socket.computer/',
       title: 'Socket.IO Computer',
@@ -262,7 +283,7 @@ var games = new Section({
     new Content({
       title: 'Meatbeat',
       date: 'February 2013',
-      text: 'processing game for javascript where meatballs bounce in rhythm with sique beats',
+      text: 'processing game for javascript where meatballs bounce in rhythm with sique beats...beginnings',
       images: ['images/meatbeat.jpg']
     })
   ]
@@ -311,7 +332,7 @@ var pics = new Section({
     new Content({
       link: 'film/mouths/',
       title: 'Mouths',
-      text: 'eating from a cannon',
+      text: 'eat through the hole',
       images: ['images/mouths.jpg']
     }),
     new Content({
@@ -323,25 +344,4 @@ var pics = new Section({
   ]
 });
 
-var vids = new Section({
-  id: 'vids',
-  title: 'Vids',
-  contents: [
-    new Content({
-      link: 'cruise',
-      title: 'cruise remix',
-      date: 'October 2013',
-      text: 'A remix of a florida georgia line song with video too. Link leads u to a movie theater.',
-      images: ['images/cruise.jpg']
-    }),
-    new Content({
-      link: 'https://www.youtube.com/watch?v=Bl8wKauzzdA',
-      title: 'brain phlem',
-      date: 'Fall 2011',
-      text: "This is old and dumb and I'm sorry for everything.",
-      images: ['images/brainphlem.jpg']
-    })
-  ]
-});
-
-module.exports.sections = [mixedMedia, computer, games, pics, vids];
+module.exports.sections = [mixedMedia, computer, pics, games];

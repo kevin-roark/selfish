@@ -16,7 +16,7 @@ Content.prototype.render = function() {
   view += '<div class="content-item-wrapper">';
 
   if (this.link) {
-    view += '<a class="content-item" href="' + this.link + '">';
+    view += '<a target="_blank" class="content-item" href="' + this.link + '">';
   } else {
     view += '<div class="content-item">';
   }

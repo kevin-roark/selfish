@@ -4,8 +4,7 @@
   var $web = $('#web');
   var $games = $('#games');
   var $pics = $('#pics');
-  var $vids = $('#vids');
-  var sectionElements = [$media, $web, $games, $pics, $vids];
+  var sectionElements = [$media, $web, $games, $pics];
 
   var currentBottomElementID = null;
   var currentActiveMenuButton = null;
