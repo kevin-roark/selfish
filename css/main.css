@@ -280,6 +280,13 @@ body a {
     background-color: #9eedcd;
   }
 
+#contact-vsco {
+  background-color: #D4AF37;
+}
+  #contact-vsco:hover {
+    background-color: #C3B382;
+  }
+
 #contact-instagram {
   background-color: #68a0eb;
 }

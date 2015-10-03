@@ -334,12 +334,6 @@ var pics = new Section({
       title: 'Mouths',
       text: 'eat through the hole',
       images: ['images/mouths.jpg']
-    }),
-    new Content({
-      link: 'http://kevinr.vsco.co',
-      title: 'VSCO',
-      text: "This is where I dump phone pictures. I work here also!",
-      images: ['images/vsco.jpg']
     })
   ]
 });
