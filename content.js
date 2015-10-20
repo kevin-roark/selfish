@@ -4,7 +4,7 @@ var Content = cms.Content;
 var Section = cms.Section;
 
 var mixedMedia = new Section({
-  id: 'media',
+  id: 'multimedia',
   title: 'Multimedia',
   contents: [
     new Content({
@@ -14,13 +14,13 @@ var mixedMedia = new Section({
       text: "A collection of poems hailing the One Man One Tool One Purpose ideology. Please contact me to obtain a physical book.",
       images: ['images/andrakes.jpg']
     }),
-    // new Content({
-    //   link: 'http://lovepoem.porkf.at/',
-    //   title: '[Love Poem]',
-    //   date: 'August 2015',
-    //   text: "I made gold from a Richard Brautigan poem",
-    //   images: ['images/lovepoem.jpg']
-    // }),
+    new Content({
+      link: 'http://lovepoem.porkf.at/',
+      title: '[Love Poem]',
+      date: 'August 2015',
+      text: "I made gold from a Richard Brautigan poem",
+      images: ['images/lovepoem.jpg']
+    }),
     new Content({
       link: 'http://www.newplanet.website/',
       title: 'New Snock Planet',
@@ -201,7 +201,7 @@ var mixedMedia = new Section({
 });
 
 var computer = new Section({
-  id: 'web',
+  id: 'computer',
   title: 'Computer',
   contents: [
     new Content({

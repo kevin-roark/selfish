@@ -20,8 +20,8 @@ body a {
 
 .pre-content-section-box {
   padding: 15px;
-  max-width: 300px;
-  margin: 20px;
+  max-width: 500px;
+  margin: 15px 20px 25px 20px;
 
   font-size: 18px;
   line-height: 24px;
@@ -33,14 +33,6 @@ body a {
   margin-bottom: 0;
 }
 
-.pre-content-section-box a {
-  color: #3366FF;
-}
-
-  .pre-content-section-box a:hover, .pre-content-section-box a:focus {
-    color: #2447B2;
-  }
-
 #pre-content-section-about {
   color: rgba(255, 255, 255, 0.97);
   background-color: black;
@@ -48,8 +40,95 @@ body a {
 
 #shane {
   background-color: #ffeb6a;
-  color: #8331f0;
+  color: rgba(0, 0, 0, 0.87);
 }
+  #shane a {
+    color: #00baff;
+
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    transition: all 500ms;
+  }
+    #shane a:hover, #shane a:focus {
+      text-decoration: underline;
+      -webkit-transform: scale(1.01);
+      transform: scale(1.01);
+    }
+
+/* CONTACT */
+
+#contact-info {
+  margin-bottom: 10px;
+}
+
+#contact-header {
+  font-size: 20px;
+  font-style: italic;
+  display: inline-block;
+}
+
+.contact-item {
+  display: inline-block;
+  font-size: 14px;
+  padding: 7px;
+  margin-top: 10px;
+  margin-right: 8px;
+  color: rgba(0, 0, 0, 0.87);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  transition: all 500ms;
+}
+  a.contact-item {
+    color: rgba(0, 0, 0, 0.87);
+  }
+  .contact-item:hover {
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
+  }
+
+#contact-email {
+  background-color: #fdff6e;
+}
+  #contact-email:hover {
+    background-color: #fcfac1;
+  }
+
+#contact-twitter {
+  background-color: #69ebbd;
+}
+  #contact-twitter:hover {
+    background-color: #9eedcd;
+  }
+
+#contact-vsco {
+  background-color: #D4AF37;
+}
+  #contact-vsco:hover {
+    background-color: #C3B382;
+  }
+
+#contact-instagram {
+  background-color: #68a0eb;
+}
+  #contact-instagram:hover {
+    background-color: #9ebded;
+  }
+
+#contact-lastfm {
+  background-color: #e9583f;
+}
+  #contact-lastfm:hover {
+    background-color: #f0877e;
+  }
+
+#contact-github {
+  background-color: #cc60f7;
+}
+  #contact-github:hover {
+    background-color: #ce7ded;
+  }
 
 /* CONTENT */
 
@@ -72,8 +151,8 @@ body a {
 
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
-  #media-header {
-    margin-top: 20px;
+  #multimedia-header {
+    margin-top: 10px;
   }
 
 .content-section-buffer {
@@ -126,6 +205,9 @@ body a {
 }
   .content-item:hover {
     background-color: #ff648a;
+
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
   }
 
 .content-text {
@@ -212,6 +294,7 @@ body a {
   right: 10px;
   top: 5px;
   padding: 10px;
+  text-align: right;
 
   z-index: 1000;
 
@@ -238,74 +321,6 @@ body a {
 
   .content-menu-link.active-menu-button a:hover {
     color: #4296f7;
-  }
-
-/* CONTACT */
-
-#contact-info {
-  position: fixed;
-  bottom: 10px;
-  left: 20px;
-  padding: 5px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
-
-#contact-header {
-  font-size: 20px;
-  margin-bottom: 9px;
-  font-style: italic;
-  display: inline-block;
-}
-
-.contact-item {
-  display: inline-block;
-  font-size: 14px;
-  padding: 7px;
-  margin-right: 8px;
-  color: black;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-}
-
-#contact-email {
-  background-color: #fdff6e;
-}
-  #contact-email:hover {
-    background-color: #fcfac1;
-  }
-
-#contact-twitter {
-  background-color: #69ebbd;
-}
-  #contact-twitter:hover {
-    background-color: #9eedcd;
-  }
-
-#contact-vsco {
-  background-color: #D4AF37;
-}
-  #contact-vsco:hover {
-    background-color: #C3B382;
-  }
-
-#contact-instagram {
-  background-color: #68a0eb;
-}
-  #contact-instagram:hover {
-    background-color: #9ebded;
-  }
-
-#contact-lastfm {
-  background-color: #e9583f;
-}
-  #contact-lastfm:hover {
-    background-color: #f0877e;
-  }
-
-#contact-github {
-  background-color: #cc60f7;
-}
-  #contact-github:hover {
-    background-color: #ce7ded;
   }
 
 /* MEDIA BRAH */
