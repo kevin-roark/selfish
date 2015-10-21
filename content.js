@@ -15,7 +15,7 @@ var mixedMedia = new Section({
       images: ['images/andrakes.jpg']
     }),
     new Content({
-      link: 'http://lovepoem.porkf.at/',
+      /*link: 'http://lovepoem.porkf.at/',*/
       title: '[Love Poem]',
       date: 'August 2015',
       text: "I made gold from a Richard Brautigan poem",
