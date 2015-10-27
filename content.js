@@ -8,6 +8,13 @@ var mixedMedia = new Section({
   title: 'Multimedia',
   contents: [
     new Content({
+      link: 'http://www.davidzwirnher.com/',
+      title: 'David Zwirnher Online',
+      date: 'October 2015',
+      text: "Fall through the Hole. Easy and Quick and at Home. Rapid View all the Art ever exhibited at the David Zwirnher New York City Art Gallery. Special Bern friend, too.",
+      images: ['images/dzonline.jpg']
+    }),
+    new Content({
       link: 'http://www.onetool.website/',
       title: 'And Rakes To Spread The Haul',
       date: 'August 2015',
