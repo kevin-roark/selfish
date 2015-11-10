@@ -8,10 +8,17 @@ var mixedMedia = new Section({
   title: 'Multimedia',
   contents: [
     new Content({
+      link: 'http://www.rainonme.xyz/',
+      title: 'Rain in a Room',
+      date: 'November 2015',
+      text: "Let the Wet wash over You. Water falls all around you yet you never wet yourself, then witness a flood of others experiencing the Rain Room artwork. 20 minutes recommended. Special Bern friend, too.",
+      images: ['images/raininaroom.jpg']
+    }),
+    new Content({
       link: 'http://www.davidzwirnher.com/',
       title: 'David Zwirnher Online',
       date: 'October 2015',
-      text: "Fall through the Hole. Easy and Quick and at Home. Rapid View all the Art ever exhibited at the David Zwirnher New York City Art Gallery. Special Bern friend, too.",
+      text: "Fall through the Hole. Easy and Quick and at Home. Rapid View all the Art ever exhibited at the David Zwirnher New York City Art Gallery. 15 minutes recommended. Special Bern friend, too.",
       images: ['images/dzonline.jpg']
     }),
     new Content({
