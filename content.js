@@ -104,7 +104,7 @@ var mixedMedia = new Section({
       title: 'Mister Shane',
       subtitle: 'Content: Volume 1',
       date: 'May 2014',
-      text: 'First collection from Mister Shane, experimental m&amp;v project from sean and kev man',
+      text: 'First collection from Mister Shane, experimental audiovisual project from Sean and Kev',
       images: [
         'images/shane/laborpain.jpg',
         'images/shane/osteen.jpg',
@@ -112,6 +112,13 @@ var mixedMedia = new Section({
         'images/shane/birthday.jpg',
         'images/shane/eat.jpg',
       ]
+    }),
+    new Content({
+      link: 'http://journey.porkf.at',
+      title: '(Pork) Journey',
+      date: 'June 2014',
+      text: 'Play through the inevitable fate of a space-pig: The Journey To Pork',
+      images: ['images/porkjourney.jpg']
     }),
     new Content({
       link: 'http://www.wideopenwitharms.com',
@@ -127,6 +134,13 @@ var mixedMedia = new Section({
       date: 'May 2014',
       text: 'Hardcore straightedge sermon music. First small demo lol its coming back one day',
       images: ['images/sxecop.jpg']
+    }),
+    new Content({
+      link: 'http://www.lonelytrash.me',
+      title: 'Lonely Trash',
+      date: 'May 2014',
+      text: 'Small walking exploration, three minutes to win in this world of my trash, trash from me',
+      images: ['images/lonelytrash.jpg']
     }),
     new Content({
       link: 'http://www.millersfantasy.com/',
@@ -272,32 +286,11 @@ var computer = new Section({
       date: 'Fall 2013',
       text: "a stupid ass project for a stupid ass class uses foursquare api don't care",
       images: ['images/boarsquare.jpg']
-    })
-  ]
-});
-
-var games = new Section({
-  id: 'games',
-  title: 'Gamers',
-  contents: [
-    new Content({
-      link: 'http://journey.porkf.at',
-      title: '(Pork) Journey',
-      date: 'June 2014',
-      text: 'play as a pig and get eaten',
-      images: ['images/porkjourney.jpg']
-    }),
-    new Content({
-      link: 'http://www.lonelytrash.me',
-      title: 'Lonely Trash',
-      date: 'May 2014',
-      text: 'three minutes to win in this world i made the pictures and the music and all',
-      images: ['images/lonelytrash.jpg']
     }),
     new Content({
       title: 'Meatbeat',
       date: 'February 2013',
-      text: 'processing game for javascript where meatballs bounce in rhythm with sique beats...beginnings',
+      text: 'The first time I tried. A processing game of rhythm-bouncing meatballs. Hard to Not Remember The Past',
       images: ['images/meatbeat.jpg']
     })
   ]
@@ -352,4 +345,4 @@ var pics = new Section({
   ]
 });
 
-module.exports.sections = [mixedMedia, computer, pics, games];
+module.exports.sections = [mixedMedia, computer, pics];

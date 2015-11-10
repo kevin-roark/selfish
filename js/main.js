@@ -3,8 +3,7 @@
   var $media = $('#multimedia');
   var $computer = $('#computer');
   var $pics = $('#pics');
-  var $games = $('#games');
-  var sectionElements = [$media, $computer, $pics, $games];
+  var sectionElements = [$media, $computer, $pics];
 
   var currentBottomElementID = null;
   var currentActiveMenuButton = null;

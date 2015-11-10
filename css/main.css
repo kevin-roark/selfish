@@ -312,7 +312,7 @@ body a {
     color: black;
   }
     .content-menu-link a:hover {
-      color: #41dc6f;
+      color: #4296f7;
     }
 
   .content-menu-link.active-menu-button a {
@@ -320,10 +320,10 @@ body a {
   }
 
   .content-menu-link.active-menu-button a:hover {
-    color: #4296f7;
+    color: #41dc6f;
   }
 
-/* MEDIA BRAH */
+/* MEDIA QQQQQQQQQQ */
 
 @media (max-width : 750px), (max-device-width: 750px) {
   .content-item {
