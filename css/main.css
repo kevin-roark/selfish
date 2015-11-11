@@ -49,7 +49,7 @@ body a {
 }
   #shane a {
     display: inline-block;
-    color: #00baff;
+    color: #6e85fc;
   }
     #shane a:hover {
       text-decoration: underline;
@@ -64,52 +64,46 @@ body a {
 }
 
 #contact-header {
-  font-size: 20px;
+  font-size: 22px;
   font-style: italic;
-  display: inline-block;
+  margin-bottom: 5px;
 }
 
 .contact-item {
   display: inline-block;
-  font-size: 14px;
-  padding: 7px;
-  margin-top: 10px;
-  margin-right: 8px;
-  color: rgba(0, 0, 0, 0.87);
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  font-size: 20px;
+  margin: 4px;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.12);
 
   -webkit-transition: all 500ms;
   -moz-transition: all 500ms;
   transition: all 500ms;
 }
-  a.contact-item {
-    color: rgba(0, 0, 0, 0.87);
-  }
   .contact-item:hover {
-    -webkit-transform: skewX(10deg) skewY(4deg) rotateY(30deg) scale(1.4);
-    transform: skewX(10deg) skewY(4deg) rotateY(30deg) scale(1.4);
+    -webkit-transform: skewX(10deg) skewY(4deg) rotateY(30deg) scale(1.5);
+    transform: skewX(10deg) skewY(4deg) rotateY(30deg) scale(1.5);
   }
 
 #contact-email {
-  background-color: #fffc9e;
+  color: #3d3d3d;
 }
 #contact-twitter {
-  background-color: #9eedcd;
+  color: #5ceea8;
 }
 #contact-facebook {
-  background-color: #6e85fc;
+  color: #6e85fc;
 }
 #contact-vsco {
-  background-color: #ffd967;
+  color: #ffd967;
 }
 #contact-instagram {
-  background-color: #ffc78e;
+  color: #ffc78e;
 }
 #contact-lastfm {
-  background-color: #ff8f85;
+  color: #ff8f85;
 }
 #contact-github {
-  background-color: #b574ff;
+  color: #b574ff;
 }
 
 /* CONTENT */
