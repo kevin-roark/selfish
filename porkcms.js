@@ -92,11 +92,8 @@ Section.prototype.render = function() {
 };
 
 Section.prototype.menuLink = function() {
-  var view = '<div class="content-menu-link" id="' + this.id + '-menu-link">';
-
-  view += '<a href="#' + this.id + '">' + this.id + '</a>';
-
-  view += '</div>';
+  var view = '<a class="content-menu-link" id="' + this.id +
+             '-menu-link" href="#' + this.id + '">' + this.id + '</a>';
   return view;
 };
 

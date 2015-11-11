@@ -14,7 +14,12 @@ body {
 
 body a {
   text-decoration: none;
+
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  transition: all 500ms;
 }
+
 
 /* PRE-CONTENT */
 
@@ -43,16 +48,13 @@ body a {
   color: rgba(0, 0, 0, 0.87);
 }
   #shane a {
+    display: inline-block;
     color: #00baff;
-
-    -webkit-transition: all 500ms;
-    -moz-transition: all 500ms;
-    transition: all 500ms;
   }
-    #shane a:hover, #shane a:focus {
+    #shane a:hover {
       text-decoration: underline;
-      -webkit-transform: scale(1.01);
-      transform: scale(1.01);
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
     }
 
 /* CONTACT */
@@ -84,51 +86,31 @@ body a {
     color: rgba(0, 0, 0, 0.87);
   }
   .contact-item:hover {
-    -webkit-transform: scale(1.4);
-    transform: scale(1.4);
+    -webkit-transform: skewX(10deg) skewY(4deg) rotateY(30deg) scale(1.4);
+    transform: skewX(10deg) skewY(4deg) rotateY(30deg) scale(1.4);
   }
 
 #contact-email {
-  background-color: #fdff6e;
+  background-color: #fffc9e;
 }
-  #contact-email:hover {
-    background-color: #fcfac1;
-  }
-
 #contact-twitter {
-  background-color: #69ebbd;
+  background-color: #9eedcd;
 }
-  #contact-twitter:hover {
-    background-color: #9eedcd;
-  }
-
+#contact-facebook {
+  background-color: #6e85fc;
+}
 #contact-vsco {
-  background-color: #D4AF37;
+  background-color: #ffd967;
 }
-  #contact-vsco:hover {
-    background-color: #C3B382;
-  }
-
 #contact-instagram {
-  background-color: #68a0eb;
+  background-color: #ffc78e;
 }
-  #contact-instagram:hover {
-    background-color: #9ebded;
-  }
-
 #contact-lastfm {
-  background-color: #e9583f;
+  background-color: #ff8f85;
 }
-  #contact-lastfm:hover {
-    background-color: #f0877e;
-  }
-
 #contact-github {
-  background-color: #cc60f7;
+  background-color: #b574ff;
 }
-  #contact-github:hover {
-    background-color: #ce7ded;
-  }
 
 /* CONTENT */
 
@@ -150,7 +132,15 @@ body a {
   color: #101115;
 
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+  -webkit-transition: all 600ms;
+  -moz-transition: all 600ms;
+  transition: all 600ms;
 }
+  .content-header:hover {
+    -webkit-transform: skewX(10deg) skewY(4deg) rotateY(30deg);
+    transform: skewX(10deg) skewY(4deg) rotateY(30deg);
+  }
   #multimedia-header {
     margin-top: 10px;
   }
@@ -302,24 +292,23 @@ body a {
 }
 
 .content-menu-link {
+  display: block;
   margin: 10px 0px;
   font-family: monospace;
   font-weight: bold;
   font-size: 14px;
+  color: rgba(0, 0, 0, 0.87);
 }
+  .content-menu-link:hover {
+    color: #4296f7;
 
-  .content-menu-link a {
-    color: black;
+    -webkit-transform: skewX(10deg) skewY(4deg) rotateY(30deg);
+    transform: skewX(10deg) skewY(4deg) rotateY(30deg);
   }
-    .content-menu-link a:hover {
-      color: #4296f7;
-    }
-
-  .content-menu-link.active-menu-button a {
+  .content-menu-link.active-menu-button {
     color: #f54842;
   }
-
-  .content-menu-link.active-menu-button a:hover {
+  .content-menu-link.active-menu-button:hover {
     color: #41dc6f;
   }
 
