@@ -3,10 +3,17 @@ var cms = require('./porkcms');
 var Content = cms.Content;
 var Section = cms.Section;
 
-var mixedMedia = new Section({
+var multimedia = new Section({
   id: 'multimedia',
   title: 'Multimedia',
   contents: [
+    new Content({
+      link: 'https://vimeo.com/145527109',
+      title: '30 Pushups By Myself',
+      date: 'November 2015',
+      text: "9 hours of accumulated clerical mistakes. Work and Work and Work and this is what I get. 11 minute video.",
+      images: ['images/30pushupsbymyself.jpg']
+    }),
     new Content({
       link: 'http://www.rainonme.xyz/',
       title: 'Rain in a Room',
@@ -345,4 +352,4 @@ var pics = new Section({
   ]
 });
 
-module.exports.sections = [mixedMedia, computer, pics];
+module.exports.sections = [multimedia, computer, pics];
