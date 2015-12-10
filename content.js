@@ -8,6 +8,13 @@ var multimedia = new Section({
   title: 'Multimedia',
   contents: [
     new Content({
+      link: 'http://www.gods.website/',
+      title: "God's Website",
+      date: 'December 2015',
+      text: "Helps us track what we say about God, right now. Good or bad? Is it two-way? By Carmichael Payamps",
+      images: ['images/godswebsite.jpg']
+    }),
+    new Content({
       link: 'https://vimeo.com/145527109',
       title: '30 Pushups By Myself',
       date: 'November 2015',
@@ -18,14 +25,14 @@ var multimedia = new Section({
       link: 'http://www.rainonme.xyz/',
       title: 'Rain in a Room',
       date: 'November 2015',
-      text: "Let the Wet wash over You. Water falls all around you yet you never wet yourself, then witness a flood of others experiencing the Rain Room artwork. 20 minutes recommended. Special Bern friend, too.",
+      text: "Let the Wet wash over You. Water falls all around you yet you never wet yourself, then witness a flood of others experiencing the Rain Room artwork. 20 minutes recommended. By Carmichael Payamps",
       images: ['images/raininaroom.jpg']
     }),
     new Content({
       link: 'http://www.davidzwirnher.com/',
       title: 'David Zwirnher Online',
       date: 'October 2015',
-      text: "Fall through the Hole. Easy and Quick and at Home. Rapid View all the Art ever exhibited at the David Zwirnher New York City Art Gallery. 15 minutes recommended. Special Bern friend, too.",
+      text: "Fall through the Hole. Easy and Quick and at Home. Rapid View all the Art ever exhibited at the David Zwirnher New York City Art Gallery. 15 minutes recommended. By Carmichael Payamps",
       images: ['images/dzonline.jpg']
     }),
     new Content({
