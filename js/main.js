@@ -10,6 +10,8 @@
   scrolled();
   $(document).scroll(scrolled);
 
+  setHeaderImage();
+
   function scrolled() {
     var bottomElement = mostVisibleElement(sectionElements);
     if (!bottomElement) {
@@ -33,6 +35,12 @@
 
     currentActiveMenuButton = bottomElementMenuButton;
     currentBottomElementID = bottomElementID;
+  }
+
+  function setHeaderImage() {
+    var imageNumber = Math.floor(Math.random() * 5) + 1;
+    var filename = '/images/headers/' + imageNumber + '.jpg';
+    $('.header-image').attr('src', filename);
   }
 
 })();

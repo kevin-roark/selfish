@@ -57,6 +57,26 @@ body a {
       transform: scale(1.1);
     }
 
+.header-image {
+  display: block;
+  position: absolute; left: 580px; top: 15px; max-width: 420px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.floater-image {
+  display: block;
+  position: fixed; right: 15px; bottom: 15px; width: 60px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  transition: all 500ms;
+}
+  .floater-image:hover {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
 /* CONTACT */
 
 #contact-info {
