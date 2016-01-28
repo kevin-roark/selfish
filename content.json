@@ -4,6 +4,22 @@
     "title": "Multimedia",
     "contents": [
       {
+        "link": "https://dogshadow.bandcamp.com/",
+        "title": "Dog Shadow",
+        "subtitle": "Faithful Companion",
+        "date": "December 2015",
+        "text": "Blasted Dog Sounds",
+        "images": ["images/faithfulcompanion.jpg"]
+      },
+      {
+        "link": "http://second.mistershane.com/",
+        "title": "Mister Shane",
+        "subtitle": "Second Shane",
+        "date": "December 2015",
+        "text": "A complex and growing interactive world unified by consistent contemporary themes. Please explore...",
+        "images": ["images/secondshane.jpg"]
+      },
+      {
         "link": "http://www.gods.website/",
         "title": "God's Website",
         "date": "December 2015",
