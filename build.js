@@ -1,8 +1,20 @@
 #!/usr/bin/env node
 
 var fs = require('fs');
+var cms = require('./porkcms');
 
-var content = require('./content.js');
+var contentData = require('./content');
+var content = {sections: []};
+contentData.forEach(function(sectionData) {
+  var contents = [];
+  sectionData.contents.forEach(function(contentData) {
+    contents.push(new cms.Content(contentData));
+  });
+  sectionData.contents = contents;
+
+  content.sections.push(new cms.Section(sectionData));
+});
+
 var contentMenu = '<div id="content-menu">';
 var contentContainer = '<div id="content-container">';
 

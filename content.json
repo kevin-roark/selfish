@@ -1,0 +1,357 @@
+[
+  {
+    "id": "multimedia",
+    "title": "Multimedia",
+    "contents": [
+      {
+        "link": "http://www.gods.website/",
+        "title": "God's Website",
+        "date": "December 2015",
+        "text": "Helps us track what we say about God, right now. Good or bad? Is it two-way? By Carmichael Payamps",
+        "images": ["images/godswebsite.jpg"]
+      },
+      {
+        "link": "https://vimeo.com/145527109",
+        "title": "30 Pushups By Myself",
+        "date": "November 2015",
+        "text": "9 hours of accumulated clerical mistakes. Work and Work and Work and this is what I get. 11 minute video.",
+        "images": ["images/30pushupsbymyself.jpg"]
+      },
+      {
+        "link": "http://www.rainonme.xyz/",
+        "title": "Rain in a Room",
+        "date": "November 2015",
+        "text": "Let the Wet wash over You. Water falls all around you yet you never wet yourself, then witness a flood of others experiencing the Rain Room artwork. 20 minutes recommended. By Carmichael Payamps",
+        "images": ["images/raininaroom.jpg"]
+      },
+      {
+        "link": "http://www.davidzwirnher.com/",
+        "title": "David Zwirnher Online",
+        "date": "October 2015",
+        "text": "Fall through the Hole. Easy and Quick and at Home. Rapid View all the Art ever exhibited at the David Zwirnher New York City Art Gallery. 15 minutes recommended. By Carmichael Payamps",
+        "images": ["images/dzonline.jpg"]
+      },
+      {
+        "link": "http://www.onetool.website/",
+        "title": "And Rakes To Spread The Haul",
+        "date": "August 2015",
+        "text": "A collection of poems hailing the One Man One Tool One Purpose ideology. Please contact me to obtain a physical book.",
+        "images": ["images/andrakes.jpg"]
+      },
+      {
+        "link": "http://lovepoem.porkf.at/",
+        "title": "[Love Poem]",
+        "date": "August 2015",
+        "text": "I made gold from a Richard Brautigan poem",
+        "images": ["images/lovepoem.jpg"]
+      },
+      {
+        "link": "http://www.newplanet.website/",
+        "title": "New Snock Planet",
+        "date": "July 2015",
+        "text": "A persistent new world, boiling the essence, becoming. Chat and interact with others and me.",
+        "images": ["images/snockplanet.jpg"]
+      },
+      {
+        "link": "http://www.luminal.space/",
+        "title": "Luminal.space",
+        "date": "April 2015",
+        "text": "An installation on Columbia's Low Steps; long-term project made with many people more talented than me. Click for info.",
+        "images": ["images/luminal.jpg"]
+      },
+      {
+        "title": "TONY TONEHOLE",
+        "subtitle": "Job Fair",
+        "date": "March 2015",
+        "text": "Simulation of a startup job fair / earn and prove your worth",
+        "images": ["images/tony/jobfair.jpg"]
+      },
+      {
+        "link": "http://heaven.mistershane.com",
+        "title": "Mister Shane",
+        "subtitle": "Shane's Tweet Heaven",
+        "date": "February 2015",
+        "text": "Explore your twitter self with a museum made just for u",
+        "images": ["images/shane/heaven.jpg"]
+      },
+      {
+        "title": "TONY TONEHOLE",
+        "subtitle": "Ronald",
+        "date": "December 2014",
+        "text": "He just can't seem to get outside of that computer trash can. Help him.",
+        "images": ["images/tony/ronald.jpg"]
+      },
+      {
+        "link": "http://www.9857188538.website/",
+        "title": "(985) 718-8538",
+        "date": "November 2014",
+        "text": "Translation of phone words to phone sounds using DTMF tones",
+        "images": ["images/9857188538.jpg"]
+      },
+      {
+        "title": "TONY TONEHOLE",
+        "subtitle": "strengh.js",
+        "date": "October 2014",
+        "text": "Tech Masculinity / Wrestling Dylan with Kinect puppets",
+        "images": ["images/tony/strengthjs.jpg"]
+      },
+      {
+        "link": "http://benkogan.github.io/corpse/",
+        "title": "Corpse",
+        "date": "October 2014",
+        "text": "Computer corpse for Postcrypt's Exquisite Corpse show. Made w/ Ben, Dylan, Henry. I did the foot.",
+        "images": ["images/corpse.jpg"]
+      },
+      {
+        "link": "http://wayne.porkf.at",
+        "title": "wayne",
+        "date": "October 2014",
+        "text": "A wayne model that grows sicker and sadder with you",
+        "images": ["images/wayne.jpg"]
+      },
+      {
+        "link": "http://www.mistershane.com",
+        "title": "Mister Shane",
+        "subtitle": "Content: Volume 1",
+        "date": "May 2014",
+        "text": "First collection from Mister Shane, experimental audiovisual project from Sean and Kev",
+        "images": [
+          "images/shane/laborpain.jpg",
+          "images/shane/osteen.jpg",
+          "images/shane/pig.jpg",
+          "images/shane/birthday.jpg",
+          "images/shane/eat.jpg"
+        ]
+      },
+      {
+        "link": "http://journey.porkf.at",
+        "title": "(Pork) Journey",
+        "date": "June 2014",
+        "text": "Play through the inevitable fate of a space-pig: The Journey To Pork",
+        "images": ["images/porkjourney.jpg"]
+      },
+      {
+        "link": "http://www.wideopenwitharms.com",
+        "title": "Wide Open With Arms",
+        "date": "June 2014",
+        "text": "Creed Music Video",
+        "images": ["images/wideopenwitharms.jpg"]
+      },
+      {
+        "link": "http://sxecop.bandcamp.com",
+        "title": "Straightedge Cop",
+        "subtitle": "2014 Demo",
+        "date": "May 2014",
+        "text": "Hardcore straightedge sermon music. First small demo lol its coming back one day",
+        "images": ["images/sxecop.jpg"]
+      },
+      {
+        "link": "http://www.lonelytrash.me",
+        "title": "Lonely Trash",
+        "date": "May 2014",
+        "text": "Small walking exploration, three minutes to win in this world of my trash, trash from me",
+        "images": ["images/lonelytrash.jpg"]
+      },
+      {
+        "link": "http://www.millersfantasy.com/",
+        "title": "Miller's Fantasy",
+        "subtitle": "yellin",
+        "date": "April 2014",
+        "text": "An iOS application. Send sound at miller's fantasy founders. We send it back",
+        "images": ["images/miller/yellin.jpg"]
+      },
+      {
+        "link": "http://www.specialmagicglasshole.com",
+        "unavailable": true,
+        "title": "Special Magic Glass Hole",
+        "date": "March 2014",
+        "text": "A realtime hole through which all are seen and can Share",
+        "images": ["images/specialmagicglasshole.jpg"]
+      },
+      {
+        "link": "http://www.specialmagicyellingroom.com",
+        "unavailable": true,
+        "title": "Special Magic Yelling Room",
+        "date": "March 2014",
+        "text": "A realtime Ear Bucket where everyone is Heard at once",
+        "images": ["images/specialmagicyellingroom.jpg"]
+      },
+      {
+        "link": "http://www.networkforu.com/",
+        "title": "Miller's Fantasy",
+        "subtitle": "Network Style",
+        "date": "March 2014",
+        "text": "A seminar on Best Business Practices and learning Trade Secrets",
+        "images": ["images/miller/networkstyle.jpg"]
+      },
+      {
+        "link": "http://www.diningatcu.com/",
+        "title": "Miller's Fantasy",
+        "subtitle": "Dining@CU",
+        "date": "March 2014",
+        "text": "Dining menu application to discover dining hall menus",
+        "images": ["images/miller/diningatcu.jpg"]
+      },
+      {
+        "link": "http://www.whereistimesquare.com/",
+        "title": "Miller's Fantasy",
+        "subtitle": "WHERE IS TIME SQUARE?",
+        "date": "February 2014",
+        "text": "Map findng application to map find Time Square",
+        "images": ["images/miller/whereistimesquare.jpg"]
+      },
+      {
+        "link": "https://raw.github.com/kevin-roark/watchpi/master/samples/square_600_pi.jpg",
+        "title": "watch pi",
+        "date": "January 2014",
+        "text": "Turning irrational numbers into irrational images and videos",
+        "images": ["images/watchpi.jpg"]
+      },
+      {
+        "link": "cruise",
+        "title": "cruise remix",
+        "date": "October 2013",
+        "text": "A remix of a florida georgia line song with video too. Link leads u to a movie theater.",
+        "images": ["images/cruise.jpg"]
+      },
+      {
+        "link": "http://www.lollaurie.net",
+        "title": "Laurie",
+        "date": "December 2013",
+        "text": "Christmas present for my special and great sister, that is all.",
+        "images": ["images/laurie.jpg"]
+      },
+      {
+        "link": "http://pi.porkf.at",
+        "title": "look at pi",
+        "date": "July 2013",
+        "text": "Turning irrational numbers into irrational colors.",
+        "images": ["images/lookatpi.jpg"]
+      },
+      {
+        "link": "https://www.youtube.com/watch?v=Bl8wKauzzdA",
+        "title": "brain phlem",
+        "date": "Fall 2011",
+        "text": "This is old and bad, I'm sorry for everything about me.",
+        "images": ["images/brainphlem.jpg"]
+      }
+    ]
+  },
+
+  {
+    "id": "computer",
+    "title": "Computer",
+    "contents": [
+      {
+        "link": "https://github.com/kevin-roark/sheen",
+        "title": "Sheen",
+        "date": "August 2015",
+        "text": "A small extension of THREE.js with helpful starter pack for my own projects. You are welcome to use it. You also don't have to.",
+        "images": ["images/sheen.jpg"]
+      },
+      {
+        "link": "http://socket.computer/",
+        "title": "Socket.IO Computer",
+        "date": "May 2014",
+        "text": "a collaborative windows xp emulator that runs in browser",
+        "images": ["images/socketcomputer.jpg"]
+      },
+      {
+        "link": "http://kevin-roark.github.io/arthur",
+        "title": "arthur",
+        "date": "Spring 2014",
+        "text": "a programming language made for manipulating and combining various media styles. made it for a class with melody sahil henry dylan. check the examples.",
+        "images": ["images/arthur.jpg"]
+      },
+      {
+        "link": "http://wbar.org",
+        "title": "WBAR",
+        "date": "Fall 2012 - Spring 2015",
+        "text": "internet work at best freeform nyc college radio station a+",
+        "images": ["images/wbar.jpg"]
+      },
+      {
+        "link": "http://adhoc.fm",
+        "title": "AdHoc",
+        "text": "i do the internet work at this diy music publication a+",
+        "images": ["images/adhoc.jpg"]
+      },
+      {
+        "link": "http://www.hifisnockuptown.com",
+        "title": "Hi Fi Snock Uptown",
+        "date": "2014 - forever",
+        "text": "made the site for this great place and thing in nyc",
+        "images": ["images/hifisnockuptown.jpg"]
+      },
+      {
+        "link": "http://www.weplay.io",
+        "title": "Weplay",
+        "date": "March 2014",
+        "text": "a 100% javascript collaborative gameboy player w/ socket.io 1.0 (with mr guillermo &amp; Mr. Tony)",
+        "images": ["images/weplay.jpg"]
+      },
+      {
+        "link": "https://github.com/sahil-ansari/boar-square",
+        "title": "boar square",
+        "date": "Fall 2013",
+        "text": "a stupid ass project for a stupid ass class uses foursquare api don't care",
+        "images": ["images/boarsquare.jpg"]
+      },
+      {
+        "title": "Meatbeat",
+        "date": "February 2013",
+        "text": "The first time I tried. A processing game of rhythm-bouncing meatballs. Hard to Not Remember The Past",
+        "images": ["images/meatbeat.jpg"]
+      }
+    ]
+  },
+
+  {
+    "id": "pics",
+    "title": "Pics",
+    "contents": [
+      {
+        "link": "film/june15-1/",
+        "title": "June 2015 1",
+        "text": "cycles",
+        "images": ["images/june15-1.jpg"]
+      },
+      {
+        "link": "film/june15-2/",
+        "title": "June 2015 2",
+        "text": "you deserve extra",
+        "images": ["images/june15-2.jpg"]
+      },
+      {
+        "link": "film/june15-3/",
+        "title": "June 2015 3",
+        "text": "i live in a wet world",
+        "images": ["images/june15-3.jpg"]
+      },
+      {
+        "link": "film/june15-4/",
+        "title": "June 2015 4",
+        "text": "visions",
+        "images": ["images/june15-4.jpg"]
+      },
+      {
+        "link": "film/june15-5/",
+        "title": "June 2015 5",
+        "text": "Florida",
+        "images": ["images/june15-5.jpg"]
+      },
+      {
+        "link": "film/textures/",
+        "title": "Textures",
+        "text": "natural patterns",
+        "images": ["images/textures.jpg"]
+      },
+      {
+        "link": "film/mouths/",
+        "title": "Mouths",
+        "text": "eat through the hole",
+        "images": ["images/mouths.jpg"]
+      }
+    ]
+  }
+]
