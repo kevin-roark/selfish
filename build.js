@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 var fs = require('fs');
+var beautify = require('js-beautify');
 var cms = require('./porkcms');
 
 var contentData = require('./content');
@@ -35,6 +36,11 @@ fs.readFile('base.html', 'utf8', function(err, base) {
               base.substring(menuLocation + 1, containerLocation) +
               renderedContent +
               base.substring(containerLocation + 1);
+
+  index = beautify.html(index, {
+    indent_size: 2
+  });
+  index += '\n';
 
   fs.writeFile('index.html', index, 'utf8', function(err) {
     if (err) {
