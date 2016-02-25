@@ -43,18 +43,17 @@ body a {
   background-color: black;
 }
 
-#shane {
-  background-color: #ffeb6a;
+#collaborations {
+  background-color: #fcec85;
   color: rgba(0, 0, 0, 0.87);
 }
-  #shane a {
+  #collaborations a {
     display: inline-block;
-    color: #6e85fc;
+    color: rgb(102, 102, 255);
   }
-    #shane a:hover {
-      text-decoration: underline;
-      -webkit-transform: scale(1.1);
-      transform: scale(1.1);
+    #collaborations a:hover {
+      -webkit-transform: skewX(10deg) skewY(4deg) rotateY(30deg) scale(1.5);
+      transform: skewX(10deg) skewY(4deg) rotateY(30deg) scale(1.5);
     }
 
 .header-image {
