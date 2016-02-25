@@ -1,6 +1,6 @@
 
 (function() {
-  var $media = $('#multimedia');
+  var $media = $('#media');
   var $computer = $('#computer');
   var $pics = $('#pics');
   var sectionElements = [$media, $computer, $pics];
