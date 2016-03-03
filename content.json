@@ -4,6 +4,13 @@
     "title": "Media",
     "contents": [
       {
+        "link": "http://www.lifeislife.xyz",
+        "title": "Life in Review",
+        "date": "March 2016",
+        "text": "A stream of Facebook's emotive digital memories flashes before your physical eyes. By Carmichael Payamps",
+        "images": ["images/lifeinreview.jpg"]
+      },
+      {
         "link": "http://www.feud.online/",
         "title": "feud.online",
         "date": "February 2016",
