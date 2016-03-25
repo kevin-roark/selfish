@@ -4,6 +4,13 @@
     "title": "Media",
     "contents": [
       {
+        "link": "http://www.colors.black/",
+        "title": "Chromatic Reduction",
+        "date": "March 2016",
+        "text": "A rainbow spectrum of films where each frame is reduced to its most relevant color and rendered into an ABSTRACT COLORSTREAM. Recommended: Minions. By Carmichael Payamps",
+        "images": ["images/chromaticreduction.jpg"]
+      },
+      {
         "link": "http://www.fffight.site/",
         "title": "fffight.site",
         "date": "March 2016",
