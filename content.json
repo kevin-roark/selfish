@@ -4,6 +4,13 @@
     "title": "Media",
     "contents": [
       {
+        "link": "http://www.carmichael.xyz/multiplex/",
+        "title": "Multiplex Cinema",
+        "date": "March 2016",
+        "text": "Task-oriented parallel films rearranged from A1A2A3B1B2B3C1C2C3 to A1B1C1A2B2C2A3B3C3 for achievement pleasure. By Carmichael Payamps",
+        "images": ["images/cinemamultiplex.jpg"]
+      },
+      {
         "link": "http://www.colors.black/",
         "title": "Chromatic Reduction",
         "date": "March 2016",
