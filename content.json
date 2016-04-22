@@ -4,6 +4,13 @@
     "title": "Media",
     "contents": [
       {
+        "link": "http://www.colors.black/deduction/",
+        "title": "Chromatic Deduction",
+        "date": "April 2016",
+        "text": "A series of films that were broken down into frames and rearranged temporally with various color-sorting techniques into ColorTime. By Carmichael Payamps",
+        "images": ["images/chromaticdeduction.jpg"]
+      },
+      {
         "link": "http://www.carmichael.xyz/multiplex/",
         "title": "Multiplex Cinema",
         "date": "March 2016",
@@ -11,7 +18,7 @@
         "images": ["images/cinemamultiplex.jpg"]
       },
       {
-        "link": "http://www.colors.black/",
+        "link": "http://www.colors.black/reduction/",
         "title": "Chromatic Reduction",
         "date": "March 2016",
         "text": "A rainbow spectrum of films where each frame is reduced to its most relevant color and rendered into an ABSTRACT COLORSTREAM. Recommended: Minions. By Carmichael Payamps",
