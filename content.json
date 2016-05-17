@@ -4,6 +4,20 @@
     "title": "Media",
     "contents": [
       {
+        "link": "http://atsea.mistershane.com/",
+        "title": "Mister Shane: At Sea",
+        "date": "May 2016",
+        "text": "Mister Shane went on a Carnival cruise from New Orleans to Mexico. This is a multimedia collection made of music and photos from that journey. A journey at sea. Every sound is either a field recording from the ship or Shane's voice. He went on vacation. He got what he wanted. He found it.",
+        "images": ["images/atsea.jpg"]
+      },
+      {
+        "link": "https://pleasureseeker.bandcamp.com/album/love-songs/",
+        "title": "Pleasure Seeker: Love Songs",
+        "date": "May 2016",
+        "text": "A set of 32 of the Greatest Pop Love Songs Of All Time that I compiled and recorded renditions of with the aid of YouTube lyrics videos. An <em>icy-hot</em> profession of love and pain.",
+        "images": ["images/pleasureseekerlovesongs.jpg"]
+      },
+      {
         "link": "http://sol.carmichael.xyz/",
         "title": "Second Round Square Solo",
         "date": "May 2016",
@@ -71,7 +85,7 @@
         "title": "Dog Shadow",
         "subtitle": "Faithful Companion",
         "date": "December 2015",
-        "text": "Blasted Dog Sounds",
+        "text": "The first music release from Dog Shadow, featuring blasted electronic emotional dog sounds.",
         "images": ["images/faithfulcompanion.jpg"]
       },
       {
