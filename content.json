@@ -4,6 +4,20 @@
     "title": "Media",
     "contents": [
       {
+        "link": "https://dogshadow.bandcamp.com/album/dog-years",
+        "title": "Dog Years: Dog Years",
+        "date": "May 2016",
+        "text": "An album of Hard Emotional Tracks divided into three thematic acts: you can hear the pride!! Swelling! Big bunch of ideas in this one. Listen to \"Inside Man.\"",
+        "images": ["images/dogyears.jpg"]
+      },
+      {
+        "link": "http://www.hdsllc.website",
+        "title": "HDS VOL. 1",
+        "date": "May 2016",
+        "text": "A data-object media compilation on which a lot of my and friends' recent projects/work/data was released! You can purchase HDS Vol. 1 at www.hdsllc.website. Please do it and support friends and lovers everywhere!!",
+        "images": ["images/hdsvol1.jpg"]
+      },
+      {
         "link": "http://atsea.mistershane.com/",
         "title": "Mister Shane: At Sea",
         "date": "May 2016",
