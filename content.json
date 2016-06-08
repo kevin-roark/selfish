@@ -350,11 +350,38 @@
     "title": "Computer",
     "contents": [
       {
+        "link": "https://github.com/kevin-roark/frampton",
+        "title": "Frampton",
+        "date": "February 2015 - TODAY",
+        "text": "An in-the-works suite of isomorphic-ish algorithmic video composition tools.",
+        "images": []
+      },
+      {
+        "link": "https://github.com/kevin-roark/midi-timing",
+        "title": "midi-timing",
+        "date": "May 2015",
+        "text": "A small utility to convert MIDI files (.mid) to an easy-to-read JSON structure of offset times and durations",
+        "images": []
+      },
+      {
+        "link": "https://vsco.co",
+        "title": "VSCO",
+        "text": "I've worked a lot on the VSCO iOS app. It is fun and good for enjoying some photos On The Go (:.",
+        "images": []
+      },
+      {
         "link": "https://github.com/kevin-roark/sheen",
         "title": "Sheen",
         "date": "August 2015",
         "text": "A small extension of THREE.js with helpful starter pack for my own projects. You are welcome to use it. You also don't have to.",
         "images": ["images/sheen.jpg"]
+      },
+      {
+        "link": "https://github.com/kevin-roark/dummy-meat-timer",
+        "title": "dummy-meat-timer",
+        "date": "June 2014",
+        "text": "A simple HTML tool for timing a sequence of events. I used it to record ticks of when each word in the song \"With Arms Wide Open\" occurs :).",
+        "images": []
       },
       {
         "link": "http://socket.computer/",
