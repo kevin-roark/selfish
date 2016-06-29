@@ -1,7 +1,7 @@
 [
   {
     "id": "media",
-    "title": "Media (🎨)",
+    "title": "Media 🎨",
     "contents": [
       {
         "link": "http://www.f-a-c-e.press",
@@ -387,6 +387,13 @@
         "link": "https://vsco.co",
         "title": "VSCO",
         "text": "I've worked a lot on the VSCO iOS app. It is fun and good for enjoying some photos On The Go (:."
+      },
+      {
+        "link": "http://www.pith.space",
+        "title": "Pith Website",
+        "date": "May 2015",
+        "text": "I made a small lil site for chef-dorm-event-wonder Jonah Reider :).",
+        "images": ["images/pith.jpg"]
       },
       {
         "link": "https://github.com/kevin-roark/sheen",
