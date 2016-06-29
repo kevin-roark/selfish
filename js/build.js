@@ -5,9 +5,16 @@ module.exports=[
     "title": "Media 🎨",
     "contents": [
       {
+        "link": "https://drive.google.com/open?id=0B0zd60zvfI4DX0dXZ1k5UE96dFE",
+        "title": "Daddy's Essays #1",
+        "date": "June 2016",
+        "text": "A couple of essays about my childhood and my dad. All love for him now :)",
+        "images": ["images/daddy_essays_1.jpg"]
+      },
+      {
         "link": "http://www.f-a-c-e.press",
         "title": "FACE TIME",
-        "date": "May 2016",
+        "date": "June 2016",
         "text": "Facial Aspect Character Emulator with Timed Intuitive Muscular Expression. A realtime facial distortion suite. Make a better face and print it out and paste it on your skin.",
         "tags": ["Carmichael Payamps"],
         "images": ["images/facetime.jpg"]
@@ -243,7 +250,7 @@ module.exports=[
         "link": "http://www.mistershane.com",
         "title": "Content: Volume 1",
         "date": "May 2014",
-        "text": "First collection of tracks from Mister Shane, experimental audiovisual project from Sean and Kev",
+        "text": "First collection of tracks from Mister Shane, experimental audiovisual project from Sean and Kev.",
         "tags": ["Mister Shane"],
         "images": [
           "images/shane/laborpain.jpg",
@@ -801,6 +808,7 @@ Content.prototype.render = function() {
   view += '</div>'; // content-text
 
   if (this.images) {
+    view += '<div class="content-image-zone">';
     for (i = 0; i < this.images.length; i++) {
       view += '<div class="content-image-container">';
 
@@ -808,6 +816,7 @@ Content.prototype.render = function() {
 
       view += '</div>';
     }
+    view += '</div>';
   }
 
   if (this.unavailable) {

@@ -49,6 +49,7 @@ Content.prototype.render = function() {
   view += '</div>'; // content-text
 
   if (this.images) {
+    view += '<div class="content-image-zone">';
     for (i = 0; i < this.images.length; i++) {
       view += '<div class="content-image-container">';
 
@@ -56,6 +57,7 @@ Content.prototype.render = function() {
 
       view += '</div>';
     }
+    view += '</div>';
   }
 
   if (this.unavailable) {
