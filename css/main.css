@@ -89,8 +89,9 @@ body a {
 
 .content-date {
   position: absolute;
-  top: 0px; right: 0px;
-
+  right: -2px; top: -2px;
+  max-width: 50%;
+  text-align: right;
   font-size: 12px;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
@@ -212,7 +213,7 @@ body a {
 
 .section-list-header, .contact-header {
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-  font-size: 18px;
+  font-size: 19px;
   margin: 5px 0;
 }
   .section-list-header.active {
@@ -225,7 +226,7 @@ body a {
   list-style: none;
   font-family: "Times New Roman", "Georgia", serif;
   font-size: 15px;
-  line-height: 1.7;
+  line-height: 2;
 }
   .section-list li {
     -webkit-transition: all 500ms;
@@ -233,14 +234,14 @@ body a {
     transition: all 500ms;
     display: inline-block;
   }
-  .section-list li:hover, .section-list li:focus {
+  .section-list li.active {
     -webkit-transform: skewX(-15deg) skewY(0.5deg);
     transform: skewX(-15deg) skewY(0.5deg);
   }
     .section-list li a {
       color: inherit;
     }
-      .section-list li:hover a, .section-list li:focus a {
+      .section-list li.active a {
         text-decoration: underline;
         text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
       }
@@ -248,5 +249,31 @@ body a {
 /* MEDIA QQQQQQQQQQ */
 
 @media (max-width: 600px) {
+  .name {
+    font-size: 24px;
+  }
 
+  .welcome {
+    font-size: 13px;
+  }
+
+  .section-list {
+    line-height: 3;
+  }
+
+  .content-menu {
+    padding-bottom: 666px;
+  }
+
+  .content-title {
+    font-size: 16px;
+  }
+
+  .content-description {
+    font-size: 12px;
+  }
+
+  .content-date {
+    font-size: 8px;
+  }
 }

@@ -512,40 +512,52 @@ module.exports=[
     });
   });
 
-  var currentBottomElementID = null;
+  var $activeListElement = null;
+  var activeListTitle = null;
   var contentContainer = $('.content-container');
+  var $listItems = $('.section-list li');
+  var isTouch = isTouchScreen();
 
   resize();
   window.onresize = resize();
 
-  scrolled();
   $(document).scroll(scrolled);
 
   setHeaderImage();
 
-  $('.section-list li').mouseenter(function() {
-    var listTitle = this.textContent;
-    setActiveContent(listTitle);
+  $listItems.mouseenter(function() {
+    setActiveContent($(this));
   });
 
-  function setActiveContent(listTitle) {
-    var content = contentMap[listTitle];
-    var rendered = content.render();
-    contentContainer.html(rendered);
-  }
-
-  function scrolled() {
-    var bottomElement = mostVisibleElement([]);
-    if (!bottomElement) {
+  function setActiveContent($listElement) {
+    var listTitle = $listElement.text();
+    if (activeListTitle === listTitle) {
       return;
     }
 
-    var bottomElementID = bottomElement.attr('id');
-    if (bottomElementID !== currentBottomElementID) {
-
+    if ($activeListElement) {
+      $activeListElement.removeClass('active');
     }
 
-    currentBottomElementID = bottomElementID;
+    $listElement.addClass('active');
+
+    var content = contentMap[listTitle];
+    var rendered = content.render();
+    contentContainer.html(rendered);
+
+    $activeListElement = $listElement;
+    activeListTitle = listTitle;
+  }
+
+  function scrolled() {
+    if (!isTouch) return;
+
+    var topListElement = mostVisibleElement($listItems);
+    if (!topListElement) {
+      return;
+    }
+
+    setActiveContent(topListElement);
   }
 
   function resize() {
@@ -561,7 +573,7 @@ module.exports=[
 })();
 
 function mostVisibleElement(elements, bottomMost, buffer) {
-  if (!buffer) buffer = 100;
+  if (!buffer) buffer = -10;
 
   var topBound = $(window).scrollTop() + (bottomMost? -buffer : -buffer);
   var bottomBound = topBound + window.innerHeight;
@@ -570,9 +582,9 @@ function mostVisibleElement(elements, bottomMost, buffer) {
   var bestOffset = bottomMost? 0 : 10000000;
 
   for (var i = 0; i < elements.length; i++) {
-    var $element = elements[i];
+    var $element = $(elements[i]);
     var top = $element.offset().top;
-    var nextTop = (i === elements.length - 1 ? null : elements[i + 1].offset().top);
+    var nextTop = (i === elements.length - 1 ? null : $(elements[i + 1]).offset().top);
 
     if ( (top >= topBound) || (nextTop && nextTop > bottomBound) ) {
       if ( (bottomMost && top > bestOffset) || (!bottomMost && top < bestOffset) ) {
@@ -583,6 +595,12 @@ function mostVisibleElement(elements, bottomMost, buffer) {
   }
 
   return bestElement;
+}
+
+function isTouchScreen () {
+  return ('ontouchstart' in window) ||
+   (navigator.maxTouchPoints > 0) ||
+   (navigator.msMaxTouchPoints > 0);
 }
 
 },{"../content":1,"./porkcms":3}],3:[function(require,module,exports){
