@@ -8,14 +8,16 @@ module.exports=[
         "link": "http://www.f-a-c-e.press",
         "title": "FACE TIME",
         "date": "May 2016",
-        "text": "Facial Aspect Character Emulator with Timed Intuitive Muscular Expression. A realtime facial distortion suite. Make a better face and print it out and paste it on your skin. By Carmichael Payamps",
+        "text": "Facial Aspect Character Emulator with Timed Intuitive Muscular Expression. A realtime facial distortion suite. Make a better face and print it out and paste it on your skin.",
+        "tags": ["Carmichael Payamps"],
         "images": ["images/facetime.jpg"]
       },
       {
         "link": "https://dogshadow.bandcamp.com/album/dog-years",
-        "title": "Dog Shadow: Dog Years",
+        "title": "Dog Years",
         "date": "May 2016",
-        "text": "An album of Hard Emotional Tracks divided into three thematic acts: you can hear the pride!! Swelling! Big bunch of ideas in this one. Listen to \"Inside Man.\"",
+        "text": "An album of Hard Emotional Tracks divided into three thematic acts: you can hear the pride!! Swelling! Big bunch of ideas in this one. Listen to \"Inside Man\" and \"Cut It Off.\"",
+        "tags": ["Dog Shadow"],
         "images": ["images/dogyears.jpg"]
       },
       {
@@ -27,23 +29,26 @@ module.exports=[
       },
       {
         "link": "http://atsea.mistershane.com/",
-        "title": "Mister Shane: At Sea",
+        "title": "At Sea",
         "date": "May 2016",
         "text": "Mister Shane went on a Carnival cruise from New Orleans to Mexico. This is a multimedia collection made of music and photos from that journey. A journey at sea. Every sound is either a field recording from the ship or Shane's voice. He went on vacation. He got what he wanted. He found it.",
+        "tags": ["Mister Shane"],
         "images": ["images/atsea.jpg"]
       },
       {
         "link": "https://pleasureseeker.bandcamp.com/album/love-songs/",
-        "title": "Pleasure Seeker: Love Songs",
+        "title": "Love Songs",
         "date": "May 2016",
         "text": "A set of 32 of the Greatest Pop Love Songs Of All Time that I compiled and recorded renditions of with the aid of YouTube lyrics videos. An <em>icy-hot</em> profession of love and pain.",
+        "tags": ["Pleasure Seeker"],
         "images": ["images/pleasureseekerlovesongs.jpg"]
       },
       {
         "link": "http://sol.carmichael.xyz/",
         "title": "Second Round Square Solo",
         "date": "May 2016",
-        "text": "A video permutation series where 13 poems, ascending from in length from three to fifteen lines, are mechanically read in every possible permutated line-order. It's Very Cool&trade; By Carmichael Payamps",
+        "text": "A video permutation series where 13 poems, ascending from in length from three to fifteen lines, are mechanically read in every possible permutated line-order. It's Very Cool&trade;.",
+        "tags": ["Carmichael Payamps"],
         "images": ["images/secondroundsquaresolo.jpg"]
       },
       {
@@ -57,72 +62,80 @@ module.exports=[
         "link": "http://www.colors.black/deduction/",
         "title": "Chromatic Deduction",
         "date": "April 2016",
-        "text": "A series of films that were broken down into frames and rearranged temporally with various color-sorting techniques into ColorTime. By Carmichael Payamps",
+        "text": "A series of films that were broken down into frames and rearranged temporally with various color-sorting techniques into ColorTime.",
+        "tags": ["Carmichael Payamps"],
         "images": ["images/chromaticdeduction.jpg"]
       },
       {
         "link": "http://www.carmichael.xyz/multiplex/",
         "title": "Multiplex Cinema",
         "date": "March 2016",
-        "text": "Task-oriented parallel films rearranged from A1A2A3B1B2B3C1C2C3 to A1B1C1A2B2C2A3B3C3 for achievement pleasure. By Carmichael Payamps",
+        "text": "Task-oriented parallel films rearranged from A1A2A3B1B2B3C1C2C3 to A1B1C1A2B2C2A3B3C3 for achievement pleasure.",
+        "tags": ["Carmichael Payamps"],
         "images": ["images/cinemamultiplex.jpg"]
       },
       {
         "link": "http://www.colors.black/reduction/",
         "title": "Chromatic Reduction",
         "date": "March 2016",
-        "text": "A rainbow spectrum of films where each frame is reduced to its most relevant color and rendered into an ABSTRACT COLORSTREAM. Recommended: Minions. By Carmichael Payamps",
+        "text": "A rainbow spectrum of films where each frame is reduced to its most relevant color and rendered into an ABSTRACT COLORSTREAM. Recommended: Minions.",
+        "tags": ["Carmichael Payamps"],
         "images": ["images/chromaticreduction.jpg"]
       },
       {
         "link": "http://www.fffight.site/",
         "title": "fffight.site",
         "date": "March 2016",
-        "text": "Grotesque live-composed permutations of all possibilities hinted at by Bourne rebourne. The ultimate action movie site. By Carmichael Payamps",
+        "text": "Grotesque live-composed permutations of all possibilities hinted at by Bourne rebourne. The ultimate action movie site.",
+        "tags": ["Carmichael Payamps"],
         "images": ["images/fffightsite.jpg"]
       },
       {
         "link": "http://www.carmichael.xyz/rebourne",
         "title": "Bourne rebourne",
         "date": "March 2016",
-        "text": "Frankensteinien reconstruction of shots from the <em>Bourne</em> series that amplify what we wanted. By Carmichael Payamps",
+        "text": "Frankensteinien reconstruction of shots from the <em>Bourne</em> series that amplify what we wanted.",
+        "tags": ["Carmichael Payamps"],
         "images": ["images/bournerebourne.jpg"]
       },
       {
         "link": "http://www.lifeislife.xyz",
         "title": "Life in Review",
         "date": "March 2016",
-        "text": "A stream of Facebook's emotive digital memories flashes before your physical eyes. By Carmichael Payamps",
+        "text": "A stream of Facebook's emotive digital memories flashes before your physical eyes.",
+        "tags": ["Carmichael Payamps"],
         "images": ["images/lifeinreview.jpg"]
       },
       {
         "link": "http://www.feud.online/",
         "title": "feud.online",
         "date": "February 2016",
-        "text": "A series of endless films about family and spectacle featuring delicate clips from TV's Family Feud. By Carmichael Payamps",
+        "text": "A series of endless films about family and spectacle featuring delicate clips from TV's Family Feud.",
+        "tags": ["Carmichael Payamps"],
         "images": ["images/feudonline.jpg"]
       },
       {
         "link": "https://dogshadow.bandcamp.com/",
-        "title": "Dog Shadow",
-        "subtitle": "Faithful Companion",
+        "title": "Faithful Companion",
         "date": "December 2015",
         "text": "The first music release from Dog Shadow, featuring blasted electronic emotional dog sounds.",
+        "tags": ["Dog Shadow"],
         "images": ["images/faithfulcompanion.jpg"]
       },
       {
         "link": "http://second.mistershane.com/",
-        "title": "Mister Shane",
-        "subtitle": "Second Shane",
+        "title": "Second Shane",
         "date": "December 2015",
-        "text": "A complex and growing interactive world unified by consistent contemporary themes. Please explore...",
+        "text": "A complex and growing interactive world unified by consistent themes both contemporary + eternal. Please explore and see what you can find...",
+        "tags": ["Mister Shane"],
         "images": ["images/secondshane.jpg"]
       },
       {
         "link": "http://www.gods.website/",
         "title": "God's Website",
         "date": "December 2015",
-        "text": "Helps us track what we say about God, right now. Good or bad? Is it two-way? By Carmichael Payamps",
+        "text": "Helps us track what we say about God, right now. Good or bad? Is it two-way?",
+        "tags": ["Carmichael Payamps"],
         "images": ["images/godswebsite.jpg"]
       },
       {
@@ -136,14 +149,16 @@ module.exports=[
         "link": "http://www.rainonme.xyz/",
         "title": "Rain in a Room",
         "date": "November 2015",
-        "text": "Let the Wet wash over You. Water falls all around you yet you never wet yourself, then witness a flood of others experiencing the Rain Room artwork. 20 minutes recommended. By Carmichael Payamps",
+        "text": "Let the Wet wash over You. Water falls all around you yet you never wet yourself, then witness a flood of others experiencing the Rain Room artwork. 20 minutes recommended.",
+        "tags": ["Carmichael Payamps"],
         "images": ["images/raininaroom.jpg"]
       },
       {
         "link": "http://www.davidzwirnher.com/",
         "title": "David Zwirnher Online",
         "date": "October 2015",
-        "text": "Fall through the Hole. Easy and Quick and at Home. Rapid View all the Art ever exhibited at the David Zwirnher New York City Art Gallery. 15 minutes recommended. By Carmichael Payamps",
+        "text": "Fall through the Hole. Easy and Quick and at Home. Rapid View all the Art ever exhibited at the David Zwirnher New York City Art Gallery. 15 minutes recommended.",
+        "tags": ["Carmichael Payamps"],
         "images": ["images/dzonline.jpg"]
       },
       {
@@ -175,25 +190,25 @@ module.exports=[
         "images": ["images/luminal.jpg"]
       },
       {
-        "title": "TONY TONEHOLE",
-        "subtitle": "Job Fair",
+        "title": "Job Fair",
         "date": "March 2015",
         "text": "Simulation of a startup job fair / earn and prove your worth",
+        "tags": ["TONY TONEHOLE"],
         "images": ["images/tony/jobfair.jpg"]
       },
       {
         "link": "http://heaven.mistershane.com",
-        "title": "Mister Shane",
-        "subtitle": "Shane's Tweet Heaven",
+        "title": "Shane's Tweet Heaven",
         "date": "February 2015",
         "text": "Explore your twitter self with a museum made just for u",
+        "tags": ["Mister Shane"],
         "images": ["images/shane/heaven.jpg"]
       },
       {
-        "title": "TONY TONEHOLE",
-        "subtitle": "Ronald",
+        "title": "Ronald",
         "date": "December 2014",
         "text": "He just can't seem to get outside of that computer trash can. Help him.",
+        "tags": ["TONY TONEHOLE"],
         "images": ["images/tony/ronald.jpg"]
       },
       {
@@ -204,10 +219,10 @@ module.exports=[
         "images": ["images/9857188538.jpg"]
       },
       {
-        "title": "TONY TONEHOLE",
-        "subtitle": "strengh.js",
+        "title": "Strengh.js",
         "date": "October 2014",
         "text": "Tech Masculinity / Wrestling Dylan with Kinect puppets",
+        "tags": ["TONY TONEHOLE"],
         "images": ["images/tony/strengthjs.jpg"]
       },
       {
@@ -219,17 +234,17 @@ module.exports=[
       },
       {
         "link": "http://wayne.porkf.at",
-        "title": "wayne",
+        "title": "Wayne",
         "date": "October 2014",
         "text": "A wayne model that grows sicker and sadder with you",
         "images": ["images/wayne.jpg"]
       },
       {
         "link": "http://www.mistershane.com",
-        "title": "Mister Shane",
-        "subtitle": "Content: Volume 1",
+        "title": "Content: Volume 1",
         "date": "May 2014",
-        "text": "First collection from Mister Shane, experimental audiovisual project from Sean and Kev",
+        "text": "First collection of tracks from Mister Shane, experimental audiovisual project from Sean and Kev",
+        "tags": ["Mister Shane"],
         "images": [
           "images/shane/laborpain.jpg",
           "images/shane/osteen.jpg",
@@ -269,10 +284,10 @@ module.exports=[
       },
       {
         "link": "http://www.millersfantasy.com/",
-        "title": "Miller's Fantasy",
-        "subtitle": "yellin",
+        "title": "yellin",
         "date": "April 2014",
         "text": "An iOS application. Send sound at miller's fantasy founders. We send it back",
+        "tags": ["Miller's Fantasy"],
         "images": ["images/miller/yellin.jpg"]
       },
       {
@@ -293,38 +308,38 @@ module.exports=[
       },
       {
         "link": "http://www.networkforu.com/",
-        "title": "Miller's Fantasy",
-        "subtitle": "Network Style",
+        "title": "Network Style",
         "date": "March 2014",
         "text": "A seminar on Best Business Practices and learning Trade Secrets",
+        "tags": ["Miller's Fantasy"],
         "images": ["images/miller/networkstyle.jpg"]
       },
       {
         "link": "http://www.diningatcu.com/",
-        "title": "Miller's Fantasy",
-        "subtitle": "Dining@CU",
+        "title": "Dining@CU",
         "date": "March 2014",
         "text": "Dining menu application to discover dining hall menus",
+        "tags": ["Miller's Fantasy"],
         "images": ["images/miller/diningatcu.jpg"]
       },
       {
         "link": "http://www.whereistimesquare.com/",
-        "title": "Miller's Fantasy",
-        "subtitle": "WHERE IS TIME SQUARE?",
+        "title": "WHERE IS TIME SQUARE?",
         "date": "February 2014",
         "text": "Map findng application to map find Time Square",
+        "tags": ["Miller's Fantasy"],
         "images": ["images/miller/whereistimesquare.jpg"]
       },
       {
         "link": "https://raw.github.com/kevin-roark/watchpi/master/samples/square_600_pi.jpg",
-        "title": "watch pi",
+        "title": "Watch Pi",
         "date": "January 2014",
         "text": "Turning irrational numbers into irrational images and videos",
         "images": ["images/watchpi.jpg"]
       },
       {
         "link": "cruise",
-        "title": "cruise remix",
+        "title": "Cruise Remix",
         "date": "October 2013",
         "text": "A remix of a florida georgia line song with video too. Link leads u to a movie theater.",
         "images": ["images/cruise.jpg"]
@@ -338,16 +353,16 @@ module.exports=[
       },
       {
         "link": "http://pi.porkf.at",
-        "title": "look at pi",
+        "title": "Look at Pi",
         "date": "July 2013",
         "text": "Turning irrational numbers into irrational colors.",
         "images": ["images/lookatpi.jpg"]
       },
       {
         "link": "https://www.youtube.com/watch?v=Bl8wKauzzdA",
-        "title": "brain phlem",
+        "title": "Brain Phlem",
         "date": "Fall 2011",
-        "text": "This is old and bad, I'm sorry for everything about me.",
+        "text": "This is old and bad I'm sorry for everything about me.",
         "images": ["images/brainphlem.jpg"]
       }
     ]
@@ -433,16 +448,9 @@ module.exports=[
         "images": ["images/weplay.jpg"]
       },
       {
-        "link": "https://github.com/sahil-ansari/boar-square",
-        "title": "boar square",
-        "date": "Fall 2013",
-        "text": "a stupid ass project for a stupid ass class uses foursquare api don't care",
-        "images": ["images/boarsquare.jpg"]
-      },
-      {
         "title": "Meatbeat",
         "date": "February 2013",
-        "text": "The first time I tried. A processing game of rhythm-bouncing meatballs. Hard to Not Remember The Past",
+        "text": "The first time I tried something. A processing game of rhythm-bouncing meatballs. Hard to Not Remember The Past",
         "images": ["images/meatbeat.jpg"]
       }
     ]
@@ -608,7 +616,7 @@ function isTouchScreen () {
 function Content(config) {
   this.link = config.link;
   this.title = config.title;
-  this.subtitle = config.subtitle;
+  this.tags = config.tags;
   this.date = config.date;
   this.text = config.text;
   this.images = config.images;
@@ -619,6 +627,7 @@ function Content(config) {
 
 Content.prototype.render = function() {
   var view = '';
+  var i;
 
   if (this.link) {
     view += '<a target="_blank" class="content-item" href="' + this.link + '">';
@@ -627,13 +636,21 @@ Content.prototype.render = function() {
   }
 
   view += '<div class="content-text">';
-  view += '<div class="content-title">' + this.title;
 
-  if (this.subtitle) {
-    view += ': <span class="content-subtitle">' + this.subtitle + '</span>';
+  if (this.tags) {
+    var colors = ['#ff0000', '#00ff00', '#0000ff'];
+    view += '<div class="content-tags">';
+
+    for (i = 0; i < this.tags.length; i++) {
+      var c = colors[Math.floor(colors.length * Math.random())];
+      view += '<span style="color: ' + c + '">' + this.tags[i] + '</span>';
+    }
+
+    view += '</div>';
   }
 
-  view += '</div>'; // for title
+  var titleClass = 'content-title' + (this.tags ? ' with-tags' : '');
+  view += '<div class="' + titleClass + '">' + this.title + '</div>';
 
   if (this.date) {
     view += '<div class="content-date">' + this.date + '</div>';
@@ -646,7 +663,7 @@ Content.prototype.render = function() {
   view += '</div>'; // content-text
 
   if (this.images) {
-    for (var i = 0; i < this.images.length; i++) {
+    for (i = 0; i < this.images.length; i++) {
       view += '<div class="content-image-container">';
 
       view += '<img src="' + this.images[i] + '" alt=""></img>';

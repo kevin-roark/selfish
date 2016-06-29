@@ -75,16 +75,20 @@ body a {
   }
 
 .content-title {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   max-width: 75%;
   font-family: "Times New Roman", "Georgia", serif;
   font-size: 22px;
 }
+  .content-title.with-tags {
+    padding-top: 20px;
+  }
 
-.content-subtitle {
-  font-family: "Times New Roman", "Georgia", serif;
-  font-size: 17px;
-  font-style: italic;
+.content-tags {
+  position: absolute;
+  left: 0; top: -5px;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  font-size: 14px;
 }
 
 .content-date {
@@ -201,10 +205,10 @@ body a {
   #contact-email { color: #3d3d3d; }
   #contact-twitter { color: #5ca8ee; }
   #contact-facebook { color: #6e85fc; }
-  #contact-vsco { color: #ffd967; }
-  #contact-instagram { color: #ffc78e; }
-  #contact-lastfm { color: #ff8f85; }
-  #contact-github { color: #b574ff; }
+  #contact-vsco { color: #fec92c; }
+  #contact-instagram { color: #fca247; }
+  #contact-lastfm { color: #ff5f50; }
+  #contact-github { color: #a456fc; }
 
 .content-menu {
   margin: 22px;
@@ -267,6 +271,16 @@ body a {
 
   .content-title {
     font-size: 16px;
+    margin-bottom: 6px;
+  }
+    .content-title.with-tags {
+      padding-top: 2px;
+    }
+
+  .content-tags {
+    position: inherit; left: inherit; top: inherit;
+    font-size: 12px;
+    margin-bottom: 4px;
   }
 
   .content-description {
@@ -274,6 +288,10 @@ body a {
   }
 
   .content-date {
+    right: auto; left: auto;
+    position: relative;
+    text-align: left;
     font-size: 8px;
+    margin: 6px 0 4px 0;
   }
 }

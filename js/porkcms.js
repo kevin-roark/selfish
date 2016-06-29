@@ -2,7 +2,7 @@
 function Content(config) {
   this.link = config.link;
   this.title = config.title;
-  this.subtitle = config.subtitle;
+  this.tags = config.tags;
   this.date = config.date;
   this.text = config.text;
   this.images = config.images;
@@ -13,6 +13,7 @@ function Content(config) {
 
 Content.prototype.render = function() {
   var view = '';
+  var i;
 
   if (this.link) {
     view += '<a target="_blank" class="content-item" href="' + this.link + '">';
@@ -21,13 +22,21 @@ Content.prototype.render = function() {
   }
 
   view += '<div class="content-text">';
-  view += '<div class="content-title">' + this.title;
 
-  if (this.subtitle) {
-    view += ': <span class="content-subtitle">' + this.subtitle + '</span>';
+  if (this.tags) {
+    var colors = ['#ff0000', '#00ff00', '#0000ff'];
+    view += '<div class="content-tags">';
+
+    for (i = 0; i < this.tags.length; i++) {
+      var c = colors[Math.floor(colors.length * Math.random())];
+      view += '<span style="color: ' + c + '">' + this.tags[i] + '</span>';
+    }
+
+    view += '</div>';
   }
 
-  view += '</div>'; // for title
+  var titleClass = 'content-title' + (this.tags ? ' with-tags' : '');
+  view += '<div class="' + titleClass + '">' + this.title + '</div>';
 
   if (this.date) {
     view += '<div class="content-date">' + this.date + '</div>';
@@ -40,7 +49,7 @@ Content.prototype.render = function() {
   view += '</div>'; // content-text
 
   if (this.images) {
-    for (var i = 0; i < this.images.length; i++) {
+    for (i = 0; i < this.images.length; i++) {
       view += '<div class="content-image-container">';
 
       view += '<img src="' + this.images[i] + '" alt=""></img>';
