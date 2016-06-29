@@ -515,6 +515,7 @@
   {
     "id": "links",
     "title": "Links & friends 💖",
+    "isNotMine": true,
     "contents": [
       {
         "link": "http://joebucciero.website",

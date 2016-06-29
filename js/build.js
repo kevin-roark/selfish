@@ -516,6 +516,7 @@ module.exports=[
   {
     "id": "links",
     "title": "Links & friends 💖",
+    "isNotMine": true,
     "contents": [
       {
         "link": "http://joebucciero.website",
@@ -856,6 +857,7 @@ function Section(config) {
   this.id = config.id;
   this.title = config.title;
   this.contents = config.contents;
+  this.isNotMine = config.isNotMine;
 }
 
 Section.prototype.render = function() {
@@ -876,6 +878,34 @@ Section.prototype.render = function() {
   view += '</div>'; // section-list-wrapper
 
   return view;
+};
+
+Section.prototype.renderFullTicker = function(sections) {
+  var count = 0;
+  sections.forEach(function(section) {
+    if (!section.isNotMine) {
+      count += section.contents.length;
+    }
+  });
+
+  var view = '<span class="ticker-intro">' +
+    'I have ' + count + ' works. Is that enough? When will it be? ' +
+    '</span>';
+
+  view += '<span class="ticker-travel-intro">Fast Travel: </span>';
+  view += '<span class="ticker-travel-items">';
+
+  sections.forEach(function(section) {
+    view += section.renderTicker();
+  });
+
+  view += '</span>'; // ticker-travel-items
+
+  return view;
+};
+
+Section.prototype.renderTicker = function() {
+  return '<a href="#' + this.id + '">' + this.title + '</a>';
 };
 
 module.exports.Content = Content;

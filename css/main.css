@@ -37,6 +37,25 @@ body a {
     transform: rotate(180deg);
   }
 
+/* TICKER */
+.ticker {
+  position: fixed;
+  top: 0; right: 0;
+  font-size: 6px;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  color: #000;
+  z-index: 1;
+}
+  .ticker-travel-intro {
+    font-style: italic;
+  }
+  .ticker-travel-items a {
+    display: inline-block;
+    margin: 0 4px;
+    color: inherit;
+    text-decoration: underline;
+  }
+
 /* NEW ME */
 
 .content-section {
@@ -263,6 +282,13 @@ body a {
 /* MEDIA QQQQQQQQQQ */
 
 @media (max-width: 600px) {
+  .ticker-intro {
+    display: none;
+  }
+  .ticker-travel-items a {
+    margin: 0 2px;
+  }
+
   .left-section {
     width: 45%;
   }
