@@ -63,6 +63,25 @@ Content.prototype.render = function() {
   return view;
 };
 
+Content.prototype.listTitle = function() {
+  return this.title;
+};
+
+Content.prototype.renderedMenuLink = function() {
+  var view = '';
+  if (this.link) {
+    view += '<a target="_blank" href="' + this.link + '">';
+  }
+
+  view += this.listTitle();
+
+  if (this.link) {
+    view += '</a>';
+  }
+
+  return view;
+};
+
 function Section(config) {
   this.id = config.id;
   this.title = config.title;
@@ -72,28 +91,20 @@ function Section(config) {
 Section.prototype.render = function() {
   var view = '';
 
-  view += '<div class="content-section" id="' + this.id + '">';
+  view += '<div class="section-list-wrapper" id="' + this.id + '">';
 
-  view += '<div class="content-section-buffer"></div>';
+  view += '<div class="section-list-header" id="' + this.id + '-header">' + this.title + '</div>';
 
-  view += '<div class="content-header" id="' + this.id + '-header">' + this.title + '</div>';
-
-  view += '<div class="content-list">';
+  view += '<ul class="section-list">';
 
   for (var i = 0; i < this.contents.length; i++) {
-    view += this.contents[i].render();
+    view += '<li>' + this.contents[i].renderedMenuLink() + '</li></br>';
   }
 
-  view += '</div>'; // content-list
+  view += '</ul>'; // section-list
 
-  view += '</div>'; // content-section
+  view += '</div>'; // section-list-wrapper
 
-  return view;
-};
-
-Section.prototype.menuLink = function() {
-  var view = '<a class="content-menu-link" id="' + this.id +
-             '-menu-link" href="#' + this.id + '">' + this.id + '</a>';
   return view;
 };
 
