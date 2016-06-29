@@ -69,6 +69,17 @@
     $('.header-image').attr('src', filename);
   }
 
+  function listItemWithTitle(title) {
+    for (var i = 0; i < $listItems.length; i++) {
+      var item = $listItems[i];
+      if (item.textContent === title) {
+        return item;
+      }
+    }
+
+    return null;
+  }
+
 })();
 
 function mostVisibleElement(elements, bottomMost, buffer) {

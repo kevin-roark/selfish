@@ -5,7 +5,7 @@ function Content(config) {
   this.tags = config.tags;
   this.date = config.date;
   this.text = config.text;
-  this.images = config.images;
+  this.images = config.images || [];
   this.unavailable = config.unavailable;
 
   this.config = config;

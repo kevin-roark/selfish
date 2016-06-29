@@ -1,7 +1,7 @@
 [
   {
     "id": "media",
-    "title": "Media",
+    "title": "Media (🎨)",
     "contents": [
       {
         "link": "http://www.f-a-c-e.press",
@@ -369,27 +369,24 @@
 
   {
     "id": "computer",
-    "title": "Computer",
+    "title": "Computer $💻$",
     "contents": [
       {
         "link": "https://github.com/kevin-roark/frampton",
         "title": "Frampton",
         "date": "February 2015 - TODAY",
-        "text": "An in-the-works suite of isomorphic-ish algorithmic video composition tools.",
-        "images": []
+        "text": "An in-the-works suite of isomorphic-ish algorithmic video composition tools."
       },
       {
         "link": "https://github.com/kevin-roark/midi-timing",
         "title": "midi-timing",
         "date": "May 2015",
-        "text": "A small utility to convert MIDI files (.mid) to an easy-to-read JSON structure of offset times and durations",
-        "images": []
+        "text": "A small utility to convert MIDI files (.mid) to an easy-to-read JSON structure of offset times and durations"
       },
       {
         "link": "https://vsco.co",
         "title": "VSCO",
-        "text": "I've worked a lot on the VSCO iOS app. It is fun and good for enjoying some photos On The Go (:.",
-        "images": []
+        "text": "I've worked a lot on the VSCO iOS app. It is fun and good for enjoying some photos On The Go (:."
       },
       {
         "link": "https://github.com/kevin-roark/sheen",
@@ -402,8 +399,7 @@
         "link": "https://github.com/kevin-roark/dummy-meat-timer",
         "title": "dummy-meat-timer",
         "date": "June 2014",
-        "text": "A simple HTML tool for timing a sequence of events. I used it to record ticks of when each word in the song \"With Arms Wide Open\" occurs :).",
-        "images": []
+        "text": "A simple HTML tool for timing a sequence of events. I used it to record ticks of when each word in the song \"With Arms Wide Open\" occurs :)."
       },
       {
         "link": "http://socket.computer/",
@@ -454,10 +450,9 @@
       }
     ]
   },
-
   {
     "id": "pics",
-    "title": "Pics",
+    "title": "Pics 📷",
     "contents": [
       {
         "link": "film/june15-1/",
@@ -500,6 +495,131 @@
         "title": "Mouths",
         "text": "eat through the hole",
         "images": ["images/mouths.jpg"]
+      }
+    ]
+  },
+  {
+    "id": "links",
+    "title": "Links & friends 💖",
+    "contents": [
+      {
+        "link": "http://joebucciero.website",
+        "title": "Joe Bucciero",
+        "text": "A longtime friend who writes and knows about a lot and more and put me on his very own website.",
+        "images": ["images/links/joe.jpg"]
+      },
+      {
+        "link": "http://www.seandelanty.com/",
+        "title": "Sean Delanty",
+        "text": "Great Friend and Collaborator and Artist (the other half of Mister Shane and Dog Shadow).",
+        "images": ["images/links/sean.jpg"]
+      },
+      {
+        "link": "http://www.mermanhunters.com/",
+        "title": "Merman Hunters",
+        "text": "A swimwear line run by friend Sam and her sister. I have the pink trunks and would highly recommend them to others.",
+        "images": ["images/links/merman.jpg"]
+      },
+      {
+        "link": "https://vimeo.com/fasenfest",
+        "title": "Bernhard Fasenfest",
+        "text": "Smart + Cool Dog (part of Carmichael Payamps)",
+        "images": ["images/links/bernhard.jpg"]
+      },
+      {
+        "link": "https://soundcloud.com/div0rce",
+        "title": "DIVORCE",
+        "text": "Amazing electronic music from <3 friends Dylan and Natalie",
+        "images": ["images/links/divorce.jpg"]
+      },
+      {
+        "link": "http://sebastianchoe.com/",
+        "title": "Sebastian Choe",
+        "text": "Friend good at <i>all</i> the forms of media you'll love the site.",
+        "images": ["images/links/seb.jpg"]
+      },
+      {
+        "link": "http://candusen.net/",
+        "title": "Can Dusen",
+        "text": "Happy Friend Henry makes fun + cool web zones right here",
+        "images": ["images/links/henry.jpg"]
+      },
+      {
+        "link": "http://www.somanytumbleweeds.com/",
+        "title": "Claire Donato",
+        "text": "A very nice writer!! Claire and I are working on a video game be on the <i>lookout</i> for that soonish.",
+        "images": ["images/links/claire.jpg"]
+      },
+      {
+        "link": "http://augustadayton.com/",
+        "title": "Augusta Dayton",
+        "text": "I like Gus and she makes cool films.",
+        "images": ["images/links/augusta.jpg"]
+      },
+      {
+        "link": "http://kanghee.kim/",
+        "title": "KangHee Kim",
+        "text": "Sick photographer and neighbor and friend!!",
+        "images": ["images/links/kanghee.jpg"]
+      },
+      {
+        "link": "https://vimeo.com/jaaaaawn",
+        "title": "John West",
+        "text": "Spooky sick videos from ole dirty John"
+      },
+      {
+        "link": "https://orangemilkrecords.bandcamp.com/album/and-lo-artifice-did-beget-artifice",
+        "title": "Magic The Happening",
+        "text": "Amazing jazz fuck friends"
+      },
+      {
+        "link": "https://livinglarge.bandcamp.com/",
+        "title": "Living Large",
+        "text": "Emotional goof rock from friend Brian"
+      },
+      {
+        "link": "https://drugpizza.bandcamp.com",
+        "title": "Drug Pizza",
+        "text": "ROCK AND ROLL BAND featuring all friends :)"
+      },
+      {
+        "link": "http://www.francescocksedge.com/",
+        "title": "Frances Cocksedge",
+        "text": "Love Frances' paintings..."
+      },
+      {
+        "link": "http://www.shriyasamavai.com/",
+        "title": "Shriya Samavai",
+        "text": "Photo Friend"
+      },
+      {
+        "link": "http://katieg.co/",
+        "title": "Katie Giritlian",
+        "text": "Desert Person Artist Friend"
+      },
+      {
+        "link": "http://thedancepit.tumblr.com/",
+        "title": "The Dance Pit",
+        "text": "Mixes and Zines and More from friend Anuradha"
+      },
+      {
+        "link": "http://slamskillet.com/",
+        "title": "Slam Skillet",
+        "text": "Clothing and Music from ole friend Sam S."
+      },
+      {
+        "link": "http://www.starwipe.com/",
+        "title": "StarWipe",
+        "text": "ALL HAIL THE NEW FLESH / A site I once loved"
+      },
+      {
+        "link": "http://www.clickhole.com/blogpost/i-was-never-able-accept-my-sons-autism-until-i-mon-3532",
+        "title": "I was Never Able To Accept...",
+        "text": "Sick article that I think gets to to the nugget of what I'm thinking about."
+      },
+      {
+        "title": "???",
+        "text": "I want more links. Would you like to submit a link? Got a site? Please email me: kevin.e.roark@gmail.com. I don't wish to exclude *anyone* from this link section, I might just not know your site got it??"
       }
     ]
   }
