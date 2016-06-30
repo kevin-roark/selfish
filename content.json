@@ -4,6 +4,14 @@
     "title": "Media 🎨",
     "contents": [
       {
+        "link": "http://johnny.kevinroark.com",
+        "title": "Johnny Football",
+        "date": "June 2016",
+        "text": "I hope Johnny goes to jail <i>music</i>. I hope my son goes to jail <i>music</i>. I hope my dad goes to jail <i>music</i>.",
+        "tags": ["Pleasure Seeker"],
+        "images": ["images/johnnyfootball.jpg"]
+      },
+      {
         "link": "https://drive.google.com/open?id=0B0zd60zvfI4DX0dXZ1k5UE96dFE",
         "title": "Daddy's Essays #1",
         "date": "June 2016",
