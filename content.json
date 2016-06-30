@@ -27,6 +27,14 @@
         "images": ["images/facetime.jpg"]
       },
       {
+        "link": "https://www.youtube.com/watch?v=VGzTPTxfQ1U",
+        "title": "Wasted Years",
+        "date": "May 2016",
+        "text": "Video for the Dog Shadow track. Footage from an urban domestic dog park in downtown New York City.",
+        "tags": ["Dog Shadow"],
+        "images": ["images/wastedyears.jpg"]
+      },
+      {
         "link": "https://dogshadow.bandcamp.com/album/dog-years",
         "title": "Dog Years",
         "date": "May 2016",
