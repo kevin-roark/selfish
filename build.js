@@ -2,7 +2,7 @@
 
 var fs = require('fs');
 var beautify = require('js-beautify');
-var cms = require('./porkcms');
+var cms = require('./js/porkcms');
 
 var contentData = require('./content');
 var content = {sections: []};
@@ -16,26 +16,27 @@ contentData.forEach(function(sectionData) {
   content.sections.push(new cms.Section(sectionData));
 });
 
-var contentMenu = '<div id="content-menu">';
-var contentContainer = '<div id="content-container">';
-
+var ticker = '<div class="ticker">';
+var contentMenu = '<div class="content-menu">';
+var contentContainer = '<div class="content-container">';
 
 fs.readFile('base.html', 'utf8', function(err, base) {
+  var tickerLocation = base.indexOf(ticker) + ticker.length;
   var menuLocation = base.indexOf(contentMenu) + contentMenu.length;
   var containerLocation = base.indexOf(contentContainer) + contentContainer.length;
 
+  var renderedTicker = content.sections[0].renderFullTicker(content.sections);
+
   var renderedMenu = '\n';
-  var renderedContent = '\n';
   content.sections.forEach(function(section) {
-    renderedContent += section.render() + '\n';
-    renderedMenu += section.menuLink() + '\n';
+    renderedMenu += section.render() + '\n';
   });
 
-  var index = base.substring(0, menuLocation) +
-              renderedMenu +
-              base.substring(menuLocation + 1, containerLocation) +
-              renderedContent +
-              base.substring(containerLocation + 1);
+  var index = base.substring(0, tickerLocation) +
+    renderedTicker +
+    base.substring(tickerLocation + 1, menuLocation) +
+    renderedMenu +
+    base.substring(menuLocation + 1);
 
   index = beautify.html(index, {
     indent_size: 2
