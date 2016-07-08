@@ -4,6 +4,14 @@
     "title": "Media 🎨",
     "contents": [
       {
+        "link": "http://max.carmichael.xyz/",
+        "title": "MAX AND ROLL",
+        "date": "July 2016",
+        "text": "Carmichael's first album. Not just an album, a Visual Software Classic Rock MIDI Album incorporating videos of friend Max playing the piano. In 3D and 2D!!! All D.",
+        "tags": ["Carmichael Payamps"],
+        "images": ["images/maxandroll.jpg"]
+      },
+      {
         "link": "http://johnny.kevinroark.com",
         "title": "Johnny Football",
         "date": "June 2016",
