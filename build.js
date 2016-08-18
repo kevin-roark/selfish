@@ -26,17 +26,16 @@ fs.readFile('base.html', 'utf8', function(err, base) {
   var containerLocation = base.indexOf(contentContainer) + contentContainer.length;
 
   var renderedTicker = content.sections[0].renderFullTicker(content.sections);
-
-  var renderedMenu = '\n';
-  content.sections.forEach(function(section) {
-    renderedMenu += section.render() + '\n';
-  });
+  var renderedMenu = '\n' + content.sections.map((s, index) => s.render({ index })).join('\n');
+  var renderedFirstContent = content.sections[0].contents[0].render();
 
   var index = base.substring(0, tickerLocation) +
     renderedTicker +
     base.substring(tickerLocation + 1, menuLocation) +
     renderedMenu +
-    base.substring(menuLocation + 1);
+    base.substring(menuLocation + 1, containerLocation) +
+    renderedFirstContent +
+    base.substring(containerLocation + 1);
 
   index = beautify.html(index, {
     indent_size: 2

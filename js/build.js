@@ -689,10 +689,10 @@ module.exports=[
     });
   });
 
-  var $activeListElement = null;
-  var activeListTitle = null;
   var contentContainer = $('.content-container');
   var $listItems = $('.section-list li');
+  var $activeListElement = $($listItems.get(0));
+  var activeListTitle = $activeListElement.text();
   var isTouch = isTouchScreen();
 
   resize();
@@ -896,7 +896,7 @@ function Section(config) {
   this.isNotMine = config.isNotMine;
 }
 
-Section.prototype.render = function() {
+Section.prototype.render = function({ index } = {}) {
   var view = '';
 
   view += '<div class="section-list-wrapper" id="' + this.id + '">';
@@ -906,7 +906,9 @@ Section.prototype.render = function() {
   view += '<ul class="section-list">';
 
   for (var i = 0; i < this.contents.length; i++) {
-    view += '<li>' + this.contents[i].renderedMenuLink() + '</li></br>';
+    let active = index === 0 && i === 0;
+    view += active ? '<li class="active">' : '<li>';
+    view += this.contents[i].renderedMenuLink() + '</li></br>';
   }
 
   view += '</ul>'; // section-list

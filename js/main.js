@@ -11,10 +11,10 @@
     });
   });
 
-  var $activeListElement = null;
-  var activeListTitle = null;
   var contentContainer = $('.content-container');
   var $listItems = $('.section-list li');
+  var $activeListElement = $($listItems.get(0));
+  var activeListTitle = $activeListElement.text();
   var isTouch = isTouchScreen();
 
   resize();
