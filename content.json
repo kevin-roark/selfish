@@ -4,6 +4,14 @@
     "title": "Media 🎨",
     "contents": [
       {
+        "link": "https://kevinroark.itch.io/the-rock-and-the-rock",
+        "title": "The Rock and The Rock",
+        "date": "August 2016",
+        "text": "A small baby game / film about the inevitable and natural attraction of two rocks to one another. It is set in the desert. Rock on.",
+        "tags": ["Money"],
+        "images": ["images/therockandtherock.jpg"]
+      },
+      {
         "link": "http://max.carmichael.xyz/",
         "title": "MAX AND ROLL",
         "date": "July 2016",
@@ -55,6 +63,7 @@
         "title": "HDS VOL. 1",
         "date": "May 2016",
         "text": "A data-object media compilation on which a lot of my and friends' recent projects/work/data was released! You can purchase HDS Vol. 1 at www.hdsllc.website. Please do it and support friends and lovers everywhere!!",
+        "tags": ["Money"],
         "images": ["images/hdsvol1.jpg"]
       },
       {
@@ -196,6 +205,7 @@
         "title": "And Rakes To Spread The Haul",
         "date": "August 2015",
         "text": "A collection of poems hailing the One Man One Tool One Purpose ideology. Please contact me to obtain a physical book.",
+        "tags": ["Money"],
         "images": ["images/andrakes.jpg"]
       },
       {

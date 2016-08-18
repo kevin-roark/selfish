@@ -5,6 +5,14 @@ module.exports=[
     "title": "Media 🎨",
     "contents": [
       {
+        "link": "https://kevinroark.itch.io/the-rock-and-the-rock",
+        "title": "The Rock and The Rock",
+        "date": "August 2016",
+        "text": "A small baby game / film about the inevitable and natural attraction of two rocks to one another. It is set in the desert. Rock on.",
+        "tags": ["Money"],
+        "images": ["images/therockandtherock.jpg"]
+      },
+      {
         "link": "http://max.carmichael.xyz/",
         "title": "MAX AND ROLL",
         "date": "July 2016",
@@ -56,6 +64,7 @@ module.exports=[
         "title": "HDS VOL. 1",
         "date": "May 2016",
         "text": "A data-object media compilation on which a lot of my and friends' recent projects/work/data was released! You can purchase HDS Vol. 1 at www.hdsllc.website. Please do it and support friends and lovers everywhere!!",
+        "tags": ["Money"],
         "images": ["images/hdsvol1.jpg"]
       },
       {
@@ -197,6 +206,7 @@ module.exports=[
         "title": "And Rakes To Spread The Haul",
         "date": "August 2015",
         "text": "A collection of poems hailing the One Man One Tool One Purpose ideology. Please contact me to obtain a physical book.",
+        "tags": ["Money"],
         "images": ["images/andrakes.jpg"]
       },
       {
@@ -809,11 +819,13 @@ Content.prototype.render = function() {
 
   if (this.tags) {
     var colors = ['#ff0000', '#00ff00', '#0000ff'];
+    var moneyColor = 'rgb(10, 147, 69)';
     view += '<div class="content-tags">';
 
     for (i = 0; i < this.tags.length; i++) {
-      var c = colors[Math.floor(colors.length * Math.random())];
-      view += '<span style="color: ' + c + '">' + this.tags[i] + '</span>';
+      var t = this.tags[i];
+      var c = t === 'Money' ? moneyColor : colors[Math.floor(colors.length * Math.random())];
+      view += '<span style="color: ' + c + '">' + t + '</span>';
     }
 
     view += '</div>';

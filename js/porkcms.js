@@ -25,11 +25,13 @@ Content.prototype.render = function() {
 
   if (this.tags) {
     var colors = ['#ff0000', '#00ff00', '#0000ff'];
+    var moneyColor = 'rgb(10, 147, 69)';
     view += '<div class="content-tags">';
 
     for (i = 0; i < this.tags.length; i++) {
-      var c = colors[Math.floor(colors.length * Math.random())];
-      view += '<span style="color: ' + c + '">' + this.tags[i] + '</span>';
+      var t = this.tags[i];
+      var c = t === 'Money' ? moneyColor : colors[Math.floor(colors.length * Math.random())];
+      view += '<span style="color: ' + c + '">' + t + '</span>';
     }
 
     view += '</div>';
