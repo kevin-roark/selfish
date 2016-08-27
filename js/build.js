@@ -36,6 +36,14 @@ module.exports=[
         "images": ["images/daddy_essays_1.jpg"]
       },
       {
+        "link": "https://www.youtube.com/watch?v=gruumgDfOEs",
+        "title": "My Bad Video",
+        "date": "June 2016",
+        "text": "Video for the Dog Shadow track. I took off my shirt again.",
+        "tags": ["Dog Shadow"],
+        "images": ["images/mybad.jpg"]
+      },
+      {
         "link": "http://www.f-a-c-e.press",
         "title": "FACE TIME",
         "date": "June 2016",
@@ -45,7 +53,7 @@ module.exports=[
       },
       {
         "link": "https://www.youtube.com/watch?v=VGzTPTxfQ1U",
-        "title": "Wasted Years",
+        "title": "Wasted Years Video",
         "date": "May 2016",
         "text": "Video for the Dog Shadow track. Footage from an urban domestic dog park in downtown New York City.",
         "tags": ["Dog Shadow"],
