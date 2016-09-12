@@ -21,6 +21,13 @@ module.exports=[
         "images": ["images/therockandtherock.jpg"]
       },
       {
+        "link": "https://drive.google.com/drive/u/0/folders/0B0zd60zvfI4DSV9YSHF2OFNZVzQ",
+        "title": "Daddy's Essays #2",
+        "date": "July 2016",
+        "text": "An extension of the series of essays that began with \"Daddy's Essays #1.\"",
+        "images": ["images/daddy_essays_2.jpg"]
+      },
+      {
         "link": "http://max.carmichael.xyz/",
         "title": "MAX AND ROLL",
         "date": "July 2016",
