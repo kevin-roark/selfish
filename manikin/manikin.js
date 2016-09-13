@@ -27,4 +27,42 @@
     { image: '17', text: 'Yellow Minivan Taxi Driving to a Man with Strange Light and Strong body and Deformed Genitals and the Hands' },
     { image: '21', text: 'NEW Hands Clawing at the Sky or the Roof and a Honda Parked Alone' }
   ];
+
+  var contentEl = document.querySelector('.content');
+  var contentImages = document.querySelectorAll('.content-image');
+  var textEls = document.querySelectorAll('.text');
+
+  var currentIndex = 0;
+  var lastDownTime = new Date();
+  document.addEventListener('mousedown', function () {
+    lastDownTime = new Date();
+  }, false);
+  document.addEventListener('click', function () {
+    if (new Date() - lastDownTime < 500) {
+      transition();
+    }
+  }, false);
+
+  function transition () {
+    contentEl.classList.add('shrunken');
+    currentIndex = (currentIndex + 1) % content.length;
+    var c = content[currentIndex];
+
+    setTimeout(function () {
+      contentEl.style.background = 'url(images/2048/img' + c.image + '.jpg) no-repeat center center fixed';
+
+      var i;
+      for (i = 0; i < contentImages.length; i++) {
+        contentImages[i].src = 'images/1200/img' + c.image + '.jpg';
+      }
+      for (i = 0; i < textEls.length; i++) {
+        textEls[i].textContent = c.text;
+      }
+    }, 500);
+
+    setTimeout(function () {
+      contentEl.classList.remove('shrunken');
+    }, 500);
+  }
+
 })();
