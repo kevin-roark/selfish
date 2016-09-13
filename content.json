@@ -12,6 +12,13 @@
         "images": ["images/woody.jpg"]
       },
       {
+        "link": "/manikin",
+        "title": "Manikin",
+        "date": "September 2016",
+        "text": "Text and Image collection made through a window",
+        "images": ["images/manikin.jpg"]
+      },
+      {
         "link": "https://kevinroark.itch.io/the-rock-and-the-rock",
         "title": "The Rock and The Rock",
         "date": "August 2016",
