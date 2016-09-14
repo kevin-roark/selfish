@@ -16,8 +16,8 @@ body {
 .content {
   position: fixed; top: 0; left: 0; width: 100%; height: 100%;
 
-  background: url(images/2048/img3.jpg) no-repeat center center fixed;
-  background-size: cover;
+  background-image: url(images/2048/img3.jpg);
+  background-size: 100% 100%;
 
   box-shadow: 0 19px 38px rgba(255,255,255,0.5), 0 15px 12px rgba(255,255,255,0.3);
 
@@ -81,20 +81,44 @@ body {
   line-height: 1.5;
 }
 
+.long-transform {
+  -webkit-transition: -webkit-transform 60s;
+  transition: -webkit-transform 60s;
+  transition: transform 60s;
+  transition: transform 60s, -webkit-transform 60s;
+}
+
+.bleeding {
+  -webkit-transform: translateY(300px) scaleY(10);
+  transform: translateY(300px) scaleY(10);
+}
+
 .right-mirror {
   left: auto; right: 0;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
+  .right-mirror.bleeding {
+    -webkit-transform: translateY(300px) scaleX(-1) scaleY(10);
+    transform: translateY(300px) scaleX(-1) scaleY(10);
+  }
 
 .bottom-mirror {
   top: auto; bottom: 0;
   -webkit-transform: scaleY(-1);
   transform: scaleY(-1);
 }
+  .bottom-mirror.bleeding {
+    -webkit-transform: translateY(-300px) scaleY(-10);
+    transform: translateY(-300px) scaleY(-10);
+  }
 
 .bottom-right-mirror {
   top: auto; left: auto; bottom: 0; right: 0;
   -webkit-transform: scaleX(-1) scaleY(-1);
   transform: scaleX(-1) scaleY(-1);
 }
+  .bottom-right-mirror.bleeding {
+    -webkit-transform: translateY(-300px) scaleX(-1) scaleY(-10);
+    transform: translateY(-300px) scaleX(-1) scaleY(-10);
+  }

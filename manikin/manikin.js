@@ -34,12 +34,16 @@
 
   var currentIndex = 0;
   var lastDownTime = new Date();
+  bleed();
+
   document.addEventListener('mousedown', function () {
     lastDownTime = new Date();
   }, false);
   document.addEventListener('click', function () {
     if (new Date() - lastDownTime < 500) {
+      resetBleed();
       transition();
+      bleed();
     }
   }, false);
 
@@ -47,13 +51,16 @@
     contentEl.classList.add('shrunken');
     currentIndex = (currentIndex + 1) % content.length;
     var c = content[currentIndex];
+    var indexAtTime = currentIndex;
 
     setTimeout(function () {
-      contentEl.style.background = 'url(images/2048/img' + c.image + '.jpg) no-repeat center center fixed';
+      var src = 'images/1200/img' + c.image + '.jpg';
+
+      contentEl.style.backgroundImage = 'url(' + src + ')';
 
       var i;
       for (i = 0; i < contentImages.length; i++) {
-        contentImages[i].src = 'images/1200/img' + c.image + '.jpg';
+        contentImages[i].src = src;
       }
       for (i = 0; i < textEls.length; i++) {
         textEls[i].textContent = c.text;
@@ -61,8 +68,37 @@
     }, 500);
 
     setTimeout(function () {
-      contentEl.classList.remove('shrunken');
+      if (indexAtTime === currentIndex) {
+        contentEl.classList.remove('shrunken');
+      }
     }, 500);
+  }
+
+  function bleed () {
+    var indexAtTime = currentIndex;
+
+    setTimeout(function () {
+      if (indexAtTime !== currentIndex) return;
+
+      var i;
+      for (i = 0; i < textEls.length; i++) {
+        textEls[i].classList.add('long-transform');
+      }
+
+      setTimeout(function () {
+        for (i = 0; i < textEls.length; i++) {
+          textEls[i].classList.add('bleeding');
+        }
+      }, 0);
+    }, 1666);
+  }
+
+  function resetBleed () {
+    for (var i = 0; i < textEls.length; i++) {
+      var el = textEls[i];
+      el.classList.remove('long-transform');
+      el.classList.remove('bleeding');
+    }
   }
 
 })();
