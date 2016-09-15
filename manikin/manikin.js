@@ -2,16 +2,16 @@
   var content = [
     { image: '3', text: 'Husband and Wife and the Muscular Horse they Got' },
     { image: '5', text: 'Man Looking at Women Not Looking at the Family Separated by the Window' },
-    { image: '2', text: 'Groomed and Bearded Forms Divided by the Reflection of My Pants' },
-    { image: '7', text: 'One Pack of Men behind the Glass and another Pack in front of it' },
+    { image: '2', text: 'Groomed and Bearded and Divided by the Reflection of My Pants' },
+    { image: '7', text: 'One Pack of Men behind the Glass, Another Pack in front of it' },
     { image: '4', text: 'The Car in the Woman on the Horse and her Daughter' },
-    { image: '6', text: 'Woman in Pink and Woman in Blue and Woman in Yellow seen through the Mirror made of Buildings' },
+    { image: '6', text: 'Women in Three Dresses Watched through the Mirror made of Buildings' },
     { image: '8', text: 'One Man and One Woman and One Woman and One Man for Sale in front of a TV' },
-
-    { image: '1', text: 'Four Women on a Platform through a Window and Three are in Love' },
 
     { image: '9', text: 'Sixteen Male Heads and Four and One Half Male Torsos each on a Pedestal' },
     { image: '10', text: 'Growth Curve where the Points are Bodies' },
+
+    { image: '1', text: 'Four Women on a Platform through a Window and Three are in Love' },
 
     { image: '11', text: 'One Man Alone in the Dark' },
     { image: '12', text: 'Circle of Men Staring at Pants and a Body as Seen from the Street' },
@@ -90,7 +90,7 @@
           textEls[i].classList.add('bleeding');
         }
       }, 0);
-    }, 1666);
+    }, 5000);
   }
 
   function resetBleed () {
