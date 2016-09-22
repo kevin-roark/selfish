@@ -13,6 +13,14 @@ module.exports=[
         "images": ["images/woody.jpg"]
       },
       {
+        "link": "https://kevinroark.itch.io/daddy",
+        "title": "Daddy's Essays Complete Edition",
+        "date": "September 2016",
+        "text": "I put all of the essays about past that I wrote in the Spring in a book, with some photos taken by my mom and myself. Digital copy avaialble at link, if you want a printed copy please contact me :). love ya!",
+        "tags": ["Money"],
+        "images": ["images/daddy_essays_complete.jpg"]
+      },
+      {
         "link": "/manikin",
         "title": "Manikin",
         "date": "September 2016",
@@ -28,19 +36,19 @@ module.exports=[
         "images": ["images/therockandtherock.jpg"]
       },
       {
-        "link": "https://drive.google.com/drive/u/0/folders/0B0zd60zvfI4DSV9YSHF2OFNZVzQ",
-        "title": "Daddy's Essays #2",
-        "date": "July 2016",
-        "text": "An extension of the series of essays that began with \"Daddy's Essays #1.\"",
-        "images": ["images/daddy_essays_2.jpg"]
-      },
-      {
         "link": "http://max.carmichael.xyz/",
         "title": "MAX AND ROLL",
         "date": "July 2016",
         "text": "Carmichael's first album. Not just an album, a Visual Software Classic Rock MIDI Album incorporating videos of friend Max playing the piano. In 3D and 2D!!! All D.",
         "tags": ["Carmichael Payamps"],
         "images": ["images/maxandroll.jpg"]
+      },
+      {
+        "link": "https://drive.google.com/drive/u/0/folders/0B0zd60zvfI4DSV9YSHF2OFNZVzQ",
+        "title": "Daddy's Essays #2",
+        "date": "July 2016",
+        "text": "An extension of the series of essays that began with \"Daddy's Essays #1.\"",
+        "images": ["images/daddy_essays_2.jpg"]
       },
       {
         "link": "http://johnny.kevinroark.com",
