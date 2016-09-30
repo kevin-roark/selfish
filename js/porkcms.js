@@ -6,12 +6,13 @@ function Content(config) {
   this.date = config.date;
   this.text = config.text;
   this.images = config.images || [];
+  this.weight = config.weight || 1;
   this.unavailable = config.unavailable;
 
   this.config = config;
 }
 
-var primaryColors = ['#ff0000', '#00ff00', '#0000ff'];
+var primaryColors = ['#ff0000', '#00ff00', '#0000ff', '#ff7f00'];
 var tagColorMap = {
   'Money': 'rgb(10, 147, 69)',
   'Text': 'rgb(190, 155, 10)'
@@ -91,7 +92,14 @@ Content.prototype.listTitle = function() {
 Content.prototype.renderedMenuLink = function() {
   var view = '';
   if (this.link) {
-    view += '<a target="_blank" href="' + this.link + '">';
+    view += '<a target="_blank" href="' + this.link + '"';
+
+    if (this.weight !== 1) {
+      var weightPercent = (this.weight * 100).toFixed(1) + '%';
+      view += ' style="font-size: ' + weightPercent + '"';
+    }
+
+    view += '>';
   }
 
   view += this.listTitle();
