@@ -5,19 +5,27 @@ module.exports=[
     "title": "Media 🎨",
     "contents": [
       {
+        "link": "https://www.youtube.com/watch?v=FcCluBBaz8A",
+        "title": "These Are The 50 Facts You Didn't Know About Stranger Things",
+        "date": "September 2016",
+        "text": "Mister Shane researched 50 amazing facts about the hit TV series Stranger Things.",
+        "tags": ["Mister Shane", "Video"],
+        "images": ["images/strangerthings.jpg"]
+      },
+      {
         "link": "http://www.mistershane.com/woody",
         "title": "Woody",
         "date": "September 2016 - ",
         "text": "Mister Shane made a Woody mask.",
-        "tags": ["Mister Shane"],
+        "tags": ["Mister Shane", "Video"],
         "images": ["images/woody.jpg"]
       },
       {
         "link": "https://kevinroark.itch.io/daddy",
         "title": "Daddy's Essays Complete Edition",
         "date": "September 2016",
-        "text": "I put all of the essays about past that I wrote in the Spring in a book, with some photos taken by my mom and myself. Digital copy avaialble at link, if you want a printed copy please contact me :). love ya!",
-        "tags": ["Money"],
+        "text": "I put all of the essays about past that I wrote in the Spring in a book, with some photos taken by my mom and myself. Digital copy avaialble at link, if you want a printed copy please contact me :). Love ya!",
+        "tags": ["Money", "Text"],
         "images": ["images/daddy_essays_complete.jpg"]
       },
       {
@@ -25,6 +33,7 @@ module.exports=[
         "title": "Manikin",
         "date": "September 2016",
         "text": "Text and Image collection made through a window",
+        "tags": ["Photo", "Text"],
         "images": ["images/manikin.jpg"]
       },
       {
@@ -843,6 +852,12 @@ function Content(config) {
   this.config = config;
 }
 
+var primaryColors = ['#ff0000', '#00ff00', '#0000ff'];
+var tagColorMap = {
+  'Money': 'rgb(10, 147, 69)',
+  'Text': 'rgb(190, 155, 10)'
+};
+
 Content.prototype.render = function() {
   var view = '';
   var i;
@@ -856,14 +871,16 @@ Content.prototype.render = function() {
   view += '<div class="content-text">';
 
   if (this.tags) {
-    var colors = ['#ff0000', '#00ff00', '#0000ff'];
-    var moneyColor = 'rgb(10, 147, 69)';
     view += '<div class="content-tags">';
 
     for (i = 0; i < this.tags.length; i++) {
       var t = this.tags[i];
-      var c = t === 'Money' ? moneyColor : colors[Math.floor(colors.length * Math.random())];
+      var c = tagColorMap[t] || primaryColors[Math.floor(primaryColors.length * Math.random())];
+
       view += '<span style="color: ' + c + '">' + t + '</span>';
+      if (this.tags.length > 1 && this.tags.length - 1 !== i) {
+        view += ', ';
+      }
     }
 
     view += '</div>';

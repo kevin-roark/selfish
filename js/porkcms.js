@@ -11,6 +11,12 @@ function Content(config) {
   this.config = config;
 }
 
+var primaryColors = ['#ff0000', '#00ff00', '#0000ff'];
+var tagColorMap = {
+  'Money': 'rgb(10, 147, 69)',
+  'Text': 'rgb(190, 155, 10)'
+};
+
 Content.prototype.render = function() {
   var view = '';
   var i;
@@ -24,14 +30,16 @@ Content.prototype.render = function() {
   view += '<div class="content-text">';
 
   if (this.tags) {
-    var colors = ['#ff0000', '#00ff00', '#0000ff'];
-    var moneyColor = 'rgb(10, 147, 69)';
     view += '<div class="content-tags">';
 
     for (i = 0; i < this.tags.length; i++) {
       var t = this.tags[i];
-      var c = t === 'Money' ? moneyColor : colors[Math.floor(colors.length * Math.random())];
+      var c = tagColorMap[t] || primaryColors[Math.floor(primaryColors.length * Math.random())];
+
       view += '<span style="color: ' + c + '">' + t + '</span>';
+      if (this.tags.length > 1 && this.tags.length - 1 !== i) {
+        view += ', ';
+      }
     }
 
     view += '</div>';
