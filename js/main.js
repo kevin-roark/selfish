@@ -15,7 +15,7 @@
   var $listItems = $('.section-list li');
   var $activeListElement = $($listItems.get(0));
   var activeListTitle = $activeListElement.text();
-  var isTouch = isTouchScreen();
+  var isSmallScreen = isSmallOne();
 
   resize();
   window.onresize = resize();
@@ -49,7 +49,7 @@
   }
 
   function scrolled() {
-    if (!isTouch) return;
+    if (!isSmallScreen) return;
 
     var topListElement = mostVisibleElement($listItems);
     if (!topListElement) {
@@ -107,8 +107,6 @@ function mostVisibleElement(elements, bottomMost, buffer) {
   return bestElement;
 }
 
-function isTouchScreen () {
-  return ('ontouchstart' in window) ||
-   (navigator.maxTouchPoints > 0) ||
-   (navigator.msMaxTouchPoints > 0);
+function isSmallOne () {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }

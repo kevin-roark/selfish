@@ -10,6 +10,7 @@ module.exports=[
         "date": "September 2016",
         "text": "Mister Shane researched 50 amazing facts about the hit TV series Stranger Things.",
         "tags": ["Mister Shane", "Video"],
+        "weight": 1.1,
         "images": ["images/strangerthings.jpg"]
       },
       {
@@ -18,6 +19,7 @@ module.exports=[
         "date": "September 2016 - ",
         "text": "Mister Shane made a Woody mask.",
         "tags": ["Mister Shane", "Video"],
+        "weight": 1.6,
         "images": ["images/woody.jpg"]
       },
       {
@@ -26,6 +28,7 @@ module.exports=[
         "date": "September 2016",
         "text": "I put all of the essays about past that I wrote in the Spring in a book, with some photos taken by my mom and myself. Digital copy avaialble at link, if you want a printed copy please contact me :). Love ya!",
         "tags": ["Money", "Text"],
+        "weight": 1.4,
         "images": ["images/daddy_essays_complete.jpg"]
       },
       {
@@ -34,6 +37,7 @@ module.exports=[
         "date": "September 2016",
         "text": "Text and Image collection made through a window",
         "tags": ["Photo", "Text"],
+        "weight": 0.95,
         "images": ["images/manikin.jpg"]
       },
       {
@@ -41,7 +45,8 @@ module.exports=[
         "title": "The Rock and The Rock",
         "date": "August 2016",
         "text": "A small baby game / film about the inevitable and natural attraction of two rocks to one another. It is set in the desert. Rock on.",
-        "tags": ["Money"],
+        "tags": ["Money", "Game", "3D"],
+        "weight": 1.6,
         "images": ["images/therockandtherock.jpg"]
       },
       {
@@ -49,7 +54,8 @@ module.exports=[
         "title": "MAX AND ROLL",
         "date": "July 2016",
         "text": "Carmichael's first album. Not just an album, a Visual Software Classic Rock MIDI Album incorporating videos of friend Max playing the piano. In 3D and 2D!!! All D.",
-        "tags": ["Carmichael Payamps"],
+        "tags": ["Carmichael Payamps", "3D", "Net"],
+        "weight": 0.8,
         "images": ["images/maxandroll.jpg"]
       },
       {
@@ -57,6 +63,8 @@ module.exports=[
         "title": "Daddy's Essays #2",
         "date": "July 2016",
         "text": "An extension of the series of essays that began with \"Daddy's Essays #1.\"",
+        "tags": ["Text"],
+        "weight": 0.7,
         "images": ["images/daddy_essays_2.jpg"]
       },
       {
@@ -64,7 +72,8 @@ module.exports=[
         "title": "Johnny Football",
         "date": "June 2016",
         "text": "I hope Johnny goes to jail <i>music</i>. I hope my son goes to jail <i>music</i>. I hope my dad goes to jail <i>music</i>.",
-        "tags": ["Pleasure Seeker"],
+        "tags": ["Pleasure Seeker", "Sound", "Net"],
+        "weight": 1.2,
         "images": ["images/johnnyfootball.jpg"]
       },
       {
@@ -72,6 +81,8 @@ module.exports=[
         "title": "Daddy's Essays #1",
         "date": "June 2016",
         "text": "A couple of essays about my childhood and my dad. All love for him now :)",
+        "tags": ["Text"],
+        "weight": 0.7,
         "images": ["images/daddy_essays_1.jpg"]
       },
       {
@@ -79,7 +90,7 @@ module.exports=[
         "title": "My Bad Video",
         "date": "June 2016",
         "text": "Video for the Dog Shadow track. I took off my shirt again.",
-        "tags": ["Dog Shadow"],
+        "tags": ["Dog Shadow", "Video", "Sound"],
         "images": ["images/mybad.jpg"]
       },
       {
@@ -87,7 +98,8 @@ module.exports=[
         "title": "FACE TIME",
         "date": "June 2016",
         "text": "Facial Aspect Character Emulator with Timed Intuitive Muscular Expression. A realtime facial distortion suite. Make a better face and print it out and paste it on your skin.",
-        "tags": ["Carmichael Payamps"],
+        "tags": ["Carmichael Payamps", "3D", "Net"],
+        "weight": 0.9,
         "images": ["images/facetime.jpg"]
       },
       {
@@ -95,7 +107,8 @@ module.exports=[
         "title": "Wasted Years Video",
         "date": "May 2016",
         "text": "Video for the Dog Shadow track. Footage from an urban domestic dog park in downtown New York City.",
-        "tags": ["Dog Shadow"],
+        "tags": ["Dog Shadow", "Video", "Sound"],
+        "weight": 1.1,
         "images": ["images/wastedyears.jpg"]
       },
       {
@@ -103,7 +116,8 @@ module.exports=[
         "title": "Dog Years",
         "date": "May 2016",
         "text": "An album of Hard Emotional Tracks divided into three thematic acts: you can hear the pride!! Swelling! Big bunch of ideas in this one. Listen to \"Inside Man\" and \"Cut It Off.\"",
-        "tags": ["Dog Shadow"],
+        "tags": ["Dog Shadow", "Sound"],
+        "weight": 1.7,
         "images": ["images/dogyears.jpg"]
       },
       {
@@ -111,7 +125,8 @@ module.exports=[
         "title": "HDS VOL. 1",
         "date": "May 2016",
         "text": "A data-object media compilation on which a lot of my and friends' recent projects/work/data was released! You can purchase HDS Vol. 1 at www.hdsllc.website. Please do it and support friends and lovers everywhere!!",
-        "tags": ["Money"],
+        "tags": ["Money", "Object"],
+        "weight": 1.6,
         "images": ["images/hdsvol1.jpg"]
       },
       {
@@ -119,7 +134,8 @@ module.exports=[
         "title": "At Sea",
         "date": "May 2016",
         "text": "Mister Shane went on a Carnival cruise from New Orleans to Mexico. This is a multimedia collection made of music and photos from that journey. A journey at sea. Every sound is either a field recording from the ship or Shane's voice. He went on vacation. He got what he wanted. He found it.",
-        "tags": ["Mister Shane"],
+        "tags": ["Mister Shane", "Sound", "Photo"],
+        "weight": 1.6,
         "images": ["images/atsea.jpg"]
       },
       {
@@ -127,7 +143,8 @@ module.exports=[
         "title": "Love Songs",
         "date": "May 2016",
         "text": "A set of 32 of the Greatest Pop Love Songs Of All Time that I compiled and recorded renditions of with the aid of YouTube lyrics videos. An <em>icy-hot</em> profession of love and pain.",
-        "tags": ["Pleasure Seeker"],
+        "tags": ["Pleasure Seeker", "Sound"],
+        "weight": 1.2,
         "images": ["images/pleasureseekerlovesongs.jpg"]
       },
       {
@@ -135,7 +152,7 @@ module.exports=[
         "title": "Second Round Square Solo",
         "date": "May 2016",
         "text": "A video permutation series where 13 poems, ascending from in length from three to fifteen lines, are mechanically read in every possible permutated line-order. It's Very Cool&trade;.",
-        "tags": ["Carmichael Payamps"],
+        "tags": ["Carmichael Payamps", "Video", "Net"],
         "images": ["images/secondroundsquaresolo.jpg"]
       },
       {
@@ -143,6 +160,8 @@ module.exports=[
         "title": "Birdhouse Formal Wall Projection",
         "date": "April 2016",
         "text": "NYC Fraternity big birdhouse themed party commissioned request for video project with no reference to birds so I referenced construction because it is through architecture through which we humans fly (CHROME ONLY).",
+        "tags": ["Video"],
+        "weight": 0.7,
         "images": ["images/birdhouse.jpg"]
       },
       {
@@ -150,7 +169,8 @@ module.exports=[
         "title": "Chromatic Deduction",
         "date": "April 2016",
         "text": "A series of films that were broken down into frames and rearranged temporally with various color-sorting techniques into ColorTime.",
-        "tags": ["Carmichael Payamps"],
+        "tags": ["Carmichael Payamps", "Video"],
+        "weight": 1.2,
         "images": ["images/chromaticdeduction.jpg"]
       },
       {
@@ -158,7 +178,7 @@ module.exports=[
         "title": "Multiplex Cinema",
         "date": "March 2016",
         "text": "Task-oriented parallel films rearranged from A1A2A3B1B2B3C1C2C3 to A1B1C1A2B2C2A3B3C3 for achievement pleasure.",
-        "tags": ["Carmichael Payamps"],
+        "tags": ["Carmichael Payamps", "Video"],
         "images": ["images/cinemamultiplex.jpg"]
       },
       {
@@ -166,7 +186,8 @@ module.exports=[
         "title": "Chromatic Reduction",
         "date": "March 2016",
         "text": "A rainbow spectrum of films where each frame is reduced to its most relevant color and rendered into an ABSTRACT COLORSTREAM. Recommended: Minions.",
-        "tags": ["Carmichael Payamps"],
+        "tags": ["Carmichael Payamps", "Video"],
+        "weight": 1.1,
         "images": ["images/chromaticreduction.jpg"]
       },
       {
@@ -174,7 +195,7 @@ module.exports=[
         "title": "fffight.site",
         "date": "March 2016",
         "text": "Grotesque live-composed permutations of all possibilities hinted at by Bourne rebourne. The ultimate action movie site.",
-        "tags": ["Carmichael Payamps"],
+        "tags": ["Carmichael Payamps", "Video", "Net"],
         "images": ["images/fffightsite.jpg"]
       },
       {
@@ -182,7 +203,8 @@ module.exports=[
         "title": "Bourne rebourne",
         "date": "March 2016",
         "text": "Frankensteinien reconstruction of shots from the <em>Bourne</em> series that amplify what we wanted.",
-        "tags": ["Carmichael Payamps"],
+        "tags": ["Carmichael Payamps", "Video"],
+        "weight": 0.7,
         "images": ["images/bournerebourne.jpg"]
       },
       {
@@ -190,7 +212,8 @@ module.exports=[
         "title": "Life in Review",
         "date": "March 2016",
         "text": "A stream of Facebook's emotive digital memories flashes before your physical eyes.",
-        "tags": ["Carmichael Payamps"],
+        "tags": ["Carmichael Payamps", "Net"],
+        "weight": 1.2,
         "images": ["images/lifeinreview.jpg"]
       },
       {
@@ -198,7 +221,8 @@ module.exports=[
         "title": "feud.online",
         "date": "February 2016",
         "text": "A series of endless films about family and spectacle featuring delicate clips from TV's Family Feud.",
-        "tags": ["Carmichael Payamps"],
+        "tags": ["Carmichael Payamps", "Video"],
+        "weight": 0.9,
         "images": ["images/feudonline.jpg"]
       },
       {
@@ -206,7 +230,8 @@ module.exports=[
         "title": "Faithful Companion",
         "date": "December 2015",
         "text": "The first music release from Dog Shadow, featuring blasted electronic emotional dog sounds.",
-        "tags": ["Dog Shadow"],
+        "tags": ["Dog Shadow", "Sound"],
+        "weight": 0.85,
         "images": ["images/faithfulcompanion.jpg"]
       },
       {
@@ -214,7 +239,8 @@ module.exports=[
         "title": "Second Shane",
         "date": "December 2015",
         "text": "A complex and growing interactive world unified by consistent themes both contemporary + eternal. Please explore and see what you can find...",
-        "tags": ["Mister Shane"],
+        "tags": ["Mister Shane", "3D", "Net", "Sound"],
+        "weight": 1.4,
         "images": ["images/secondshane.jpg"]
       },
       {
@@ -222,7 +248,8 @@ module.exports=[
         "title": "God's Website",
         "date": "December 2015",
         "text": "Helps us track what we say about God, right now. Good or bad? Is it two-way?",
-        "tags": ["Carmichael Payamps"],
+        "tags": ["Carmichael Payamps", "Net"],
+        "weight": 1.25,
         "images": ["images/godswebsite.jpg"]
       },
       {
@@ -230,6 +257,7 @@ module.exports=[
         "title": "30 Pushups By Myself",
         "date": "November 2015",
         "text": "9 hours of accumulated clerical mistakes. Work and Work and Work and this is what I get. 11 minute video.",
+        "tags": ["Video"],
         "images": ["images/30pushupsbymyself.jpg"]
       },
       {
@@ -237,7 +265,8 @@ module.exports=[
         "title": "Rain in a Room",
         "date": "November 2015",
         "text": "Let the Wet wash over You. Water falls all around you yet you never wet yourself, then witness a flood of others experiencing the Rain Room artwork. 20 minutes recommended.",
-        "tags": ["Carmichael Payamps"],
+        "tags": ["Carmichael Payamps", "3D", "Net"],
+        "weight": 1.1,
         "images": ["images/raininaroom.jpg"]
       },
       {
@@ -245,7 +274,8 @@ module.exports=[
         "title": "David Zwirnher Online",
         "date": "October 2015",
         "text": "Fall through the Hole. Easy and Quick and at Home. Rapid View all the Art ever exhibited at the David Zwirnher New York City Art Gallery. 15 minutes recommended.",
-        "tags": ["Carmichael Payamps"],
+        "tags": ["Carmichael Payamps", "3D", "Net"],
+        "weight": 1.1,
         "images": ["images/dzonline.jpg"]
       },
       {
@@ -253,7 +283,8 @@ module.exports=[
         "title": "And Rakes To Spread The Haul",
         "date": "August 2015",
         "text": "A collection of poems hailing the One Man One Tool One Purpose ideology. Please contact me to obtain a physical book.",
-        "tags": ["Money"],
+        "tags": ["Money", "Text", "Object", "Net"],
+        "weight": 1.2,
         "images": ["images/andrakes.jpg"]
       },
       {
@@ -261,6 +292,8 @@ module.exports=[
         "title": "[Love Poem]",
         "date": "August 2015",
         "text": "I made gold from a Richard Brautigan poem",
+        "tags": ["Text", "3D"],
+        "weight": 0.65,
         "images": ["images/lovepoem.jpg"]
       },
       {
@@ -268,6 +301,7 @@ module.exports=[
         "title": "New Snock Planet",
         "date": "July 2015",
         "text": "A persistent new world, boiling the essence, becoming. Chat and interact with others and me.",
+        "tags": ["3D", "Net"],
         "images": ["images/snockplanet.jpg"]
       },
       {
@@ -275,13 +309,15 @@ module.exports=[
         "title": "Luminal.space",
         "date": "April 2015",
         "text": "An installation on Columbia's Low Steps; long-term project made with many people more talented than me. Click for info.",
+        "tags": ["Object"],
+        "weight": 1.1,
         "images": ["images/luminal.jpg"]
       },
       {
         "title": "Job Fair",
         "date": "March 2015",
         "text": "Simulation of a startup job fair / earn and prove your worth",
-        "tags": ["TONY TONEHOLE"],
+        "tags": ["TONY TONEHOLE", "Performance", "Sound", "3D"],
         "images": ["images/tony/jobfair.jpg"]
       },
       {
@@ -289,14 +325,15 @@ module.exports=[
         "title": "Shane's Tweet Heaven",
         "date": "February 2015",
         "text": "Explore your twitter self with a museum made just for u",
-        "tags": ["Mister Shane"],
+        "tags": ["Mister Shane", "Text", "3D", "Sound", "Net"],
+        "weight": 1.45,
         "images": ["images/shane/heaven.jpg"]
       },
       {
         "title": "Ronald",
         "date": "December 2014",
         "text": "He just can't seem to get outside of that computer trash can. Help him.",
-        "tags": ["TONY TONEHOLE"],
+        "tags": ["TONY TONEHOLE", "Performance", "Sound", "3D"],
         "images": ["images/tony/ronald.jpg"]
       },
       {
@@ -304,13 +341,15 @@ module.exports=[
         "title": "(985) 718-8538",
         "date": "November 2014",
         "text": "Translation of phone words to phone sounds using DTMF tones",
+        "tags": ["Text", "Net", "Sound"],
+        "weight": 1.16,
         "images": ["images/9857188538.jpg"]
       },
       {
         "title": "Strengh.js",
         "date": "October 2014",
         "text": "Tech Masculinity / Wrestling Dylan with Kinect puppets",
-        "tags": ["TONY TONEHOLE"],
+        "tags": ["TONY TONEHOLE", "Performance", "Sound", "3D"],
         "images": ["images/tony/strengthjs.jpg"]
       },
       {
@@ -318,6 +357,8 @@ module.exports=[
         "title": "Corpse",
         "date": "October 2014",
         "text": "Computer corpse for Postcrypt's Exquisite Corpse show. Made w/ Ben, Dylan, Henry. I did the foot.",
+        "tags": ["Net"],
+        "weight": 0.9,
         "images": ["images/corpse.jpg"]
       },
       {
@@ -325,6 +366,8 @@ module.exports=[
         "title": "Wayne",
         "date": "October 2014",
         "text": "A wayne model that grows sicker and sadder with you",
+        "tags": ["3D", "Net"],
+        "weight": 0.7,
         "images": ["images/wayne.jpg"]
       },
       {
@@ -332,7 +375,8 @@ module.exports=[
         "title": "Content: Volume 1",
         "date": "May 2014",
         "text": "First collection of tracks from Mister Shane, experimental audiovisual project from Sean and Kev.",
-        "tags": ["Mister Shane"],
+        "tags": ["Mister Shane", "Sound", "Video", "Net"],
+        "weight": 1.2,
         "images": [
           "images/shane/laborpain.jpg",
           "images/shane/osteen.jpg",
@@ -346,6 +390,7 @@ module.exports=[
         "title": "(Pork) Journey",
         "date": "June 2014",
         "text": "Play through the inevitable fate of a space-pig: The Journey To Pork",
+        "tags": ["Game"],
         "images": ["images/porkjourney.jpg"]
       },
       {
@@ -353,6 +398,8 @@ module.exports=[
         "title": "Wide Open With Arms",
         "date": "June 2014",
         "text": "Creed Music Video",
+        "tags": ["Video"],
+        "weight": 1.1,
         "images": ["images/wideopenwitharms.jpg"]
       },
       {
@@ -361,6 +408,7 @@ module.exports=[
         "subtitle": "2014 Demo",
         "date": "May 2014",
         "text": "Hardcore straightedge sermon music. First small demo lol its coming back one day",
+        "tags": ["Sound"],
         "images": ["images/sxecop.jpg"]
       },
       {
@@ -368,6 +416,7 @@ module.exports=[
         "title": "Lonely Trash",
         "date": "May 2014",
         "text": "Small walking exploration, three minutes to win in this world of my trash, trash from me",
+        "tags": ["Game", "Photo"],
         "images": ["images/lonelytrash.jpg"]
       },
       {
@@ -375,7 +424,7 @@ module.exports=[
         "title": "yellin",
         "date": "April 2014",
         "text": "An iOS application. Send sound at miller's fantasy founders. We send it back",
-        "tags": ["Miller's Fantasy"],
+        "tags": ["Miller's Fantasy", "App", "Sound"],
         "images": ["images/miller/yellin.jpg"]
       },
       {
@@ -384,6 +433,8 @@ module.exports=[
         "title": "Special Magic Glass Hole",
         "date": "March 2014",
         "text": "A realtime hole through which all are seen and can Share",
+        "tags": ["Net"],
+        "weight": 0.7,
         "images": ["images/specialmagicglasshole.jpg"]
       },
       {
@@ -392,6 +443,8 @@ module.exports=[
         "title": "Special Magic Yelling Room",
         "date": "March 2014",
         "text": "A realtime Ear Bucket where everyone is Heard at once",
+        "tags": ["Net"],
+        "weight": 0.7,
         "images": ["images/specialmagicyellingroom.jpg"]
       },
       {
@@ -399,7 +452,7 @@ module.exports=[
         "title": "Network Style",
         "date": "March 2014",
         "text": "A seminar on Best Business Practices and learning Trade Secrets",
-        "tags": ["Miller's Fantasy"],
+        "tags": ["Miller's Fantasy", "Net"],
         "images": ["images/miller/networkstyle.jpg"]
       },
       {
@@ -407,7 +460,8 @@ module.exports=[
         "title": "Dining@CU",
         "date": "March 2014",
         "text": "Dining menu application to discover dining hall menus",
-        "tags": ["Miller's Fantasy"],
+        "tags": ["Miller's Fantasy", "Net"],
+        "weight": 0.8,
         "images": ["images/miller/diningatcu.jpg"]
       },
       {
@@ -415,7 +469,8 @@ module.exports=[
         "title": "WHERE IS TIME SQUARE?",
         "date": "February 2014",
         "text": "Map findng application to map find Time Square",
-        "tags": ["Miller's Fantasy"],
+        "tags": ["Miller's Fantasy", "Net"],
+        "weight": 0.95,
         "images": ["images/miller/whereistimesquare.jpg"]
       },
       {
@@ -423,6 +478,8 @@ module.exports=[
         "title": "Watch Pi",
         "date": "January 2014",
         "text": "Turning irrational numbers into irrational images and videos",
+        "tags": ["Software"],
+        "weight": 0.7,
         "images": ["images/watchpi.jpg"]
       },
       {
@@ -430,6 +487,8 @@ module.exports=[
         "title": "Cruise Remix",
         "date": "October 2013",
         "text": "A remix of a florida georgia line song with video too. Link leads u to a movie theater.",
+        "tags": ["Video", "Sound"],
+        "weight": 0.84,
         "images": ["images/cruise.jpg"]
       },
       {
@@ -437,6 +496,8 @@ module.exports=[
         "title": "Laurie",
         "date": "December 2013",
         "text": "Christmas present for my special and great sister, that is all.",
+        "tags": ["Net"],
+        "weight": 0.7,
         "images": ["images/laurie.jpg"]
       },
       {
@@ -444,6 +505,8 @@ module.exports=[
         "title": "Look at Pi",
         "date": "July 2013",
         "text": "Turning irrational numbers into irrational colors.",
+        "tags": ["Net"],
+        "weight": 0.8,
         "images": ["images/lookatpi.jpg"]
       },
       {
@@ -464,7 +527,8 @@ module.exports=[
         "link": "https://github.com/kevin-roark/frampton",
         "title": "Frampton",
         "date": "February 2015 - TODAY",
-        "text": "An in-the-works suite of isomorphic-ish algorithmic video composition tools."
+        "text": "An in-the-works suite of isomorphic-ish algorithmic video composition tools.",
+        "weight": 1.3
       },
       {
         "link": "https://github.com/kevin-roark/midi-timing",
@@ -475,21 +539,24 @@ module.exports=[
       {
         "link": "https://vsco.co",
         "title": "VSCO",
-        "text": "I've worked a lot on the VSCO iOS app. It is fun and good for enjoying some photos On The Go (:."
+        "text": "I've worked a lot on the VSCO iOS app. It is fun and good for enjoying some photos On The Go (:.",
+        "weight": 1.1
       },
       {
         "link": "http://www.pith.space",
         "title": "Pith Website",
         "date": "May 2015",
         "text": "I made a small lil site for chef-dorm-event-wonder Jonah Reider :).",
-        "images": ["images/pith.jpg"]
+        "images": ["images/pith.jpg"],
+        "weight": 0.7
       },
       {
         "link": "https://github.com/kevin-roark/sheen",
         "title": "Sheen",
         "date": "August 2015",
         "text": "A small extension of THREE.js with helpful starter pack for my own projects. You are welcome to use it. You also don't have to.",
-        "images": ["images/sheen.jpg"]
+        "images": ["images/sheen.jpg"],
+        "weight": 0.8
       },
       {
         "link": "https://github.com/kevin-roark/dummy-meat-timer",
@@ -502,21 +569,24 @@ module.exports=[
         "title": "Socket.IO Computer",
         "date": "May 2014",
         "text": "a collaborative windows xp emulator that runs in browser",
-        "images": ["images/socketcomputer.jpg"]
+        "images": ["images/socketcomputer.jpg"],
+        "weight": 1.25
       },
       {
         "link": "http://kevin-roark.github.io/arthur",
         "title": "arthur",
         "date": "Spring 2014",
         "text": "a programming language made for manipulating and combining various media styles. made it for a class with melody sahil henry dylan. check the examples.",
-        "images": ["images/arthur.jpg"]
+        "images": ["images/arthur.jpg"],
+        "weight": 1.3
       },
       {
         "link": "http://wbar.org",
         "title": "WBAR",
         "date": "Fall 2012 - Spring 2015",
         "text": "internet work at best freeform nyc college radio station a+",
-        "images": ["images/wbar.jpg"]
+        "images": ["images/wbar.jpg"],
+        "weight": 1.15
       },
       {
         "link": "http://adhoc.fm",
@@ -536,13 +606,15 @@ module.exports=[
         "title": "Weplay",
         "date": "March 2014",
         "text": "a 100% javascript collaborative gameboy player w/ socket.io 1.0 (with mr guillermo &amp; Mr. Tony)",
-        "images": ["images/weplay.jpg"]
+        "images": ["images/weplay.jpg"],
+        "weight": 0.8
       },
       {
         "title": "Meatbeat",
         "date": "February 2013",
         "text": "The first time I tried something. A processing game of rhythm-bouncing meatballs. Hard to Not Remember The Past",
-        "images": ["images/meatbeat.jpg"]
+        "images": ["images/meatbeat.jpg"],
+        "weight": 0.4
       }
     ]
   },
@@ -740,7 +812,7 @@ module.exports=[
   var $listItems = $('.section-list li');
   var $activeListElement = $($listItems.get(0));
   var activeListTitle = $activeListElement.text();
-  var isTouch = isTouchScreen();
+  var isSmallScreen = isSmallOne();
 
   resize();
   window.onresize = resize();
@@ -774,7 +846,7 @@ module.exports=[
   }
 
   function scrolled() {
-    if (!isTouch) return;
+    if (!isSmallScreen) return;
 
     var topListElement = mostVisibleElement($listItems);
     if (!topListElement) {
@@ -832,10 +904,8 @@ function mostVisibleElement(elements, bottomMost, buffer) {
   return bestElement;
 }
 
-function isTouchScreen () {
-  return ('ontouchstart' in window) ||
-   (navigator.maxTouchPoints > 0) ||
-   (navigator.msMaxTouchPoints > 0);
+function isSmallOne () {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
 
 },{"../content":1,"./porkcms":3}],3:[function(require,module,exports){
@@ -847,12 +917,13 @@ function Content(config) {
   this.date = config.date;
   this.text = config.text;
   this.images = config.images || [];
+  this.weight = config.weight || 1;
   this.unavailable = config.unavailable;
 
   this.config = config;
 }
 
-var primaryColors = ['#ff0000', '#00ff00', '#0000ff'];
+var primaryColors = ['#ff0000', '#00ff00', '#0000ff', '#ff7f00'];
 var tagColorMap = {
   'Money': 'rgb(10, 147, 69)',
   'Text': 'rgb(190, 155, 10)'
@@ -932,7 +1003,14 @@ Content.prototype.listTitle = function() {
 Content.prototype.renderedMenuLink = function() {
   var view = '';
   if (this.link) {
-    view += '<a target="_blank" href="' + this.link + '">';
+    view += '<a target="_blank" href="' + this.link + '"';
+
+    if (this.weight !== 1) {
+      var weightPercent = (this.weight * 100).toFixed(1) + '%';
+      view += ' style="font-size: ' + weightPercent + '"';
+    }
+
+    view += '>';
   }
 
   view += this.listTitle();
