@@ -8,7 +8,7 @@ module.exports=[
         "link": "https://www.youtube.com/playlist?list=PL9j8JGV9mSa3Ltz47vMXom2EpK1HJ958b",
         "title": "Here I Am",
         "date": "October 2016",
-        "text": "A 28 epsiode series of instructional yoga videos performed by \"Kev.\"",
+        "text": "A 28 epsiode series of instructional yoga videos performed by \"Kev.\" I did the same thing every day but I did not improve.",
         "tags": ["Video"],
         "weight": 1.25,
         "images": ["images/hereiam.jpg"]
