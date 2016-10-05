@@ -131,11 +131,17 @@ body a {
 .section-list-header, .contact-header {
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
   font-size: 19px;
-  margin: 5px 0;
+  color: #ff0000;
+  text-shadow: 0 5px 5px rgba(255, 0, 0, 0.35);
 }
-  .section-list-header.active {
-    color: #4296f7;
-  }
+
+.section-list-header {
+  margin: 5px 0 10px 0;
+}
+
+.contact-header {
+  margin: 5px 0 15px 0;
+}
 
 .section-list {
   margin: 0 0 22px 0;
@@ -344,7 +350,7 @@ body a {
 
   .content-tags {
     position: inherit; left: inherit; top: inherit;
-    font-size: 12px;
+    font-size: 7px;
     margin-bottom: 4px;
   }
 
