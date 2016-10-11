@@ -5,6 +5,15 @@ module.exports=[
     "title": "Media 🎨",
     "contents": [
       {
+        "link": "https://kevinroark.itch.io/luddy",
+        "title": "Luddy",
+        "date": "October 2016",
+        "text": "Luddy put me on his list. A compilation of financial tech recruiting email correspondence that took place over the course of 20 months followed by a devolving sequence of collage-accompanied reflections. I have a small run of printed copies available, please contact me to obtain one :).",
+        "tags": ["Text", "Money"],
+        "weight": 1.33,
+        "images": ["images/luddy.jpg"]
+      },
+      {
         "link": "https://www.youtube.com/playlist?list=PL9j8JGV9mSa3Ltz47vMXom2EpK1HJ958b",
         "title": "Here I Am",
         "date": "October 2016",
