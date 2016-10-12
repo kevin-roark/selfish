@@ -14,6 +14,15 @@ module.exports=[
         "images": ["images/luddy.jpg"]
       },
       {
+        "link": "https://www.youtube.com/playlist?list=PL9j8JGV9mSa3f-ZuOOtfgS96hzsvkIbqB",
+        "title": "There It Is",
+        "date": "October 2016",
+        "text": "A 32 epsiode cooking and lifestyle series performed by \"Kev.\" \"What's new with you?\" \"I've been cooking a lot recently.\" \"Oh.\"",
+        "tags": ["Video"],
+        "weight": 1.2,
+        "images": ["images/thereitis.jpg"]
+      },
+      {
         "link": "https://www.youtube.com/playlist?list=PL9j8JGV9mSa3Ltz47vMXom2EpK1HJ958b",
         "title": "Here I Am",
         "date": "October 2016",
