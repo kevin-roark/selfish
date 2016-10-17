@@ -4,6 +4,15 @@
     "title": "Media 🎨",
     "contents": [
       {
+        "link": "https://pleasureseeker.bandcamp.com/album/clap",
+        "title": "CLAP",
+        "date": "October 2016",
+        "text": "Music tracks made from clap sounds. Mainly the 808 clap sound, the cheap toy one not the real one. I learned that when it was too late. Every sound is a clap. Please clap.",
+        "tags": ["Pleasure Seeker", "Sound"],
+        "weight": 1.35,
+        "images": ["images/clap.jpg"]
+      },
+      {
         "link": "https://kevinroark.itch.io/luddy",
         "title": "Luddy",
         "date": "October 2016",
