@@ -5,6 +5,15 @@ module.exports=[
     "title": "Media 🎨",
     "contents": [
       {
+        "link": "https://www.youtube.com/watch?v=k-9ZI4bmx4I",
+        "title": "I Say Nothing",
+        "date": "October 2016",
+        "text": "Video. Power of Refusal. Apprenticeship.",
+        "tags": ["Mister Shane", "Video"],
+        "weight": 1.3,
+        "images": ["images/isaynothing.jpg"]
+      },
+      {
         "link": "https://pleasureseeker.bandcamp.com/album/clap",
         "title": "CLAP",
         "date": "October 2016",
@@ -28,7 +37,7 @@ module.exports=[
         "date": "October 2016",
         "text": "A 32 epsiode cooking and lifestyle series performed by \"Kev.\" \"What's new with you?\" \"I've been cooking a lot recently.\" \"Oh.\"",
         "tags": ["Video"],
-        "weight": 1.2,
+        "weight": 1.25,
         "images": ["images/thereitis.jpg"]
       },
       {
