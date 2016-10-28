@@ -29,32 +29,53 @@
 <body>
   <div class="film-title">THE WATCHER</div>
 
-  <div class="film-description-wrapper">
-    <p class="film-description">
-      THE WATCHER is a film about watching. It consists of many hours of footage of me watching other visual content. It is
-      cropped to show only my eyes. I had to film my watching to encourage myself to watch. Look for changes in my tired
-      eyes. As you watch THE WATCHER you become the watcher of a watcher who himself was not watching THE WATCHER.
-    </p>
+  <div class="indent-wrapper">
+    <div class="film-description-wrapper">
+      <p class="film-description">
+        THE WATCHER is a film about watching. It consists of many hours of footage of me watching other visual content. It is
+        cropped to show only my eyes. I had to film my watching to encourage myself to watch. Look for changes in my tired
+        eyes. As you watch THE WATCHER you become the watcher of a watcher who himself was not watching THE WATCHER.
+      </p>
 
-    <p class="film-description">
-      One good detail is that the finale of the film includes footage from the Lifetime Movie Network's 2016
-      film <i>The Watcher</i>, a different but related film worth watching in its own right.
-    </p>
+      <p class="film-description">
+        One good detail is that the finale of the film includes footage from the Lifetime Movie Network's 2016
+        film <i>The Watcher</i>, a different but related film worth watching in its own right.
+      </p>
 
-    <p class="film-description">
-      Thanks for reading and I hope you enjoy THE WATCHER. At the least, put it on your background screen as you watch something else.
-      It will look like I'm watching. You will be watching.
-    </p>
+      <p class="film-description">
+        Thanks for reading and I hope you enjoy THE WATCHER. At the least, put it on your background screen as you watch something else.
+        It will look like I'm watching. You will be watching.
+      </p>
+    </div>
+
+    <a class="film-link" href="https://www.youtube.com/watch?v=62yyQE2mSJE">Watch THE WATCHER in full online</a>
+    <a class="trailer-link" href="https://www.youtube.com/watch?v=UpzAAApV8xo">Watch THE WATCHER trailer</a>
+
+    <div class="merch-title">Merch ;)</div>
+    <ul class="merch-list">
+      <li><a href="https://society6.com/product/the-watcher-1_mug#s6-6079581p30a27v199">AH A NICE 11 oz. OR 15 oz. THE WATCHER COFFEE MUG</a></li>
+      <li><a href="https://society6.com/product/the-watcher-2_pillow#s6-6079647p26a18v126a25v193">REST YOUR HEAD ON THE WATCHER PILLOW</a></li>
+      <li><a href="https://society6.com/product/the-watcher-1_long-sleeve-tshirt#s6-6079581p39a48v351a49v362a50v367">A LONG SLEVE T SHIRT WITH THE EYE OF THE WATCHER</a></li>
+      <li><a href="https://society6.com/product/the-watcher-1_print">ONE ELEGANT THE WATCHER PRINT</a></li>
+    </ul>
+
+    <div class="goodbye">- Kev</div>
   </div>
 
-  <a class="film-link" href="https://www.youtube.com/watch?v=62yyQE2mSJE">Watch THE WATCHER online</a>
-
-  <div class="merch-title">Merch ;)</div>
-  <ul class="merch-list">
-    <li><a href="https://society6.com/product/the-watcher-1_mug#s6-6079581p30a27v199">AH A NICE 11 oz. OR 15 oz. THE WATCHER COFFEE MUG</a></li>
-    <li><a href="https://society6.com/product/the-watcher-2_pillow#s6-6079647p26a18v126a25v193">REST YOUR HEAD ON THE WATCHER PILLOW</a></li>
-    <li><a href="https://society6.com/product/the-watcher-1_long-sleeve-tshirt#s6-6079581p39a48v351a49v362a50v367">A LONG SLEVE T SHIRT WITH THE EYE OF THE WATCHER</a></li>
-    <li><a href="https://society6.com/product/the-watcher-1_print">ONE ELEGANT THE WATCHER PRINT</a></li>
-  </ul>
+  <script>
+    (function() {
+      var images = ['watcher1', 'watcher2', 'watcher3', 'watcher4', 'watcher5'];
+      setTimeout(function() {
+        setInterval(function() {
+          var img = images[Math.floor(images.length * Math.random())];
+          document.body.style.background = 'url(img/' + img + '.jpg) no-repeat center center fixed #000';
+          document.body.style.backgroundSize = 'cover';
+          setTimeout(function() {
+            document.body.style.background = '#000';
+          }, Math.random() * 200 + 50);
+        }, 1000);
+      }, 2000);
+    })();
+  </script>
 </body>
 </html>
