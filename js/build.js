@@ -5,6 +5,15 @@ module.exports=[
     "title": "Media 🎨",
     "contents": [
       {
+        "link": "/the-watcher",
+        "title": "THE WATCHER",
+        "date": "October 2016",
+        "text": "THE WATCHER is a film about watching. It is a concatenation of a lot of footage of watching. Watch THE WATCHER.",
+        "tags": ["Video"],
+        "weight": 1.6,
+        "images": ["images/thewatcher.jpg"]
+      },
+      {
         "link": "https://www.youtube.com/watch?v=k-9ZI4bmx4I",
         "title": "I Say Nothing",
         "date": "October 2016",
