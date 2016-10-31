@@ -4,12 +4,21 @@
     "title": "Media 🎨",
     "contents": [
       {
+        "link": "http://www.sweetnothings.online",
+        "title": "SWEET NOTHINGS — BDSMR (Visual)",
+        "date": "October 2016",
+        "text": "BDSMR is a really good minimal electronic album by SWEET NOTHINGS. I did not make the music, but I made the website, some photos, two videos (ETERNITY and ZODIAC) and the album art (with help!). Click it!!",
+        "tags": ["Net", "Video", "Money"],
+        "weight": 1.45,
+        "images": ["images/bdsmr.jpg"]
+      },
+      {
         "link": "/the-watcher",
         "title": "THE WATCHER",
         "date": "October 2016",
         "text": "THE WATCHER is a film about watching. It is a concatenation of a lot of footage of watching. Watch THE WATCHER.",
         "tags": ["Video"],
-        "weight": 1.6,
+        "weight": 1.5,
         "images": ["images/thewatcher.jpg"]
       },
       {
@@ -69,7 +78,7 @@
       {
         "link": "http://www.mistershane.com/woody",
         "title": "Woody",
-        "date": "September 2016 - ",
+        "date": "Ongoing (b. September 2016)",
         "text": "Mister Shane made a Woody mask.",
         "tags": ["Mister Shane", "Video"],
         "weight": 1.6,
