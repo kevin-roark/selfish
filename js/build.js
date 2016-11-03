@@ -5,6 +5,15 @@ module.exports=[
     "title": "Media 🎨",
     "contents": [
       {
+        "link": "http://www.mistershane.com/lemonade-performance",
+        "title": "Lemonade Performance ",
+        "date": "Ongoing (b. October 2016)",
+        "text": "Mister Shane is selling the performance of the sale of a glass of lemonade for $1,000.",
+        "tags": ["Mister Shane", "Performance", "Video"],
+        "weight": 1.3,
+        "images": ["images/lemonadeperformance.jpg"]
+      },
+      {
         "link": "http://www.sweetnothings.online",
         "title": "SWEET NOTHINGS — BDSMR (Visual)",
         "date": "October 2016",
