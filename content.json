@@ -4,8 +4,17 @@
     "title": "Media 🎨",
     "contents": [
       {
+        "link": "/from-tony-rontinos",
+        "title": "From Tony Rontino's",
+        "date": "November 2016",
+        "text": "LIVE ALBUM RECORDED FROM TONY RONTINO'S ITALIAN RESTAURANT IN WEST CHESTER",
+        "tags": ["Pleasure Seeker", "Sound", "Italian Food"],
+        "weight": 1,
+        "images": ["images/fromtonyrontinos.jpg"]
+      },
+      {
         "link": "http://www.mistershane.com/lemonade-performance",
-        "title": "Lemonade Performance ",
+        "title": "Lemonade Performance",
         "date": "Ongoing (b. October 2016)",
         "text": "Mister Shane is selling the performance of the sale of a glass of lemonade for $1,000.",
         "tags": ["Mister Shane", "Performance", "Video"],
