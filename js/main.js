@@ -28,6 +28,17 @@
     setActiveContent($(this));
   });
 
+
+  var bodyClassIndex = 0;
+  var bodyClasses = ['blue', 'white'];
+  // setInterval(changeBodyClass, 1000);
+  function changeBodyClass() {
+    var className = bodyClasses[bodyClassIndex];
+    bodyClassIndex = (bodyClassIndex + 1) % bodyClasses.length;
+
+    document.body.className = className;
+  }
+
   function setActiveContent($listElement) {
     var listTitle = $listElement.text();
     if (activeListTitle === listTitle) {

@@ -7,6 +7,21 @@ html, body {
 body {
   background-color: #fdfdfd;
   padding-bottom: 300px;
+  -webkit-transition: background 0.8s;
+  -moz-transition: background 0.8s;
+  transition: background 0.8s;
+}
+
+body.blue {
+  background: #00f;
+}
+
+::selection {
+  background: #ff0;
+}
+
+::-moz-selection {
+  background: #ff0;
 }
 
 body a {
@@ -91,9 +106,13 @@ body a {
   font-size: 14px;
   line-height: 1.5;
   margin-left: 22px; margin-bottom: 22px;
+  max-width: 600px;
 }
   .welcome a {
     color: #0000ff;
+  }
+  .blue .welcome a {
+    color: #fdfdfd;
   }
     .welcome a:hover, .welcome a:focus {
       text-decoration: underline;

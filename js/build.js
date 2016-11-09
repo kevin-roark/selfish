@@ -2,7 +2,7 @@
 module.exports=[
   {
     "id": "media",
-    "title": "Media 🎨",
+    "title": "My Work 🎨",
     "contents": [
       {
         "link": "/from-tony-rontinos",
@@ -602,8 +602,17 @@ module.exports=[
 
   {
     "id": "computer",
-    "title": "Computer $💻$",
+    "title": "Moneywork & Tools $💻$",
     "contents": [
+      {
+        "link": "https://vsco.co",
+        "title": "VSCO Discover Homepage",
+        "text": "Programmed the new VSCO website it is all black and has countdowns... pretty sick.",
+        "date": "November 2016",
+        "images": ["images/vscohomepage.jpg"],
+        "tags": ["Money", "Web"],
+        "weight": 1.2
+      },
       {
         "link": "https://github.com/kevin-roark/frampton",
         "title": "Frampton",
@@ -619,8 +628,10 @@ module.exports=[
       },
       {
         "link": "https://vsco.co",
-        "title": "VSCO",
-        "text": "I've worked a lot on the VSCO iOS app. It is fun and good for enjoying some photos On The Go (:.",
+        "title": "VSCO App",
+        "text": "I've worked a lot on the VSCO iOS app and some backend machine learning software. It is fun and good (:.",
+        "images": ["images/vscoapp.jpg"],
+        "tags": ["Money"],
         "weight": 1.1
       },
       {
@@ -629,7 +640,8 @@ module.exports=[
         "date": "May 2015",
         "text": "I made a small lil site for chef-dorm-event-wonder Jonah Reider :).",
         "images": ["images/pith.jpg"],
-        "weight": 0.7
+        "tags": ["Money", "Web"],
+        "weight": 0.8
       },
       {
         "link": "https://github.com/kevin-roark/sheen",
@@ -905,6 +917,17 @@ module.exports=[
   $listItems.mouseenter(function() {
     setActiveContent($(this));
   });
+
+
+  var bodyClassIndex = 0;
+  var bodyClasses = ['blue', 'white'];
+  // setInterval(changeBodyClass, 1000);
+  function changeBodyClass() {
+    var className = bodyClasses[bodyClassIndex];
+    bodyClassIndex = (bodyClassIndex + 1) % bodyClasses.length;
+
+    document.body.className = className;
+  }
 
   function setActiveContent($listElement) {
     var listTitle = $listElement.text();
