@@ -1,9 +1,18 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 module.exports=[
   {
-    "id": "media",
-    "title": "My Work 🎨",
+    "id": "work",
+    "title": "My Work",
     "contents": [
+      {
+        "link": "https://docs.google.com/document/d/1wBPhVi4UxxUtJffNkEdAA2Ia_qTqak4BC-45saYhX9E/edit?usp=sharing",
+        "title": "Curtain State",
+        "date": "November 2016",
+        "text": "Here are some thoughts about the bad election in relation to reality tv, mass media, and self-representation. Helpful for me to process hope it can be helpful to others.",
+        "tags": ["Text"],
+        "weight": 2.5,
+        "listStyle": "background: #f00;"
+      },
       {
         "link": "/from-tony-rontinos",
         "title": "From Tony Rontino's",
@@ -602,7 +611,7 @@ module.exports=[
 
   {
     "id": "computer",
-    "title": "Moneywork & Tools $💻$",
+    "title": "Moneywork & Tools $",
     "contents": [
       {
         "link": "https://vsco.co",
@@ -713,7 +722,7 @@ module.exports=[
   },
   {
     "id": "pics",
-    "title": "Pics 📷",
+    "title": "Pics",
     "contents": [
       {
         "link": "film/june15-1/",
@@ -1027,7 +1036,7 @@ function Content(config) {
   this.config = config;
 }
 
-var primaryColors = ['#ff0000', '#00ff00', '#0000ff', '#ff7f00'];
+var primaryColors = ['#ff0000', '#00cc00', '#0000ff', '#ff7f00'];
 var tagColorMap = {
   'Money': 'rgb(10, 147, 69)',
   'Text': 'rgb(190, 155, 10)'
@@ -1104,17 +1113,22 @@ Content.prototype.listTitle = function() {
   return this.title;
 };
 
-Content.prototype.renderedMenuLink = function() {
-  var view = '';
+Content.prototype.renderedMenuLink = function(active) {
+  var view = active ? '<li class="active"' : '<li';
+
+  var style = this.config.listStyle || '';
+  if (this.weight !== 1) {
+    var weightPercent = (this.weight * 100).toFixed(1) + '%';
+    style += ' font-size: ' + weightPercent;
+  }
+  if (style.length > 0) {
+    view += ' style="' + style + '"';
+  }
+
+  view += '>';
+
   if (this.link) {
-    view += '<a target="_blank" href="' + this.link + '"';
-
-    if (this.weight !== 1) {
-      var weightPercent = (this.weight * 100).toFixed(1) + '%';
-      view += ' style="font-size: ' + weightPercent + '"';
-    }
-
-    view += '>';
+    view += '<a target="_blank" href="' + this.link + '">';
   }
 
   view += this.listTitle();
@@ -1122,6 +1136,8 @@ Content.prototype.renderedMenuLink = function() {
   if (this.link) {
     view += '</a>';
   }
+
+  view += '</li>';
 
   return view;
 };
@@ -1138,14 +1154,13 @@ Section.prototype.render = function({ index } = {}) {
 
   view += '<div class="section-list-wrapper" id="' + this.id + '">';
 
-  view += '<div class="section-list-header" id="' + this.id + '-header">' + this.title + '</div>';
+  view += '<a class="section-list-header" href="#' + this.id + '" id="' + this.id + '-header">' + this.title + '</a>';
 
   view += '<ul class="section-list">';
 
   for (var i = 0; i < this.contents.length; i++) {
     let active = index === 0 && i === 0;
-    view += active ? '<li class="active">' : '<li>';
-    view += this.contents[i].renderedMenuLink() + '</li></br>';
+    view += this.contents[i].renderedMenuLink(active) + '</br>';
   }
 
   view += '</ul>'; // section-list

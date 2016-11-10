@@ -1,8 +1,17 @@
 [
   {
-    "id": "media",
-    "title": "My Work 🎨",
+    "id": "work",
+    "title": "My Work",
     "contents": [
+      {
+        "link": "https://docs.google.com/document/d/1wBPhVi4UxxUtJffNkEdAA2Ia_qTqak4BC-45saYhX9E/edit?usp=sharing",
+        "title": "Curtain State",
+        "date": "November 2016",
+        "text": "Here are some thoughts about the bad election in relation to reality tv, mass media, and self-representation. Helpful for me to process hope it can be helpful to others.",
+        "tags": ["Text"],
+        "weight": 2.5,
+        "listStyle": "background: #f00;"
+      },
       {
         "link": "/from-tony-rontinos",
         "title": "From Tony Rontino's",
@@ -601,7 +610,7 @@
 
   {
     "id": "computer",
-    "title": "Moneywork & Tools $💻$",
+    "title": "Moneywork & Tools $",
     "contents": [
       {
         "link": "https://vsco.co",
@@ -712,7 +721,7 @@
   },
   {
     "id": "pics",
-    "title": "Pics 📷",
+    "title": "Pics",
     "contents": [
       {
         "link": "film/june15-1/",

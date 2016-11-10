@@ -12,7 +12,7 @@ function Content(config) {
   this.config = config;
 }
 
-var primaryColors = ['#ff0000', '#00ff00', '#0000ff', '#ff7f00'];
+var primaryColors = ['#ff0000', '#00cc00', '#0000ff', '#ff7f00'];
 var tagColorMap = {
   'Money': 'rgb(10, 147, 69)',
   'Text': 'rgb(190, 155, 10)'
@@ -89,17 +89,22 @@ Content.prototype.listTitle = function() {
   return this.title;
 };
 
-Content.prototype.renderedMenuLink = function() {
-  var view = '';
+Content.prototype.renderedMenuLink = function(active) {
+  var view = active ? '<li class="active"' : '<li';
+
+  var style = this.config.listStyle || '';
+  if (this.weight !== 1) {
+    var weightPercent = (this.weight * 100).toFixed(1) + '%';
+    style += ' font-size: ' + weightPercent;
+  }
+  if (style.length > 0) {
+    view += ' style="' + style + '"';
+  }
+
+  view += '>';
+
   if (this.link) {
-    view += '<a target="_blank" href="' + this.link + '"';
-
-    if (this.weight !== 1) {
-      var weightPercent = (this.weight * 100).toFixed(1) + '%';
-      view += ' style="font-size: ' + weightPercent + '"';
-    }
-
-    view += '>';
+    view += '<a target="_blank" href="' + this.link + '">';
   }
 
   view += this.listTitle();
@@ -107,6 +112,8 @@ Content.prototype.renderedMenuLink = function() {
   if (this.link) {
     view += '</a>';
   }
+
+  view += '</li>';
 
   return view;
 };
@@ -123,14 +130,13 @@ Section.prototype.render = function({ index } = {}) {
 
   view += '<div class="section-list-wrapper" id="' + this.id + '">';
 
-  view += '<div class="section-list-header" id="' + this.id + '-header">' + this.title + '</div>';
+  view += '<a class="section-list-header" href="#' + this.id + '" id="' + this.id + '-header">' + this.title + '</a>';
 
   view += '<ul class="section-list">';
 
   for (var i = 0; i < this.contents.length; i++) {
     let active = index === 0 && i === 0;
-    view += active ? '<li class="active">' : '<li>';
-    view += this.contents[i].renderedMenuLink() + '</li></br>';
+    view += this.contents[i].renderedMenuLink(active) + '</br>';
   }
 
   view += '</ul>'; // section-list

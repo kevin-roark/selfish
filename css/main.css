@@ -41,10 +41,10 @@ body a {
 /* TICKER */
 .ticker {
   position: fixed;
-  top: 0; right: 0;
+  top: 0; right: 20px;
   font-size: 6px;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-  color: #000;
+  color: #aaa;
   z-index: 1;
 }
   .ticker-travel-intro {
@@ -96,10 +96,18 @@ body a {
 }
 
 .name {
+  display: block;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
   font-size: 28px;
   margin: 22px;
+  background: #000;
+  color: #fff;
+  max-width: 340px;
+  padding-left: 2px;
 }
+  .name:hover {
+    color: #000;
+  }
 
 .welcome {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -150,16 +158,21 @@ body a {
   padding-bottom: 60px;
 }
 
-.section-list-header, .contact-header {
+.section-list-header {
+  display: block;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
   font-size: 19px;
-  color: #ff0000;
-  text-shadow: 0 5px 5px rgba(255, 0, 0, 0.35);
-}
-
-.section-list-header {
+  background: #000;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  padding-left: 2px; padding-bottom: 2px;
   margin: 5px 0 10px 0;
+  max-width: 340px;
 }
+  .section-list-header:hover {
+    color: #000;
+    text-shadow: none;
+  }
 
 .contact-header {
   margin: 5px 0 15px 0;
@@ -174,15 +187,15 @@ body a {
   line-height: 1.5;
 }
   .section-list li {
-    -webkit-transition: all 500ms;
-    -moz-transition: all 500ms;
-    transition: all 500ms;
+    -webkit-transition: all 200ms;
+    -moz-transition: all 200ms;
+    transition: all 200ms;
     display: inline-block;
     margin-bottom: 9px;
   }
   .section-list li.active {
-    -webkit-transform: skewX(-15deg) skewY(0.5deg);
-    transform: skewX(-15deg) skewY(0.5deg);
+    -webkit-transform: skewX(-8deg) skewY(0.2deg);
+    transform: skewX(-8deg) skewY(0.2deg);
   }
     .section-list li a {
       color: inherit;
@@ -312,11 +325,16 @@ body a {
 /* MEDIA QQQQQQQQQQ */
 
 @media (max-width: 600px) {
+  .ticker {
+    left: 10px;
+    right: auto;
+  }
   .ticker-intro {
     display: none;
   }
-  .ticker-travel-items a {
-    margin: 0 2px;
+
+  .content-section {
+    top: 10px;
   }
 
   .left-section {
@@ -352,7 +370,7 @@ body a {
     margin-bottom: 20px;
   }
 
-  .section-list-header, .contact-header {
+  .section-list-header {
     font-size: 16px;
   }
 
