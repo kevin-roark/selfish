@@ -12,7 +12,7 @@ function Content(config) {
   this.config = config;
 }
 
-var primaryColors = ['#ff0000', '#00cc00', '#0000ff', '#ff7f00'];
+var primaryColors = ['#ff0000', '#00cc00', '#0000ff', '#ff7f00', '#6666ff', '#ff66a2', '#c0c0c0'];
 var tagColorMap = {
   'Money': 'rgb(10, 147, 69)',
   'Text': 'rgb(190, 155, 10)'
@@ -62,7 +62,8 @@ Content.prototype.render = function() {
   if (this.images) {
     view += '<div class="content-image-zone">';
     for (i = 0; i < this.images.length; i++) {
-      view += '<div class="content-image-container">';
+      var imageContainerClass = 'content-image-container' + (this.images.length > 1 ? ' multi-image' : '');
+      view += '<div class="' + imageContainerClass + '">';
 
       view += '<img src="' + this.images[i] + '" alt=""></img>';
 

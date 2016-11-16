@@ -5,6 +5,15 @@ module.exports=[
     "title": "My Work",
     "contents": [
       {
+        "link": "https://www.youtube.com/watch?v=8gQ4cEM1ONA",
+        "title": "\"True\" (ft. Maria Ivanova) - Broken Spear (Video)",
+        "date": "November 2016",
+        "text": "Music video for the single \"True\" from the Broken Spear album True (out now go listen). I loved making this vid.",
+        "tags": ["Video"],
+        "weight": 1.9,
+        "images": ["images/true/1.jpg", "images/true/2.jpg", "images/true/3.jpg", "images/true/4.jpg", "images/true/5.jpg"]
+      },
+      {
         "link": "https://docs.google.com/document/d/1wBPhVi4UxxUtJffNkEdAA2Ia_qTqak4BC-45saYhX9E/edit?usp=sharing",
         "title": "Curtain State",
         "date": "November 2016",
@@ -1036,7 +1045,7 @@ function Content(config) {
   this.config = config;
 }
 
-var primaryColors = ['#ff0000', '#00cc00', '#0000ff', '#ff7f00'];
+var primaryColors = ['#ff0000', '#00cc00', '#0000ff', '#ff7f00', '#6666ff', '#ff66a2', '#c0c0c0'];
 var tagColorMap = {
   'Money': 'rgb(10, 147, 69)',
   'Text': 'rgb(190, 155, 10)'
@@ -1086,7 +1095,8 @@ Content.prototype.render = function() {
   if (this.images) {
     view += '<div class="content-image-zone">';
     for (i = 0; i < this.images.length; i++) {
-      view += '<div class="content-image-container">';
+      var imageContainerClass = 'content-image-container' + (this.images.length > 1 ? ' multi-image' : '');
+      view += '<div class="' + imageContainerClass + '">';
 
       view += '<img src="' + this.images[i] + '" alt=""></img>';
 

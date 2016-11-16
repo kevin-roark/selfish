@@ -4,6 +4,15 @@
     "title": "My Work",
     "contents": [
       {
+        "link": "https://www.youtube.com/watch?v=8gQ4cEM1ONA",
+        "title": "\"True\" (ft. Maria Ivanova) - Broken Spear (Video)",
+        "date": "November 2016",
+        "text": "Music video for the single \"True\" from the Broken Spear album True (out now go listen). I loved making this vid.",
+        "tags": ["Video"],
+        "weight": 1.9,
+        "images": ["images/true/1.jpg", "images/true/2.jpg", "images/true/3.jpg", "images/true/4.jpg", "images/true/5.jpg"]
+      },
+      {
         "link": "https://docs.google.com/document/d/1wBPhVi4UxxUtJffNkEdAA2Ia_qTqak4BC-45saYhX9E/edit?usp=sharing",
         "title": "Curtain State",
         "date": "November 2016",
