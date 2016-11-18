@@ -1,0 +1,73 @@
+
+html, body {
+  margin: 0; padding: 0; width: 100%; height: 100%;
+}
+
+body {
+  background-color: #000;
+  overflow-x: hidden;
+  transform-origin: 50% 0;
+  transition: transform 0.2s;
+}
+
+::selection {
+  background: #ff0;
+}
+
+.background-image {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+}
+
+.freelance-title {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 18px;
+  letter-spacing: 5px;
+  color: #ffe534;
+  text-shadow:
+    1px 1px 1px rgba(255, 229, 52, 0.95),
+    2px 2px 3px rgba(255, 229, 52, 0.5),
+    3px 3px 5px rgba(255, 229, 52, 0.3);
+}
+
+.freelance-images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  align-items: flex-start;
+
+  padding-top: 120px;
+  padding-bottom: 100vh;
+}
+
+.freelance-images img {
+  display: block;
+  margin: 0 0 100vh 0;
+  padding: 0;
+  max-width: 33.3333vw;
+  box-sizing: border-box;
+  opacity: 0.5;
+
+  border: 10px solid transparent;
+  transition: border 0.2s, transform 0.15s;
+
+  user-select: none;
+  --moz-user-select: none;
+}
+
+.freelance-images img:hover {
+  opacity: 1;
+  z-index: 1;
+}
+
+@media (max-width: 600px) {
+  .freelance-images img {
+    max-width: 100vw;
+  }
+}
