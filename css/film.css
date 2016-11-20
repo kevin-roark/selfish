@@ -8,6 +8,16 @@ body {
   height: 100%;
 }
 
+.photo-series-list {
+  list-style: none;
+  font-size: 28px;
+  line-height: 2;
+}
+
+.photo-series-list a {
+  color: black;
+}
+
 .film-header {
   font-size: 44px;
   text-align: center;

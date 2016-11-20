@@ -5,12 +5,22 @@ module.exports=[
     "title": "My Work",
     "contents": [
       {
+        "link": "/freelance",
+        "title": "FREELANCE",
+        "date": "Ongoing (b. November 2016)",
+        "text": "Deep Stream of life photos taken on VIVITAR FREELANCE digital cam.",
+        "tags": ["Photo"],
+        "weight": 1.4,
+        "listStyle": "letter-spacing: 5px; text-shadow: 5px 5px 1px rgba(0,0,0,0.5);",
+        "images": ["freelance/images/381.jpg", "freelance/images/327.jpg", "freelance/images/253.jpg", "freelance/images/274.jpg"]
+      },
+      {
         "link": "https://www.youtube.com/watch?v=8gQ4cEM1ONA",
         "title": "\"True\" (ft. Maria Ivanova) - Broken Spear (Video)",
         "date": "November 2016",
         "text": "Music video for the single \"True\" from the Broken Spear album True (out now go listen). I loved making this vid.",
         "tags": ["Video"],
-        "weight": 1.9,
+        "weight": 1.7,
         "images": ["images/true/1.jpg", "images/true/2.jpg", "images/true/3.jpg", "images/true/4.jpg", "images/true/5.jpg"]
       },
       {
@@ -404,6 +414,46 @@ module.exports=[
         "images": ["images/snockplanet.jpg"]
       },
       {
+        "link": "film/june15/pt1",
+        "title": "June 2015 Pt. 1",
+        "date": "June 2015",
+        "text": "35mm photos of motorcycles",
+        "tags": ["Photo"],
+        "images": ["images/june15-1.jpg"]
+      },
+      {
+        "link": "film/june15/pt2",
+        "title": "June 2015 Pt. 2",
+        "date": "June 2015",
+        "text": "35mm photos of luxury",
+        "tags": ["Photo"],
+        "images": ["images/june15-2.jpg"]
+      },
+      {
+        "link": "film/june15/pt3",
+        "title": "June 2015 Pt. 3",
+        "date": "June 2015",
+        "text": "35mm photos of wet world water",
+        "tags": ["Photo"],
+        "images": ["images/june15-3.jpg"]
+      },
+      {
+        "link": "film/june15/pt4",
+        "title": "June 2015 Pt. 4",
+        "date": "June 2015",
+        "text": "35mm photos of outside stuff",
+        "tags": ["Photo"],
+        "images": ["images/june15-4.jpg"]
+      },
+      {
+        "link": "film/june15/pt5",
+        "title": "June 2015 Pt. 5",
+        "date": "June 2015",
+        "text": "35mm photos of florida",
+        "tags": ["Photo"],
+        "images": ["images/june15-5.jpg"]
+      },
+      {
         "link": "http://www.luminal.space/",
         "title": "Luminal.space",
         "date": "April 2015",
@@ -525,6 +575,22 @@ module.exports=[
         "text": "An iOS application. Send sound at miller's fantasy founders. We send it back",
         "tags": ["Miller's Fantasy", "App", "Sound"],
         "images": ["images/miller/yellin.jpg"]
+      },
+      {
+        "link": "film/textures/",
+        "title": "Textures",
+        "date": "Spring 2014",
+        "text": "natural patterns",
+        "tags": ["Photo"],
+        "images": ["images/textures.jpg"]
+      },
+      {
+        "link": "film/mouths/",
+        "title": "Mouths",
+        "date": "Spring 2014",
+        "text": "eat through the hole",
+        "tags": ["Photo"],
+        "images": ["images/mouths.jpg"]
       },
       {
         "link": "http://www.specialmagicglasshole.com",
@@ -726,54 +792,6 @@ module.exports=[
         "text": "The first time I tried something. A processing game of rhythm-bouncing meatballs. Hard to Not Remember The Past",
         "images": ["images/meatbeat.jpg"],
         "weight": 0.4
-      }
-    ]
-  },
-  {
-    "id": "pics",
-    "title": "Pics",
-    "contents": [
-      {
-        "link": "film/june15-1/",
-        "title": "June 2015 1",
-        "text": "cycles",
-        "images": ["images/june15-1.jpg"]
-      },
-      {
-        "link": "film/june15-2/",
-        "title": "June 2015 2",
-        "text": "you deserve extra",
-        "images": ["images/june15-2.jpg"]
-      },
-      {
-        "link": "film/june15-3/",
-        "title": "June 2015 3",
-        "text": "i live in a wet world",
-        "images": ["images/june15-3.jpg"]
-      },
-      {
-        "link": "film/june15-4/",
-        "title": "June 2015 4",
-        "text": "visions",
-        "images": ["images/june15-4.jpg"]
-      },
-      {
-        "link": "film/june15-5/",
-        "title": "June 2015 5",
-        "text": "Florida",
-        "images": ["images/june15-5.jpg"]
-      },
-      {
-        "link": "film/textures/",
-        "title": "Textures",
-        "text": "natural patterns",
-        "images": ["images/textures.jpg"]
-      },
-      {
-        "link": "film/mouths/",
-        "title": "Mouths",
-        "text": "eat through the hole",
-        "images": ["images/mouths.jpg"]
       }
     ]
   },
@@ -1045,10 +1063,10 @@ function Content(config) {
   this.config = config;
 }
 
-var primaryColors = ['#ff0000', '#00cc00', '#0000ff', '#ff7f00', '#6666ff', '#ff66a2', '#c0c0c0'];
+var primaryColors = ['#ff0000', '#00cc00', '#0000ff', '#ff9446', '#6666ff', '#ff66a2', '#c0c0c0'];
 var tagColorMap = {
-  'Money': 'rgb(10, 147, 69)',
-  'Text': 'rgb(190, 155, 10)'
+  'Money': '#0a9345',
+  'Text': '#be9b0a'
 };
 
 Content.prototype.render = function() {

@@ -12,10 +12,10 @@ function Content(config) {
   this.config = config;
 }
 
-var primaryColors = ['#ff0000', '#00cc00', '#0000ff', '#ff7f00', '#6666ff', '#ff66a2', '#c0c0c0'];
+var primaryColors = ['#ff0000', '#00cc00', '#0000ff', '#ff9446', '#6666ff', '#ff66a2', '#c0c0c0'];
 var tagColorMap = {
-  'Money': 'rgb(10, 147, 69)',
-  'Text': 'rgb(190, 155, 10)'
+  'Money': '#0a9345',
+  'Text': '#be9b0a'
 };
 
 Content.prototype.render = function() {
