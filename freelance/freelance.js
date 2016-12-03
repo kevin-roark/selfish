@@ -1,5 +1,7 @@
 (function() {
   var borderColors = ['#ff0', '#000', '#00f', '#f00', '#fff'];
+  var transluscentBorderColors = ['rgba(255, 255, 0, 0.3)', 'rgba(0, 0, 0, 0.3)', 'rgba(0, 0, 255, 0.3)', 'rgba(255, 0, 0, 0.3)', 'rgba(255, 255, 255, 0.3)'];
+
   var backgroundImage = document.querySelector('.background-image');
   var imageContainer = document.querySelector('.freelance-images');
   var images = document.querySelectorAll('.freelance-images img');
@@ -71,7 +73,7 @@
 
   function setImagesBorderColor (color) {
     for (var i = 0; i < images.length; i++) {
-      images[i].style.borderColor = color || borderColors[Math.floor(borderColors.length * Math.random())];
+      images[i].style.borderColor = color || transluscentBorderColors[Math.floor(transluscentBorderColors.length * Math.random())];
     }
   }
 
