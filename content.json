@@ -4,6 +4,14 @@
     "title": "My Work",
     "contents": [
       {
+        "link": "http://gruen.kevinroark.com",
+        "title": "Gruen (NAME ON THE FRONT PAGE)",
+        "date": "December 2016",
+        "text": "Infinitely-growing black pillars in a black box lit by red and blue. Sound from a disgusting man. Made for projection at a Cyberpunk Event (lol).",
+        "tags": ["Pleasure Seeker", "3D", "Sound"],
+        "images": ["images/gruen.jpg"]
+      },
+      {
         "link": "/freelance",
         "title": "FREELANCE",
         "date": "Ongoing (b. November 2016)",

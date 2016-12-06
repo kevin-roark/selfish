@@ -126,7 +126,10 @@ function Section(config) {
   this.isNotMine = config.isNotMine;
 }
 
-Section.prototype.render = function({ index } = {}) {
+Section.prototype.render = function(options) {
+  if (!options) options = {};
+  var index = options.index;
+
   var view = '';
 
   view += '<div class="section-list-wrapper" id="' + this.id + '">';
@@ -136,7 +139,7 @@ Section.prototype.render = function({ index } = {}) {
   view += '<ul class="section-list">';
 
   for (var i = 0; i < this.contents.length; i++) {
-    let active = index === 0 && i === 0;
+    var active = index === 0 && i === 0;
     view += this.contents[i].renderedMenuLink(active) + '</br>';
   }
 

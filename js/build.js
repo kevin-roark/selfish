@@ -5,6 +5,14 @@ module.exports=[
     "title": "My Work",
     "contents": [
       {
+        "link": "http://gruen.kevinroark.com",
+        "title": "Gruen (NAME ON THE FRONT PAGE)",
+        "date": "December 2016",
+        "text": "Infinitely-growing black pillars in a black box lit by red and blue. Sound from a disgusting man. Made for projection at a Cyberpunk Event (lol).",
+        "tags": ["Pleasure Seeker", "3D", "Sound"],
+        "images": ["images/gruen.jpg"]
+      },
+      {
         "link": "/freelance",
         "title": "FREELANCE",
         "date": "Ongoing (b. November 2016)",
@@ -1177,7 +1185,10 @@ function Section(config) {
   this.isNotMine = config.isNotMine;
 }
 
-Section.prototype.render = function({ index } = {}) {
+Section.prototype.render = function(options) {
+  if (!options) options = {};
+  var index = options.index;
+
   var view = '';
 
   view += '<div class="section-list-wrapper" id="' + this.id + '">';
@@ -1187,7 +1198,7 @@ Section.prototype.render = function({ index } = {}) {
   view += '<ul class="section-list">';
 
   for (var i = 0; i < this.contents.length; i++) {
-    let active = index === 0 && i === 0;
+    var active = index === 0 && i === 0;
     view += this.contents[i].renderedMenuLink(active) + '</br>';
   }
 
