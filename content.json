@@ -4,6 +4,15 @@
     "title": "My Work",
     "contents": [
       {
+        "link": "/bird-sculpture",
+        "title": "Bird Sculpture (FREEDOM)",
+        "date": "December 2016",
+        "text": "Multimedia installation about birds, guilt, replication, and abstraction.",
+        "tags": ["Installation", "Sculpture", "3D", "Video"],
+        "weight": 1.5,
+        "images": ["images/birdsculpture.jpg"]
+      },
+      {
         "link": "http://gruen.kevinroark.com",
         "title": "Gruen (NAME ON THE FRONT PAGE)",
         "date": "December 2016",
