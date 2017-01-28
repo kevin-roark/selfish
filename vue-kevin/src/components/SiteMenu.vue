@@ -27,6 +27,7 @@ ul {
   position: fixed;
   bottom: 10px; right: 10px;
   text-align: right;
+  z-index: 10;
 }
 
 li {

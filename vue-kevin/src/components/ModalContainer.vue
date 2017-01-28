@@ -1,7 +1,7 @@
 <template>
   <div class="modal-container">
     <template v-for="i in 4">
-      <x-icon :class="['x-icon', `x-icon-${i + 1}`]" @click="close" />
+      <x-icon :class="['x-icon', `x-icon-${i + 1}`]" @click.native="close" />
     </template>
     <slot></slot>
   </div>

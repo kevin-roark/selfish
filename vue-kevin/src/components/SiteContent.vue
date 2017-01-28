@@ -1,41 +1,70 @@
 <template>
   <div class="content-container">
     <transition name="simple-fade">
-      <img v-if="hoveringCard.imageURL" class="background-image" :src="hoveringCard.imageURL" alt="" />
+      <img v-if="hoveringImageURL" class="background-image" :src="hoveringImageURL" alt="" />
     </transition>
 
-    <ContentCard
-      v-for="i in 5"
-      :title="'ART #' + i"
-      :style="cardStyle(i)"
-      :isCardHovering="!!hoveringCard.imageURL"
-      @hoverChange="cardHover"
-    />
+    <div class="card-container" :style="cardContainerStyle">
+      <ContentCard
+        v-for="i in 50"
+        :title="'ART #' + i"
+        :style="cardStyles[i - 1]"
+        :isCardHovering="!!hoveringImageURL"
+        @hoverChange="cardHover"
+      />
+    </div>
   </div>
 </template>
 
 <script>
 import ContentCard from './ContentCard';
+import Resizer from '../mixins/resizer';
 
 export default {
   components: {
     ContentCard,
   },
+  mixins: [Resizer],
   data: () => ({
-    hoveringCard: { imageURL: null },
+    cardContainerWidth: 0,
+    cardStyles: [],
+    hoveringImageURL: null,
   }),
+  mounted() {
+    this.computeCardPositions();
+  },
   computed: {
+    containerStyle() {
+      return { width: `${this.width}px` };
+    },
+    cardContainerStyle() {
+      return { width: `${this.cardContainerWidth}px` };
+    },
   },
   methods: {
-    cardStyle(i) {
-      return {
-        position: 'absolute',
-        top: `${(i * 150)}px`,
-        left: `${(i * 60)}px`,
-      };
+    onResize() {
+      this.computeCardPositions(true);
     },
     cardHover({ imageURL, hovering }) {
-      this.hoveringCard.imageURL = hovering ? imageURL : null;
+      this.hoveringImageURL = hovering ? imageURL : null;
+    },
+    computeCardPositions(resize = false) {
+      // only need to calculate the card positions on mount or resize
+      const cardStyles = [];
+      const h = window.innerHeight;
+      let left = 50;
+      for (let i = 0; i < 50; i += 1) {
+        cardStyles.push({
+          left: resize ? this.cardStyles[i].left : `${left}px`,
+          top: `${Math.floor(Math.random() * (h - 120))}px`,
+          position: 'absolute',
+        });
+        left = resize ? Number(this.cardStyles[i].left) :
+          left + (Math.random() * Math.random() * 200) + 40;
+      }
+
+      this.cardStyles = cardStyles;
+      this.cardContainerWidth = left + 170;
     },
   },
 };
@@ -43,9 +72,13 @@ export default {
 
 <style scoped>
 .content-container {
-  position: fixed;
-  top: 0; left: 0; width: 100vw; height: calc(100vh - 200px);
+  position: absolute;
+  top: 0; left: 0; width: 100vw; height: 100vh;
   overflow: auto;
+}
+
+.card-container {
+  height: 100vh;
 }
 
 .background-image {
