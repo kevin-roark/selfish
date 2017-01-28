@@ -36,9 +36,15 @@ li {
 }
 
 a {
+  display: block;
   color: inherit;
   text-decoration: none;
+  transform-origin: 100% 50%;
+  transition: transform 0.2s;
 }
+  .no-touch a:hover {
+    transform: scale(8, 1.5);
+  }
 
 @media (max-width: 800px) {
   ul {
@@ -47,5 +53,6 @@ a {
   li {
     font-size: 11px;
   }
+  a:hover {}
 }
 </style>

@@ -11,6 +11,7 @@
   font-family: Menlo, Monaco, monospace;
   font-weight: normal;
   font-size: 28px;
+  z-index: 10;
 }
 
 @media (max-width: 800px) {

@@ -1,13 +1,16 @@
 <template>
-  <div id="app">
-    <div class="main-content" :class="{ 'modal-showing': modalRoute }">
+  <div id="app" :class="appClass">
+    <div class="main-content" :class="contentClass">
       <my-name></my-name>
       <site-menu></site-menu>
+      <site-content></site-content>
     </div>
 
-    <modal-container v-if="modalRoute">
-      <router-view></router-view>
-    </modal-container>
+    <transition name="simple-fade">
+      <modal-container v-if="modalRoute">
+        <router-view></router-view>
+      </modal-container>
+    </transition>
   </div>
 </template>
 
@@ -15,15 +18,39 @@
 import ModalContainer from './components/ModalContainer';
 import MyName from './components/MyName';
 import SiteMenu from './components/SiteMenu';
+import SiteContent from './components/SiteContent';
+
+function isTouchDevice() {
+  return 'ontouchstart' in window // works on most browsers
+    || navigator.maxTouchPoints;  // works on IE10/11 and Surface
+}
 
 export default {
   name: 'app',
   components: {
     MyName,
     SiteMenu,
+    SiteContent,
     ModalContainer,
   },
+  data: () => ({ touch: true }),
+  mounted() {
+    if (!isTouchDevice()) {
+      this.touch = false;
+    }
+  },
   computed: {
+    appClass() {
+      return {
+        'no-touch': !this.touch,
+        touch: this.touch,
+      };
+    },
+    contentClass() {
+      return {
+        'modal-showing': this.modalRoute,
+      };
+    },
     modalRoute() {
       return this.$route.path.length > 1; // only "/" will return false
     },
@@ -42,7 +69,18 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.main-content {
+  transition: opacity 0.2s;
+}
+
 .main-content.modal-showing {
   opacity: 0.5;
+}
+
+.simple-fade-enter-active, .simple-fade-leave-active {
+  transition: opacity 0.2s
+}
+.simple-fade-enter, .simple-fade-leave-to {
+  opacity: 0
 }
 </style>
