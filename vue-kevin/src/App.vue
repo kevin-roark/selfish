@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+    <my-name></my-name>
+    <site-menu></site-menu>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello';
+import MyName from './components/MyName';
+import SiteMenu from './components/SiteMenu';
 
 export default {
   name: 'app',
   components: {
-    Hello,
+    MyName,
+    SiteMenu,
   },
 };
 </script>
