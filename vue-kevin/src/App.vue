@@ -3,7 +3,7 @@
     <div class="main-content" :class="contentClass">
       <my-name></my-name>
       <site-menu></site-menu>
-      <site-content></site-content>
+      <site-content :content="content"></site-content>
     </div>
 
     <transition name="simple-fade">
@@ -19,6 +19,7 @@ import ModalContainer from './components/ModalContainer';
 import MyName from './components/MyName';
 import SiteMenu from './components/SiteMenu';
 import SiteContent from './components/SiteContent';
+import content from './data/content.json';
 
 function isTouchDevice() {
   return 'ontouchstart' in window // works on most browsers
@@ -33,7 +34,7 @@ export default {
     SiteContent,
     ModalContainer,
   },
-  data: () => ({ touch: true }),
+  data: () => ({ touch: true, content }),
   mounted() {
     if (!isTouchDevice()) {
       this.touch = false;
@@ -67,6 +68,11 @@ html, body {
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: #00f;
+  color: #f00;
 }
 
 .main-content {

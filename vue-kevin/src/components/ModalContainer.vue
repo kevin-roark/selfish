@@ -1,8 +1,12 @@
 <template>
   <div class="modal-container">
+    <div class="color-bar color-bar-red" />
+    <div class="color-bar color-bar-blue" />
+
     <template v-for="i in 4">
       <x-icon :class="['x-icon', `x-icon-${i + 1}`]" @click.native="close" />
     </template>
+
     <slot></slot>
   </div>
 </template>
@@ -37,6 +41,24 @@ export default {
 .modal-container {
   position: fixed;
   top: 0; left: 0; width: 100%; height: 100%;
+  overflow: auto;
+}
+
+.color-bar {
+  position: fixed;
+  left: 0; width: 100%;
+  height: 50%;
+  mix-blend-mode: overlay;
+  opacity: 0.9;
+  z-index: -1;
+}
+.color-bar-red {
+  background: #f00;
+  top: 0;
+}
+.color-bar-blue {
+  background: #00f;
+  top: 50%;
 }
 
 .x-icon {

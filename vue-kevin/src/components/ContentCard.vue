@@ -1,7 +1,7 @@
 <template>
   <div class="card" :style="cardStyle" @mouseenter="setHover(true)" @mouseleave="setHover(false)">
-    <h2 class="card-title">{{ title }}</h2>
-    <img class="card-image" :src="imageURL" :alt="`${title} Image`" />
+    <h2 class="card-title" :class="{ 'no-image': !imageURL }">{{ title }}</h2>
+    <img v-if="imageURL" class="card-image" :src="imageURL" :alt="`${title} Image`" />
   </div>
 </template>
 
@@ -9,10 +9,10 @@
 export default {
   props: {
     title: String,
+    imageURL: String,
     isCardHovering: Boolean,
   },
   data: () => ({
-    imageURL: require('../assets/images/birdsculpture.jpg'), // eslint-disable-line
     hovering: false,
   }),
   computed: {
@@ -59,10 +59,14 @@ export default {
   margin: 0; padding: 0;
   font-family: Menlo, Monaco, monospace;
   font-size: 11px;
+  line-height: 1.4;
   font-weight: normal;
   color: #FFF;
   text-shadow: 0.25px 1px 1px rgba(0,0,0,0.30);
 }
+  .card-title.no-image {
+    font-size: 16px;
+  }
 
 .card-image {
   width: 98px;

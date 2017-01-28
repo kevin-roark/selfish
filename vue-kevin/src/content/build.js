@@ -1,16 +1,21 @@
 
-let fs = require('fs');
-let path = require('path');
-let CSON = reqire('cson');
+const fs = require('fs');
+const path = require('path');
+const CSON = require('cson');
+const pathname = file => path.join(__dirname, file);
 
-let pathname = file => path.join(__dirname, file);
+console.log('asdfasdf');
 
-let content = CSON.parseCSONFile(pathname('content.cson'));
-let links = CSON.parseCSONFile(pathname('links.cson'));
+const content = CSON.parseCSONFile(pathname('content.cson'));
+fs.writeFileSync(pathname('content.json'), JSON.stringify(content));
 
-let data = {
+console.log('hello', content);
+
+const links = CSON.parseCSONFile(pathname('links.cson'));
+fs.writeFileSync(pathname('links.json'), JSON.stringify(links));
+
+const data = {
   content,
-  links
+  links,
 };
-
-fs.writeFileSync(pathname('data.json'));
+fs.writeFileSync(pathname('data.json'), JSON.stringify(data));
