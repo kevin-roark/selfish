@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import App from './App';
+import ContentDetail from './routes/ContentDetail';
 import AboutMe from './routes/AboutMe';
 import Contact from './routes/Contact';
 import Links from './routes/Links';
@@ -15,6 +16,7 @@ const router = new VueRouter({
     { path: '/contact', component: Contact },
     { path: '/links', component: Links },
     { path: '/essays', component: Essays },
+    { path: '/detail/:slug', component: ContentDetail, props: true },
   ],
 });
 

@@ -2,9 +2,16 @@
 const fs = require('fs');
 const path = require('path');
 const CSON = require('cson');
+const slug = require('slug');
+
 const pathname = file => path.join(__dirname, file);
 
 const content = CSON.parseCSONFile(pathname('content.cson'));
+
+content.forEach((c) => {
+  c.slug = slug(c.title); //eslint-disable-line
+});
+
 fs.writeFileSync(pathname('content.json'), JSON.stringify(content));
 
 const links = CSON.parseCSONFile(pathname('links.cson'));

@@ -12,6 +12,8 @@
   font-weight: normal;
   font-size: 28px;
   z-index: 10;
+  color: #1f1f1f;
+  text-shadow: 0 2px 2px #fff;
 }
 
 @media (max-width: 800px) {

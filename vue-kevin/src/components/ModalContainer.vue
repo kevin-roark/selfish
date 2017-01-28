@@ -1,9 +1,8 @@
 <template>
   <div class="modal-container">
-    <div class="color-bar color-bar-red" />
-    <div class="color-bar color-bar-blue" />
+    <color-bars :opacity="colorBarOpacity" :style="{ zIndex: -1 }" />
 
-    <template v-for="i in 4">
+    <template v-if="showCloseButtons" v-for="i in 4">
       <x-icon :class="['x-icon', `x-icon-${i + 1}`]" @click.native="close" />
     </template>
 
@@ -13,16 +12,35 @@
 
 <script>
 import XIcon from './x-icon';
+import ColorBars from './ColorBars';
 
 export default {
   components: {
     XIcon,
+    ColorBars,
+  },
+  props: {
+    mode: { type: String, default: 'default' },
   },
   mounted() {
     window.addEventListener('keyup', this.keyup);
   },
   beforeDestroy() {
     window.removeEventListener('keyup', this.keyup);
+  },
+  computed: {
+    colorBarOpacity() {
+      switch (this.mode) {
+        case 'detail': return 0.75;
+        default: return 0.9;
+      }
+    },
+    showCloseButtons() {
+      switch (this.mode) {
+        case 'detail': return false;
+        default: return true;
+      }
+    },
   },
   methods: {
     keyup(ev) {
@@ -42,23 +60,6 @@ export default {
   position: fixed;
   top: 0; left: 0; width: 100%; height: 100%;
   overflow: auto;
-}
-
-.color-bar {
-  position: fixed;
-  left: 0; width: 100%;
-  height: 50%;
-  mix-blend-mode: overlay;
-  opacity: 0.9;
-  z-index: -1;
-}
-.color-bar-red {
-  background: #f00;
-  top: 0;
-}
-.color-bar-blue {
-  background: #00f;
-  top: 50%;
 }
 
 .x-icon {

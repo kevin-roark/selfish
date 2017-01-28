@@ -7,7 +7,7 @@
     </div>
 
     <transition name="simple-fade">
-      <modal-container v-if="modalRoute">
+      <modal-container v-if="modalRoute" :mode="modalMode">
         <router-view></router-view>
       </modal-container>
     </transition>
@@ -54,6 +54,9 @@ export default {
     },
     modalRoute() {
       return this.$route.path.length > 1; // only "/" will return false
+    },
+    modalMode() {
+      return this.$route.path.indexOf('detail') >= 0 ? 'detail' : 'default';
     },
   },
 };

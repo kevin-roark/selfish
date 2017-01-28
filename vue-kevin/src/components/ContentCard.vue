@@ -1,8 +1,10 @@
 <template>
-  <div class="card" :style="cardStyle" @mouseenter="setHover(true)" @mouseleave="setHover(false)">
-    <h2 class="card-title" :class="{ 'no-image': !imageURL }">{{ title }}</h2>
-    <img v-if="imageURL" class="card-image" :src="imageURL" :alt="`${title} Image`" />
-  </div>
+  <router-link class="card-wrapper" :to="url">
+    <div class="card" :style="cardStyle" @mouseenter="setHover(true)" @mouseleave="setHover(false)">
+      <h2 class="card-title" :class="{ 'no-image': !imageURL }">{{ title }}</h2>
+      <img v-if="imageURL" class="card-image" :src="imageURL" :alt="`${title} Image`" />
+    </div>
+  </router-link>
 </template>
 
 <script>
@@ -11,22 +13,32 @@ export default {
     title: String,
     imageURL: String,
     isCardHovering: Boolean,
+    weight: { type: Number, default: 1 },
+    slug: String,
   },
   data: () => ({
     hovering: false,
   }),
   computed: {
     cardStyle() {
-      let opacity = 1;
+      let bgOpacity = 1;
       if (this.weight < 1) {
-        opacity = this.weight * 0.8;
+        bgOpacity = this.weight * 0.75;
       } else if (this.weight < 2) {
-        opacity = ((2 - this.weight) * 0.2) + 0.8;
+        bgOpacity = ((this.weight - 1) * 0.25) + 0.8;
       }
+      const black = Math.round((1 - bgOpacity) * 255);
+
+      const scale = this.weight > 1 ? Math.min(2, this.weight) : Math.max(1, 1.2 * this.weight);
+
       return {
-        opacity,
-        mixBlendMode: (this.isCardHovering && !this.hovering) ? 'difference' : 'normal',
+        backgroundColor: `rgb(${black}, ${black}, ${black})`,
+        mixBlendMode: (this.isCardHovering && !this.hovering) ? 'difference' : 'inherit',
+        transform: `scale(${scale}, ${scale})`,
       };
+    },
+    url() {
+      return `/detail/${this.slug}`;
     },
   },
   methods: {
@@ -39,9 +51,15 @@ export default {
 </script>
 
 <style scoped>
+.card-wrapper {
+  display: block;
+  color: inherit; text-decoration: none;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
 .card {
   box-sizing: border-box;
-  width: 120px;
+  min-width: 120px; max-width: 200px;
   padding: 10px;
   cursor: pointer;
   text-align: center;
@@ -50,15 +68,17 @@ export default {
   transition: box-shadow 0.2s, transform 0.2s;
 }
 
-  .no-touch .card:hover {
+  .no-touch .card-wrapper:hover {
+    transform: scale(1.25);
+  }
+  .no-touch .card-wrapper:hover .card {
     box-shadow: -5px 5px 1px 0 #232323, -10px 10px 1px 0 #444444, -15px 15px 1px 0 #636363, -20px 20px 1px 0 #959595;
-    transform: scale(1.5);
   }
 
 .card-title {
   margin: 0; padding: 0;
   font-family: Menlo, Monaco, monospace;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.4;
   font-weight: normal;
   color: #FFF;

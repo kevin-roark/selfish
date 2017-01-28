@@ -11,6 +11,8 @@
         :key="item.title"
         :title="item.title"
         :imageURL="getImageURL(item)"
+        :weight="item.weight"
+        :slug="item.slug"
         :style="cardStyles[i]"
         :isCardHovering="hoverState.hovering"
         @hoverChange="cardHover"
@@ -22,6 +24,7 @@
 <script>
 import ContentCard from './ContentCard';
 import Resizer from '../mixins/resizer';
+import { getImageURL } from '../util/images';
 
 export default {
   components: {
@@ -53,7 +56,7 @@ export default {
       this.hoverState.imageURL = hovering ? imageURL : null;
     },
     getImageURL(i) {
-      return i.images && i.images.length > 0 ? require(`../assets/${i.images[0]}`) : null; // eslint-disable-line
+      return i.images && i.images.length > 0 ? getImageURL(i.images[0]) : null;
     },
     computeCardPositions(resize = false) {
       // only need to calculate the card positions on mount or resize
@@ -63,11 +66,11 @@ export default {
       for (let i = 0; i < this.content.length; i += 1) {
         cardStyles.push({
           left: resize ? this.cardStyles[i].left : `${left}px`,
-          top: `${Math.floor(Math.random() * (h - 120))}px`,
+          top: `${Math.floor(Math.random() * (h - 140)) + 20}px`,
           position: 'absolute',
         });
         left = resize ? parseFloat(this.cardStyles[i].left) :
-          left + (Math.random() * Math.random() * 200) + 40;
+          left + (Math.random() * Math.random() * 200) + 75;
       }
 
       this.cardStyles = cardStyles;
