@@ -1,11 +1,18 @@
 <template>
   <div id="app">
-    <my-name></my-name>
-    <site-menu></site-menu>
+    <div class="main-content" :class="{ 'modal-showing': modalRoute }">
+      <my-name></my-name>
+      <site-menu></site-menu>
+    </div>
+
+    <modal-container v-if="modalRoute">
+      <router-view></router-view>
+    </modal-container>
   </div>
 </template>
 
 <script>
+import ModalContainer from './components/ModalContainer';
 import MyName from './components/MyName';
 import SiteMenu from './components/SiteMenu';
 
@@ -14,6 +21,12 @@ export default {
   components: {
     MyName,
     SiteMenu,
+    ModalContainer,
+  },
+  computed: {
+    modalRoute() {
+      return this.$route.path.length > 1; // only "/" will return false
+    },
   },
 };
 </script>
@@ -27,5 +40,9 @@ html, body {
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.main-content.modal-showing {
+  opacity: 0.5;
 }
 </style>

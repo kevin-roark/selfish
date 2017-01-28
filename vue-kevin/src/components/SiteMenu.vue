@@ -1,7 +1,7 @@
 <template>
   <ul>
     <li v-for="item in items">
-      {{ item }}
+      <router-link :to="item.path">{{ item.name }}</router-link>
     </li>
   </ul>
 </template>
@@ -11,10 +11,10 @@
     name: 'site-menu',
     data: () => ({
       items: [
-        'INFO',
-        'CONTACT',
-        'ESSAYS',
-        'LINKS',
+        { name: 'INFO', path: '/info' },
+        { name: 'CONTACT', path: '/contact' },
+        { name: 'ESSAYS', path: '/essays' },
+        { name: 'LINKS', path: '/links' },
       ],
     }),
   };
@@ -33,6 +33,11 @@ li {
   font-family: Menlo, Monaco, monospace;
   font-size: 16px;
   line-height: 2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 @media (max-width: 800px) {
