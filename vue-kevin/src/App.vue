@@ -1,5 +1,7 @@
 <template>
   <div id="app" :class="appClass">
+    <ThreeDee />
+
     <div class="main-content" :class="contentClass">
       <my-name></my-name>
       <site-menu></site-menu>
@@ -15,6 +17,7 @@
 </template>
 
 <script>
+import ThreeDee from './components/ThreeDee';
 import ModalContainer from './components/ModalContainer';
 import MyName from './components/MyName';
 import SiteMenu from './components/SiteMenu';
@@ -33,6 +36,7 @@ export default {
     SiteMenu,
     SiteContent,
     ModalContainer,
+    ThreeDee,
   },
   data: () => ({ touch: true, content }),
   mounted() {
