@@ -1,27 +1,26 @@
 <template>
-  <div class="detail-container">
-    <div class="detail-modal">
-      <x-icon class="detail-close-button" color="#fff" @click.native="close" />
+  <div class="detail-modal">
+    <h2 class="detail-title">
+      <a v-if="content.link" :href="content.link" target="_blank">{{ content.title }}</a>
+      <span v-else>{{ content.title }}</span>
+    </h2>
 
-      <h2 class="detail-title">
-        <a v-if="content.link" :href="content.link" target="_blank">{{ content.title }}</a>
-        <span v-else>{{ content.title }}</span>
-      </h2>
+    <detail-tags class="detail-tags" :tags="content.tags" :date="content.date" />
 
-      <detail-tags class="detail-tags" :tags="content.tags" :date="content.date" />
+    <div class="detail-description">{{ content.text }}</div>
 
-      <div class="detail-description">{{ content.text }}</div>
+    <div
+      v-if="imageURLs.length > 0"
+      :class="{ 'detail-images': true, 'single-image': imageURLs.length === 1 }"
+    >
+      <img v-for="(src, i) in imageURLs" :src="src" :alt="`Image ${i}`" />
+    </div>
 
-      <div v-if="imageURLs.length > 0" class="detail-images">
-        <img v-for="(src, i) in imageURLs" :src="src" :alt="`Image ${i}`" />
-      </div>
+    <a v-if="content.link" class="detail-link" :href="content.link" target="_blank">LINK</a>
 
-      <a v-if="content.link" class="detail-link" :href="content.link" target="_blank">LINK</a>
-
-      <div v-if="navigationHandler" class="detail-navigation">
-        <span class="detail-navigation-arrow" @click="navigationHandler(-1)">→</span>
-        <span class="detail-navigation-arrow" @click="navigationHandler(1)">←</span>
-      </div>
+    <div v-if="navigationHandler" class="detail-navigation">
+      <span class="detail-navigation-arrow" @click="navigationHandler(-1)">→</span>
+      <span class="detail-navigation-arrow" @click="navigationHandler(1)">←</span>
     </div>
   </div>
 </template>
@@ -51,29 +50,11 @@ export default {
     },
   },
   methods: {
-    close() {
-      this.$router.go(-1);
-    },
   },
 };
 </script>
 
 <style scoped>
-.detail-container {
-  position: fixed;
-  top: 0; left: 0; width: 100%; height: 100%;
-}
-
-.detail-close-button {
-  position: absolute;
-  top: 10px; left: 10px;
-  cursor: pointer;
-  transition: box-shadow 0.2s;
-}
-  .no-touch .detail-close-button:hover {
-    box-shadow: 5px 5px 1px 0 #232323, 10px 10px 1px 0 #444444, 15px 15px 1px 0 #636363, 20px 20px 1px 0 #959595;
-  }
-
 .detail-modal {
   position: absolute;
   top: 100px; left: calc(50% - 400px);
@@ -123,6 +104,11 @@ export default {
   border-image: linear-gradient(to bottom, #f00 0%, #00f 100%);
   border-image-slice: 1;
 }
+  .detail-images.single-image img {
+    margin: 10px 40px;
+    max-width: none;
+    width: 700px;
+  }
 
 .detail-link {
   display: block;

@@ -2,8 +2,8 @@
   <div class="modal-container">
     <color-bars :opacity="colorBarOpacity" :style="{ zIndex: -1 }" />
 
-    <template v-if="showCloseButtons" v-for="i in 4">
-      <x-icon :class="['x-icon', `x-icon-${i + 1}`]" @click.native="close" />
+    <template v-for="i in 4">
+      <x-icon :class="['x-icon', `x-icon-${i}`]" :color="xColor" @click.native="close" />
     </template>
 
     <slot></slot>
@@ -35,10 +35,10 @@ export default {
         default: return 0.9;
       }
     },
-    showCloseButtons() {
+    xColor() {
       switch (this.mode) {
-        case 'detail': return false;
-        default: return true;
+        case 'detail': return '#E9E9E9';
+        default: return '#000';
       }
     },
   },
@@ -64,7 +64,6 @@ export default {
 
 .x-icon {
   position: fixed;
-  width: 50px; height: 50px;
   cursor: pointer;
   transition: box-shadow 0.2s, background 0.2s;
 }
@@ -81,9 +80,10 @@ export default {
   bottom: 0; right: 0;
 }
 
-  .no-touch .x-icon:hover {
-    background: #f00;
+  .no-touch .x-icon-1:hover {
+    box-shadow: 5px 5px 1px 0 #232323, 10px 10px 1px 0 #444444, 15px 15px 1px 0 #636363, 20px 20px 1px 0 #959595;
+  }
+  .no-touch .x-icon-2:hover {
     box-shadow: -5px 5px 1px 0 #232323, -10px 10px 1px 0 #444444, -15px 15px 1px 0 #636363, -20px 20px 1px 0 #959595;
   }
-
 </style>
