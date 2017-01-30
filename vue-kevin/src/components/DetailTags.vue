@@ -21,6 +21,7 @@ export default {
   },
   methods: {
     tagStyle(tag) {
+      if (!tag) return null;
       return tagStyle(tag);
     },
   },

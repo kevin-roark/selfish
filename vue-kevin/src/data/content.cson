@@ -78,11 +78,11 @@
 		link: "/from-tony-rontinos"
 		title: "From Tony Rontino's"
 		date: "November 2016"
-		text: "LIVE ALBUM RECORDED FROM TONY RONTINO'S ITALIAN RESTAURANT IN WEST CHESTER"
+		text: "LIVE ALBUM RECORDED FROM TONY RONTINO'S ITALIAN RESTAURANT IN WEST CHESTER - Italian Food."
 		tags: [
 			"Pleasure Seeker"
 			"Sound"
-			"Italian Food"
+      "Video"
 		]
 		weight: 1
 		images: [
@@ -933,7 +933,7 @@
 		text: "An iOS application. Send sound at miller's fantasy founders. We send it back"
 		tags: [
 			"Miller's Fantasy"
-			"App"
+			"Software"
 			"Sound"
 		]
 		images: [
@@ -1105,7 +1105,8 @@
   	]
   	tags: [
   		"Money"
-  		"Web"
+  		"Net"
+      "Software"
   	]
   	weight: 1.2
   }
@@ -1130,13 +1131,14 @@
 			"images/vscoapp.jpg"
 		]
 		tags: [
-			"Money"
+			"Money",
+      "Software"
 		]
 		weight: 1.1
 	}
 	{
 		link: "http://www.pith.space"
-		title: "Pith Website"
+		title: "Pith Homepage"
 		date: "May 2015"
 		text: "I made a small lil site for chef-dorm-event-wonder Jonah Reider :)."
 		images: [
@@ -1144,7 +1146,7 @@
 		]
 		tags: [
 			"Money"
-			"Web"
+			"Net"
 		]
 		weight: 0.8
 	}

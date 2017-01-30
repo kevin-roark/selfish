@@ -1,5 +1,5 @@
 <template>
-  <div class="modal-container">
+  <div v-if="routeHasContainer" class="modal-container">
     <color-bars :opacity="colorBarOpacity" :style="{ zIndex: -1 }" />
 
     <template v-for="i in 4">
@@ -8,6 +8,7 @@
 
     <slot></slot>
   </div>
+  <span v-else></span>
 </template>
 
 <script>
@@ -36,6 +37,12 @@ export default {
       switch (this.mode) {
         case 'detail': return '#E9E9E9';
         default: return '#000';
+      }
+    },
+    routeHasContainer() {
+      switch (this.mode) {
+        case 'tagged': return false;
+        default: return true;
       }
     },
   },

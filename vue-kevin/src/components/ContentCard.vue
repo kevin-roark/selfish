@@ -54,7 +54,7 @@ export default {
 .card-wrapper {
   display: block;
   color: inherit; text-decoration: none;
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition: all 0.3s;
 }
 
 .card {
@@ -66,6 +66,7 @@ export default {
   background-color: #000;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
   transition: box-shadow 0.2s, transform 0.2s;
+  transform-origin: 0% 50%;
 }
 
   .no-touch .card-wrapper:hover {
