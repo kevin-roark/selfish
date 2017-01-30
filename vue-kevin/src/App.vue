@@ -7,7 +7,12 @@
       <site-menu></site-menu>
       <site-content :content="content" :tags="currentTags" @cardHover="handleCardHover"></site-content>
 
-      <content-tags :tags="allTags" :currentTags="currentTags" @tagClick="tagClick"></content-tags>
+      <content-tags
+        :tags="allTags"
+        :currentTags="currentTags"
+        :style="tagsStyle"
+        @tagClick="tagClick"
+      />
     </div>
 
     <transition name="simple-fade">
@@ -77,8 +82,11 @@ export default {
     },
     contentClass() {
       return {
-        'modal-showing': this.modalRoute && this.modalMode !== 'tagged',
+        'modal-showing': this.modalShowing,
       };
+    },
+    modalShowing() {
+      return this.modalRoute && this.modalMode !== 'tagged';
     },
     modalRoute() {
       return this.$route.path.length > 1; // only "/" will return false
@@ -87,6 +95,9 @@ export default {
       if (this.$route.path.indexOf('detail') >= 0) return 'detail';
       if (this.$route.path.indexOf('tagged') >= 0) return 'tagged';
       return 'default';
+    },
+    tagsStyle() {
+      return { opacity: this.contentHovering && !this.modalShowing ? 0 : 1 };
     },
     allTags() {
       return allTags();

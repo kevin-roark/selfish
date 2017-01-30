@@ -1,6 +1,5 @@
 <template>
 <div class="tags-container" :class="{ tagged, tagsShowing }">
-  <img class="image-bg" src="../assets/images/birdsculpture.jpg" />
   <div class="tags-button" @click="tagButtonPressed" :class="{ reset: tagsShowing && tagged }">
     <span class="tags-button-text">{{ tagsButtonText }}</span>
   </div>
@@ -68,20 +67,8 @@ export default {
   position: fixed;
   bottom: 0; left: 0;
   width: 320px;
-  transition: bottom 0.25s;
+  transition: all 0.1s;
 }
-
-.image-bg {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  transform: translateY(100%);
-  opacity: 0;
-  transition: all 0.25s;
-}
-  .tagsShowing .image-bg {
-    transform: none;
-    opacity: 1;
-  }
 
 .tags-button {
   position: fixed;
@@ -105,11 +92,8 @@ export default {
   .tagsShowing .tags-button {
     background: rgba(255, 255, 179, 0.95);
   }
-  .no-touch .tags-button:hover {
-    box-shadow: 5px -5px #ffff91, 10px -10px #dada80, 15px -15px #9299d2, 20px -20px #00f;
-  }
   .no-touch .tags-button:hover .tags-button-text {
-    transform: scale(6, 3);
+    transform: scale(5, 4) rotate(180deg) translateY(-1px);
   }
 
 .tags-button-text {
@@ -135,11 +119,11 @@ export default {
   transform: translateY(100%);
   transition: all 0.25s;
   opacity: 0;
+  background: linear-gradient(#00f, #e04, #f00);
 }
   .tagsShowing .tags {
     top: 0;
-    padding-bottom: 95px;
-    margin: 10px 10px 0 10px;
+    padding: 10px 0 80px 0;
     transform: none;
     opacity: 1;
   }
@@ -148,11 +132,12 @@ export default {
   margin: 5px 10px;
   padding: 0;
   cursor: pointer;
-  background: #fff;
+  background: rgba(255, 255, 255, 1);
   font-family: Menlo, Monaco, monospace;
   font-weight: bold;
   font-size: 15px;
   user-select: none;
+  transition: all 0.1s;
 }
 
   .tagged .tags li {
@@ -161,7 +146,7 @@ export default {
 
   .no-touch .tags li:hover, .no-touch .tagged .tags li:hover {
     background: #000;
-    color: #fff;
+    color: #fff !important;
     opacity: 1;
   }
 
