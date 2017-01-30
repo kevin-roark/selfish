@@ -9,9 +9,11 @@
     </div>
 
     <transition name="simple-fade">
-      <modal-container v-if="modalRoute" :mode="modalMode">
-        <router-view></router-view>
-      </modal-container>
+      <keep-alive>
+        <modal-container v-if="modalRoute" :mode="modalMode">
+          <router-view></router-view>
+        </modal-container>
+      </keep-alive>
     </transition>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div class="detail-modal">
-    <h2 class="detail-title">
+    <h2 class="detail-title" :class="{ long: content.title.length >= 30 }">
       <a v-if="content.link" :href="content.link" target="_blank">{{ content.title }}</a>
       <span v-else>{{ content.title }}</span>
     </h2>
@@ -16,11 +16,21 @@
       <img v-for="(src, i) in imageURLs" :src="src" :alt="`Image ${i}`" />
     </div>
 
-    <a v-if="content.link" class="detail-link" :href="content.link" target="_blank">LINK</a>
+    <a
+      v-if="content.link"
+      class="detail-link"
+      :href="content.link"
+      target="_blank"
+      @mouseenter="setLinkHovering(true)"
+      @mouseleave="setLinkHovering(false)"
+    >
+      LINK
+      <span class="link-mirror" :class="{ active: linkHovering }">LINK</span>
+    </a>
 
-    <div v-if="navigationHandler" class="detail-navigation">
-      <span class="detail-navigation-arrow" @click="navigationHandler(-1)">→</span>
-      <span class="detail-navigation-arrow" @click="navigationHandler(1)">←</span>
+    <div class="detail-navigation">
+      <span class="detail-navigation-arrow" @click="navigate(-1)">←</span>
+      <span class="detail-navigation-arrow" @click="navigate(1)">→</span>
     </div>
   </div>
 </template>
@@ -29,7 +39,7 @@
 import XIcon from '../components/x-icon';
 import DetailTags from '../components/DetailTags';
 import { getImageURL } from '../util/images';
-import { contentFromSlug } from '../util/content';
+import { contentFromSlug, navigateFromContent } from '../util/content';
 
 export default {
   components: {
@@ -38,8 +48,10 @@ export default {
   },
   props: {
     slug: { type: String, required: true },
-    navigationHandler: Function,
   },
+  data: () => ({
+    linkHovering: false,
+  }),
   computed: {
     content() {
       return contentFromSlug(this.slug);
@@ -50,20 +62,37 @@ export default {
     },
   },
   methods: {
+    setLinkHovering(hovering) {
+      this.linkHovering = hovering;
+    },
+    navigate(delta) {
+      const nextContent = navigateFromContent(this.content, { delta });
+      if (nextContent) {
+        this.$router.replace(`/detail/${nextContent.slug}`);
+      }
+    },
   },
 };
 </script>
 
 <style scoped>
 .detail-modal {
-  position: absolute;
-  top: 100px; left: calc(50% - 400px);
+  position: fixed;
+  box-sizing: border-box;
   width: 800px;
-  background-color: #000;
+  left: calc(50% - 400px);
+  top: 80px;
+  max-height: calc(100% - 160px);
+  overflow-y: auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.9);
   color: #fff;
+  box-shadow: 0 6px 10px 5px rgba(0,0,0,0.50);
 }
 
 .detail-title {
+  padding: 0;
+  margin: 0 80px 30px 80px;
   text-align: center;
   font-family: TimesNewRomanPSMT, 'Times New Roman', sans-serif;
   font-size: 64px;
@@ -71,69 +100,151 @@ export default {
   letter-spacing: 1.14px;
   text-shadow: 0.25px 1px 1px rgba(0,0,0,0.30);
 }
+  .detail-title.long {
+    font-size: 48px;
+  }
   .detail-title a {
     color: inherit; text-decoration: none;
   }
 
 .detail-tags {
   position: absolute;
-  top: 10px; right: 10px;
+  top: 8px; right: 10px;
+  max-width: 100px;
 }
 
 .detail-description {
-  margin: 15px;
+  margin: 30px 0;
   font-family: TimesNewRomanPSMT, 'Times New Roman', sans-serif;
   font-size: 18px;
   letter-spacing: 1.14px;
-  line-height: 24px;
+  line-height: 26px;
 }
 
 .detail-images {
   box-sizing: border-box;
-  margin: 10px 10px 40px 10px;
+  margin: 25px 0 40px 0;
   white-space: nowrap;
   overflow-x: auto;
 }
 
 .detail-images img {
-  margin: 10px;
-  max-width: 600px;
+  margin: 10px 0 10px 20px;
+  width: 600px;
 
   box-sizing: border-box;
   border: 5px solid transparent;
   border-image: linear-gradient(to bottom, #f00 0%, #00f 100%);
   border-image-slice: 1;
 }
+  .detail-images img:first-child {
+    margin-left: 0;
+  }
   .detail-images.single-image img {
-    margin: 10px 40px;
+    margin: 10px 30px;
     max-width: none;
     width: 700px;
   }
 
 .detail-link {
   display: block;
+  margin: 100px 0 10px 0;
   color: #fff;
   text-decoration: none;
   font-family: sans-serif;
   font-size: 48px;
   transform-origin: 0% 100%;
-  transform: scale(4, 2);
+  transform: scale(3.4, 2);
   text-shadow: 4px 4px 2px rgba(255,0,0,0.50), 7px 7px 2px rgba(0,0,255,0.50);
+}
+
+.link-mirror {
+  display: inline-block;
+  position: absolute;
+  top: 0; left: 116px;
+  opacity: 0;
+  transform: scaleX(-1);
+  transition: opacity 0.3s;
+}
+  .link-mirror.active {
+    opacity: 1;
+  }
+
+.detail-navigation {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -20px;
+  user-select: none;
+}
+
+.detail-navigation-arrow {
+  color: #fff;
+  font-family: Menlo, Monoaco, monospace;
+  font-size: 132px;
+  text-shadow: 5px 5px 1px #DEDEDE, 10px 10px 1px #B4B4B4;
+  cursor: pointer;
+  margin: 0 40px;
 }
 
 @media (max-width: 800px) {
   .detail-modal {
     top: 10px; left: 10px;
     width: calc(100% - 20px);
+    height: calc(100% - 90px);
+    max-height: none;
+  }
+
+  .detail-tags {
+    position: fixed;
+    top: 15px; right: 18px;
   }
 
   .detail-title {
+    margin: 0 80px 30px 0;
+    text-align: left;
     font-size: 48px;
     letter-spacing: 0.86px;
   }
+    .detail-title.long {
+      font-size: 36px;
+    }
 
   .detail-description {
+    margin-bottom: 0;
+  }
 
+  .detail-images {
+    white-space: normal;
+    margin-bottom: 100px;
+  }
+
+  .detail-images img, .detail-images.single-image img {
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .detail-link {
+    position: fixed;
+    margin: 0;
+    bottom: 80px; right: 25px;
+    font-size: 36px;
+    transform-origin: 100% 100%;
+    transform: scale(3.4, 2.5);
+  }
+
+  .link-mirror {
+    left: 0;
+    transform: scaleX(-1) translateX(90%);
+  }
+
+  .detail-navigation {
+    bottom: -5px;
+  }
+
+  .detail-navigation-arrow {
+    font-size: 80px;
+    margin: 0 5px 0 0;
   }
 }
 </style>
