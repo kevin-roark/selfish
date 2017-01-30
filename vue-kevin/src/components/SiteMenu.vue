@@ -28,6 +28,7 @@ ul {
   bottom: 0; right: 10px;
   text-align: right;
   z-index: 10;
+  transition: all 0.2s;
 }
 
 li {

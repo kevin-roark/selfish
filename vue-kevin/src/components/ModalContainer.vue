@@ -71,7 +71,10 @@ export default {
 .x-icon {
   position: fixed;
   cursor: pointer;
-  transition: box-shadow 0.2s, background 0.2s;
+  transition: all 0.25s;
+  border-radius: 40px;
+  padding: 10px 15px;
+  margin: 4px;
 }
 .x-icon-1 {
   top: 0; left: 0;
@@ -86,10 +89,19 @@ export default {
   bottom: 0; right: 0;
 }
 
+  .no-touch .x-icon:hover {
+    background: #000;
+  }
   .no-touch .x-icon-1:hover {
-    box-shadow: 5px 5px 1px 0 #232323, 10px 10px 1px 0 #444444, 15px 15px 1px 0 #636363, 20px 20px 1px 0 #959595;
+    box-shadow: 5px 5px 1px 0 #232323, 10px 10px 1px 0 #444444, 15px 15px 1px 0 #636363, 20px 20px 1px 0 #959595, 25px 25px 1px 0 #cccccc, 30px 30px 1px 0 #fff;
   }
   .no-touch .x-icon-2:hover {
-    box-shadow: -5px 5px 1px 0 #232323, -10px 10px 1px 0 #444444, -15px 15px 1px 0 #636363, -20px 20px 1px 0 #959595;
+    box-shadow: -5px 5px 1px 0 #232323, -10px 10px 1px 0 #444444, -15px 15px 1px 0 #636363, -20px 20px 1px 0 #959595, -25px 25px 1px 0 #cccccc, -30px 30px 1px 0 #fff;
+  }
+  .no-touch .x-icon-3:hover {
+    box-shadow: 5px -5px 1px 0 #232323, 10px -10px 1px 0 #444444, 15px -15px 1px 0 #636363, 20px -20px 1px 0 #959595, 25px -25px 1px 0 #cccccc, 30px -30px 1px 0 #fff;
+  }
+  .no-touch .x-icon-4:hover {
+    box-shadow: -5px -5px 1px 0 #232323, -10px -10px 1px 0 #444444, -15px -15px 1px 0 #636363, -20px -20px 1px 0 #959595, -25px -25px 1px 0 #cccccc, -30px -30px 1px 0 #fff;
   }
 </style>

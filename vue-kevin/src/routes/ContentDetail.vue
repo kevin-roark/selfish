@@ -36,7 +36,6 @@
 </template>
 
 <script>
-import XIcon from '../components/x-icon';
 import DetailTags from '../components/DetailTags';
 import KeyUp from '../mixins/keyup';
 import { getImageURL } from '../util/images';
@@ -44,7 +43,6 @@ import { contentFromSlug, navigateFromContent } from '../util/content';
 
 export default {
   components: {
-    XIcon,
     DetailTags,
   },
   props: {

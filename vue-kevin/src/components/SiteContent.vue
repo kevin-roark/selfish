@@ -94,7 +94,7 @@ export default {
         } else {
           cardStyles.push({
             left: resize ? this.cardStyles[i].left : `${left}px`,
-            top: `${Math.floor(Math.random() * (h - 140)) + 20}px`,
+            top: `${Math.floor(Math.random() * (h - 220)) + 20}px`,
             position: 'absolute',
           });
 

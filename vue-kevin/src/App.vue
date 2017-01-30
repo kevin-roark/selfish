@@ -4,8 +4,14 @@
 
     <div class="main-content" :class="contentClass">
       <my-name :imageBackground="!!hoveringImageURL"></my-name>
-      <site-menu></site-menu>
-      <site-content :content="content" :tags="currentTags" @cardHover="handleCardHover"></site-content>
+
+      <site-menu :style="menuStyle" />
+
+      <site-content
+        :content="content"
+        :tags="currentTags"
+        @cardHover="handleCardHover"
+      />
 
       <content-tags
         :tags="allTags"
@@ -95,6 +101,11 @@ export default {
       if (this.$route.path.indexOf('detail') >= 0) return 'detail';
       if (this.$route.path.indexOf('tagged') >= 0) return 'tagged';
       return 'default';
+    },
+    menuStyle() {
+      return {
+        opacity: this.hoveringImageURL && !this.modalShowing ? 0 : 1,
+      };
     },
     tagsStyle() {
       return { opacity: this.hoveringImageURL && !this.modalShowing ? 0 : 1 };

@@ -22,7 +22,7 @@ export default {
   methods: {
     tagStyle(tag) {
       if (!tag) return null;
-      return tagStyle(tag);
+      return tagStyle(tag, 'solid');
     },
   },
 };
@@ -36,12 +36,18 @@ ul {
 }
 
 li {
-  margin: 0 0 5px 0;
+  margin: 0 0 4px 0;
   padding: 0;
   font-family: 'Work Sans', "SF UI", sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
-  line-height: 20px;
+  line-height: 18px;
+}
+
+@media (max-width: 800px) {
+  li {
+    font-size: 12px;
+  }
 }
 
 </style>
