@@ -1,15 +1,39 @@
 <template>
-  <div>
-    <h1 class="title">
-      CONTACT
-    </h1>
+  <div class="contact">
+    <a _target="_blank" href="mailto:kevin.e.roark@gmail.com">kevin.e.roark@gmail.com</a>
+    <a _target="_blank" href="https://twitter.com/limp__biscuit">TWITTER</a>
+    <a _target="_blank" href="https://instagram.com/limp___biscuit">INSTAGRAM</a>
+    <a _target="_blank" href="https://facebook.com/kevroark">FACEBOOK</a>
+    <a _target="_blank" href="https://github.com/kevin-roark">GITHUB</a>
   </div>
 </template>
 
 <style scoped>
-.title {
-  font-family: Menlo, Monaco, monospace;
-  font-weight: normal;
-  font-size: 200px;
+.contact {
+  word-break: break-all;
+  margin: 100px 20px;
+  font-family: 'Crimson Text', 'Times New Roman', Times, serif;
+  font-size: 120px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+}
+
+a {
+  display: block;
+  margin: 40px 0;
+  color: inherit;
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  .contact {
+    margin: 70px 10px;
+    font-size: 64px;
+  }
+
+  a {
+    margin: 80px 0;
+  }
 }
 </style>

@@ -25,15 +25,17 @@ ul {
   list-style: none;
   margin: 0; padding: 0;
   position: fixed;
-  bottom: 10px; right: 10px;
+  bottom: 0; right: 10px;
   text-align: right;
   z-index: 10;
 }
 
 li {
-  font-family: Menlo, Monaco, monospace;
-  font-size: 16px;
+  font-family: 'Inconsolata', Menlo, Monaco, monospace;
+  font-size: 22px;
+  letter-spacing: 2px;
   line-height: 2;
+  text-shadow: -0.5px 1px 1px rgba(0, 0, 0, 0.2), 0.5px 2px 0 #fff;
 }
 
 a {
@@ -49,10 +51,11 @@ a {
 
 @media (max-width: 800px) {
   ul {
-    bottom: auto; top: 10px;
+    bottom: auto; top: 0; right: 8px;
   }
   li {
-    font-size: 11px;
+    font-size: 15px;
+    line-height: 1.8;
   }
   a:hover {}
 }

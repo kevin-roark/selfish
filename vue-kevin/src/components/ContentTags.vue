@@ -68,7 +68,11 @@ export default {
   bottom: 0; left: 0;
   width: 320px;
   transition: all 0.1s;
+  pointer-events: none;
 }
+  .tagsShowing.tags-container {
+    pointer-events: auto;
+  }
 
 .tags-button {
   position: fixed;
@@ -84,6 +88,7 @@ export default {
   user-select: none;
   z-index: 1;
   transition: all 0.25s;
+  pointer-events: auto;
 }
   .tags-button.reset {
     border-color: #ff0000;
@@ -93,14 +98,14 @@ export default {
     background: rgba(255, 255, 179, 0.95);
   }
   .no-touch .tags-button:hover .tags-button-text {
-    transform: scale(5, 4) rotate(180deg) translateY(-1px);
+    transform: scale(5, 4) rotate(180deg) translateY(-2px);
   }
 
 .tags-button-text {
   display: inline-block;
-  font-family: "SF UI", sans-serif;
-  font-size: 15px;
-  font-weight: bold;
+  font-family: 'Work Sans', 'SF UI', 'Helvetica', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
   text-shadow: 1px 2px 2px #000088, 0 1.2px 0 #000000;
   transform: scale(5, 3);
   transition: transform 0.1s;
@@ -130,11 +135,11 @@ export default {
 
 .tags li {
   margin: 5px 10px;
-  padding: 0;
+  padding: 2px;
   cursor: pointer;
   background: rgba(255, 255, 255, 1);
-  font-family: Menlo, Monaco, monospace;
-  font-weight: bold;
+  font-family: 'Work Sans', 'SF UI', 'Helvetica', sans-serif;
+  font-weight: 600;
   font-size: 15px;
   user-select: none;
   transition: all 0.1s;
@@ -156,7 +161,7 @@ export default {
   }
 
 @media (max-width: 800px) {
-  .tags-button {
+  .tags-button, .tags-container {
     left: calc(50% - 160px);
   }
 }

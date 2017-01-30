@@ -24,7 +24,7 @@
       @mouseenter="setLinkHovering(true)"
       @mouseleave="setLinkHovering(false)"
     >
-      LINK
+      <span class="link-text">LINK</span>
       <span class="link-mirror" :class="{ active: linkHovering }">LINK</span>
     </a>
 
@@ -101,11 +101,11 @@ export default {
 
 .detail-title {
   padding: 0;
-  margin: 0 80px 30px 80px;
+  margin: -8px 80px 30px 80px;
   text-align: center;
-  font-family: TimesNewRomanPSMT, 'Times New Roman', sans-serif;
-  font-size: 64px;
-  font-weight: normal;
+  font-family: 'Crimson Text', TimesNewRomanPSMT, 'Times New Roman', serif;
+  font-size: 54px;
+  font-weight: 600;
   letter-spacing: 1.14px;
   text-shadow: 0.25px 1px 1px rgba(0,0,0,0.30);
 }
@@ -119,15 +119,15 @@ export default {
 .detail-tags {
   position: absolute;
   top: 8px; right: 10px;
-  max-width: 100px;
+  max-width: 110px;
 }
 
 .detail-description {
   margin: 30px 0;
-  font-family: TimesNewRomanPSMT, 'Times New Roman', sans-serif;
-  font-size: 18px;
+  font-family: 'Crimson Text', TimesNewRomanPSMT, 'Times New Roman', serif;
+  font-size: 22px;
   letter-spacing: 1.14px;
-  line-height: 26px;
+  line-height: 1.4;
 }
 
 .detail-images {
@@ -157,14 +157,16 @@ export default {
 
 .detail-link {
   display: block;
-  margin: 100px 0 10px 0;
+  margin: 70px 0 0 0;
   color: #fff;
   text-decoration: none;
-  font-family: sans-serif;
-  font-size: 48px;
+  font-family: 'Work Sans', "SF UI", sans-serif;
+  font-weight: 400;
+  font-size: 52px;
   transform-origin: 0% 100%;
-  transform: scale(3.4, 2);
+  transform: scale(3.3, 2);
   text-shadow: 4px 4px 2px rgba(255,0,0,0.50), 7px 7px 2px rgba(0,0,255,0.50);
+  width: 0;
 }
 
 .link-mirror {
@@ -210,13 +212,13 @@ export default {
   }
 
   .detail-title {
-    margin: 0 80px 30px 0;
+    margin: -8px 80px 30px 0;
     text-align: left;
-    font-size: 48px;
+    font-size: 42px;
     letter-spacing: 0.86px;
   }
     .detail-title.long {
-      font-size: 36px;
+      font-size: 32px;
     }
 
   .detail-description {
@@ -240,6 +242,7 @@ export default {
     font-size: 36px;
     transform-origin: 100% 100%;
     transform: scale(3.4, 2.5);
+    width: auto;
   }
 
   .link-mirror {

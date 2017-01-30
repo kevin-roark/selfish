@@ -16,20 +16,19 @@ export default {
 <style scoped>
 .title {
   position: fixed;
-  top: 40px; left: 44px;
-  font-family: Menlo, Monaco, monospace;
+  top: 20px; left: 44px;
+  font-family: 'Inconsolata', Menlo, Monaco, monospace;
   font-weight: normal;
-  font-size: 28px;
+  font-size: 40px;
   z-index: 10;
+  background: #fff;
   color: #1f1f1f;
-  text-shadow: 0 2px 2px #fff;
   transition: color 0.1s, text-shadow 0.1s;
 }
 
 .image-bg .title-title {
-  color: #5e5e5e;
-  mix-blend-mode: color-burn;
-  text-shadow: 0 2px 2px #222;
+  color: #000;
+  text-shadow: 0 1px 0 #000;
 }
 
 .title-mirror {
@@ -40,7 +39,7 @@ export default {
   color: #eee;
   opacity: 0;
   transition: opacity 0.2s;
-  mix-blend-mode: normal;
+  text-shadow: 0 2px 2px #fff;
 }
   .image-bg .title-mirror {
     opacity: 1;
@@ -48,8 +47,8 @@ export default {
 
 @media (max-width: 800px) {
   .title {
-    top: 10px; left: 10px;
-    font-size: 18px;
+    top: 5px; left: 20px;
+    font-size: 26px;
   }
 
   .title-mirror {

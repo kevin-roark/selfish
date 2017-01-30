@@ -1,7 +1,7 @@
 <template>
   <router-link class="card-wrapper" :to="url">
     <div class="card" :style="cardStyle" @mouseenter="setHover(true)" @mouseleave="setHover(false)">
-      <h2 class="card-title" :class="{ 'no-image': !imageURL }">{{ title }}</h2>
+      <h2 class="card-title" :class="{ 'no-image': !imageURL, 'long': title.length >= 30 }">{{ title }}</h2>
       <img v-if="imageURL" class="card-image" :src="imageURL" :alt="`${title} Image`" />
     </div>
   </router-link>
@@ -60,7 +60,7 @@ export default {
 .card {
   box-sizing: border-box;
   min-width: 120px; max-width: 200px;
-  padding: 10px;
+  padding: 8px 10px 10px 10px;
   cursor: pointer;
   text-align: center;
   background-color: #000;
@@ -71,6 +71,7 @@ export default {
 
   .no-touch .card-wrapper:hover {
     transform: scale(1.25);
+    z-index: 10;
   }
   .no-touch .card-wrapper:hover .card {
     box-shadow: -5px 5px 1px 0 #232323, -10px 10px 1px 0 #444444, -15px 15px 1px 0 #636363, -20px 20px 1px 0 #959595;
@@ -78,22 +79,26 @@ export default {
 
 .card-title {
   margin: 0; padding: 0;
-  font-family: Menlo, Monaco, monospace;
-  font-size: 12px;
+  font-family: 'Inconsolata', Menlo, Monaco, monospace;
+  font-size: 14px;
   line-height: 1.4;
   font-weight: normal;
   color: #FFF;
   text-shadow: 0.25px 1px 1px rgba(0,0,0,0.30);
 }
-  .card-title.no-image {
-    font-size: 16px;
+  .card-title.long {
+    font-size: 12px;
+  }
+  .card-title.no-image, .card-title.long.no-image {
+    font-size: 18px;
   }
 
 .card-image {
   width: 98px;
   margin-top: 8px;
-  border: 1px solid #FFFFFF;
-  box-shadow: 0 0 3px 0 rgba(255,255,255,0.50);
+  /*border: 1px solid #FFFFFF;*/
+  box-shadow: 0 0 3px 0.5px rgba(255,255,255,1);
+  /*box-shadow: -2px 4px 0 0 #fff;*/
 }
 
 @media (max-width: 800px) {
@@ -102,8 +107,8 @@ export default {
     padding: 8px;
   }
 
-  .card-title {
-    font-size: 9px;
+  .card-title.no-image {
+    font-size: 15px;
   }
 
   .card-image {

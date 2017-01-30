@@ -1,5 +1,5 @@
 <template>
-  <div class="content-container">
+  <div class="content-container" ref="contentContainer">
     <transition name="simple-fade">
       <img v-if="hoverState.imageURL" class="background-image" :src="hoverState.imageURL" alt="" />
       <div v-else-if="hoverState.hovering" class="background-image" />
@@ -48,6 +48,7 @@ export default {
   watch: {
     tags(tags) {
       this.computeCardPositions({ tagged: tags.length > 0 });
+      this.$refs.contentContainer.scrollLeft = 0;
     },
   },
   computed: {
