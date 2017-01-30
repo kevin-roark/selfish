@@ -38,6 +38,7 @@
 <script>
 import XIcon from '../components/x-icon';
 import DetailTags from '../components/DetailTags';
+import KeyUp from '../mixins/keyup';
 import { getImageURL } from '../util/images';
 import { contentFromSlug, navigateFromContent } from '../util/content';
 
@@ -49,6 +50,7 @@ export default {
   props: {
     slug: { type: String, required: true },
   },
+  mixins: [KeyUp],
   data: () => ({
     linkHovering: false,
   }),
@@ -69,6 +71,13 @@ export default {
       const nextContent = navigateFromContent(this.content, { delta });
       if (nextContent) {
         this.$router.replace(`/detail/${nextContent.slug}`);
+      }
+    },
+    keyup(ev) {
+      if (ev.keyCode === 37) {
+        this.navigate(-1);
+      } else if (ev.keyCode === 39) {
+        this.navigate(1);
       }
     },
   },

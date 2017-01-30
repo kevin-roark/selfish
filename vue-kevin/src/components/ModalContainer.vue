@@ -13,6 +13,7 @@
 <script>
 import XIcon from './x-icon';
 import ColorBars from './ColorBars';
+import KeyUp from '../mixins/keyup';
 
 export default {
   components: {
@@ -21,13 +22,9 @@ export default {
   },
   props: {
     mode: { type: String, default: 'default' },
+    active: { type: Boolean, default: false },
   },
-  mounted() {
-    window.addEventListener('keyup', this.keyup);
-  },
-  beforeDestroy() {
-    window.removeEventListener('keyup', this.keyup);
-  },
+  mixins: [KeyUp],
   computed: {
     colorBarOpacity() {
       switch (this.mode) {
@@ -49,7 +46,9 @@ export default {
       }
     },
     close() {
-      this.$router.go(-1);
+      if (this.active) {
+        this.$router.go(-1);
+      }
     },
   },
 };

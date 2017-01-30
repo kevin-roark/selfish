@@ -1,10 +1,11 @@
 
 export default {
   mounted() {
-    window.addEventListener('resize', this.onResize.bind(this));
+    this.onResize = this.onResize.bind(this);
+    window.addEventListener('resize', this.onResize);
   },
   beforeDestroy() {
-    window.removeEventListener('resize', this.onResize.bind(this));
+    window.removeEventListener('resize', this.onResize);
   },
   methods: {
     onResize() {

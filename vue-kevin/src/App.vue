@@ -10,7 +10,7 @@
 
     <transition name="simple-fade">
       <keep-alive>
-        <modal-container v-if="modalRoute" :mode="modalMode">
+        <modal-container v-if="modalRoute" :mode="modalMode" :active="!!modalRoute">
           <router-view></router-view>
         </modal-container>
       </keep-alive>
