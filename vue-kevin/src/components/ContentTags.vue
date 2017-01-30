@@ -46,9 +46,11 @@ export default {
     tagButtonPressed() {
       if (!this.tagsShowing) {
         this.tagsShowing = true;
-      } else if (this.tagged) {
-        this.$router.replace('/');
       } else {
+        if (this.tagged) {
+          this.$router.replace('/');
+        }
+
         this.tagsShowing = false;
       }
     },
@@ -72,6 +74,7 @@ export default {
 }
   .tagsShowing.tags-container {
     pointer-events: auto;
+    mix-blend-mode: hard-light;
   }
 
 .tags-button {
@@ -124,7 +127,7 @@ export default {
   transform: translateY(100%);
   transition: all 0.25s;
   opacity: 0;
-  background: linear-gradient(#00f, #e04, #f00);
+  background: linear-gradient(#00f, #600, #f00);
 }
   .tagsShowing .tags {
     top: 0;
@@ -137,7 +140,8 @@ export default {
   margin: 5px 10px;
   padding: 2px;
   cursor: pointer;
-  background: rgba(255, 255, 255, 1);
+  background: rgba(0, 0, 0, 1);
+  color: #fff;
   font-family: 'Work Sans', 'SF UI', 'Helvetica', sans-serif;
   font-weight: 600;
   font-size: 15px;

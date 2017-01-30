@@ -77,7 +77,7 @@ export default {
     cardHover({ imageURL, hovering }) {
       this.hoverState.hovering = hovering;
       this.hoverState.imageURL = hovering ? imageURL : null;
-      this.$emit('cardHover', hovering);
+      this.$emit('cardHover', { hovering, imageURL });
     },
     getImageURL(i) {
       return i.images && i.images.length > 0 ? getImageURL(i.images[0]) : null;
@@ -125,6 +125,7 @@ export default {
   position: fixed;
   top: 0; left: 0; width: 100%; height: 100%;
   background-color: #dedede;
+  mix-blend-mode: multiply;
 }
 
 .untagged {

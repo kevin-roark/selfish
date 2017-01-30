@@ -3,7 +3,7 @@
     <ThreeDee />
 
     <div class="main-content" :class="contentClass">
-      <my-name :imageBackground="contentHovering"></my-name>
+      <my-name :imageBackground="!!hoveringImageURL"></my-name>
       <site-menu></site-menu>
       <site-content :content="content" :tags="currentTags" @cardHover="handleCardHover"></site-content>
 
@@ -50,15 +50,15 @@ export default {
     ModalContainer,
     ThreeDee,
   },
-  data: () => ({ touch: true, contentHovering: false, content }),
+  data: () => ({ touch: true, hoveringImageURL: null, content }),
   mounted() {
     if (!isTouchDevice()) {
       this.touch = false;
     }
   },
   methods: {
-    handleCardHover(hovering) {
-      this.contentHovering = hovering;
+    handleCardHover({ hovering, imageURL }) {
+      this.hoveringImageURL = hovering ? imageURL : null;
     },
     tagClick(tag) {
       const tags = this.currentTags.concat();
@@ -97,7 +97,7 @@ export default {
       return 'default';
     },
     tagsStyle() {
-      return { opacity: this.contentHovering && !this.modalShowing ? 0 : 1 };
+      return { opacity: this.hoveringImageURL && !this.modalShowing ? 0 : 1 };
     },
     allTags() {
       return allTags();

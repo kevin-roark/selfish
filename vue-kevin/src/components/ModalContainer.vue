@@ -54,7 +54,7 @@ export default {
     },
     close() {
       if (this.active) {
-        this.$router.go(-1);
+        this.$router.push('/');
       }
     },
   },

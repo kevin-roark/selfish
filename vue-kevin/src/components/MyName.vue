@@ -23,23 +23,23 @@ export default {
   z-index: 10;
   background: #fff;
   color: #1f1f1f;
-  transition: color 0.1s, text-shadow 0.1s;
+  transition: all 0.2s;
 }
 
 .image-bg .title-title {
-  color: #000;
-  text-shadow: 0 1px 0 #000;
+  color: #00f;
+  transition: inherit;
 }
 
 .title-mirror {
   display: inline-block;
-  transform: scale(1, -1);
+  transform: scale(-1, -1) translateY(100%);
   position: absolute;
-  top: -32px; left: 0;
-  color: #eee;
+  top: 0; left: 0;
+  color: #f00;
+  background: #000;
   opacity: 0;
-  transition: opacity 0.2s;
-  text-shadow: 0 2px 2px #fff;
+  transition: inherit;
 }
   .image-bg .title-mirror {
     opacity: 1;
