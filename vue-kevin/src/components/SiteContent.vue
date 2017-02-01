@@ -5,19 +5,19 @@
       <div v-else-if="hoverState.hovering" class="background-image" />
     </transition>
 
-    <div class="card-container" :style="cardContainerStyle">
-      <ContentCard
-        v-for="(item, i) in content"
+    <div class="card-container" ref="cardContainer">
+      <ContentCard v-for="(item, i) in content"
         :key="item.title"
         :title="item.title"
         :imageURL="getImageURL(item)"
         :weight="cardData[i].weight"
         :slug="item.slug"
-        :style="cardStyles[i]"
         :class="cardData[i].classes"
+        :style="cardStyles[i]"
         :isCardHovering="hoverState.hovering"
         @hoverChange="cardHover"
       />
+      <div class="space-adder"></div>
     </div>
   </div>
 </template>
@@ -38,7 +38,6 @@ export default {
     tags: Array,
   },
   data: () => ({
-    cardContainerWidth: 0,
     cardStyles: [],
     hoverState: { imageURL: null, hovering: false },
   }),
@@ -48,23 +47,30 @@ export default {
   watch: {
     tags(tags) {
       this.computeCardPositions({ tagged: tags.length > 0 });
-      this.$refs.contentContainer.scrollLeft = 0;
+      this.$refs.cardContainer.scrollLeft = 0;
     },
   },
   computed: {
-    cardContainerStyle() {
-      return { width: `${this.cardContainerWidth}px` };
+    hasTags() {
+      return this.tags.length > 0;
+    },
+    untaggedCards() {
+      if (!this.hasTags) return {};
+
+      const untagged = {};
+      this.content.forEach((item, index) => {
+        if (this.taggedIndices.indexOf(index) < 0) {
+          untagged[index] = true;
+        }
+      });
+      return untagged;
     },
     cardData() {
-      const hasTags = this.tags.length > 0;
       return this.content
-        .map((item, index) => {
-          const untagged = hasTags && this.taggedIndices.indexOf(index) < 0;
-          return {
-            classes: { untagged },
-            weight: hasTags ? 1.5 : item.weight,
-          };
-        });
+        .map((item, index) => ({
+          classes: { untagged: this.untaggedCards[index] },
+          weight: this.hasTags ? 1.5 : item.weight,
+        }));
     },
     taggedIndices() {
       return this.tags.length === 0 ? [] : contentWithTags(this.tags);
@@ -86,25 +92,23 @@ export default {
       // only need to calculate the card positions on mount or resize
       const cardStyles = [];
       const h = window.innerHeight;
-      let left = 275;
       for (let i = 0; i < this.content.length; i += 1) {
         const untagged = tagged && this.taggedIndices.indexOf(i) < 0;
         if (untagged) {
           cardStyles.push(this.cardStyles[i]);
         } else {
+          let left = this.cardStyles.length > i ? this.cardStyles[i].left : 0;
+          if (!resize) {
+            left = Math.floor((Math.random() - 0.5) * 120) + 40;
+          }
           cardStyles.push({
-            left: resize ? this.cardStyles[i].left : `${left}px`,
-            top: `${Math.floor(Math.random() * (h - 220)) + 20}px`,
-            position: 'absolute',
+            marginTop: `${Math.floor(Math.random() * (h - 250))}px`,
+            marginLeft: `${left}px`,
           });
-
-          left = resize ? parseFloat(this.cardStyles[i].left) :
-            left + (Math.random() * Math.random() * 200) + 75;
         }
       }
 
       this.cardStyles = cardStyles;
-      this.cardContainerWidth = left + 170;
     },
   },
 };
@@ -118,7 +122,18 @@ export default {
 }
 
 .card-container {
-  height: 100vh;
+  box-sizing: border-box;
+  padding: 5px 100px 80px 100px;
+  display: flex;
+  align-items: flex-start;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 100%;
+}
+
+.space-adder {
+  min-width: 150px;
+  height: 100px;
 }
 
 .background-image {
@@ -129,6 +144,8 @@ export default {
 }
 
 .untagged {
-  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  margin-left: 0 !important;
 }
 </style>

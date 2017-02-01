@@ -16,7 +16,7 @@ export default {
 <style scoped>
 .title {
   position: fixed;
-  top: 20px; left: 44px;
+  top: 15px; left: 48px;
   font-family: 'Inconsolata', Menlo, Monaco, monospace;
   font-weight: normal;
   font-size: 40px;
