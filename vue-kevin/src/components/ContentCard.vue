@@ -122,16 +122,23 @@ export default {
 
 @media (max-width: 800px) {
   .card {
-    width: 104px;
+    min-width: none; max-width: none;
+    width: 50vw;
     padding: 8px;
   }
 
-  .card-title.no-image {
-    font-size: 15px;
+  .card-title.no-image, .card-title.long.no-image  {
+    font-size: 40px;
   }
 
   .card-image {
-    width: 72px;
+    margin: 10px 10px 8px 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .card {
+    width: 80vw;
   }
 }
 </style>

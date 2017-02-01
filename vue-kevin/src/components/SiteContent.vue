@@ -40,14 +40,19 @@ export default {
   data: () => ({
     cardStyles: [],
     hoverState: { imageURL: null, hovering: false },
+    viewStyle: 'large',
   }),
   mounted() {
+    this.setViewStyle();
     this.computeCardPositions();
   },
   watch: {
     tags(tags) {
       this.computeCardPositions({ tagged: tags.length > 0 });
       this.$refs.cardContainer.scrollLeft = 0;
+    },
+    viewStyle() {
+      this.computeCardPositions();
     },
   },
   computed: {
@@ -77,8 +82,15 @@ export default {
     },
   },
   methods: {
+    setViewStyle() {
+      if (window.innerWidth > 800) {
+        this.viewStyle = 'large';
+      } else {
+        this.viewStyle = window.innerWidth > 420 ? 'medium' : 'small';
+      }
+    },
     onResize() {
-      this.computeCardPositions({ resize: true });
+      this.setViewStyle();
     },
     cardHover({ imageURL, hovering }) {
       this.hoverState.hovering = hovering;
@@ -88,22 +100,28 @@ export default {
     getImageURL(i) {
       return i.images && i.images.length > 0 ? getImageURL(i.images[0]) : null;
     },
-    computeCardPositions({ resize = false, tagged = false } = {}) {
-      // only need to calculate the card positions on mount or resize
+    computeCardPositions({ tagged = false } = {}) {
+      const { content, viewStyle, untaggedCards } = this;
       const cardStyles = [];
-      const h = window.innerHeight;
-      for (let i = 0; i < this.content.length; i += 1) {
-        const untagged = tagged && this.taggedIndices.indexOf(i) < 0;
+      for (let i = 0; i < content.length; i += 1) {
+        const untagged = tagged && untaggedCards[i];
         if (untagged) {
           cardStyles.push(this.cardStyles[i]);
         } else {
-          let left = this.cardStyles.length > i ? this.cardStyles[i].left : 0;
-          if (!resize) {
+          let top;
+          let left;
+          if (viewStyle === 'large') {
+            top = Math.floor(Math.random() * 80);
             left = Math.floor((Math.random() - 0.5) * 120) + 40;
+          } else {
+            top = Math.floor(Math.random() * 120) + 40;
+
+            const space = viewStyle === 'medium' ? 50 : 20;
+            left = Math.floor(Math.random() * space);
           }
           cardStyles.push({
-            marginTop: `${Math.floor(Math.random() * (h - 250))}px`,
-            marginLeft: `${left}px`,
+            marginTop: `${top}${viewStyle === 'large' ? 'vh' : 'px'}`,
+            marginLeft: `${left}${viewStyle === 'large' ? 'px' : 'vw'}`,
           });
         }
       }
@@ -133,7 +151,7 @@ export default {
 
 .space-adder {
   min-width: 150px;
-  height: 100px;
+  min-height: 150px;
 }
 
 .background-image {
@@ -147,5 +165,16 @@ export default {
   width: 0;
   overflow: hidden;
   margin-left: 0 !important;
+}
+
+@media (max-width: 800px) {
+  .card-container {
+    padding: 100px 0;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    height: auto;
+  }
 }
 </style>
