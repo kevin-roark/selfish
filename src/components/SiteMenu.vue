@@ -29,6 +29,7 @@ ul {
   text-align: right;
   z-index: 10;
   transition: all 0.2s;
+  mix-blend-mode: difference;
 }
 
 li {
@@ -45,6 +46,8 @@ a {
   text-decoration: none;
   transform-origin: 100% 50%;
   transition: transform 0.2s;
+  background: #000;
+  color: #fff;
 }
   .no-touch a:hover {
     transform: scale(6.66, 1.5) skewX(15deg);

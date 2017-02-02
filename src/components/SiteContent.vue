@@ -5,7 +5,7 @@
 
     <div class="card-container" ref="cardContainer" @scroll="onScroll">
       <template v-for="(item, i) in content">
-        <DateMarker v-if="i === 0" :date="item.date" />
+        <DateMarker v-if="dateMarkerIndices[i]" :date="item.date" />
         <ContentCard
           :key="item.title"
           :title="item.title"
@@ -31,6 +31,7 @@ import DateMarker from './DateMarker';
 import Resizer from '../mixins/resizer';
 import { getImageURL } from '../util/images';
 import { contentWithTags } from '../util/content';
+import { yearFromDate } from '../util/date';
 
 export default {
   components: {
@@ -87,6 +88,21 @@ export default {
     taggedIndices() {
       return this.tags.length === 0 ? [] : contentWithTags(this.tags);
     },
+    dateMarkerIndices() {
+      const idxs = {};
+      let currentYear = 10000000000;
+      this.content.forEach((item, idx) => {
+        if (this.untaggedCards[idx]) return;
+
+        const y = yearFromDate(item.date);
+        if (y < currentYear) {
+          currentYear = y;
+          idxs[idx] = true;
+        }
+      });
+
+      return idxs;
+    },
   },
   methods: {
     setViewStyle() {
@@ -132,8 +148,8 @@ export default {
           const space = viewStyle === 'medium' ? 50 : 20;
           const left = Math.floor(Math.random() * space);
           cardStyles.push({
-            marginTop: `${top}px}`,
-            marginLeft: `${left}vw}`,
+            marginTop: `${top}px`,
+            marginLeft: `${left}vw`,
           });
         }
       }

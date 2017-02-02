@@ -105,7 +105,7 @@ export default {
   }
   .no-touch .card-wrapper:hover .card {
     background-color: #000 !important;
-    box-shadow: -5px 5px 1px 0 #232323, -10px 10px 1px 0 #444444, -15px 15px 1px 0 #797979, -20px 20px 1px 0 #ccc;
+    box-shadow: -5px 5px 1px 0 #232323, -10px 10px 1px 0 #444444, -15px 15px 1px 0 #797979, -20px 20px 1px 0 #ccc, -25px 25px 1px 0 #fff;
   }
 
 .card-title {

@@ -22,17 +22,14 @@ export default {
   font-weight: 600;
   font-size: 64px;
   z-index: 10;
-  color: #1f1f1f;
+  background: #000;
+  color: #efefef;
+  mix-blend-mode: difference;
   transition: all 0.2s;
 }
 
 .image-bg .title {
-  color: #000;
-}
-
-.image-bg .title-title {
-  /*color: #00f;*/
-  /*background: #fff;*/
+  color: #fff;
 }
 
 .title-mirror {
@@ -40,10 +37,7 @@ export default {
   transform: scale(-1, -1) translateY(-100%);
   position: absolute;
   top: 0; left: 0;
-  /*color: #f00;*/
-  /*background: #000;*/
   opacity: 0;
-  transition: inherit;
 }
   .image-bg .title-mirror {
     opacity: 1;

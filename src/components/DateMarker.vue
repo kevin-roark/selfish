@@ -21,7 +21,21 @@ export default {
 
 <style scoped>
 .date-marker {
+  margin: 0 200px 100px 120px;
+  align-self: center;
+  font-family: 'Work Sans';
   font-size: 200px;
-  margin-top: 100px;
+  transform: scale(1.5, 4);
+  background: #000;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+@media (max-width: 800px) {
+  .date-marker {
+    margin: 140px 20px;
+    font-size: 100px;
+    transform: scale(1.5, 3);
+  }
 }
 </style>
