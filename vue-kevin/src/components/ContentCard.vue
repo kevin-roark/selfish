@@ -1,5 +1,5 @@
 <template>
-  <div class="card-wrapper" @mouseenter="setHover(true)" @mouseleave="setHover(false)">
+  <div class="card-wrapper" :style="wrapperStyle" @mouseenter="setHover(true)" @mouseleave="setHover(false)">
     <router-link v-if="url" :to="url" class="card" :style="cardStyle">
       <h2 class="card-title" :class="cardTitleStyle">{{ title }}</h2>
       <img v-if="imageURL" class="card-image" :src="imageURL" :alt="`${title} Image`" />
@@ -24,6 +24,12 @@ export default {
     hovering: false,
   }),
   computed: {
+    wrapperStyle() {
+      const scale = Math.min(1, Math.max(0.4, (this.weight / 1.75) * 1.333));
+      return {
+        transform: `scale(${scale}, ${scale})`,
+      };
+    },
     cardStyle() {
       let bgOpacity = 1;
       if (this.weight < 1) {
@@ -33,12 +39,9 @@ export default {
       }
       const white = Math.round((1 - bgOpacity) * 255);
 
-      const scale = Math.min(1, Math.max(0.4, (this.weight / 1.75) * 1.333));
-
       return {
         backgroundColor: `rgb(${white}, ${white}, ${white})`,
         mixBlendMode: (this.isCardHovering && !this.hovering) ? 'difference' : 'inherit',
-        transform: `scale(${scale}, ${scale})`,
       };
     },
     cardTitleStyle() {
@@ -67,7 +70,7 @@ export default {
 }
 
 .card-wrapper {
-  transition: all 0.25s;
+  transition: all 0.15s;
   transform-origin: 0% 50%;
 }
 
@@ -81,43 +84,46 @@ export default {
   text-align: center;
   background-color: #000;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
-  transition: all 0.25s;
+  transition: all 0.15s;
   transform-origin: 0% 50%;
 }
 
   .no-touch .card-wrapper:hover {
-    transform: scale(1.5);
+    /*transform: scale(1.5);*/
     z-index: 10;
   }
   .no-touch .card-wrapper:hover .card {
-    box-shadow: -5px 5px 1px 0 #232323, -10px 10px 1px 0 #444444, -15px 15px 1px 0 #636363, -20px 20px 1px 0 #959595;
+    background-color: #000 !important;
+    box-shadow: -5px 5px 1px 0 #232323, -10px 10px 1px 0 #444444, -15px 15px 1px 0 #797979, -20px 20px 1px 0 #ccc;
   }
 
 .card-title {
   margin: 0; padding: 0;
-  font-family: 'Inconsolata', Menlo, Monaco, monospace;
-  font-size: 24px;
+  font-family: 'Work Sans', 'SF UI', 'Inconsolata', Menlo, Monaco, monospace;
+  font-weight: 600;
+  font-size: 28px;
   line-height: 1.4;
-  font-weight: normal;
-  color: #e8e8e8;
+  color: #fff;
   text-shadow: 0.25px 1px 1px rgba(0,0,0,0.30);
-  letter-spacing: 0.5px;
+  transition: color 0.15s;
 }
   .card-title.long {
-    font-size: 24px;
+    font-size: 22px;
   }
   .card-title.no-image, .card-title.long.no-image {
-    font-size: 48px;
+    font-size: 72px;
+  }
+  .no-touch .card-wrapper:hover .card-title {
+    color: #f00;
   }
 
 .card-image {
   display: block;
-  width: calc(100% - 20px);
-  margin: 14px 10px 8px 10px;
-  border: 2px solid #ff0;
-  /*border: 1px solid #FFFFFF;*/
-  /*box-shadow: 0 0 3px 0.5px rgba(255,255,255,1);*/
-  /*box-shadow: -2px 4px 0 0 #fff;*/
+  width: calc(100% - 16px);
+  margin: 8px;
+  border: 2px solid #ccc;
+  border-image: linear-gradient(to bottom, #f00 0%, #00f 100%);
+  border-image-slice: 1;
 }
 
 @media (max-width: 800px) {

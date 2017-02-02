@@ -8,6 +8,7 @@ import Contact from './routes/Contact';
 import Links from './routes/Links';
 import Essays from './routes/Essays';
 import TaggedContent from './routes/TaggedContent';
+import { routeHasTags, tagsFromRoute } from './util/tags-route';
 
 Vue.use(VueRouter);
 
@@ -18,7 +19,21 @@ const router = new VueRouter({
     { path: '/links', component: Links },
     { path: '/essays', component: Essays },
 
-    { path: '/detail/:slug', component: ContentDetail, props: true },
+    {
+      path: '/detail/:slug',
+      component: ContentDetail,
+      props: true,
+      beforeEnter: (to, from, next) => {
+        if (routeHasTags(from)) {
+          const tags = tagsFromRoute(from);
+          next(`/detail/${to.params.slug}/tagged/${tags.join(',')}`);
+        } else {
+          next();
+        }
+      },
+    },
+    { path: '/detail/:slug/tagged/:tags', component: ContentDetail, props: true },
+    { path: '/detail/:slug/tagged', redirect: '/detail/:slug' },
 
     { path: '/tagged/:tags', component: TaggedContent, props: true },
     { path: '/tagged', redirect: '/' },

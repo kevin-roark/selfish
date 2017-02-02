@@ -1,5 +1,5 @@
 
-const tagColors = {
+export const tagColors = {
   Money: '#00ff00',
 
   // names
@@ -17,11 +17,11 @@ const tagColors = {
   '3D': '#563bff',
   Game: '#d6a832',
   Text: '#B17B1E',
-  Software: '#b3b1b1',
+  Software: '#bbb',
   Object: '#82392b',
-  Installation: '#15bec3',
+  Installation: '#2424ff',
   Sculpture: '#18653b',
-  Photo: '#2424ff',
+  Photo: '#8cc1ff',
   Performance: '#e68a5b',
 };
 
@@ -34,6 +34,18 @@ export default function tagStyle(tag, type = 'subtle') {
     case 'solid':
       if (color) {
         style.color = color;
+      }
+      break;
+
+    case 'border':
+      if (color) {
+        style.borderColor = color;
+      }
+      break;
+
+    case 'background':
+      if (color) {
+        style.backgroundColor = color;
       }
       break;
 

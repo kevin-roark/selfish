@@ -1,9 +1,7 @@
 <template>
   <div class="content-container" ref="contentContainer">
-    <transition name="simple-fade">
-      <img v-if="hoverState.imageURL" class="background-image" :src="hoverState.imageURL" alt="" />
-      <div v-else-if="hoverState.hovering" class="background-image" />
-    </transition>
+    <img v-if="hoverState.imageURL" class="background-image" :src="hoverState.imageURL" alt="" />
+    <div v-else-if="hoverState.hovering" class="background-image" />
 
     <div class="card-container" ref="cardContainer">
       <ContentCard v-for="(item, i) in content"
@@ -47,9 +45,11 @@ export default {
     this.computeCardPositions();
   },
   watch: {
-    tags(tags) {
-      this.computeCardPositions({ tagged: tags.length > 0 });
-      this.$refs.cardContainer.scrollLeft = 0;
+    tags(tags, oldTags) {
+      if (tags.length !== oldTags.length) {
+        this.computeCardPositions({ tagged: tags.length > 0 });
+        this.$refs.cardContainer.scrollLeft = 0;
+      }
     },
     viewStyle() {
       this.computeCardPositions();
@@ -111,7 +111,7 @@ export default {
           let top;
           let left;
           if (viewStyle === 'large') {
-            top = Math.floor(Math.random() * 80);
+            top = Math.floor(Math.random() * 75);
             left = Math.floor((Math.random() - 0.5) * 120) + 40;
           } else {
             top = Math.floor(Math.random() * 120) + 40;
@@ -157,7 +157,7 @@ export default {
 .background-image {
   position: fixed;
   top: 0; left: 0; width: 100%; height: 100%;
-  background-color: #dedede;
+  background-color: #ccc;
   mix-blend-mode: multiply;
 }
 

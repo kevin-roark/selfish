@@ -1,11 +1,10 @@
 <template>
 <div class="tags-container" :class="{ tagged, untagged: !tagged, tagsShowing }">
-  <div class="tags-button" @click="tagButtonPressed" :class="{ reset: tagsShowing && tagged }">
-    <span class="tags-button-text">{{ tagsButtonText }}</span>
-  </div>
+  <TagsButton @click.native="tagButtonPressed" :tagsShowing="tagsShowing" :tagged="tagged" />
+
   <ul class="tags">
     <li
-      v-for="tag in tags"
+      v-for="tag in sortedTags"
       :class="tagClass(tag)"
       :style="tagStyle(tag)"
       @click="tagClick(tag)"
@@ -17,8 +16,9 @@
 </template>
 
 <script>
+import TagsButton from './TagsButton';
 import tagStyle from '../util/tag-style';
-import { remainingTags } from '../util/content';
+import { contentWithTag, remainingTags } from '../util/content';
 
 const a2m = (a) => {
   const m = {};
@@ -27,12 +27,32 @@ const a2m = (a) => {
 };
 
 export default {
+  components: { TagsButton },
   props: {
     tags: Array,
     currentTags: Array,
   },
   data: () => ({ tagsShowing: false }),
   computed: {
+    sortedTags() {
+      return this.tags.concat()
+        .sort((t1, t2) => {
+          // prioritize years
+          const nt1 = /^\d+$/.test(t1) && parseInt(t1, 10);
+          const nt2 = /^\d+$/.test(t2) && parseInt(t2, 10);
+          if (nt1 && nt2) {
+            return nt2 - nt1;
+          }
+          if (nt1) {
+            return -1;
+          }
+          if (nt2) {
+            return 1;
+          }
+
+          return contentWithTag(t2).length - contentWithTag(t1).length;
+        });
+    },
     tagged() {
       return this.currentTags.length > 0;
     },
@@ -41,13 +61,6 @@ export default {
     },
     remainingTagMap() {
       return a2m(remainingTags(this.currentTags));
-    },
-    tagsButtonText() {
-      if (!this.tagsShowing) {
-        return 'TAGS';
-      }
-
-      return this.tagged ? 'RESET' : 'HIDE';
     },
   },
   methods: {
@@ -63,7 +76,7 @@ export default {
       }
     },
     tagStyle(tag) {
-      return tagStyle(tag, 'solid');
+      return tagStyle(tag, this.currentTagMap[tag] ? 'background' : 'solid');
     },
     tagClass(tag) {
       return {
@@ -72,7 +85,9 @@ export default {
       };
     },
     tagClick(tag) {
-      this.$emit('tagClick', tag);
+      if (!this.tagged || this.currentTagMap[tag] || this.remainingTagMap[tag]) {
+        this.$emit('tagClick', tag);
+      }
     },
   },
 };
@@ -83,55 +98,17 @@ export default {
   position: fixed;
   bottom: 0; left: 0;
   width: 320px;
+  max-height: 666px;
+  overflow-y: auto;
   transition: all 0.1s;
   pointer-events: none;
 }
   .tagsShowing.tags-container {
     pointer-events: auto;
-    mix-blend-mode: hard-light;
+    /*mix-blend-mode: darken;*/
   }
   .no-touch .tagsShowing.tags-container:hover {
     mix-blend-mode: normal;
-  }
-
-.tags-button {
-  position: fixed;
-  bottom: 0; left: 0;
-  width: 320px;
-  padding: 20px 0 25px 0;
-  cursor: pointer;
-  background: #FFFFB3;
-  color: #0000ff;
-  box-sizing: border-box;
-  border: 4px solid #0000FF;
-  text-align: center;
-  user-select: none;
-  z-index: 1;
-  transition: all 0.25s;
-  pointer-events: auto;
-}
-  .tags-button.reset {
-    border-color: #ff0000;
-    color: #ff0000;
-  }
-  .tagsShowing .tags-button {
-    background: rgba(255, 255, 179, 0.95);
-  }
-  .no-touch .tags-button:hover .tags-button-text {
-    transform: scale(5, 4) rotate(180deg) translateY(-2px);
-  }
-
-.tags-button-text {
-  display: inline-block;
-  font-family: 'Work Sans', 'SF UI', 'Helvetica', sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  text-shadow: 1px 2px 2px #000088, 0 1.2px 0 #000000;
-  transform: scale(5, 3);
-  transition: transform 0.1s;
-}
-  .reset .tags-button-text {
-    text-shadow: 1px 2px 2px #880000, 0 1.2px 0 #000000;
   }
 
 .tags {
@@ -142,35 +119,34 @@ export default {
   display: flex;
   flex-wrap: wrap;
   transform: translateY(100%);
-  transition: all 0.25s;
+  transition: all 0.25s, background none;
   opacity: 0;
-  background: linear-gradient(#00f, #600, #f00);
+  background: linear-gradient(rgba(0,0,255,0.8), rgba(120, 0, 40, 0.8), rgba(255,0,0,0.8));
 }
   .tagsShowing .tags {
     top: 0;
-    padding: 10px 0 80px 0;
+    padding: 10px 5px 80px 0;
     transform: none;
     opacity: 1;
   }
 
   .no-touch .tagsShowing:hover .tags {
-    background: linear-gradient(#00f, #fff, #f00);
+    background: #f00;
   }
 
 .tags li {
-  margin: 5px 6px;
-  padding: 2px;
+  margin: 5px;
+  padding: 1px;
   cursor: pointer;
   background: #000;
   color: #fff;
-  box-shadow: -2px 2px 0 0 #000;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
-  font-family: 'Work Sans', 'SF UI', 'Helvetica', sans-serif;
+  text-shadow: 0 0.5px 0.7px rgba(255,255,255,0.3);
+  font-family: 'Inconsolata', 'Work Sans', 'SF UI', 'Helvetica', sans-serif;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 20px;
   user-select: none;
-  transition: all 0.1s;
-  border: 4px solid transparent;
+  transition: all 0.15s;
+  border: 3px solid transparent;
 }
 
   .tagged .tags li {
@@ -178,32 +154,38 @@ export default {
     cursor: auto;
   }
 
-  .no-touch .untagged .tags li:hover,
-  .no-touch .tagged .tags li.active-tag:hover,
-  .no-touch .tagged .tags li.remaining-tag:hover {
-    background: #000;
-    color: #fff !important;
-    opacity: 1;
-    font-weight: 600;
-  }
-
   .tagged .tags li.active-tag {
     cursor: pointer;
     opacity: 1;
-    border: 4px solid #ff0;
+    border-color: #fffb7e;
+    background: #000;
+    color: #fff;
+    text-shadow: 0 1px 1px #000;
     font-weight: 600;
     box-shadow: none;
+    transform: skew(-10deg);
   }
 
   .tagged .tags li.remaining-tag {
     cursor: pointer;
     opacity: 0.9;
     background: #111;
-    box-shadow: -2px 2px 0 0 #111;
+  }
+
+  .no-touch .untagged .tags li:hover,
+  .no-touch .tagged .tags li.remaining-tag:hover {
+    background: #ccc;
+    color: #fff !important;
+    text-shadow: 0 1px 1px #000;
+    opacity: 1;
+  }
+
+  .no-touch .tagged .tags li.active-tag:hover {
+    border-color: #000;
   }
 
 @media (max-width: 800px) {
-  .tags-button, .tags-container {
+  .tags-container {
     left: calc(50% - 160px);
   }
 }

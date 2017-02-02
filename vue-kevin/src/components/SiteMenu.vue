@@ -11,10 +11,10 @@
     name: 'site-menu',
     data: () => ({
       items: [
-        { name: 'INFO', path: '/info' },
-        { name: 'CONTACT', path: '/contact' },
-        { name: 'ESSAYS', path: '/essays' },
-        { name: 'LINKS', path: '/links' },
+        { name: 'Info', path: '/info' },
+        { name: 'Contact', path: '/contact' },
+        // { name: 'Essays', path: '/essays' },
+        { name: 'Links', path: '/links' },
       ],
     }),
   };
@@ -33,10 +33,10 @@ ul {
 
 li {
   font-family: 'Inconsolata', Menlo, Monaco, monospace;
-  font-size: 22px;
-  letter-spacing: 2px;
-  line-height: 2;
-  text-shadow: -0.5px 1px 1px rgba(0, 0, 0, 0.2), 0.5px 2px 0 #fff;
+  font-weight: bold;
+  font-size: 28px;
+  letter-spacing: 1px;
+  line-height: 1.8;
 }
 
 a {
@@ -47,7 +47,7 @@ a {
   transition: transform 0.2s;
 }
   .no-touch a:hover {
-    transform: scale(8, 1.5);
+    transform: scale(6.66, 1.5) skewX(15deg);
   }
 
 @media (max-width: 800px) {
@@ -55,9 +55,7 @@ a {
     bottom: auto; top: 0; right: 8px;
   }
   li {
-    font-size: 15px;
-    line-height: 1.8;
+    font-size: 18px;
   }
-  a:hover {}
 }
 </style>

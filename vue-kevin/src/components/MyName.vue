@@ -16,34 +16,44 @@ export default {
 <style scoped>
 .title {
   position: fixed;
-  top: 15px; left: 48px;
-  font-family: 'Inconsolata', Menlo, Monaco, monospace;
-  font-weight: normal;
-  font-size: 40px;
+  top: 20px; left: 60px;
+  margin: 0; padding: 0;
+  font-family: 'Crimson Text', 'Inconsolata', Menlo, Monaco, monospace;
+  font-weight: 600;
+  font-size: 64px;
   z-index: 10;
-  background: #fff;
   color: #1f1f1f;
   transition: all 0.2s;
 }
 
+.image-bg .title {
+  color: #000;
+}
+
 .image-bg .title-title {
-  color: #00f;
-  transition: inherit;
+  /*color: #00f;*/
+  /*background: #fff;*/
 }
 
 .title-mirror {
   display: inline-block;
-  transform: scale(-1, -1) translateY(100%);
+  transform: scale(-1, -1) translateY(-100%);
   position: absolute;
   top: 0; left: 0;
-  color: #f00;
-  background: #000;
+  /*color: #f00;*/
+  /*background: #000;*/
   opacity: 0;
   transition: inherit;
 }
   .image-bg .title-mirror {
     opacity: 1;
   }
+
+@media (max-width: 1200px) {
+  .title {
+    font-size: 50px;
+  }
+}
 
 @media (max-width: 800px) {
   .title {

@@ -38,15 +38,22 @@ ul {
 li {
   margin: 0 0 4px 0;
   padding: 0;
-  font-family: 'Work Sans', "SF UI", sans-serif;
-  font-size: 13px;
+  font-family: 'Inconsolata', 'Work Sans', "SF UI", sans-serif;
+  font-size: 15px;
   font-weight: 600;
-  line-height: 18px;
+  line-height: 19px;
 }
 
 @media (max-width: 800px) {
+  ul {
+    text-align: left;
+    margin-left: -10px;
+  }
+
   li {
-    font-size: 12px;
+    font-size: 14px;
+    display: inline-block;
+    margin: 0 10px;
   }
 }
 

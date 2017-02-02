@@ -49,38 +49,15 @@ export function contentFromSlug(slug) {
   return content[slugMap[slug]];
 }
 
-export function navigateFromContent(con, { filter, delta = 1 } = {}) {
-  if (!slugMap) {
-    buildSlugMap();
-  }
-
-  const contentIndex = slugMap[con.slug];
-  let hasNext = false;
-
-  let nextIndex;
-  while (!hasNext) {
-    nextIndex = contentIndex + delta;
-    if (nextIndex >= content.length) nextIndex = 0;
-    else if (nextIndex < 0) nextIndex = content.length - 1;
-
-    if (!filter || filter(content[nextIndex])) {
-      hasNext = true;
-    }
-  }
-
-  const nc = content[nextIndex];
-  return nc.slug !== con.slug ? nc : null;
-}
-
-export function allTags() {
+export function contentWithTag(tag) {
   if (!tagMap) {
     buildTagMap();
   }
 
-  return tagList;
+  return tagMap[tag];
 }
 
-export function contentWithTags(tags) {
+export function contentWithTags(tags, map = false) {
   if (!tagMap) {
     buildTagMap();
   }
@@ -101,7 +78,43 @@ export function contentWithTags(tags) {
     return true;
   });
 
-  return indices;
+  if (!map) {
+    return indices;
+  }
+
+  const m = {};
+  indices.forEach(i => (m[i] = true));
+  return m;
+}
+
+export function navigateFromContent(con, { tags, delta = 1 } = {}) {
+  if (!slugMap) {
+    buildSlugMap();
+  }
+
+  const contentIndex = slugMap[con.slug];
+  const taggedContent = tags ? contentWithTags(tags, true) : null;
+  let hasNext = false;
+
+  let nextIndex = contentIndex;
+  while (!hasNext) {
+    nextIndex += delta;
+    if (nextIndex >= content.length) nextIndex = 0;
+    else if (nextIndex < 0) nextIndex = content.length - 1;
+
+    hasNext = taggedContent ? taggedContent[nextIndex] : true;
+  }
+
+  const nc = content[nextIndex];
+  return nc.slug !== con.slug ? nc : null;
+}
+
+export function allTags() {
+  if (!tagMap) {
+    buildTagMap();
+  }
+
+  return tagList;
 }
 
 export function remainingTags(tags) {

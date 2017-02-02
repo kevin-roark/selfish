@@ -21,13 +21,9 @@
       />
     </div>
 
-    <transition name="simple-fade">
-      <keep-alive>
-        <modal-container v-if="modalRoute" :mode="modalMode" :active="!!modalRoute">
-          <router-view></router-view>
-        </modal-container>
-      </keep-alive>
-    </transition>
+    <modal-container v-if="modalRoute" :mode="modalMode" :active="!!modalRoute">
+      <router-view></router-view>
+    </modal-container>
   </div>
 </template>
 
@@ -40,6 +36,7 @@ import SiteContent from './components/SiteContent';
 import ContentTags from './components/ContentTags';
 import content from './data/content.json';
 import { allTags } from './util/content';
+import { tagsFromRoute } from './util/tags-route';
 
 function isTouchDevice() {
   return 'ontouchstart' in window // works on most browsers
@@ -114,11 +111,7 @@ export default {
       return allTags();
     },
     currentTags() {
-      const path = this.$route.path;
-      if (path.indexOf('tagged') < 0) return [];
-
-      const components = path.split('/');
-      return components[components.length - 1].split(',').filter(t => t.length > 0);
+      return tagsFromRoute(this.$route);
     },
   },
 };

@@ -15,6 +15,7 @@
 import XIcon from './x-icon';
 import ColorBars from './ColorBars';
 import KeyUp from '../mixins/keyup';
+import { routeHasTags, tagsFromRoute } from '../util/tags-route';
 
 export default {
   components: {
@@ -54,7 +55,12 @@ export default {
     },
     close() {
       if (this.active) {
-        this.$router.push('/');
+        if (routeHasTags(this.$route)) {
+          const tags = tagsFromRoute(this.$route);
+          this.$router.push(`/tagged/${tags.join(',')}`);
+        } else {
+          this.$router.push('/');
+        }
       }
     },
   },
