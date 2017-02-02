@@ -27,16 +27,16 @@ export default {
     cardStyle() {
       let bgOpacity = 1;
       if (this.weight < 1) {
-        bgOpacity = this.weight * 0.75;
+        bgOpacity = Math.max(0.5, this.weight * 0.8);
       } else if (this.weight < 2) {
-        bgOpacity = ((this.weight - 1) * 0.25) + 0.8;
+        bgOpacity = ((this.weight - 1) * 0.15) + 0.85;
       }
-      const black = Math.round((1 - bgOpacity) * 255);
+      const white = Math.round((1 - bgOpacity) * 255);
 
       const scale = Math.min(1, Math.max(0.4, (this.weight / 1.75) * 1.333));
 
       return {
-        backgroundColor: `rgb(${black}, ${black}, ${black})`,
+        backgroundColor: `rgb(${white}, ${white}, ${white})`,
         mixBlendMode: (this.isCardHovering && !this.hovering) ? 'difference' : 'inherit',
         transform: `scale(${scale}, ${scale})`,
       };
@@ -99,7 +99,7 @@ export default {
   font-size: 24px;
   line-height: 1.4;
   font-weight: normal;
-  color: #FFF;
+  color: #e8e8e8;
   text-shadow: 0.25px 1px 1px rgba(0,0,0,0.30);
   letter-spacing: 0.5px;
 }

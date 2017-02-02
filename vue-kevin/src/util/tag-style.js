@@ -4,20 +4,25 @@ const tagColors = {
 
   // names
   'Mister Shane': '#FF0090',
-  'Carmichael Payamps': '#5544dd',
+  'Carmichael Payamps': '#7544dd',
   'Dog Shadow': '#4990E2',
-  'Pleasure Seeker': '#9a0000',
+  'Pleasure Seeker': '#B82224',
+  'TONY TONEHOLE': '#A1725E',
+  "Miller's Fantasy": '#9900FF',
 
   // mediums
   Net: '#0000ff',
   Video: '#ff0000',
   Sound: '#ffe708',
-  '3D': '#9900FF',
+  '3D': '#563bff',
+  Game: '#d6a832',
   Text: '#B17B1E',
-  Software: '#9B9B9B',
+  Software: '#b3b1b1',
   Object: '#82392b',
   Installation: '#15bec3',
-  Sculpture: '#1f8850',
+  Sculpture: '#18653b',
+  Photo: '#2424ff',
+  Performance: '#e68a5b',
 };
 
 export default function tagStyle(tag, type = 'subtle') {

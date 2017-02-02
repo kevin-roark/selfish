@@ -1,12 +1,12 @@
 <template>
-<div class="tags-container" :class="{ tagged, tagsShowing }">
+<div class="tags-container" :class="{ tagged, untagged: !tagged, tagsShowing }">
   <div class="tags-button" @click="tagButtonPressed" :class="{ reset: tagsShowing && tagged }">
     <span class="tags-button-text">{{ tagsButtonText }}</span>
   </div>
   <ul class="tags">
     <li
       v-for="tag in tags"
-      :class="{ 'active-tag': currentTagMap[tag] }"
+      :class="tagClass(tag)"
       :style="tagStyle(tag)"
       @click="tagClick(tag)"
     >
@@ -18,6 +18,13 @@
 
 <script>
 import tagStyle from '../util/tag-style';
+import { remainingTags } from '../util/content';
+
+const a2m = (a) => {
+  const m = {};
+  a.forEach(i => (m[i] = true));
+  return m;
+};
 
 export default {
   props: {
@@ -30,9 +37,10 @@ export default {
       return this.currentTags.length > 0;
     },
     currentTagMap() {
-      const m = {};
-      this.currentTags.forEach(t => (m[t] = true));
-      return m;
+      return a2m(this.currentTags);
+    },
+    remainingTagMap() {
+      return a2m(remainingTags(this.currentTags));
     },
     tagsButtonText() {
       if (!this.tagsShowing) {
@@ -57,6 +65,12 @@ export default {
     tagStyle(tag) {
       return tagStyle(tag, 'solid');
     },
+    tagClass(tag) {
+      return {
+        'active-tag': this.currentTagMap[tag],
+        'remaining-tag': this.remainingTagMap[tag],
+      };
+    },
     tagClick(tag) {
       this.$emit('tagClick', tag);
     },
@@ -75,6 +89,9 @@ export default {
   .tagsShowing.tags-container {
     pointer-events: auto;
     mix-blend-mode: hard-light;
+  }
+  .no-touch .tagsShowing.tags-container:hover {
+    mix-blend-mode: normal;
   }
 
 .tags-button {
@@ -136,32 +153,53 @@ export default {
     opacity: 1;
   }
 
+  .no-touch .tagsShowing:hover .tags {
+    background: linear-gradient(#00f, #fff, #f00);
+  }
+
 .tags li {
-  margin: 5px 10px;
+  margin: 5px 6px;
   padding: 2px;
   cursor: pointer;
-  background: rgba(0, 0, 0, 1);
+  background: #000;
   color: #fff;
+  box-shadow: -2px 2px 0 0 #000;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
   font-family: 'Work Sans', 'SF UI', 'Helvetica', sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 15px;
   user-select: none;
   transition: all 0.1s;
+  border: 4px solid transparent;
 }
 
   .tagged .tags li {
-    opacity: 0.3;
+    opacity: 0.1;
+    cursor: auto;
   }
 
-  .no-touch .tags li:hover, .no-touch .tagged .tags li:hover {
+  .no-touch .untagged .tags li:hover,
+  .no-touch .tagged .tags li.active-tag:hover,
+  .no-touch .tagged .tags li.remaining-tag:hover {
     background: #000;
     color: #fff !important;
     opacity: 1;
+    font-weight: 600;
   }
 
   .tagged .tags li.active-tag {
+    cursor: pointer;
     opacity: 1;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    border: 4px solid #ff0;
+    font-weight: 600;
+    box-shadow: none;
+  }
+
+  .tagged .tags li.remaining-tag {
+    cursor: pointer;
+    opacity: 0.9;
+    background: #111;
+    box-shadow: -2px 2px 0 0 #111;
   }
 
 @media (max-width: 800px) {

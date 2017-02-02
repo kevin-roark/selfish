@@ -85,12 +85,14 @@ export function contentWithTags(tags) {
     buildTagMap();
   }
 
-  const indicesPerTag = tags.map(t => tagMap[t]);
-  const firstTagIndices = indicesPerTag[0];
+  if (!tags || tags.length === 0) {
+    return content;
+  }
 
+  const firstTagIndices = tagMap[tags[0]];
   const indices = firstTagIndices.filter((idx) => {
-    for (let i = indicesPerTag.length - 1; i > 0; i -= 1) {
-      const nextTagIndices = indicesPerTag[i];
+    for (let i = 1; i < tags.length; i += 1) {
+      const nextTagIndices = tagMap[tags[i]];
       if (nextTagIndices.indexOf(idx) < 0) {
         return false;
       }
@@ -100,6 +102,35 @@ export function contentWithTags(tags) {
   });
 
   return indices;
+}
+
+export function remainingTags(tags) {
+  if (!tagMap) {
+    buildTagMap();
+  }
+
+  if (!tags || tags.length === 0) {
+    return tagList;
+  }
+
+  const tm = {};
+  tags.forEach(t => (tm[t] = true));
+
+  const itemIndices = contentWithTags(tags);
+  const otherTags = [];
+  itemIndices.forEach((idx) => {
+    const item = content[idx];
+    if (item.tags) {
+      item.tags.forEach((otherTag) => {
+        if (!tm[otherTag]) {
+          otherTags.push(otherTag);
+          tm[otherTag] = true;
+        }
+      });
+    }
+  });
+
+  return otherTags;
 }
 
 export function contentWithIndex(index) {
