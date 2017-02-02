@@ -1,12 +1,14 @@
 <template>
-  <div class="card-wrapper" :style="wrapperStyle" @mouseenter="setHover(true)" @mouseleave="setHover(false)">
+  <div class="card-wrapper" :class="wrapperClass" :style="wrapperStyle" @mouseenter="setHover(true)" @mouseleave="setHover(false)">
     <router-link v-if="url" :to="url" class="card" :style="cardStyle">
-      <h2 class="card-title" :class="cardTitleStyle">{{ title }}</h2>
+      <h2 class="card-title" :class="cardTitleClass">{{ title }}</h2>
       <img v-if="imageURL" class="card-image" :src="imageURL" :alt="`${title} Image`" />
+      <div class="card-date">{{ date }}</div>
     </router-link>
     <div v-else class="card" :style="cardStyle">
-      <h2 class="card-title" :class="cardTitleStyle">{{ title }}</h2>
+      <h2 class="card-title" :class="cardTitleClass">{{ title }}</h2>
       <img v-if="imageURL" class="card-image" :src="imageURL" :alt="`${title} Image`" />
+      <div class="card-date">{{ date }}</div>
     </div>
   </div>
 </template>
@@ -18,6 +20,7 @@ export default {
     imageURL: String,
     isCardHovering: Boolean,
     weight: { type: Number, default: 1 },
+    date: String,
     slug: String,
   },
   data: () => ({
@@ -28,6 +31,12 @@ export default {
       const scale = Math.min(1, Math.max(0.4, (this.weight / 1.75) * 1.333));
       return {
         transform: `scale(${scale}, ${scale})`,
+      };
+    },
+    wrapperClass() {
+      return {
+        'other-hover': this.isCardHovering && !this.hovering,
+        'no-image': !this.imageURL,
       };
     },
     cardStyle() {
@@ -41,12 +50,10 @@ export default {
 
       return {
         backgroundColor: `rgb(${white}, ${white}, ${white})`,
-        mixBlendMode: (this.isCardHovering && !this.hovering) ? 'difference' : 'inherit',
       };
     },
-    cardTitleStyle() {
+    cardTitleClass() {
       return {
-        'no-image': !this.imageURL,
         long: this.title.length >= 30,
       };
     },
@@ -73,6 +80,10 @@ export default {
   transition: all 0.15s;
   transform-origin: 0% 50%;
 }
+
+  .card-wrapper.other-hover {
+    mix-blend-mode: difference;
+  }
 
 .card {
   display: block;
@@ -110,7 +121,7 @@ export default {
   .card-title.long {
     font-size: 22px;
   }
-  .card-title.no-image, .card-title.long.no-image {
+  .no-image .card-title, .no-image .card-title.long {
     font-size: 72px;
   }
   .no-touch .card-wrapper:hover .card-title {
@@ -119,12 +130,36 @@ export default {
 
 .card-image {
   display: block;
-  width: calc(100% - 16px);
-  margin: 8px;
+  width: calc(100% - 12px);
+  margin: 8px 4px;
   border: 2px solid #ccc;
   border-image: linear-gradient(to bottom, #f00 0%, #00f 100%);
   border-image-slice: 1;
 }
+
+.card-date {
+  position: absolute;
+  bottom: 22px; right: 20px;
+  text-align: center;
+  font-family: 'Inconsolata', Menlo, Monaco, monospace;
+  font-size: 13px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 10px #000;
+}
+
+  .no-image .card-date {
+    position: static;
+    display: inline-block;
+  }
+
+  .no-touch .card-wrapper:hover .card-date {
+    background: #00f;
+  }
+
+  .other-hover .card-date {
+    mix-blend-mode: exclusion;
+  }
 
 @media (max-width: 800px) {
   .card {
@@ -133,7 +168,7 @@ export default {
     padding: 8px;
   }
 
-  .card-title.no-image, .card-title.long.no-image  {
+  .no-image .card-title, .no-image .card-title.long {
     font-size: 40px;
   }
 

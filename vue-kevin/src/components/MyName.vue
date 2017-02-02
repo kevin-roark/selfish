@@ -49,7 +49,7 @@ export default {
     opacity: 1;
   }
 
-@media (max-width: 1200px) {
+@media (max-width: 1140px) {
   .title {
     font-size: 50px;
   }
@@ -57,7 +57,7 @@ export default {
 
 @media (max-width: 800px) {
   .title {
-    top: 5px; left: 20px;
+    top: 8px; left: 20px;
     font-size: 26px;
   }
 

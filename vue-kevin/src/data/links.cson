@@ -1,5 +1,19 @@
 [
   {
+    link: "/poly-basketball-league",
+    title: "Poly Basketball League (PBL)",
+    text: "I play basketball every week in New York City please join!"
+  }
+  {
+    link: "https://www.instagram.com/kuber.nyc",
+    title: "Kuber",
+    text: "Personal car service uber competitor Fuck Uber (I did crash my car though)"
+  }
+  {
+    link: "/1000-versions/monologue.html",
+    title: "1000 Versions"
+  }
+  {
     link: "http://joebucciero.website"
     title: "Joe Bucciero"
     text: "A longtime friend who writes and knows about a lot and more and put me on his very own website."

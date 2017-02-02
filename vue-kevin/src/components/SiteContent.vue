@@ -1,20 +1,25 @@
 <template>
-  <div class="content-container" ref="contentContainer">
+  <div class="content-container">
     <img v-if="hoverState.imageURL" class="background-image" :src="hoverState.imageURL" alt="" />
     <div v-else-if="hoverState.hovering" class="background-image" />
 
-    <div class="card-container" ref="cardContainer">
-      <ContentCard v-for="(item, i) in content"
-        :key="item.title"
-        :title="item.title"
-        :imageURL="getImageURL(item)"
-        :weight="cardData[i].weight"
-        :slug="item.slug"
-        :class="cardData[i].classes"
-        :style="cardStyles[i]"
-        :isCardHovering="hoverState.hovering"
-        @hoverChange="cardHover"
-      />
+    <div class="card-container" ref="cardContainer" @scroll="onScroll">
+      <template v-for="(item, i) in content">
+        <DateMarker v-if="i === 0" :date="item.date" />
+        <ContentCard
+          :key="item.title"
+          :title="item.title"
+          :imageURL="getImageURL(item)"
+          :weight="cardData[i].weight"
+          :date="item.date"
+          :slug="item.slug"
+          :class="cardData[i].classes"
+          :style="cardStyles[i]"
+          :isCardHovering="hoverState.hovering"
+          @hoverChange="cardHover"
+        />
+      </template>
+
       <div class="space-adder"></div>
     </div>
   </div>
@@ -22,6 +27,7 @@
 
 <script>
 import ContentCard from './ContentCard';
+import DateMarker from './DateMarker';
 import Resizer from '../mixins/resizer';
 import { getImageURL } from '../util/images';
 import { contentWithTags } from '../util/content';
@@ -29,6 +35,7 @@ import { contentWithTags } from '../util/content';
 export default {
   components: {
     ContentCard,
+    DateMarker,
   },
   mixins: [Resizer],
   props: {
@@ -92,6 +99,9 @@ export default {
     onResize() {
       this.setViewStyle();
     },
+    onScroll() {
+      // console.log(e);
+    },
     cardHover({ imageURL, hovering }) {
       this.hoverState.hovering = hovering;
       this.hoverState.imageURL = hovering ? imageURL : null;
@@ -107,21 +117,23 @@ export default {
         const untagged = tagged && untaggedCards[i];
         if (untagged) {
           cardStyles.push(this.cardStyles[i]);
-        } else {
-          let top;
-          let left;
-          if (viewStyle === 'large') {
-            top = Math.floor(Math.random() * 75);
-            left = Math.floor((Math.random() - 0.5) * 120) + 40;
+        } else if (viewStyle === 'large') {
+          const style = {};
+          style.marginLeft = `${Math.floor((Math.random() - 0.5) * 120) + 40}px`;
+          if (Math.random() < 0.6) {
+            style.marginTop = `${Math.floor(Math.random() * 65)}vh`;
           } else {
-            top = Math.floor(Math.random() * 120) + 40;
-
-            const space = viewStyle === 'medium' ? 50 : 20;
-            left = Math.floor(Math.random() * space);
+            style.alignSelf = 'flex-end';
+            style.marginBottom = `${Math.floor(Math.random() * 40) + 10}vh`;
           }
+          cardStyles.push(style);
+        } else {
+          const top = Math.floor(Math.random() * 120) + 40;
+          const space = viewStyle === 'medium' ? 50 : 20;
+          const left = Math.floor(Math.random() * space);
           cardStyles.push({
-            marginTop: `${top}${viewStyle === 'large' ? 'vh' : 'px'}`,
-            marginLeft: `${left}${viewStyle === 'large' ? 'px' : 'vw'}`,
+            marginTop: `${top}px}`,
+            marginLeft: `${left}vw}`,
           });
         }
       }
