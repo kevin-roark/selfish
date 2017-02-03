@@ -24,6 +24,7 @@ export default {
     weight: { type: Number, default: 1 },
     date: String,
     slug: String,
+    explosion: Boolean,
   },
   data: () => ({
     hovering: false,
@@ -39,6 +40,7 @@ export default {
       return {
         'other-hover': this.isCardHovering && !this.hovering,
         'no-image': !this.imageURL,
+        explosion: this.explosion,
       };
     },
     cardStyle() {
@@ -97,17 +99,21 @@ export default {
   transition: all 0.15s;
   transform-origin: 0% 50%;
   user-select: none;
+  min-width: 280px; max-width: 440px;
 }
 
   .card-wrapper.other-hover {
     mix-blend-mode: difference;
   }
 
+  .card-wrapper.explosion {
+    min-width: 0;
+  }
+
 .card {
   display: block;
   color: inherit; text-decoration: none;
   box-sizing: border-box;
-  min-width: 240px; max-width: 400px;
   padding: 8px 10px 10px 10px;
   cursor: pointer;
   text-align: center;
@@ -130,6 +136,10 @@ export default {
   }
   .other-hover .card {
     animation-duration: 50s !important;
+  }
+
+  .explosion .card {
+    min-width: 280px; max-width: 440px;
   }
 
 .card-title {
@@ -187,9 +197,13 @@ export default {
   }
 
 @media (max-width: 800px) {
+  .card-wrapper {
+    min-width: 50vw; max-width: 50vw; width: 50vw;
+  }
+  .card-wrapper.explosion {
+    min-height: 0; height: 0;
+  }
   .card {
-    min-width: 0; max-width: none;
-    width: 50vw;
     padding: 8px;
   }
 
@@ -203,8 +217,8 @@ export default {
 }
 
 @media (max-width: 420px) {
-  .card {
-    width: 64vw;
+  .card-wrapper {
+    min-width: 64vw; max-width: 64vw; width: 64vw;
   }
 }
 </style>

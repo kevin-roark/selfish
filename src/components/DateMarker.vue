@@ -1,5 +1,5 @@
 <template>
-<div class="date-marker">
+<div class="date-marker" :class="{ explosion }">
   {{ year }}
 </div>
 </template>
@@ -10,6 +10,7 @@ import { yearFromDate } from '../util/date';
 export default {
   props: {
     date: { type: String, required: true },
+    explosion: Boolean,
   },
   computed: {
     year() {
@@ -30,6 +31,10 @@ export default {
   color: #fff;
   mix-blend-mode: difference;
   user-select: none;
+}
+
+.date-marker.explosion {
+  width: 100px;
 }
 
 @media (max-width: 800px) {

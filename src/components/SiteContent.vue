@@ -5,7 +5,7 @@
 
     <div class="card-container" ref="cardContainer">
       <template v-for="(item, i) in content">
-        <DateMarker v-if="dateMarkerIndices[i]" :date="item.date" />
+        <DateMarker v-if="dateMarkerIndices[i]" :date="item.date" :explosion="explosion" />
         <ContentCard
           :key="item.title"
           :title="item.title"
@@ -16,6 +16,7 @@
           :class="cardData[i].classes"
           :style="cardStyles[i]"
           :isCardHovering="hoverState.hovering"
+          :explosion="explosion"
           @hoverChange="cardHover"
         />
       </template>
@@ -29,6 +30,7 @@
 import ContentCard from './ContentCard';
 import DateMarker from './DateMarker';
 import Resizer from '../mixins/resizer';
+import Keyup from '../mixins/keyup';
 import { getImageURL } from '../util/images';
 import { contentWithTags } from '../util/content';
 import { yearFromDate } from '../util/date';
@@ -38,7 +40,7 @@ export default {
     ContentCard,
     DateMarker,
   },
-  mixins: [Resizer],
+  mixins: [Resizer, Keyup],
   props: {
     content: Array,
     tags: Array,
@@ -47,6 +49,7 @@ export default {
     cardStyles: [],
     hoverState: { imageURL: null, hovering: false },
     viewStyle: 'large',
+    explosion: false,
   }),
   mounted() {
     this.setViewStyle();
@@ -114,6 +117,14 @@ export default {
     },
     onResize() {
       this.setViewStyle();
+    },
+    keyup(ev) {
+      const path = this.$route.path;
+      if (path !== '/' && path.substring(0, 7) !== '/tagged') return; // not on screen
+      if (ev.keyCode === 32) { // space
+        this.explosion = !this.explosion;
+        this.$refs.cardContainer.scrollLeft = 0;
+      }
     },
     cardHover({ imageURL, hovering }) {
       this.hoverState.hovering = hovering;

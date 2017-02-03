@@ -108,7 +108,7 @@ export default {
 
       let dirtyV = false;
       if (Math.abs(this.velocity) > 0) {
-        this.velocity *= Math.min(1, 0.04 * delta);
+        this.velocity *= Math.min(1, 0.057 * delta);
         dirtyV = true;
 
         if (Math.abs(this.velocity) < 0.2) {
