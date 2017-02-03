@@ -11,7 +11,7 @@
 <style scoped>
 .contact {
   word-break: break-all;
-  margin: 100px 20px;
+  margin: 140px 20px;
   font-family: 'Crimson Text', 'Times New Roman', Times, serif;
   font-size: 120px;
   font-weight: 600;
@@ -24,6 +24,11 @@ a {
   margin: 40px 0;
   color: inherit;
   text-decoration: underline;
+  transition: color 0.1s;
+}
+
+.no-touch a:hover {
+  color: #ddd;
 }
 
 @media (max-width: 800px) {

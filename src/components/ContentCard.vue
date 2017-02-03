@@ -79,6 +79,7 @@ export default {
 .card-wrapper {
   transition: all 0.15s;
   transform-origin: 0% 50%;
+  user-select: none;
 }
 
   .card-wrapper.other-hover {
@@ -117,6 +118,7 @@ export default {
   color: #fff;
   text-shadow: 0.25px 1px 1px rgba(0,0,0,0.30);
   transition: color 0.15s;
+  user-select: auto;
 }
   .card-title.long {
     font-size: 22px;

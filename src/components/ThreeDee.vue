@@ -6,12 +6,15 @@
 /* global THREE */
 import loadScripts from '../util/load-scripts';
 import Resizer from '../mixins/resizer';
+import Touching from '../mixins/touching';
 import initOBJLoader from '../lib/OBJLoader';
 
+const NORMAL_SCALE = 1200;
+
 export default {
-  mixins: [Resizer],
+  mixins: [Resizer, Touching],
   mounted() {
-    this.update = this.update.bind(this);
+    this.velocity = 0;
 
     const three = 'https://unpkg.com/three@0.84.0/build/three.min.js';
     loadScripts(three, () => {
@@ -20,9 +23,10 @@ export default {
     });
   },
   beforeDestroy() {
-    if (!this.renderer) return;
-    const el = this.renderer.domElement;
-    el.parentNode.removeChild(el);
+    if (this.renderer) {
+      const el = this.renderer.domElement;
+      el.parentNode.removeChild(el);
+    }
   },
   methods: {
     buildScene() {
@@ -66,7 +70,7 @@ export default {
         });
 
         const mesh = this.mesh = new THREE.Mesh(geometry, material);
-        mesh.scale.set(1200, 1200, 1200);
+        mesh.scale.set(NORMAL_SCALE, NORMAL_SCALE, NORMAL_SCALE);
         mesh.position.y = 20;
         this.scene.add(mesh);
       });
@@ -102,24 +106,27 @@ export default {
       const { mesh, renderer, scene, camera } = this;
       const delta = time - this.lastTime;
 
-      if (mesh) {
-        if (!mesh.rotationTarget) {
-          mesh.rotationTarget = {
-            x: (Math.random() - 0.5) * 0.01,
-            y: (Math.random() - 0.5) * 0.01,
-            z: (Math.random() - 0.5) * 0.01,
-            steps: Math.floor(Math.random() * 1000) + 300,
-          };
-        }
-        // mesh.rotation.x += mesh.rotationTarget.x;
-        // mesh.rotation.y += mesh.rotationTarget.y;
-        // mesh.rotation.z += mesh.rotationTarget.z;
-        // mesh.rotationTarget.steps -= 1;
-        // if (mesh.rotationTarget.steps < 0) {
-        //   mesh.rotationTarget = null;
-        // }
+      let dirtyV = false;
+      if (Math.abs(this.velocity) > 0) {
+        this.velocity *= Math.min(1, 0.04 * delta);
+        dirtyV = true;
 
-        mesh.rotation.y -= 0.0002 * delta;
+        if (Math.abs(this.velocity) < 0.2) {
+          this.velocity = 0;
+        }
+      }
+
+      if (mesh) {
+        if (!this.touchingDown) {
+          mesh.rotation.y -= 0.0002 * delta;
+        } else if (dirtyV && Math.abs(this.prevDX) > 0) {
+          mesh.rotation.y += this.prevDX * 0.002;
+        }
+
+        if (dirtyV) {
+          const s = NORMAL_SCALE + (this.velocity * 0.75);
+          mesh.scale.set(s, s, s);
+        }
       }
 
       renderer.render(scene, camera);
@@ -134,6 +141,17 @@ export default {
       camera.updateProjectionMatrix();
 
       renderer.setSize(window.innerWidth, window.innerHeight);
+    },
+    move(ev) {
+      const { prevX = ev.pageX, prevY = ev.pageY } = this;
+      const dx = ev.pageX - prevX;
+      const dy = ev.pageY - prevY;
+
+      this.velocity += Math.abs(dx) + Math.abs(dy);
+      this.prevX = ev.pageX;
+      this.prevY = ev.pageY;
+      this.prevDX = dx;
+      this.prevDY = dy;
     },
   },
 };

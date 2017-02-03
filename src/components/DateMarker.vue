@@ -29,6 +29,7 @@ export default {
   background: #000;
   color: #fff;
   mix-blend-mode: difference;
+  user-select: none;
 }
 
 @media (max-width: 800px) {

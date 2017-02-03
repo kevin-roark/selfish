@@ -15,6 +15,7 @@
 
 <style scoped>
 .info {
+  margin: 120px 0;
   word-wrap: break-word;
   padding: 0 20px;
   font-family: 'Crimson Text', 'Times New Roman', Times, serif;

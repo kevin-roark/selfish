@@ -6,7 +6,9 @@
       <x-icon :class="['x-icon', `x-icon-${i}`]" :color="xColor" @click.native="close" />
     </template>
 
-    <slot></slot>
+    <div class="content">
+      <slot></slot>
+    </div>
   </div>
   <span v-else></span>
 </template>
@@ -35,10 +37,7 @@ export default {
       }
     },
     xColor() {
-      switch (this.mode) {
-        case 'detail': return '#E9E9E9';
-        default: return '#000';
-      }
+      return '#fcfcfc';
     },
     routeHasContainer() {
       switch (this.mode) {
@@ -71,6 +70,12 @@ export default {
 .modal-container {
   position: fixed;
   top: 0; left: 0; width: 100%; height: 100%;
+  overflow: hidden;
+}
+
+.content {
+  box-sizing: border-box;
+  max-height: 100vh;
   overflow: auto;
 }
 

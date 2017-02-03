@@ -43,6 +43,11 @@ ul li {
 a {
   color: #000;
   text-decoration: underline;
+  transition: color 0.1s;
+}
+
+.no-touch a:hover {
+  color: #ddd;
 }
 
 .tip {
