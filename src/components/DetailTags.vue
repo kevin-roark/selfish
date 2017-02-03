@@ -1,6 +1,7 @@
 <template>
   <ul>
-    <li v-for="tag in allTags">
+    <li><span class="tag date">{{ date }}</span></li>
+    <li v-for="tag in tags">
       <span class="tag" :style="tagStyle(tag)">{{ tag }}</span>
     </li>
   </ul>
@@ -14,15 +15,10 @@ export default {
     tags: Array,
     date: String,
   },
-  computed: {
-    allTags() {
-      return [this.date].concat(this.tags);
-    },
-  },
   methods: {
     tagStyle(tag) {
       if (!tag) return null;
-      return tagStyle(tag, 'solid');
+      return tagStyle(tag, 'background');
     },
   },
 };
@@ -39,9 +35,13 @@ li {
   margin: 0 0 4px 0;
   padding: 0;
   font-family: 'Inconsolata', 'Work Sans', "SF UI", sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
-  line-height: 19px;
+}
+
+.date {
+  color: #000;
+  background: #f0f0f0;
 }
 
 @media (max-width: 800px) {

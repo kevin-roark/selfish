@@ -147,4 +147,8 @@ html, body {
 .simple-fade-enter, .simple-fade-leave-to {
   opacity: 0
 }
+
+svg {
+  overflow: visible;
+}
 </style>

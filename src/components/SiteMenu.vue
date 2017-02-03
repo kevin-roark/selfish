@@ -25,11 +25,12 @@ ul {
   list-style: none;
   margin: 0; padding: 0;
   position: fixed;
-  bottom: 0; right: 10px;
+  bottom: 0; right: 0;
   text-align: right;
   z-index: 10;
   transition: all 0.2s;
   mix-blend-mode: difference;
+  background: #000;
 }
 
 li {
@@ -38,6 +39,7 @@ li {
   font-size: 28px;
   letter-spacing: 1px;
   line-height: 1.8;
+  padding: 0 10px;
 }
 
 a {

@@ -86,6 +86,7 @@ export default {
   border-radius: 40px;
   padding: 10px 15px;
   margin: 4px;
+  width: 50px;
 }
 .x-icon-1 {
   top: 0; left: 0;

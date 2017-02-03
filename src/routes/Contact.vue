@@ -1,10 +1,10 @@
 <template>
   <div class="contact">
-    <a _target="_blank" href="mailto:kevin.e.roark@gmail.com">kevin.e.roark@gmail.com</a>
-    <a _target="_blank" href="https://twitter.com/limp__biscuit">TWITTER</a>
-    <a _target="_blank" href="https://instagram.com/limp___biscuit">INSTAGRAM</a>
-    <a _target="_blank" href="https://facebook.com/kevroark">FACEBOOK</a>
-    <a _target="_blank" href="https://github.com/kevin-roark">GITHUB</a>
+    <a target="_blank" href="mailto:kevin.e.roark@gmail.com">kevin.e.roark@gmail.com</a>
+    <a target="_blank" href="https://twitter.com/limp__biscuit">TWITTER</a>
+    <a target="_blank" href="https://instagram.com/limp___biscuit">INSTAGRAM</a>
+    <a target="_blank" href="https://facebook.com/kevroark">FACEBOOK</a>
+    <a target="_blank" href="https://github.com/kevin-roark">GITHUB</a>
   </div>
 </template>
 

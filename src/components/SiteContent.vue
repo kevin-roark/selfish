@@ -199,9 +199,7 @@ export default {
 }
 
 .untagged {
-  width: 0;
-  overflow: hidden;
-  margin-left: 0 !important;
+  display: none;
 }
 
 @media (max-width: 800px) {

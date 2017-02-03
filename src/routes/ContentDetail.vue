@@ -124,7 +124,7 @@ export default {
 
 .detail-tags {
   position: absolute;
-  top: 8px; right: 10px;
+  top: 8px; right: 8px;
   max-width: 110px;
 }
 
