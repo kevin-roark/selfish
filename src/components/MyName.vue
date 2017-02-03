@@ -34,7 +34,7 @@ export default {
 
 .title-mirror {
   display: inline-block;
-  transform: scale(-1, -1) translateY(-100%);
+  transform: scale(-1, -1) translateY(-60%);
   position: absolute;
   top: 0; left: 0;
   opacity: 0;

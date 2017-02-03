@@ -3,7 +3,7 @@
     <img v-if="hoverState.imageURL" class="background-image" :src="hoverState.imageURL" alt="" />
     <div v-else-if="hoverState.hovering" class="background-image" />
 
-    <div class="card-container" ref="cardContainer" @scroll="onScroll">
+    <div class="card-container" ref="cardContainer">
       <template v-for="(item, i) in content">
         <DateMarker v-if="dateMarkerIndices[i]" :date="item.date" />
         <ContentCard
@@ -115,9 +115,6 @@ export default {
     onResize() {
       this.setViewStyle();
     },
-    onScroll() {
-      // console.log(e);
-    },
     cardHover({ imageURL, hovering }) {
       this.hoverState.hovering = hovering;
       this.hoverState.imageURL = hovering ? imageURL : null;
@@ -129,6 +126,7 @@ export default {
     computeCardPositions({ tagged = false } = {}) {
       const { content, viewStyle, untaggedCards } = this;
       const cardStyles = [];
+      const medium = viewStyle === 'medium';
       for (let i = 0; i < content.length; i += 1) {
         const untagged = tagged && untaggedCards[i];
         if (untagged) {
@@ -136,17 +134,17 @@ export default {
         } else if (viewStyle === 'large') {
           const style = {};
           style.marginLeft = `${Math.floor((Math.random() - 0.5) * 120) + 40}px`;
-          if (Math.random() < 0.6) {
+          if (Math.random() < 0.55) {
             style.marginTop = `${Math.floor(Math.random() * 65)}vh`;
           } else {
             style.alignSelf = 'flex-end';
-            style.marginBottom = `${Math.floor(Math.random() * 40) + 10}vh`;
+            style.marginBottom = `${Math.floor(Math.random() * 32) + 8}vh`;
           }
           cardStyles.push(style);
         } else {
-          const top = Math.floor(Math.random() * 120) + 40;
-          const space = viewStyle === 'medium' ? 50 : 20;
-          const left = Math.floor(Math.random() * space);
+          const top = Math.floor(Math.random() * 120) + medium ? 100 : 40;
+          const space = medium ? 50 : 18;
+          const left = Math.floor(Math.random() * space) + medium ? 25 : 0;
           cardStyles.push({
             marginTop: `${top}px`,
             marginLeft: `${left}vw`,

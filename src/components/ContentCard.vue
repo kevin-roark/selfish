@@ -14,6 +14,8 @@
 </template>
 
 <script>
+const animationNames = ['skewer-1', 'skewer-2', 'skewer-3'];
+
 export default {
   props: {
     title: String,
@@ -50,6 +52,8 @@ export default {
 
       return {
         backgroundColor: `rgb(${white}, ${white}, ${white})`,
+        animationDuration: `${4 + (Math.random() * 14)}s`,
+        animationName: animationNames[Math.floor(Math.random() * animationNames.length)],
       };
     },
     cardTitleClass() {
@@ -71,6 +75,19 @@ export default {
 </script>
 
 <style scoped>
+@keyframes skewer-1 {
+  0%   { transform: skewX(-40deg) skewY(20deg); }
+  100% { transform: skewX(40deg) skewY(-5deg) rotateY(10deg);  }
+}
+@keyframes skewer-2 {
+  0%   { transform: skewX(30deg) skewY(-24deg); }
+  100% { transform: skewX(-30deg) skewY(20deg) rotateY(-15deg);  }
+}
+@keyframes skewer-3 {
+  0%   { transform: skewX(10deg) skewY(30deg); }
+  100% { transform: skewX(-5deg) skewY(0deg);  }
+}
+
 ::selection {
   color: #f00;
   background: #000;
@@ -97,16 +114,22 @@ export default {
   background-color: #000;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
   transition: all 0.15s;
-  transform-origin: 0% 50%;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both, forwards, none;
+  perspective: 500px;
 }
 
   .no-touch .card-wrapper:hover {
-    /*transform: scale(1.5);*/
     z-index: 10;
   }
   .no-touch .card-wrapper:hover .card {
     background-color: #000 !important;
+    animation-duration: 30s !important;
     box-shadow: -5px 5px 1px 0 #232323, -10px 10px 1px 0 #444444, -15px 15px 1px 0 #797979, -20px 20px 1px 0 #ccc, -25px 25px 1px 0 #fff;
+  }
+  .other-hover .card {
+    animation-duration: 50s !important;
   }
 
 .card-title {
@@ -165,7 +188,7 @@ export default {
 
 @media (max-width: 800px) {
   .card {
-    min-width: none; max-width: none;
+    min-width: 0; max-width: none;
     width: 50vw;
     padding: 8px;
   }
@@ -181,7 +204,7 @@ export default {
 
 @media (max-width: 420px) {
   .card {
-    width: 80vw;
+    width: 64vw;
   }
 }
 </style>

@@ -164,8 +164,7 @@ export default {
   }
 
   .no-touch .detail-images img:hover {
-    /*opacity: 0.9;*/
-    transform: scale(1, -1);
+    filter: brightness(150%) contrast(120%) saturate(150%);
   }
 
 .detail-link {
