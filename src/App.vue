@@ -3,13 +3,14 @@
     <ThreeDee />
 
     <div class="main-content" :class="contentClass">
-      <my-name :imageBackground="!!hoveringImageURL"></my-name>
+      <my-name :imageBackground="!!backgroundImageURL"></my-name>
 
       <site-menu :style="menuStyle" />
 
       <site-content
         :content="content"
         :tags="currentTags"
+        :bgImage="backgroundImageURL"
         @cardHover="handleCardHover"
       />
 
@@ -35,7 +36,8 @@ import SiteMenu from './components/SiteMenu';
 import SiteContent from './components/SiteContent';
 import ContentTags from './components/ContentTags';
 import content from './data/content.json';
-import { allTags } from './util/content';
+import { allTags, contentFromSlug } from './util/content';
+import { getImageURL } from './util/images';
 import { tagsFromRoute } from './util/tags-route';
 
 function isTouchDevice() {
@@ -53,13 +55,35 @@ export default {
     ModalContainer,
     ThreeDee,
   },
-  data: () => ({ touch: true, hoveringImageURL: null, content }),
+  data: () => ({
+    touch: true,
+    hoveringImageURL: null,
+    detailImageURL: null,
+    content,
+  }),
   mounted() {
     if (!isTouchDevice()) {
       this.touch = false;
     }
+    this.setDetailImageURL(this.$route);
+  },
+  watch: {
+    $route(rt) {
+      this.setDetailImageURL(rt);
+    },
   },
   methods: {
+    setDetailImageURL(rt) {
+      if (rt.path.indexOf('detail') >= 0) {
+        const item = contentFromSlug(rt.params.slug);
+        if (item && item.images) {
+          this.detailImageURL = getImageURL(item.images[0]);
+          console.log(this.detailImageURL);
+        }
+      } else {
+        this.detailImageURL = null;
+      }
+    },
     handleCardHover({ hovering, imageURL }) {
       this.hoveringImageURL = hovering ? imageURL : null;
     },
@@ -77,6 +101,9 @@ export default {
     },
   },
   computed: {
+    backgroundImageURL() {
+      return this.detailImageURL || this.hoveringImageURL;
+    },
     appClass() {
       return {
         'no-touch': !this.touch,
@@ -101,11 +128,11 @@ export default {
     },
     menuStyle() {
       return {
-        opacity: this.hoveringImageURL && !this.modalShowing ? 0 : 1,
+        opacity: this.backgroundImageURL && !this.modalShowing ? 0 : 1,
       };
     },
     tagsStyle() {
-      return { opacity: this.hoveringImageURL && !this.modalShowing ? 0 : 1 };
+      return { opacity: this.backgroundImageURL && !this.modalShowing ? 0 : 1 };
     },
     allTags() {
       return allTags();
@@ -138,7 +165,7 @@ html, body {
 }
 
 .main-content.modal-showing {
-  opacity: 0.5;
+  /*opacity: 0.5;*/
 }
 
 .simple-fade-enter-active, .simple-fade-leave-active {

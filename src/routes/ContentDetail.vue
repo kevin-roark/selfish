@@ -1,33 +1,34 @@
 <template>
-  <div class="detail-modal">
-    <h2 class="detail-title" :class="{ long: content.title.length >= 30 }">
-      <a v-if="content.link" :href="content.link" target="_blank">{{ content.title }}</a>
-      <span v-else>{{ content.title }}</span>
-    </h2>
+  <div>
+    <div class="detail-modal">
+      <h2 class="detail-title" :class="{ long: content.title.length >= 30 }">
+        <a v-if="content.link" :href="content.link" target="_blank">{{ content.title }}</a>
+        <span v-else>{{ content.title }}</span>
+      </h2>
 
-    <detail-tags class="detail-tags" :tags="content.tags" :date="content.date" />
+      <detail-tags class="detail-tags" :tags="content.tags" :date="content.date" />
 
-    <div class="detail-description">{{ content.text }}</div>
+      <div class="detail-description">{{ content.text }}</div>
 
-    <div
-      v-if="imageURLs.length > 0"
-      :class="{ 'detail-images': true, 'single-image': imageURLs.length === 1 }"
-    >
-      <img v-for="(src, i) in imageURLs" :src="src" :alt="`Image ${i}`" />
+      <div
+        v-if="imageURLs.length > 0"
+        :class="{ 'detail-images': true, 'single-image': imageURLs.length === 1 }"
+      >
+        <img v-for="(src, i) in imageURLs" :src="src" :alt="`Image ${i}`" @click="imageClick(src)" />
+      </div>
+
+      <a
+        v-if="content.link"
+        class="detail-link"
+        :href="content.link"
+        target="_blank"
+        @mouseenter="setLinkHovering(true)"
+        @mouseleave="setLinkHovering(false)"
+      >
+        <span class="link-text">LINK</span>
+        <span class="link-mirror" :class="{ active: linkHovering }">LINK</span>
+      </a>
     </div>
-
-    <a
-      v-if="content.link"
-      class="detail-link"
-      :href="content.link"
-      target="_blank"
-      @mouseenter="setLinkHovering(true)"
-      @mouseleave="setLinkHovering(false)"
-    >
-      <span class="link-text">LINK</span>
-      <span class="link-mirror" :class="{ active: linkHovering }">LINK</span>
-    </a>
-
     <NavigationArrows v-if="arrows" class="detail-navigation" @navigate="navigate" />
   </div>
 </template>
@@ -86,6 +87,9 @@ export default {
         this.navigate(1);
       }
     },
+    imageClick(src) {
+      window.open(src);
+    },
   },
 };
 </script>
@@ -96,8 +100,8 @@ export default {
   box-sizing: border-box;
   width: 800px;
   left: calc(50% - 400px);
-  top: 80px;
-  max-height: calc(100% - 160px);
+  top: 40px;
+  max-height: calc(100% - 100px);
   overflow-y: auto;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.95);
@@ -147,6 +151,7 @@ export default {
 .detail-images img {
   margin: 10px 0 10px 20px;
   width: 600px;
+  cursor: pointer;
 
   box-sizing: border-box;
   border: 5px solid #ccc;
@@ -164,7 +169,7 @@ export default {
   }
 
   .no-touch .detail-images img:hover {
-    filter: brightness(150%) contrast(120%) saturate(150%);
+    filter: brightness(150%) saturate(150%);
   }
 
 .detail-link {
@@ -197,7 +202,7 @@ export default {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 5px;
+  bottom: 15px;
 }
 
 @media (max-width: 800px) {
@@ -251,6 +256,10 @@ export default {
   .link-mirror {
     left: 0;
     transform: scaleX(-1) translateX(90%);
+  }
+
+  .detail-navigation {
+    bottom: 12px;
   }
 }
 </style>

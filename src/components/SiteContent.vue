@@ -1,6 +1,6 @@
 <template>
   <div class="content-container">
-    <img v-if="hoverState.imageURL" class="background-image" :src="hoverState.imageURL" alt="" />
+    <page-background v-if="bgImageURL" :src="bgImageURL" />
     <div v-else-if="hoverState.hovering" class="background-image" />
 
     <div class="card-container" ref="cardContainer">
@@ -27,6 +27,7 @@
 </template>
 
 <script>
+import PageBackground from './PageBackground';
 import ContentCard from './ContentCard';
 import DateMarker from './DateMarker';
 import Resizer from '../mixins/resizer';
@@ -37,6 +38,7 @@ import { yearFromDate } from '../util/date';
 
 export default {
   components: {
+    PageBackground,
     ContentCard,
     DateMarker,
   },
@@ -44,6 +46,7 @@ export default {
   props: {
     content: Array,
     tags: Array,
+    bgImage: String,
   },
   data: () => ({
     cardStyles: [],
@@ -67,6 +70,9 @@ export default {
     },
   },
   computed: {
+    bgImageURL() {
+      return this.hoverState.imageURL || this.bgImage;
+    },
     hasTags() {
       return this.tags.length > 0;
     },
@@ -189,13 +195,6 @@ export default {
 .space-adder {
   min-width: 150px;
   min-height: 150px;
-}
-
-.background-image {
-  position: fixed;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background-color: #ccc;
-  mix-blend-mode: multiply;
 }
 
 .untagged {
