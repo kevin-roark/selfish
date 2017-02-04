@@ -83,8 +83,10 @@ export default {
       if (this.$route.path.indexOf('detail') < 0) return; // not on screen
       if (ev.keyCode === 37) {
         this.navigate(-1);
+        ev.preventDefault();
       } else if (ev.keyCode === 39) {
         this.navigate(1);
+        ev.preventDefault();
       }
     },
     imageClick(src) {
@@ -101,7 +103,7 @@ export default {
   width: 800px;
   left: calc(50% - 400px);
   top: 40px;
-  max-height: calc(100% - 100px);
+  max-height: calc(100% - 120px);
   overflow-y: auto;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.95);

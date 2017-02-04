@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <color-bars :opacity="colorBarOpacity" />
-    <div v-if="routeHasContainer" class="modal-container">
+  <div v-if="routeHasContainer">
+    <color-bars :opacity="colorBarOpacity" :mix="colorBarMix" />
+    <div class="modal-container">
 
       <template v-for="i in 4">
         <x-icon :class="['x-icon', `x-icon-${i}`]" :color="xColor" @click.native="close" />
@@ -11,8 +11,8 @@
         <slot></slot>
       </div>
     </div>
-    <span v-else></span>
   </div>
+  <span v-else></span>
 </template>
 
 <script>
@@ -34,8 +34,14 @@ export default {
   computed: {
     colorBarOpacity() {
       switch (this.mode) {
-        case 'detail': return 0.9;
-        default: return 0.9;
+        case 'detail': return 0.75;
+        default: return 0.88;
+      }
+    },
+    colorBarMix() {
+      switch (this.mode) {
+        case 'detail': return 'multiply';
+        default: return 'normal';
       }
     },
     xColor() {
@@ -91,6 +97,7 @@ export default {
   padding: 10px 15px;
   margin: 4px;
   width: 50px;
+  box-shadow: 0 0 20px 0 #fff;
 }
 .x-icon-1 {
   top: 0; left: 0;

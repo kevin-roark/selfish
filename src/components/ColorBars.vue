@@ -9,11 +9,13 @@
 export default {
   props: {
     opacity: { type: Number, default: 1.0 },
+    mix: { type: String, default: 'normal' },
   },
   computed: {
     style() {
       return {
         opacity: this.opacity,
+        mixBlendMode: this.mix,
       };
     },
   },
@@ -24,7 +26,6 @@ export default {
 .color-bars {
   position: fixed;
   top: 0; left: 0; width: 100%; height: 100%;
-  mix-blend-mode: overlay;
 }
 
 .color-bar {

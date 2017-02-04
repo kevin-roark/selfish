@@ -76,10 +76,7 @@ export default {
     setDetailImageURL(rt) {
       if (rt.path.indexOf('detail') >= 0) {
         const item = contentFromSlug(rt.params.slug);
-        if (item && item.images) {
-          this.detailImageURL = getImageURL(item.images[0]);
-          console.log(this.detailImageURL);
-        }
+        this.detailImageURL = item && item.images ? getImageURL(item.images[0]) : null;
       } else {
         this.detailImageURL = null;
       }
@@ -132,7 +129,11 @@ export default {
       };
     },
     tagsStyle() {
-      return { opacity: this.backgroundImageURL && !this.modalShowing ? 0 : 1 };
+      let opacity = this.backgroundImageURL ? 0 : 1;
+      if (this.modalShowing) {
+        opacity = 0.5;
+      }
+      return { opacity };
     },
     allTags() {
       return allTags();

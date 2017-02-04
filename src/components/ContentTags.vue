@@ -33,6 +33,11 @@ export default {
     currentTags: Array,
   },
   data: () => ({ tagsShowing: false }),
+  mounted() {
+    if (this.$route.path.indexOf('tagged') >= 0) {
+      this.tagsShowing = true;
+    }
+  },
   computed: {
     sortedTags() {
       return this.tags.concat()
