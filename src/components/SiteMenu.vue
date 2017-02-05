@@ -1,16 +1,22 @@
 <template>
   <ul>
     <li v-for="item in items">
-      <router-link :to="item.path">{{ item.name }}</router-link>
+      <router-link :to="item.path">
+        <img v-if="item.icon" :src="item.icon" alt="" />
+        <span v-else>{{ item.name }}</span>
+      </router-link>
     </li>
   </ul>
 </template>
 
 <script>
+  const eyeballIcon = require('../assets/site-images/eyeball.png');
+
   export default {
     name: 'site-menu',
     data: () => ({
       items: [
+        { icon: eyeballIcon, path: '/eyeball' },
         { name: 'Info', path: '/info' },
         { name: 'Contact', path: '/contact' },
         // { name: 'Essays', path: '/essays' },
@@ -34,16 +40,17 @@ ul {
 }
 
 li {
+  display: block;
   font-family: 'Inconsolata', Menlo, Monaco, monospace;
   font-weight: bold;
   font-size: 28px;
   letter-spacing: 1px;
-  line-height: 1.8;
+  line-height: 1.7;
   padding: 0 10px;
 }
 
 a {
-  display: block;
+  display: inline-block;
   color: inherit;
   text-decoration: none;
   transform-origin: 100% 50%;
@@ -55,12 +62,21 @@ a {
     transform: scale(6.66, 1.5) skewX(15deg);
   }
 
+img {
+  margin-bottom: -8px;
+  width: 32px;
+}
+
 @media (max-width: 800px) {
   ul {
-    bottom: auto; top: 0; right: 8px;
+    bottom: auto; top: 0;
   }
   li {
     font-size: 18px;
+    padding: 0 8px;
+  }
+  img {
+    width: 24px;
   }
 }
 </style>

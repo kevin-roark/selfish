@@ -7,6 +7,7 @@ import AboutMe from './routes/AboutMe';
 import Contact from './routes/Contact';
 import Links from './routes/Links';
 import Essays from './routes/Essays';
+import Eyeball from './routes/Eyeball';
 import TaggedContent from './routes/TaggedContent';
 import { routeHasTags, tagsFromRoute } from './util/tags-route';
 
@@ -18,6 +19,7 @@ const router = new VueRouter({
     { path: '/contact', component: Contact },
     { path: '/links', component: Links },
     { path: '/essays', component: Essays },
+    { path: '/eyeball', component: Eyeball },
 
     {
       path: '/detail/:slug',
