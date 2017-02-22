@@ -67,6 +67,11 @@ export default {
 @media (max-width: 800px) {
   .tags-button {
     left: calc(50% - 160px);
+    padding: 10px 0 15px 0;
+  }
+
+  .tags-button-text {
+    transform: scale(2.5, 1.5);
   }
 }
 </style>

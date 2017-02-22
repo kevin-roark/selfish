@@ -118,4 +118,10 @@ export default {
     background: #000;
     box-shadow: 5px 5px 1px 0 #232323, 10px 10px 1px 0 #444444, 15px 15px 1px 0 #636363, 20px 20px 1px 0 #959595, 25px 25px 1px 0 #cccccc, 30px 30px 1px 0 #fff;
   }
+
+@media (max-width: 800px) {
+  .x-icon {
+    width: 24px;
+  }
+}
 </style>

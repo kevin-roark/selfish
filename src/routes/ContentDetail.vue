@@ -211,7 +211,7 @@ export default {
   .detail-modal {
     top: 10px; left: 10px;
     width: calc(100% - 20px);
-    height: calc(100% - 90px);
+    height: calc(100% - 60px);
     max-height: none;
   }
 
@@ -237,22 +237,22 @@ export default {
 
   .detail-images {
     white-space: normal;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
+    overflow-x: hidden;
   }
 
   .detail-images img, .detail-images.single-image img {
     margin: 10px 0;
-    width: 100%;
+    width: auto;
+    max-width: 100%;
   }
 
   .detail-link {
-    position: fixed;
-    margin: 0;
-    bottom: 80px; right: 25px;
+    margin-top: 20px;
     font-size: 36px;
-    transform-origin: 100% 100%;
     transform: scale(3.4, 2.5);
     width: auto;
+    display: inline-block;
   }
 
   .link-mirror {
@@ -261,7 +261,7 @@ export default {
   }
 
   .detail-navigation {
-    bottom: 12px;
+    bottom: 8px;
   }
 }
 </style>

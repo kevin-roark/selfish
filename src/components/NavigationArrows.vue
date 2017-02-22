@@ -73,13 +73,17 @@ export default {
 
   .nav-arrow {
     margin: 0 5px;
-    padding: 0 30px;
-    font-size: 18px;
+    padding: 0 10px;
+    font-size: 12px;
     box-shadow: 0 5px 2px 0 rgba(0, 0, 0, 0.5);
   }
 
   .nav-arrow-left {
     margin-bottom: 10px;
+  }
+
+  .nav-arrow-text {
+    transform: scale(1.2, 1);
   }
 }
 </style>

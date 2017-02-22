@@ -194,5 +194,14 @@ export default {
   .tags-container {
     left: calc(50% - 160px);
   }
+
+  .tagsShowing .tags {
+    padding: 5px 5px 55px 0;
+  }
+
+  .tags li {
+    margin: 4px;
+    font-size: 12px;
+  }
 }
 </style>

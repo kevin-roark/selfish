@@ -32,7 +32,7 @@ ul {
 }
 
 li {
-  margin: 0 0 4px 0;
+  margin: 0 0 10px 0;
   padding: 0;
   font-family: 'Inconsolata', 'Work Sans', "SF UI", sans-serif;
   font-size: 16px;
@@ -44,16 +44,20 @@ li {
   background: #f0f0f0;
 }
 
+.tag {
+  padding: 2px;
+}
+
 @media (max-width: 800px) {
   ul {
     text-align: left;
-    margin-left: -10px;
+    margin-left: -5px;
   }
 
   li {
     font-size: 14px;
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 0 0 10px;
   }
 }
 
