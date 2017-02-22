@@ -55,7 +55,8 @@ export default {
             return 1;
           }
 
-          return contentWithTag(t2).length - contentWithTag(t1).length;
+          const diff = contentWithTag(t2).length - contentWithTag(t1).length;
+          return diff !== 0 ? diff : t1.localeCompare(t2);
         });
     },
     tagged() {

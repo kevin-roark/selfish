@@ -97,7 +97,6 @@ export default {
   padding: 10px 15px;
   margin: 4px;
   width: 50px;
-  box-shadow: 0 0 20px 0 #fff;
 }
 .x-icon-1 {
   top: 0; left: 0;

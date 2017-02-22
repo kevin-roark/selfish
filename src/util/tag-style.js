@@ -18,9 +18,9 @@ export const tagColors = {
   Game: '#d6a832',
   Text: '#B17B1E',
   Software: '#bbb',
-  Object: '#82392b',
+  Object: '#18653b',
   Installation: '#2424ff',
-  Sculpture: '#18653b',
+  Sculpture: '#82392b',
   Photo: '#8cc1ff',
   Performance: '#e68a5b',
 };

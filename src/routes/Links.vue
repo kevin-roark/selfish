@@ -52,13 +52,13 @@ a {
 
 .tip {
   position: fixed;
-  top: 10px; left: 120px;
+  top: 40%; left: 20px;
   max-width: 680px;
   color: #ff0;
   text-shadow: 0 2px 1px #000;
   font-family: 'Inconsolata', Menlo, Monaco, monospace;
   font-size: 42px;
-  z-index: 1;
+  z-index: -1;
 }
 
 

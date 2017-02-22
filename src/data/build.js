@@ -6,7 +6,9 @@ const slug = require('slug');
 
 const pathname = file => path.join(__dirname, file);
 
-const content = CSON.parseCSONFile(pathname('content.cson'));
+let content = CSON.parseCSONFile(pathname('content.cson'));
+
+content = content.filter(c => !c.hidden);
 
 content.forEach((c) => {
   c.slug = slug(c.title); //eslint-disable-line

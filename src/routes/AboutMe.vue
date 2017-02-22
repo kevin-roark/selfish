@@ -1,14 +1,25 @@
 <template>
   <div class="info">
     <p>
-      Welcome to my informational web page!
-      I'm me and 23 years old (b. 1993) and live in New York City (from Louisiana).
-      You can explore my work down there below.
-      I'm interested in restraint, observation, refraction, repetition, decay, growth.
-      I prefer to work across different forms and like to say "it's all one thing."
+      Welcome to my informational web page.
+      I'm me and and live in New York City.
+      I was born in 1993 and lived in Slidell, Louisiana until 2011.
     </p>
     <p>
-      I like to cook sometimes and play basketball sport. I am happy to help you with a project.
+      Professional interests include:
+      mutation, simulation, replication, restraint, control, growth,
+      tension, world-building, disgust, joy, the feeling.
+    </p>
+    <p>
+      I enjoy working across different formats.
+      Most works incorporate video or software
+      — some use graphics, text, sound, or images.
+    </p>
+    <p>
+      Also like to hang with friends.
+    </p>
+    <p>
+      Open to working with others / assisting with your work.
     </p>
   </div>
 </template>

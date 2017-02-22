@@ -7,7 +7,6 @@
 import loadScripts from '../util/load-scripts';
 import Resizer from '../mixins/resizer';
 import Touching from '../mixins/touching';
-import initOBJLoader from '../lib/OBJLoader';
 
 const NORMAL_SCALE = 1200;
 
@@ -18,7 +17,6 @@ export default {
 
     const three = 'https://unpkg.com/three@0.84.0/build/three.min.js';
     loadScripts(three, () => {
-      initOBJLoader(THREE);
       this.buildScene();
     });
   },
@@ -92,10 +90,10 @@ export default {
         loaded();
       });
 
-      const objPath = '/static/models/bust/model.obj';
-      const objLoader = new THREE.OBJLoader();
-      objLoader.load(objPath, (group) => {
-        model.geometry = group.children[0].geometry;
+      const meshPath = '/static/models/bust/model_optimized.json';
+      const jsonLoader = new THREE.JSONLoader();
+      jsonLoader.load(meshPath, (geometry) => {
+        model.geometry = geometry;
         loaded();
       });
     },
