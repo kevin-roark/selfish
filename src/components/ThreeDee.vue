@@ -1,5 +1,5 @@
 <template>
-  <div class="three-dee" ref="div"></div>
+  <div class="three-dee" ref="div" :class="{ loaded }"></div>
 </template>
 
 <script>
@@ -13,15 +13,17 @@ const NORMAL_SCALE = 1200;
 export default {
   mixins: [Resizer, Touching],
   data() {
-    return { mouseReactive: false };
+    return { mouseReactive: false, loaded: false };
   },
   mounted() {
     this.velocity = 0;
 
-    const three = 'https://unpkg.com/three@0.84.0/build/three.min.js';
-    loadScripts(three, () => {
-      this.buildScene();
-    });
+    setTimeout(() => {
+      const three = 'https://unpkg.com/three@0.84.0/build/three.min.js';
+      loadScripts(three, () => {
+        this.buildScene();
+      });
+    }, 1000);
   },
   beforeDestroy() {
     if (this.renderer) {
@@ -74,6 +76,8 @@ export default {
         mesh.scale.set(NORMAL_SCALE, NORMAL_SCALE, NORMAL_SCALE);
         mesh.position.y = 20;
         this.scene.add(mesh);
+
+        this.loaded = true;
       });
 
       this.update();
@@ -169,5 +173,14 @@ export default {
   top: 0; left: 0;
   width: 100%; height: 100%;
   overflow: none;
+}
+
+.three-dee {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.three-dee.loaded {
+  opacity: 1;
 }
 </style>

@@ -32,7 +32,7 @@ import ContentCard from './ContentCard';
 import DateMarker from './DateMarker';
 import Resizer from '../mixins/resizer';
 import Keyup from '../mixins/keyup';
-import { getImageURL } from '../util/images';
+import { getThumbnailURL } from '../util/images';
 import { contentWithTags } from '../util/content';
 import { yearFromDate } from '../util/date';
 
@@ -138,7 +138,7 @@ export default {
       this.$emit('cardHover', { hovering, imageURL });
     },
     getImageURL(i) {
-      return i.images && i.images.length > 0 ? getImageURL(i.images[0]) : null;
+      return i.images && i.images.length > 0 ? getThumbnailURL(i.images[0]) : null;
     },
     computeCardPositions({ tagged = false } = {}) {
       const { content, viewStyle, untaggedCards } = this;
