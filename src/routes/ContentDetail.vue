@@ -8,7 +8,7 @@
 
       <detail-tags class="detail-tags" :tags="content.tags" :date="content.date" />
 
-      <div class="detail-description">{{ content.text }}</div>
+      <div class="detail-description" v-html="content.text"></div>
 
       <div
         v-if="imageURLs.length > 0"
@@ -113,7 +113,7 @@ export default {
 
 .detail-title {
   padding: 0;
-  margin: -8px 80px 30px 80px;
+  margin: -8px 80px 30px 60px;
   text-align: center;
   font-family: 'Crimson Text', TimesNewRomanPSMT, 'Times New Roman', serif;
   font-size: 54px;
@@ -139,7 +139,7 @@ export default {
   font-family: 'Crimson Text', TimesNewRomanPSMT, 'Times New Roman', serif;
   font-family: 'Work Sans', 'SF UI', 'Helvetica', sans-serif;
   font-size: 22px;
-  line-height: 1.55;
+  line-height: 1.4;
   max-width: 650px;
 }
 

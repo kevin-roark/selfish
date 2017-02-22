@@ -12,6 +12,9 @@ const NORMAL_SCALE = 1200;
 
 export default {
   mixins: [Resizer, Touching],
+  data() {
+    return { mouseReactive: false };
+  },
   mounted() {
     this.velocity = 0;
 
@@ -141,6 +144,10 @@ export default {
       renderer.setSize(window.innerWidth, window.innerHeight);
     },
     move(ev) {
+      if (!this.mouseReactive) {
+        return;
+      }
+
       const { prevX = ev.pageX, prevY = ev.pageY } = this;
       const dx = ev.pageX - prevX;
       const dy = ev.pageY - prevY;

@@ -124,6 +124,7 @@ export default {
   animation-iteration-count: infinite;
   animation-fill-mode: both, forwards, none;
   perspective: 500px;
+  word-wrap: break-word;
 }
 
   .no-touch .card-wrapper:hover {

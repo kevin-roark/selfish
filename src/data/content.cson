@@ -1,5 +1,95 @@
 [
   {
+    link: "http://www.myworld.click"
+    title: "MY WORLD"
+    date: "February 2017"
+    text: "In recent months I have been making 3D scans of the people and objects around me. This is my collection of those 3D photographs. You can download prints! Contact me if you want a 3D model file."
+    tags: [
+      "3D"
+      "Net"
+    ]
+    weight: 1.5
+    images: [
+      "images/myworld/1.jpg"
+      "images/myworld/2.jpg"
+      "images/myworld/3.jpg"
+    ]
+  }
+  {
+    link: "https://www.youtube.com/watch?v=tuWrmaQmcVo"
+    title: "Simulacrum, Everywhere"
+    date: "February 2017"
+    text: '''
+      "Donald J. Trump State Park" is a 436-acre undeveloped plot of land in Putnam County, New York. It was called a state park from 2006 until 2010, when the state abandoned it because of budget cuts. It has rested unused for seven years, wasted.
+      <br><br>
+      Donald Trump, the former star of The Apprentice and now the President of the United States, purchased the land in the 1990s for $2 million with the intention of building a $10 million private golf course on the wetlands. Inconveniently, his plan was thwarted by “some local opposition” from environmental restrictions and permitting requirements. Ever-opportunistic, Trump donated the land to the state of New York in under the conditions that it would become a park bearing his name (forever — “I gave that land for the purposes of the park, and I always believed that once a park is there, it would always be a park”) and, more significantly, that he could use the donation for a $100 million tax break. Trump made no donation to maintain the land or to truly create a park from it. The abandoned buildings contain asbestos. The land still bears his name. It is a shell. It was a gift. A simulacrum of a gift and a simulacrum of a park.
+      <br><br>
+      Former Governor George Pataki, on the donation: "With spring upon us and Earth Day right around the corner, today marks the perfect time for New Yorkers to receive such a generous and meaningful gift – the protection of valuable open space and beautiful parklands in the Hudson Valley. The establishment of Donald J. Trump State Park will increase public access to scenic landscapes and provide additional recreational opportunities for families and visitors to the region. On behalf of the people of the Empire State, I express our gratitude to Donald Trump for his vision and commitment to preserve the natural resource of this property for the benefit of future generations."
+      <br><br>
+      State Assemblyperson Sandra Galef, on the donation: "Parkland is such a precious commodity and this gift of 436 acres from Donald Trump will have a positive impact on the residents of our Hudson Valley communities for many decades."
+      <br><br>
+      Former State Parks Commissioner Bernadette Castro, on the donation: “This magnificent donation highlights the long-term success of fostering public/private partnerships as we continue to implement Governor Pataki’s vision for the environment and open space protection. Donald Trump’s incredible gift will have a lasting impact on our parklands, opening up public access to additional outdoor recreation and helping preserve the rich array of natural resources found in the Hudson Valley. Through his generosity, New Yorkers and their families will now be able to enjoy these parklands for years to come.”
+      <br><br>
+      The land is barren; everyone smiled, promised, and pretended something else. Trump didn’t want it, and the state couldn’t afford it. The park closed only four years after The Gift was announced.
+      <br><br>
+      One sign to enter the park is still visible from the Taconic Parkway. There used to be other signs. The entrance to the park is hard to find—it is at the top of a hill and gated off. Once the gate is entered: everything is dead, muddy, pale brown. There are a number of flat open fields, covered in dead grass with a view of spectacular mountains in the distance, mountains that are not in the park. There is plastic trash; there is gatorade and styrofoam. It is dirty. No one cares, no one is responsible for the land. The land is a tool.
+      <br><br>
+      On January 20th 2017 I brought a 55-gallon steel drum into the former park and a bag of shredded $10,000. I poured the money into the barrel and I played with it. I held the money in my hands and I threw it in the air and back down into the barrel. I lit the money on fire but I became afraid, the sight of burning money made my stomach churn. I poured a gallon of spring water from a plastic jug onto the pile of burning money to extinguish the flames. I held the burnt damp money in my hands, towards the sky. I carried the barrel out of the wasteland and went home.
+      <br><br>
+      This place is wretched and this man is wretched. Our world requires us to pretend that a lot of things are real; we should not pretend this man is real.
+      <br><br>
+      Yorktown superviser Linda Cooper, on Trump’s failed golf course: He “just didn’t want to go through the rules… He called me, at one point, and said, ‘Linda, just let me build the golf course — I’m rich, you’ll like it.'”
+      '''
+    tags: [
+      "Video"
+      "Performance"
+    ]
+    weight: 1.75
+    images: [
+      "images/simulacrum/1.jpg"
+      "images/simulacrum/2.jpg"
+      "images/simulacrum/3.jpg"
+    ]
+  }
+  {
+    link: "http://joebucciero.website/index.php/art/popular-mechanics/"
+    title: "Popular Mechanics / Worse Than Lepers"
+    date: "February 2017"
+    text: "Two videos made with Joe Bucciero about populism and nostalgia. Showing as part of We Need to Talk at Petzel Gallery in Chelsea. You can read more about them on Joe's site."
+    tags: ["Video"]
+    weight: 1.05,
+    images: [
+      "images/popularmechanics.jpg",
+      "images/worsethanlepers.jpg"
+    ]
+  }
+  {
+    link: "http://www.breadandmeats.com/"
+    title: "Joyce Kim Website"
+    date: "January 2017"
+    text: "Portfolio website for graphic designer Joyce Kim. She's really good and it has flames!!!"
+    tags: [
+      "Net"
+      "Money"
+    ]
+    weight: 1.2
+    images: [
+      "images/joycekim.jpg"
+    ]
+  }
+  {
+    link: "https://github.com/kevin-roark/rigid-envelope"
+    title: "Rigid Envelope"
+    date: "January 2017"
+    text: '''
+      I made a Mac application that periodically checks my email and downloads 3D scans that I make onto my computer.
+      This would not be very helpful for you, but if you find yourself doing repetitive email work and want me to
+      make you a tool I will do that!
+      '''
+    tags: ["Software"]
+    weight: 0.6
+  }
+  {
     link: "/bird-sculpture"
     title: "Bird Sculpture (FREEDOM)"
     date: "December 2016"

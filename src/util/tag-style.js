@@ -1,6 +1,6 @@
 
 export const tagColors = {
-  Money: '#00ff00',
+  Money: '#49b449',
 
   // names
   'Mister Shane': '#FF0090',

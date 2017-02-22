@@ -59,7 +59,7 @@ export default {
 
   .no-touch .nav-arrow:hover {
     background: url('../assets/site-images/red_fire.jpg') 100%;
-    transform: scaleX(-2);
+    transform: scaleX(-1);
   }
 
   .no-touch .nav-arrow:hover .nav-arrow-text {
