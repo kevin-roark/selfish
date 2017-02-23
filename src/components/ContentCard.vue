@@ -47,8 +47,8 @@ export default {
     },
     cardStyle() {
       let bgOpacity = 1;
-      if (this.weight < 1) {
-        bgOpacity = Math.max(0.5, this.weight * 0.8);
+      if (this.weight <= 1) {
+        bgOpacity = Math.max(0.75, this.weight * 0.85);
       } else if (this.weight < 2) {
         bgOpacity = ((this.weight - 1) * 0.15) + 0.85;
       }
