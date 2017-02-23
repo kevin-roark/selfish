@@ -23,7 +23,7 @@ export default {
       loadScripts(three, () => {
         this.buildScene();
       });
-    }, 1000);
+    }, 500);
   },
   beforeDestroy() {
     if (this.renderer) {
@@ -177,7 +177,7 @@ export default {
 
 .three-dee {
   opacity: 0;
-  transition: opacity 1s;
+  transition: opacity 0.5s;
 }
 
 .three-dee.loaded {

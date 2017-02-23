@@ -14,6 +14,8 @@
 </template>
 
 <script>
+import touch from '../util/is-touch';
+
 const animationNames = ['skewer-1', 'skewer-2', 'skewer-3'];
 
 export default {
@@ -71,6 +73,10 @@ export default {
     setHover(hovering) {
       this.hovering = hovering;
       this.$emit('hoverChange', { imageURL: this.imageURL, hovering });
+
+      if (hovering && touch) {
+        this.$router.push(this.url);
+      }
     },
   },
 };

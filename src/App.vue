@@ -39,11 +39,7 @@ import content from './data/content.json';
 import { allTags, contentFromSlug } from './util/content';
 import { getImageURL } from './util/images';
 import { tagsFromRoute } from './util/tags-route';
-
-function isTouchDevice() {
-  return 'ontouchstart' in window // works on most browsers
-    || navigator.maxTouchPoints;  // works on IE10/11 and Surface
-}
+import touch from './util/is-touch';
 
 export default {
   name: 'app',
@@ -56,15 +52,12 @@ export default {
     ThreeDee,
   },
   data: () => ({
-    touch: true,
+    touch,
     hoveringImageURL: null,
     detailImageURL: null,
     content,
   }),
   mounted() {
-    if (!isTouchDevice()) {
-      this.touch = false;
-    }
     this.setDetailImageURL(this.$route);
   },
   watch: {
