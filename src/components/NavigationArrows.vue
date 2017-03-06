@@ -31,7 +31,6 @@ export default {
   cursor: pointer;
   margin: 0 20px;
   padding: 5px 80px;
-  background: url('../assets/site-images/blue_waterfall.jpg') 100%;
   font-family: 'Crimson Text';
   font-size: 32px;
   text-align: center;
@@ -45,10 +44,12 @@ export default {
 .nav-arrow-left {
   transform: scaleX(-1);
   text-shadow: -1px 1px 2px #00f, -2px 2px 6px #00f;
+  background: url('../assets/site-images/blue_waterfall.jpg') 100%;
 }
 
 .nav-arrow-right {
   text-shadow: -1px 1px 2px #f00, -2px 2px 6px #f00;
+  background: url('../assets/site-images/red_fire.jpg') 100%;
 }
 
 .nav-arrow-text {
@@ -58,12 +59,19 @@ export default {
 }
 
   .no-touch .nav-arrow:hover {
-    background: url('../assets/site-images/red_fire.jpg') 100%;
     transform: scaleX(-1);
   }
 
   .no-touch .nav-arrow:hover .nav-arrow-text {
     transform: scale(-1.5, 1);
+  }
+
+  .no-touch .nav-arrow-left:hover {
+    background: url('../assets/site-images/red_fire.jpg') 100%;
+  }
+
+  .no-touch .nav-arrow-right:hover {
+    background: url('../assets/site-images/blue_waterfall.jpg') 100%;
   }
 
 @media (max-width: 800px) {

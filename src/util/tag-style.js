@@ -1,6 +1,6 @@
 
 export const tagColors = {
-  Money: '#49b449',
+  Money: '#30C251',
 
   // names
   'Mister Shane': '#FF0090',
@@ -13,6 +13,7 @@ export const tagColors = {
   // mediums
   Net: '#0000ff',
   Video: '#ff0000',
+  'Music Vid': '#ff005c',
   Sound: '#ffe708',
   '3D': '#563bff',
   Game: '#d6a832',

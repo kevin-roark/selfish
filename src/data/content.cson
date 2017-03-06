@@ -1,5 +1,28 @@
 [
   {
+    link: "https://www.youtube.com/watch?v=LIdULtTrW3c"
+    title: "\"Falcon Passport\" - DIVORCE (Video)"
+    date: "February 2017"
+    text: '''
+      DIVORCE released Jet Fuel, their first EP, via NYC's Sweat Equity; it is very good electronic music.
+      <br><br>
+      This is a music video for the fourth track of Jet Fuel. A creature learns to fly. I tried to blend real-world
+      and digital-world footage in a somewhat fluid way. Really getting deep into the bird world.
+      '''
+    tags: [
+      "Music Vid"
+      "Video"
+    ]
+    weight: 1.6
+    images: [
+      "images/falconpassport/1.jpg"
+      "images/falconpassport/2.jpg"
+      "images/falconpassport/3.jpg"
+      "images/falconpassport/4.jpg"
+      "images/falconpassport/5.jpg"
+    ]
+  }
+  {
     link: "http://www.myworld.click"
     title: "MY WORLD"
     date: "February 2017"
@@ -143,6 +166,7 @@
     date: "November 2016"
     text: "Music video for the single \"True\" from the Broken Spear album True (out now go listen). I loved making this vid."
     tags: [
+      "Music Vid"
       "Video"
     ]
     weight: 1.7
@@ -217,6 +241,7 @@
     text: "BDSMR is a really good minimal electronic album by SWEET NOTHINGS. I did not make the music, but I made the website, some photos, two videos (ETERNITY and ZODIAC) and the album art (with help!). Click it!!"
     tags: [
       "Net"
+      "Music Vid"
       "Video"
       "Money"
     ]
@@ -449,6 +474,7 @@
     text: "Video for the Dog Shadow track. Footage from an urban domestic dog park in downtown New York City."
     tags: [
       "Dog Shadow"
+      "Music Vid"
       "Video"
       "Sound"
     ]
