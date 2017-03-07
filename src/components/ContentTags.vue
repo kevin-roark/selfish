@@ -104,8 +104,6 @@ export default {
   position: fixed;
   bottom: 0; left: 0;
   width: 320px;
-  max-height: 666px;
-  overflow-y: auto;
   transition: all 0.1s;
   pointer-events: none;
 }
@@ -193,6 +191,8 @@ export default {
 @media (max-width: 800px) {
   .tags-container {
     left: calc(50% - 160px);
+    max-height: 666px;
+    overflow-y: auto;
   }
 
   .tagsShowing .tags {
