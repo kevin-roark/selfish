@@ -3,7 +3,16 @@
     <page-background v-if="bgImageURL" :src="bgImageURL" />
     <div v-else-if="hoverState.hovering" class="background-image" />
 
-    <div class="card-container" ref="cardContainer">
+    <div
+      class="card-container"
+      ref="cardContainer"
+      @mousedown="mousedown"
+      @touchstart="mousedown"
+      @mouseup="mouseup"
+      @touchend="mouseup"
+      @mousemove="mousemove"
+      @touchmove="touchmove"
+    >
       <template v-for="(item, i) in content">
         <DateMarker v-if="dateMarkerIndices[i]" :date="item.date" :explosion="explosion" />
         <ContentCard
@@ -55,6 +64,9 @@ export default {
     explosion: false,
   }),
   mounted() {
+    this.dragging = false;
+    this.prevDragX = null;
+
     this.setViewStyle();
     this.computeCardPositions();
   },
@@ -114,6 +126,33 @@ export default {
     },
   },
   methods: {
+    mousedown() {
+      if (this.viewStyle === 'large') {
+        this.dragging = true;
+      }
+    },
+    mouseup() {
+      this.dragging = false;
+      this.prevDragX = null;
+    },
+    mousemove(ev) {
+      if (!this.dragging) {
+        return;
+      }
+
+      if (this.prevDragX === null) {
+        this.prevDragX = ev.pageX;
+        return;
+      }
+
+      const delta = ev.pageX - this.prevDragX;
+      this.$refs.cardContainer.scrollLeft -= delta;
+
+      this.prevDragX = ev.pageX;
+    },
+    touchmove(ev) {
+      this.mousemove(ev.touches ? ev.touches[0] : ev);
+    },
     setViewStyle() {
       if (window.innerWidth > 800) {
         this.viewStyle = 'large';
@@ -190,6 +229,17 @@ export default {
   overflow-x: auto;
   overflow-y: hidden;
   height: 100%;
+
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+.card-container:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
 }
 
 .space-adder {
