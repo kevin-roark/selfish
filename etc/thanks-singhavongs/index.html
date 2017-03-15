@@ -1,0 +1,109 @@
+<html>
+    <head>
+      <title>thank you for having me eat brunch</title>
+        <link rel="shortcut icon" href="/favicon.png?v=0.0" />
+        <style>
+          body {
+            background-color: black;
+          }
+
+          .thanks-words {
+            text-align: center;
+            width: 90%;
+            padding: 60px 5% 60px 5%;
+            font-size: 144px;
+            font-family: Helvetica, Arial, sans-serif;
+          }
+
+            .thank {
+              color: rgb(0, 255, 255);
+            }
+
+            .you {
+              color: rgb(255, 0, 200);
+            }
+
+            .for {
+              color: rgb(255, 255, 255);
+            }
+
+            .having {
+              color: rgb(30, 255, 30);
+            }
+
+            .me {
+              color: rgb(200, 200, 20);
+            }
+
+            .in {
+              color: rgb(200, 0, 255);
+            }
+
+            .your {
+              color: rgb(0, 255, 160);
+            }
+
+            .home {
+              color: rgb(255, 255, 60);
+            }
+
+          .note-words {
+            font-size: 44px;
+            font-family: Courier New, monospace;
+            color: rgb(225, 225, 225);
+            text-align: center;
+          }
+
+          #pic-zone {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 38;
+            width: 100%;
+            height: 100%;
+            display: none;
+          }
+        </style>
+    </head>
+    <body>
+      <div class="thanks-words">
+        <span class="thank">THANK</span>
+        <span class="you">U</span>
+        <span class="for">FOR</span>
+        <span class="having">HAVING</span>
+        <span class="me">ME</span>
+        <span class="in">IN</span>
+        <span class="your">YOUR</span>
+        <span class="home">HOME</span>
+      </div>
+      <div class="note-words">
+        the food was really nice and i had two whole coffees I'm sorry you thought I could not eat gluten.
+      </div>
+      <div id="pic-zone">
+        <img src="./brunch-pic.jpg" width="100%" height="100%"></img>
+      </div>
+
+
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-50868415-1', 'auto');
+        ga('send', 'pageview');
+
+        showPic();
+        function showPic() {
+          document.getElementById('pic-zone').style.display = 'block';
+          setTimeout(hidePic, 500);
+        }
+
+        function hidePic() {
+          document.getElementById('pic-zone').style.display = 'none';
+          setTimeout(showPic, 500);
+        }
+
+      </script>
+    </body>
+</html>
