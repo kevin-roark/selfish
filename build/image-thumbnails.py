@@ -25,7 +25,8 @@ def convert(path):
         if not os.path.exists(thumb_dir):
             os.makedirs(thumb_dir)
 
-        call(['convert', img_path, '-resize', '425', thumb_path])
+        if not os.path.exists(thumb_path):
+            call(['convert', img_path, '-resize', '425', thumb_path])
 
 convert('src/assets/images')
 convert('src/assets/freelance-images')

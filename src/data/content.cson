@@ -1,5 +1,63 @@
 [
   {
+    link: "https://www.youtube.com/watch?v=vmHr9dUhclo"
+    title: "\"Unelected\" - Perc (Video)"
+    date: "April 2017"
+    text: '''
+      "Unelected" is a great new track from Perc's 2017 album Bitter Music, released on Perc Trax.
+      <br><br>
+      <a href="https://vimeo.com/fasenfest" target="_blank">Bernhard Fasenfest</a>
+      and I created a video for the track using repetitive flashing and blending
+      of news images from the world events of 2016 and early 2017.
+      <br><br>
+      Rather than work cohesively, the video’s images are meant to blur and contrast against one another, at once familiar
+      and implacable. They evoke familiar images of events, people, and places from the past year with lingering after-effects,
+      but which are easily forgotten in the vast and unrelenting 24-hour news cycle: the rise of far-right politics, mass
+      migrations of refugees, ongoing conflicts and civil wars, protests for and against the rights of others, globalization,
+      late-capitalism, etc. Images of these phenomena are cut and blended together to reflect their entanglement; a tension
+      emerges between the narrative of the individual images/objects and their aesthetic power, our inability to reconcile
+      their varied meanings overcome by the mesmerizing effects of their combination.
+      <br><br>
+      Flashing images warning (:
+      '''
+    tags: [
+      "Music Vid"
+      "Video"
+    ]
+    weight: 2
+    images: [
+      "images/perc-unelected/unelected-1.jpg"
+      "images/perc-unelected/unelected-2.jpg"
+      "images/perc-unelected/unelected-3.jpg"
+      "images/perc-unelected/unelected-4.jpg"
+      "images/perc-unelected/unelected-5.jpg"
+      "images/perc-unelected/unelected-6.jpg"
+      "images/perc-unelected/unelected-7.jpg"
+      "images/perc-unelected/unelected-8.jpg"
+      "images/perc-unelected/unelected-9.jpg"
+      "images/perc-unelected/unelected-10.jpg"
+      "images/perc-unelected/unelected-11.jpg"
+      "images/perc-unelected/unelected-12.jpg"
+      "images/perc-unelected/unelected-13.jpg"
+      "images/perc-unelected/unelected-14.jpg"
+      "images/perc-unelected/unelected-15.jpg"
+      "images/perc-unelected/unelected-16.jpg"
+      "images/perc-unelected/unelected-17.jpg"
+      "images/perc-unelected/unelected-18.jpg"
+      "images/perc-unelected/unelected-19.jpg"
+      "images/perc-unelected/unelected-20.jpg"
+      "images/perc-unelected/unelected-21.jpg"
+    ]
+  }
+  {
+    link: "https://github.com/kevin-roark/business-bot-friend-helper"
+    title: "Business Bot Friend Helper"
+    date: "April 2017"
+    text: "App to help you get a job by endlessly emailing someone you need to impress until you get the job."
+    tags: ["Software"]
+    weight: 0.4
+  }
+  {
     link: "https://www.youtube.com/watch?v=LIdULtTrW3c"
     title: "\"Falcon Passport\" - DIVORCE (Video)"
     date: "February 2017"

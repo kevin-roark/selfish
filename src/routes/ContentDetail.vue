@@ -96,7 +96,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .detail-modal {
   position: fixed;
   box-sizing: border-box;
@@ -125,7 +125,11 @@ export default {
     font-size: 48px;
   }
   .detail-title a {
-    color: inherit; text-decoration: none;
+    color: inherit;
+    text-decoration: none;
+  }
+  .no-touch .detail-title a:hover {
+    text-decoration: underline;
   }
 
 .detail-tags {
@@ -142,6 +146,10 @@ export default {
   line-height: 1.4;
   max-width: 650px;
 }
+  .detail-description a {
+    color: inherit;
+    text-decoration: underline;
+  }
 
 .detail-images {
   box-sizing: border-box;
