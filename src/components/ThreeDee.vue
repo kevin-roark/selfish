@@ -33,9 +33,7 @@ export default {
   },
   methods: {
     buildScene() {
-      const renderer = this.renderer = new THREE.WebGLRenderer({
-        antialias: true,
-      });
+      const renderer = this.renderer = new THREE.WebGLRenderer({ });
       renderer.setSize(window.innerWidth, window.innerHeight);
       renderer.setClearColor(0xffffff);
       // renderer.shadowMap.enabled = true;
