@@ -6,12 +6,6 @@
     <div
       class="card-container"
       ref="cardContainer"
-      @mousedown="mousedown"
-      @touchstart="mousedown"
-      @mouseup="mouseup"
-      @touchend="mouseup"
-      @mousemove="mousemove"
-      @touchmove="touchmove"
     >
       <template v-for="(item, i) in content">
         <DateMarker v-if="dateMarkerIndices[i]" :date="item.date" :explosion="explosion" />
@@ -64,9 +58,6 @@ export default {
     explosion: false,
   }),
   mounted() {
-    this.dragging = false;
-    this.prevDragX = null;
-
     this.setViewStyle();
     this.computeCardPositions();
   },
@@ -126,33 +117,6 @@ export default {
     },
   },
   methods: {
-    mousedown() {
-      if (this.viewStyle === 'large') {
-        this.dragging = true;
-      }
-    },
-    mouseup() {
-      this.dragging = false;
-      this.prevDragX = null;
-    },
-    mousemove(ev) {
-      if (!this.dragging) {
-        return;
-      }
-
-      if (this.prevDragX === null) {
-        this.prevDragX = ev.pageX;
-        return;
-      }
-
-      const delta = ev.pageX - this.prevDragX;
-      this.$refs.cardContainer.scrollLeft -= delta;
-
-      this.prevDragX = ev.pageX;
-    },
-    touchmove(ev) {
-      this.mousemove(ev.touches ? ev.touches[0] : ev);
-    },
     setViewStyle() {
       if (window.innerWidth > 800) {
         this.viewStyle = 'large';
@@ -181,13 +145,21 @@ export default {
     },
     computeCardPositions({ tagged = false } = {}) {
       const { content, viewStyle, untaggedCards } = this;
+      const isVertical = true;
+      const styleMap = {
+        topSpace: { large: 160, medium: 120, small: 120 },
+        top: { large: 140, medium: 100, small: 40 },
+        leftSpace: { large: 35, medium: 25, small: 18 },
+        left: { large: 5, medium: 5, small: 2 },
+      };
+
       const cardStyles = [];
-      const medium = viewStyle === 'medium';
+
       for (let i = 0; i < content.length; i += 1) {
         const untagged = tagged && untaggedCards[i];
         if (untagged) {
           cardStyles.push(this.cardStyles[i]);
-        } else if (viewStyle === 'large') {
+        } else if (!isVertical) {
           const style = {};
           style.marginLeft = `${Math.floor((Math.random() - 0.5) * 120) + 40}px`;
           if (Math.random() < 0.55) {
@@ -198,9 +170,10 @@ export default {
           }
           cardStyles.push(style);
         } else {
-          const top = Math.floor(Math.random() * 120) + medium ? 100 : 40;
-          const space = medium ? 50 : 18;
-          const left = Math.floor(Math.random() * space) + medium ? 25 : 0;
+          const topSpace = styleMap.topSpace[viewStyle];
+          const top = Math.floor(Math.random() * topSpace) + styleMap.top[viewStyle];
+          const leftSpace = styleMap.leftSpace[viewStyle];
+          const left = Math.floor(Math.random() * leftSpace) + styleMap.left[viewStyle];
           cardStyles.push({
             marginTop: `${top}px`,
             marginLeft: `${left}vw`,
@@ -223,23 +196,14 @@ export default {
 
 .card-container {
   box-sizing: border-box;
-  padding: 5px 100px 80px 100px;
+  padding: 100px;
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
-  overflow-x: auto;
-  overflow-y: hidden;
-  height: 100%;
-
-  cursor: move;
-  cursor: grab;
-  cursor: -moz-grab;
-  cursor: -webkit-grab;
-}
-
-.card-container:active {
-  cursor: grabbing;
-  cursor: -moz-grabbing;
-  cursor: -webkit-grabbing;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  height: auto;
 }
 
 .space-adder {
@@ -254,11 +218,6 @@ export default {
 @media (max-width: 800px) {
   .card-container {
     padding: 100px 0;
-    flex-direction: column;
-    overflow-x: hidden;
-    overflow-y: auto;
-    width: 100%;
-    height: auto;
   }
 }
 </style>

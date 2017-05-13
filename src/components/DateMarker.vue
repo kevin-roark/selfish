@@ -22,7 +22,7 @@ export default {
 
 <style scoped>
 .date-marker {
-  margin: 0 200px 100px 120px;
+  margin: 200px 120px 140px 120px;
   align-self: center;
   font-family: 'Work Sans';
   font-size: 200px;
