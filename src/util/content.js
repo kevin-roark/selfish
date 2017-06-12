@@ -87,12 +87,20 @@ export function contentWithTags(tags, map = false) {
   return m;
 }
 
+export function getContentIndex(con) {
+  return slugMap[con.slug];
+}
+
+export function getContentCount() {
+  return content.length;
+}
+
 export function navigateFromContent(con, { tags, delta = 1 } = {}) {
   if (!slugMap) {
     buildSlugMap();
   }
 
-  const contentIndex = slugMap[con.slug];
+  const contentIndex = getContentIndex(con);
   const taggedContent = tags ? contentWithTags(tags, true) : null;
   let hasNext = false;
 

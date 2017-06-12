@@ -1,16 +1,30 @@
 <template>
 <div class="navigation-container">
-  <div class="nav-arrow nav-arrow-left" @click="navigate(-1)">
+  <div v-if="hasPast" class="nav-arrow nav-arrow-left" @click="navigate(-1)">
     <span class="nav-arrow-text">PAST</span>
   </div>
-  <div class="nav-arrow nav-arrow-right" @click="navigate(1)">
+  <div v-if="hasFuture" class="nav-arrow nav-arrow-right" @click="navigate(1)">
     <span class="nav-arrow-text">FUTURE</span>
   </div>
 </div>
 </template>
 
 <script>
+import { getContentIndex, getContentCount } from '../util/content';
+
 export default {
+  props: ['content'],
+  computed: {
+    contentIndex() {
+      return getContentIndex(this.content);
+    },
+    hasPast() {
+      return this.contentIndex > 0;
+    },
+    hasFuture() {
+      return this.contentIndex < getContentCount() - 1;
+    },
+  },
   methods: {
     navigate(delta) {
       this.$emit('navigate', delta);

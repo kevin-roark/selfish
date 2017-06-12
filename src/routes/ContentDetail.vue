@@ -29,7 +29,7 @@
         <span class="link-mirror" :class="{ active: linkHovering }">LINK</span>
       </a>
     </div>
-    <NavigationArrows v-if="arrows" class="detail-navigation" @navigate="navigate" />
+    <NavigationArrows v-if="arrows" class="detail-navigation" @navigate="navigate" :content="content" />
   </div>
 </template>
 

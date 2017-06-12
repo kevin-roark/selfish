@@ -8,7 +8,7 @@
     <p>
       Professional interests include:
       mutation, simulation, replication, restraint, control, growth,
-      tension, world-building, disgust, joy, the feeling.
+      celebrity, tension, world-building, disgust, joy, the feeling.
     </p>
     <p>
       I enjoy working across different formats.
