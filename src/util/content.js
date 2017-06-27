@@ -101,14 +101,17 @@ export function navigateFromContent(con, { tags, delta = 1 } = {}) {
   }
 
   const contentIndex = getContentIndex(con);
+  if (contentIndex <= 0 && delta < 0) return null;
+  if (contentIndex >= content.length && delta > 0) return null;
+
   const taggedContent = tags ? contentWithTags(tags, true) : null;
   let hasNext = false;
 
   let nextIndex = contentIndex;
   while (!hasNext) {
     nextIndex += delta;
-    if (nextIndex >= content.length) nextIndex = 0;
-    else if (nextIndex < 0) nextIndex = content.length - 1;
+    // if (nextIndex >= content.length) nextIndex = 0;
+    // else if (nextIndex < 0) nextIndex = content.length - 1;
 
     hasNext = taggedContent ? taggedContent[nextIndex] : true;
   }

@@ -27,10 +27,12 @@ export default {
   font-family: 'Work Sans';
   font-size: 200px;
   transform: scale(1.5, 4);
+  transform-origin: 0 50%;
   background: #000;
   color: #fff;
   mix-blend-mode: difference;
   user-select: none;
+  width: 100vw;
 }
 
 .date-marker.explosion {

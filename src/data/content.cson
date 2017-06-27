@@ -1,15 +1,43 @@
 [
   {
     link: "http://www.itscomingastorm.us"
-    title: "IT'S COMING A STORM"
+    title: "It's Coming a Storm"
     date: "June 2017"
     text: '''
-
+      <i>It's Coming a Storm (Praise Receiver)</i> is an ongoing attempt to measure the Internet attention received
+      by people who have made lives of thriving on it.
+      <br><br>
+      It takes the form of two 3D environments. The first contains 8 ogreish politicans and celebrities swinging from
+      chains as they accumulate Attention Coins, groan, and swell as the size of their audience ebbs and flows. The
+      second (THE ORB) invites participation and manipulates a humanoid body for every Twitter person that signs up
+      <a href="http://orb.itscomingastorm.us/#/register" target="_blank">here</a>. The energy of the orb is dictated
+      by our collective sum of attention received over the past 24 hours.
+      <br><br>
+      Warning that most laptops may not render these videos very well, or they might get really hot. They were designed
+      to run on dedicated computers in the context of an installtion. So far, the work has been installed at
+      <a href="http://www.harvestworks.org/" target="_blank">Harvestworks</a> from 06/22/17 - 06/25/17.
+      <br><br>
+      Below are some images of the install / screenshots from the 3D environments.
       '''
     tags: ["Installation", "Video", "Object", "3D"]
     weight: 2
     images: [
       "images/its-coming-a-storm/storm-1.jpg"
+      "images/its-coming-a-storm/storm-2.jpg"
+      "images/its-coming-a-storm/storm-3.jpg"
+      "images/its-coming-a-storm/storm-4.jpg"
+      "images/its-coming-a-storm/storm-5.jpg"
+      "images/its-coming-a-storm/storm-6.jpg"
+      "images/its-coming-a-storm/storm-7.jpg"
+      "images/its-coming-a-storm/storm-8.jpg"
+      "images/its-coming-a-storm/storm-9.jpg"
+      "images/its-coming-a-storm/storm-10.jpg"
+      "images/its-coming-a-storm/storm-11.jpg"
+      "images/its-coming-a-storm/storm-12.jpg"
+      "images/its-coming-a-storm/storm-13.jpg"
+      "images/its-coming-a-storm/storm-14.jpg"
+      "images/its-coming-a-storm/storm-15.jpg"
+      "images/its-coming-a-storm/storm-16.jpg"
     ]
   }
   {

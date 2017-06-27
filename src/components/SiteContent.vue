@@ -149,7 +149,7 @@ export default {
       const styleMap = {
         topSpace: { large: 160, medium: 120, small: 120 },
         top: { large: 140, medium: 100, small: 40 },
-        leftSpace: { large: 35, medium: 25, small: 18 },
+        leftSpace: { large: 10, medium: 35, small: 18 },
         left: { large: 5, medium: 5, small: 2 },
       };
 
@@ -198,7 +198,7 @@ export default {
   box-sizing: border-box;
   padding: 100px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: flex-start;
   overflow-x: hidden;
   overflow-y: auto;

@@ -52,12 +52,13 @@ li {
   ul {
     text-align: left;
     margin-left: -5px;
+    margin-bottom: -10px;
   }
 
   li {
     font-size: 14px;
     display: inline-block;
-    margin: 0 0 0 10px;
+    margin: 0 0 10px 10px;
   }
 }
 

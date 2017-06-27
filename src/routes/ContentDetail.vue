@@ -104,6 +104,7 @@ export default {
   left: calc(50% - 400px);
   top: 40px;
   max-height: calc(100% - 120px);
+  overflow-x: hidden;
   overflow-y: auto;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.95);
@@ -153,14 +154,16 @@ export default {
 
 .detail-images {
   box-sizing: border-box;
-  margin: 25px 0 40px 0;
+  margin: 25px 0 20px 0;
   white-space: nowrap;
   overflow-x: auto;
+  text-align: center;
 }
 
 .detail-images img {
   margin: 10px 0 10px 20px;
-  width: 600px;
+  max-width: 600px;
+  max-height: 450px;
   cursor: pointer;
 
   box-sizing: border-box;
@@ -183,15 +186,15 @@ export default {
   }
 
 .detail-link {
+  position: absolute;
+  top: 74px; left: 35px;
   display: block;
-  margin: 70px 0 0 0;
   color: #fff;
   text-decoration: none;
   font-family: 'Work Sans', 'SF UI', 'Helvetica', sans-serif;
   font-weight: 400;
   font-size: 52px;
-  transform-origin: 0% 100%;
-  transform: scale(3.3, 2);
+  transform: scale(1.15, 3) rotate(90deg);
   text-shadow: 4px 4px 2px rgba(255,0,0,0.50), 7px 7px 2px rgba(0,0,255,0.50);
   width: 0;
 }
@@ -256,16 +259,18 @@ export default {
   }
 
   .detail-link {
-    margin-top: 20px;
+    top: 180px;
+    right: 10px;
+    left: auto;
     font-size: 36px;
-    transform: scale(3.4, 2.5);
+    transform: scale(1, 1);
     width: auto;
     display: inline-block;
   }
 
   .link-mirror {
     left: 0;
-    transform: scaleX(-1) translateX(90%);
+    transform: scaleX(-1) translateY(90%);
   }
 
   .detail-navigation {
