@@ -9,6 +9,7 @@
     "build": "node src/data/build.js && node build/build.js",
     "data": "node src/data/build.js",
     "lint": "eslint --ext .js,.vue src",
+    "prepare": "npm run data && npm run thumb",
     "thumb": "python build/image-thumbnails.py"
   },
   "dependencies": {

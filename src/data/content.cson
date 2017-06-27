@@ -1,5 +1,34 @@
 [
   {
+    link: "http://www.itscomingastorm.us"
+    title: "IT'S COMING A STORM"
+    date: "June 2017"
+    text: '''
+
+      '''
+    tags: ["Installation", "Video", "Object", "3D"]
+    weight: 2
+    images: [
+      "images/its-coming-a-storm/storm-1.jpg"
+    ]
+  }
+  {
+    link: "https://historyofthegif.com"
+    title: "History of the GIF | Giphy"
+    date: "June 2017"
+    text: '''
+      I designed & developed this site for Giphy (The BigGifWebsite) to celebrate the history of
+      the GIF image format. It was shown at the
+      <a href="https://timeframe.splashthat.com/" target="_blank">TIME_FRAME</a> exhibition
+      in New York City.
+      <br><br>
+      Made with guidance of <a href="https://computerlab.io/" target="_blank">Computer Lab</a>.
+      '''
+    tags: ["Money", "Net", "3D"]
+    weight: 1
+    images: ["images/history-of-the-gif.jpg"]
+  }
+  {
     link: "https://www.youtube.com/watch?v=vmHr9dUhclo"
     title: "\"Unelected\" - Perc (Video)"
     date: "April 2017"
