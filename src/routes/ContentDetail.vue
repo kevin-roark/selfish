@@ -103,6 +103,7 @@ export default {
   width: 800px;
   left: calc(50% - 400px);
   top: 40px;
+  min-height: 840px;
   max-height: calc(100% - 120px);
   overflow-x: hidden;
   overflow-y: auto;
@@ -223,6 +224,7 @@ export default {
     top: 10px; left: 10px;
     width: calc(100% - 20px);
     height: calc(100% - 60px);
+    min-height: 0;
     max-height: none;
   }
 
@@ -259,10 +261,10 @@ export default {
   }
 
   .detail-link {
-    top: 180px;
-    right: 10px;
+    top: 0;
+    right: 5px;
     left: auto;
-    font-size: 36px;
+    font-size: 24px;
     transform: scale(1, 1);
     width: auto;
     display: inline-block;

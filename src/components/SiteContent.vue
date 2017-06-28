@@ -1,5 +1,5 @@
 <template>
-  <div class="content-container">
+  <div :class="containerClass">
     <page-background v-if="bgImageURL" :src="bgImageURL" />
     <div v-else-if="hoverState.hovering" class="background-image" />
 
@@ -73,6 +73,12 @@ export default {
     },
   },
   computed: {
+    containerClass() {
+      return {
+        'content-container': true,
+        explosion: this.explosion,
+      };
+    },
     bgImageURL() {
       return this.hoverState.imageURL || this.bgImage;
     },
@@ -204,6 +210,12 @@ export default {
   overflow-y: auto;
   width: 100%;
   height: auto;
+}
+
+.explosion .card-container {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  height: 100%;
 }
 
 .space-adder {

@@ -17,7 +17,10 @@
       to run on dedicated computers in the context of an installtion. So far, the work has been installed at
       <a href="http://www.harvestworks.org/" target="_blank">Harvestworks</a> from 06/22/17 - 06/25/17.
       <br><br>
-      Below are some images of the install / screenshots from the 3D environments.
+      Sound produced in collaboration with <a href="http://thomasjohnmartinez.com/" target="_blank">Tommmy Martinez</a>.
+      <br><br>
+      Below are some images of the install / screenshots from the 3D environments. I can send videos of the space on
+      request.
       '''
     tags: ["Installation", "Video", "Object", "3D"]
     weight: 2
@@ -48,7 +51,7 @@
       I designed & developed this site for Giphy (The BigGifWebsite) to celebrate the history of
       the GIF image format. It was shown at the
       <a href="https://timeframe.splashthat.com/" target="_blank">TIME_FRAME</a> exhibition
-      in New York City.
+      in New York City with a bunch of GIF art.
       <br><br>
       Made with guidance of <a href="https://computerlab.io/" target="_blank">Computer Lab</a>.
       '''
@@ -222,7 +225,7 @@
     text: '''
       I made a Mac application that periodically checks my email and downloads 3D scans that I make onto my computer.
       This would not be very helpful for you, but if you find yourself doing repetitive email work and want me to
-      make you a tool I will do that!
+      make you a tool I will do that!!
       '''
     tags: ["Software"]
     weight: 0.6
