@@ -1,5 +1,27 @@
 [
   {
+    link: "https://mistershane.bandcamp.com/album/lucky"
+    title: "Lucky"
+    date: "April 2018"
+    text: '''
+      "How could it happen to me?"<br><br>
+      Mister Shane 4 song EP, 4/20/18.
+      "The Dig" video available <a href="https://www.youtube.com/watch?v=vRqmYh3MJWI" target="_blank">here</a>.
+      '''
+    tags: ["Mister Shane", "Sound"]
+    weight: 1.75
+    images: ["images/mister-shane-lucky.jpg"]
+  }
+  {
+    link: "http://spaghettis.surge.sh"
+    title: "Spaghetti's Supper Club"
+    date: "Ongoing (b. October 2017)"
+    text: ''' Spaghetti's is an Italian-American performance-oriented dinner-and-a-show supper club. '''
+    tags: ["Pleasure Seeker", "Performance"],
+    weight: 1.6,
+    images: ["images/spaghettis-spaghetti.jpg"]
+  }
+  {
     link: "http://www.itscomingastorm.us"
     title: "It's Coming a Storm"
     date: "June 2017"
@@ -1430,15 +1452,5 @@
     images: [
       "images/brainphlem.jpg"
     ]
-  }
-  {
-    title: "Meatbeat"
-    date: "February 2013"
-    hidden: true
-    text: "The first time I tried something. A processing game of rhythm-bouncing meatballs. Hard to Not Remember The Past"
-    images: [
-      "images/meatbeat.jpg"
-    ]
-    weight: 0.4
   }
 ]
