@@ -59,12 +59,27 @@
       opacity: 0;
     }
 
+    .splash .title {
+      transform-origin: 50% 25%;
+      animation: splashTitle 2s linear infinite;
+      animation-delay: 0.75s;
+    }
+    @keyframes splashTitle {
+      25% { transform: scale(3, 2); }
+      50% { transform: scale(1); }
+      75% { transform: scale(1.5, 8); }
+      100% { transform: scale(1); }
+    }
+
     .splash-img {
-      max-width: 90vw; max-height: 650px; opacity: 0.85; margin-top: 8px;
-      animation: spin 12s linear infinite;
+      max-width: 90vw; max-height: 650px; opacity: 0.98; margin-top: 8px;
+      animation: spin 4s linear infinite;
+      animation-delay: 1.5s;
     }
     @keyframes spin {
-      100% { transform:rotate(360deg); }
+      33% { transform: rotate(120deg) scale(4, 2); }
+      67% { transform: rotate(240deg) scale(6, 0.25); }
+      100% { transform: rotate(360deg) scale(1); }
     }
 
     .content {
@@ -109,14 +124,10 @@
 
     .secondaryVid {
       width: 50vw; height: 50vh; object-fit: cover;
-      opacity: 0.2; z-index: 5;
+      opacity: 0.6; z-index: 5;
 
       width: 100vw; height: 100vh; top: 0; left: 0; z-index: -1;
     }
-    /* .dinnerInVenice { top: 0; left: 0; }
-    .fineDining { top: 0; right: 0; }
-    .veniceDinner { bottom: 0; left: 0; }
-    .mealtimeMagic { bottom: 0; right: 0; } */
 
     @media (max-width: 600px) {
       .title {
@@ -124,6 +135,20 @@
       }
       .info {
         font-size: 20px;
+        margin: 20px 10px 10px 10px;
+      }
+
+      .splash {
+        padding: 100px 20px 0 20px;
+      }
+
+      .splash-img {
+        max-height: 300px;
+        max-width: calc(100vw - 40px);
+      }
+
+      .content {
+        padding: 20px 20px 200px 20px;
       }
     }
   </style>
@@ -134,12 +159,14 @@
       <div class="title">SPAGHETTI'S 2019 (I'm Home)</div>
       <div style="display: flex; flex-wrap: wrap; justify-content: center;">
         <div class="info">
-          Noted NYC-based Italian-American supper club "Spaghetti's" will re-open Fall 2019 in Clinton Hill, Brooklyn.
-          These dinners fuse elegant pan-european cuisine, avant garde performance, and powerfully romantic friendships.
+          Noted NYC-based Italian-American supper club <span style="color: #009246;">"Spaghetti's"</span> will re-open Fall 2019 in Clinton Hill, Brooklyn.
+          "Spaghetti's" dinners fuse elegant pan-european cuisine, avant garde performance, and powerful romantic friendship bonding
+          opportunities.
         </div>
         <div class="info">
-          Three events are planned for Sunday September 11, Sunday September 11, and Sunday September 11.
-          Service begins at 8pm and lasts until the well runs dry. Your hungers will be satisfied.
+          Three events are planned for Saturday October 26, Sunday November 17, and Friday December 6.
+          Service begins at 8:15pm. <span style="color: #f00;">Every hunger will be satisfied.</span>
+          Event Concept revealed once guests are set.
         </div>
         <div class="info">
           Seating is limited and discretionary. Please contact Chef Kevin at
@@ -150,11 +177,6 @@
     </div>
 
     <video class="sheeran" playsinline preload="auto" loop src="media/ed-sheeran.mp4"></video>
-    <!-- <video class="secondaryVid dinnerInVenice" loop playsinline preload="auto" src="media/dinner-in-venice.mp4"></video>
-    <video class="secondaryVid fineDining" loop playsinline preload="auto" src="media/fine-dining.mp4"></video>
-    <video class="secondaryVid veniceDinner" loop playsinline preload="auto" src="media/venice-dinner.mp4"></video>
-    <video class="secondaryVid mealtimeMagic" loop playsinline preload="auto" src="media/creating-mealtime-magic-in-venice.mp4"></video> -->
-
     <video class="secondaryVid" loop playsinline preload="auto"></video>
   </div>
 
@@ -185,11 +207,6 @@
     var content = document.querySelector('.content')
     var sheeran = document.querySelector('.sheeran')
     var secondaryVid = document.querySelector('.secondaryVid')
-    var dinnerInVenice = document.querySelector('.dinnerInVenice')
-    var fineDining = document.querySelector('.fineDining')
-    var veniceDinner = document.querySelector('.veniceDinner')
-    var mealtimeMagic = document.querySelector('.mealtimeMagic')
-    var secondaryVids = [dinnerInVenice, fineDining, veniceDinner, mealtimeMagic]
 
     const secondarySrcs = [
       'media/dinner-in-venice.mp4', 'media/fine-dining.mp4', 'media/venice-dinner.mp4', 'media/creating-mealtime-magic-in-venice.mp4',
@@ -203,53 +220,40 @@
       splash.classList.add('hidden')
       setTimeout(() => { splash.parentNode.removeChild(splash) }, 1000)
 
-      sheeran.currentTime = 62
+      sheeran.currentTime = 68
       sheeran.play()
       var sheeranWidth = 400
+      var gettingFaster = true
       setTimeout(() => setInterval(() => {
         sheeranWidth = Math.min(sheeranWidth + 1, 800, window.innerWidth - 60)
         sheeran.style.width = `${sheeranWidth}px`
-      }, 200), 5000)
 
-      var vidOpacity = 0.75
+        sheeran.playbackRate = gettingFaster ? sheeran.playbackRate + 0.008 : sheeran.playbackRate - 0.005
+        if (sheeran.playbackRate >= 1.7 || sheeran.playbackRate <= 0.6) {
+          gettingFaster = !gettingFaster
+        }
+      }, 100), 1500)
+
+      var vidOpacity = 0.6
       var time = 0
-      var interval = 3000
+      var interval = 1500
       setTimeout(() => {
-        secondaryVid.volume = 0.1
+        secondaryVid.volume = 0.2
         secondaryVid.src = secondarySrcs[Math.floor(Math.random() * secondarySrcs.length)]
         secondaryVid.play()
 
         setInterval(() => {
           time += interval
-          vidOpacity = Math.min(vidOpacity + 0.001, 0.99)
+          vidOpacity = Math.min(vidOpacity + 0.002, 0.99)
           secondaryVid.style.opacity = vidOpacity
 
           secondaryVid.pause()
           secondaryVid.src = secondarySrcs[Math.floor(Math.random() * secondarySrcs.length)]
           secondaryVid.currentTime = time / 1000
+          secondaryVid.volume = Math.random() * 0.3 + 0.05
           secondaryVid.play()
         }, interval)
       }, 1500)
-
-      // var vidOpacity = 0.2
-      // setTimeout(() => {
-      //   secondaryVids.forEach(v => {
-      //     v.volume = 0.02
-      //   })
-      //
-      //   let playingVid = secondaryVids[Math.floor(Math.random() * secondaryVids.length)]
-      //   playingVid.play()
-      //   setInterval(() => {
-      //     vidOpacity = Math.min(vidOpacity + 0.001, 0.75)
-      //     // secondaryVids.forEach(v => { v.style.opacity = vidOpacity })
-      //
-      //     playingVid.pause()
-      //
-      //     playingVid = secondaryVids[Math.floor(Math.random() * secondaryVids.length)]
-      //     playingVid.style.opacity = vidOpacity
-      //     playingVid.play()
-      //   }, 100)
-      // }, 1500)
     }
 
   </script>
