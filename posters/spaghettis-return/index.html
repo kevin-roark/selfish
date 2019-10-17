@@ -244,9 +244,11 @@
         sheeranWidth = Math.min(sheeranWidth + 1, 800)
         sheeran.style.width = `${sheeranWidth}px`
 
-        sheeran.playbackRate = gettingFaster ? sheeran.playbackRate + 0.008 : sheeran.playbackRate - 0.005
-        if (sheeran.playbackRate >= 1.7 || sheeran.playbackRate <= 0.6) {
-          gettingFaster = !gettingFaster
+        if (!isMobile) {
+          sheeran.playbackRate = gettingFaster ? sheeran.playbackRate + 0.008 : sheeran.playbackRate - 0.005
+          if (sheeran.playbackRate >= 1.7 || sheeran.playbackRate <= 0.6) {
+            gettingFaster = !gettingFaster
+          }
         }
       }, 140), 1500)
 
