@@ -83,7 +83,7 @@
     }
 
     .content {
-      padding: 60px 40px 20px 40px;
+      padding: 60px 40px 200px 40px;
       min-height: 800px;
       display: flex; justify-content: center;
     }
@@ -129,6 +129,12 @@
       width: 100vw; height: 100vh; top: 0; left: 0; z-index: -1;
     }
 
+    @media (max-width: 1500px) {
+      .info {
+        max-width: 300px;
+      }
+    }
+
     @media (max-width: 600px) {
       .title {
         font-size: 36px;
@@ -148,8 +154,10 @@
       }
 
       .content {
-        padding: 20px 20px 200px 20px;
+        padding: 20px 20px 280px 20px;
       }
+
+      .sheeran { bottom: 20px; left: 50%; transform: translateX(-50%); width: 300px; z-index: 10; }
     }
   </style>
 </head>
@@ -164,9 +172,9 @@
           opportunities.
         </div>
         <div class="info">
-          Three events are planned for Saturday October 26, Sunday November 17, and Friday December 6.
+          Three events are planned for Sunday October 27, Sunday November 17, and Friday December 6.
           Service begins at 8:15pm. <span style="color: #f00;">Every hunger will be satisfied.</span>
-          Event Concept revealed once guests are set.
+          <span style="color: #ff0">Event Concept & Lore</span> revealed once guests are confirmed.
         </div>
         <div class="info">
           Seating is limited and discretionary. Please contact Chef Kevin at
@@ -177,7 +185,7 @@
     </div>
 
     <video class="sheeran" playsinline preload="auto" loop src="media/ed-sheeran.mp4"></video>
-    <video class="secondaryVid" loop playsinline preload="auto"></video>
+    <video class="secondaryVid" loop playsinline></video>
   </div>
 
   <div class="splash">
@@ -208,6 +216,11 @@
     var sheeran = document.querySelector('.sheeran')
     var secondaryVid = document.querySelector('.secondaryVid')
 
+    const isMobile = (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)
+    if (isMobile) {
+      secondaryVid.muted = true
+    }
+
     const secondarySrcs = [
       'media/dinner-in-venice.mp4', 'media/fine-dining.mp4', 'media/venice-dinner.mp4', 'media/creating-mealtime-magic-in-venice.mp4',
     ]
@@ -220,27 +233,35 @@
       splash.classList.add('hidden')
       setTimeout(() => { splash.parentNode.removeChild(splash) }, 1000)
 
-      sheeran.currentTime = 68
-      sheeran.play()
+      const vp = sheeran.play()
+      if (vp) {
+        vp.catch(err => console.log(err))
+      }
+
       var sheeranWidth = 400
       var gettingFaster = true
       setTimeout(() => setInterval(() => {
-        sheeranWidth = Math.min(sheeranWidth + 1, 800, window.innerWidth - 60)
+        sheeranWidth = Math.min(sheeranWidth + 1, 800)
         sheeran.style.width = `${sheeranWidth}px`
 
         sheeran.playbackRate = gettingFaster ? sheeran.playbackRate + 0.008 : sheeran.playbackRate - 0.005
         if (sheeran.playbackRate >= 1.7 || sheeran.playbackRate <= 0.6) {
           gettingFaster = !gettingFaster
         }
-      }, 100), 1500)
+      }, 140), 1500)
 
       var vidOpacity = 0.6
       var time = 0
       var interval = 1500
       setTimeout(() => {
-        secondaryVid.volume = 0.2
+        if (!isMobile) {
+          secondaryVid.volume = 0.2
+        }
         secondaryVid.src = secondarySrcs[Math.floor(Math.random() * secondarySrcs.length)]
-        secondaryVid.play()
+        let vp = secondaryVid.play()
+        if (vp) {
+          vp.catch(err => console.log(err))
+        }
 
         setInterval(() => {
           time += interval
@@ -250,10 +271,23 @@
           secondaryVid.pause()
           secondaryVid.src = secondarySrcs[Math.floor(Math.random() * secondarySrcs.length)]
           secondaryVid.currentTime = time / 1000
-          secondaryVid.volume = Math.random() * 0.3 + 0.05
-          secondaryVid.play()
+          if (!isMobile) {
+            secondaryVid.volume = Math.random() * 0.3 + 0.05
+          }
+
+          vp = secondaryVid.play()
+          if (vp) {
+            vp.catch(err => console.log(err))
+          }
         }, interval)
       }, 1500)
+    }
+
+    sheeran.onmouseenter = () => {
+      sheeran.style.opacity = 0.25;
+    }
+    sheeran.onmouseleave = () => {
+      sheeran.style.opacity = 1;
     }
 
   </script>
