@@ -254,6 +254,10 @@
       var time = 0
       var interval = 1500
       setTimeout(() => {
+        if (isMobile) {
+          return // no secondary vids...
+        }
+
         if (!isMobile) {
           secondaryVid.volume = 0.2
         }
