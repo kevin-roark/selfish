@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { getOldProjectsData as getProjectsData } from './projectsData'
 import { deslug } from '@/app/util/format'
-import ProjectListItem from './projectListItem'
-import TagListItem from './tagListItem'
+import { ProjectContent } from '../ProjectContent'
+import { TagListItem } from '../TagListItem'
 
 export const metadata: Metadata = {
   title: 'Projects | Kevin Roark Monastary Website',
@@ -45,7 +45,9 @@ export default function Projects({ params }: { params: { slug?: string[] } }) {
             <h2 className="text-9xl border-b-2 border-white mb-4">{year}</h2>
             <ul className="space-y-24">
               {projects.map((project) => (
-                <ProjectListItem key={project.title} data={project} />
+                <li key={project.title}>
+                  <ProjectContent {...project} />
+                </li>
               ))}
             </ul>
           </div>

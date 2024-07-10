@@ -50,6 +50,10 @@ const oldProjects = [
     images: ["images/mister-shane-lucky.jpg"],
   },
   {
+    title: "Artforum Artguide",
+    date: "December 2018",
+  },
+  {
     link: "http://spaghettis.surge.sh",
     title: "Spaghetti's Supper Club",
     date: "October 2017 (Ongoing)",

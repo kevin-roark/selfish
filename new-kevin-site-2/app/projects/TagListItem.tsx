@@ -1,9 +1,10 @@
 'use client'
+
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { slugify } from '@/app/util/format'
 
-export default function TagListItem({ tag, count }: { tag: string, count?: number }) {
+export function TagListItem({ tag, count }: { tag: string, count?: number }) {
   const pathname = usePathname()
   const tagLink = `/projects/${slugify(tag)}`
   const active = pathname === tagLink

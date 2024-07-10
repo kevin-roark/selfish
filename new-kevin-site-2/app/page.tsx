@@ -13,7 +13,7 @@ export default function Home() {
       </h1>
 
       <p className={styles.description}>
-        I am 30 years old (April 11, 1993) and live in Brooklyn, NY.
+        I am 31 years old (April 11, 1993) and live in Brooklyn, NY.
         I am from Slidell, LA.
         I enjoy playing basketball, "my little research projects," reading, riding my bike, eating and drinking.
       </p>
@@ -37,6 +37,19 @@ export default function Home() {
         I go to a meeting every Tuesday in Carroll Gardens, hit me up if you ever want to come.
         I really love to spend time with my friends. I have three siblings: Laurie (24), Moses (16), Isabella (14). I love them too.
       </p>
+
+      <ul>
+        <li>Wendy's Wok World Art Basel Parcours Karaoke - https://www.instagram.com/wendyswokworld/p/C7uBxCsplBJ</li>
+        <li>Cory Arcangel's /roʊˈdeɪoʊ/ Let's Play: HOLLYWOOD | https://coryarcangel.com/things-i-made/2017-006-rodeo-performance | https://rodeo.computer/ | https://coryarcangel.com/shows/century-21</li>
+        <li>Mister Shane & Dog Shadow https://www.mistershane.com/ | https://dogshadow.bandcamp.com/album/dog-years</li>
+        <li>Pleasure Seeker | From Tony Rontino's https://pleasureseeker.bandcamp.com/album/from-tony-rontinos | CLAP https://pleasureseeker.bandcamp.com/album/clap</li>
+        <li>It's Coming a Storm at Harvestworks https://www.harvestworks.org/june-22-25-nyeaf-its-coming-a-storm-an-installation-by-kevin-roark-jr/</li>
+        <li>Artforum Artguide https://artguide.artforum.com/</li>
+        <li>Very early Next.js back when Vercel was called Zeit https://nextjs.org/</li>
+        <li>Socket.IO 1.0 https://github.com/socketio/socket.io</li>
+        <li>VSCO https://www.vsco.co/</li>
+        <li>Stennis Space Center https://www.nasa.gov/stennis/</li>
+      </ul>
 
       <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
         <Image
