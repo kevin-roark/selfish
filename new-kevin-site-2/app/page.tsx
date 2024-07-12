@@ -28,7 +28,7 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col items-start gap-8 xl:flex-row-reverse">
-        <ProjectHighlights />
+        <ProjectHighlights listClassName="max-xl:flex-row max-xl:flex-wrap max-xl:gap-2" />
         <div className="max-w-4xl text-2xl leading-9 [&>p]:mb-4">
           <p>
             I am 31 years old (April 11, 1993) and live in New York City. I am from Slidell, LA (swamp between New
