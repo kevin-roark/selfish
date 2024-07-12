@@ -1,27 +1,30 @@
 'use client'
 
-import { usePathname } from 'next/navigation'
+import { cn } from '@/app/util/style'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export default function Nav() {
   const pathname = usePathname()
-  console.log(pathname, pathname.split('/')[1])
-
   const navLinks = [
     { title: 'About', to: '/' },
     { title: 'Projects', to: '/projects' },
     // { title: 'Link Knots', to: '/links' },
-    { title: 'Photos', to: '/photos' },
+    // { title: 'Photos', to: '/photos' },
+    { title: 'Contact', to: '/contact' },
   ]
 
   return (
-    <nav className="fixed top-0 right-0 z-10 py-2 px-4">
+    <nav className="fixed right-0 top-0 z-10 px-4 py-2">
       <ol className="text-right">
         {navLinks.map((link) => {
-          const active = (link.to === '/' && pathname === '/') || (link.to === '/' + pathname.split('/')[1])
+          const active = (link.to === '/' && pathname === '/') || link.to === '/' + pathname.split('/')[1]
           return (
-            <li key={link.title} className={"font-bold text-xl " + (active ? 'text-[#f00] hover:text-red-900' : '')}>
-              <Link href={link.to} className="no-underline">
+            <li key={link.title} className={cn('text-xl font-bold transition-all')}>
+              <Link
+                href={link.to}
+                className={cn('px-1 no-underline', active && 'bg-white text-black hover:bg-black hover:text-white')}
+              >
                 {link.title}
               </Link>
             </li>

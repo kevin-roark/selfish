@@ -4,35 +4,32 @@
 
 :root {
   --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 255;
-  --background-end-rgb: 40, 0, 255;
+  --background-rgb: 255, 0, 0;
+  --selection-bg-rgb: 255, 255, 0;
+  --selection-fg-rgb: 0, 0, 0;
+  --link-hover-bg-rgb: 255, 255, 255;
+  --link-hover-fg-rgb: 0, 0, 0;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  /* background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb)); */
-
-  background: #00f;
-  background: linear-gradient(90deg, rgba(0,0,255,1) 0%, rgba(96,165,250,1) 50%, rgba(186,230,253,1) 100%);
-  /* background: linear-gradient(90deg, rgba(0,0,255,1) 0%, rgba(96,165,250,1) 35%, rgba(251,113,133,1) 65%, rgba(255,0,0,1) 100%); */
+  background: rgb(var(--background-rgb));
+  background: linear-gradient(180deg, rgba(0, 0, 255, 1) 0%, rgba(255, 0, 0, 1) 100%);
+  /* background: linear-gradient( 180deg, rgba(0, 0, 255, 1) 0%, rgba(96, 165, 250, 1) 35%, rgba(251, 113, 133, 1) 65%, rgba(255, 0, 0, 1) 100%); */
 }
 
 a {
   color: inherit;
   text-decoration: underline;
-  transition: background 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 a:hover {
-  background: #f00;
+  background: rgb(var(--link-hover-bg-rgb));
+  color: rgb(var(--link-hover-fg-rgb));
 }
 
 ::selection {
-  background-color: #ff0;
-  color: #000;
-}
-
-.layout-main-content {
-  min-height: calc(100vh - 80px);
-  padding: 0.5rem;
+  background-color: rgb(var(--selection-bg-rgb));
+  color: rgb(var(--selection-fg-rgb));
 }

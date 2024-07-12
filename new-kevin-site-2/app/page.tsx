@@ -1,66 +1,71 @@
-import Image from 'next/image'
+import ProjectHighlights from '@/components/ProjectHighlights'
+import { extlink } from './util/links'
 
 export default function Home() {
-  const styles = {
-    description: 'text-2xl mt-8 mb-4'
+  const links = {
+    github: 'https://github.com/kevin-roark',
+    nets: 'https://www.instagram.com/brooklynnets/',
+    countryGod: 'https://open.spotify.com/playlist/1vnpLY6Q13ygwhPPexmeTG?si=32d34b87258f4197',
+    metalcoreGod: 'https://open.spotify.com/playlist/6vh22EQ2wMAkc4pLWyC6NO?si=ac0b0c7d414c49f8',
+    aca: 'https://adultchildren.org/',
+    socketio: 'https://github.com/socketio/socket.io',
+    cory: 'https://coryarcangel.com/',
+    clab: 'https://computerlab.io/',
+    vsco: 'https://www.vsco.co/',
+    vercel: 'https://vercel.com/',
   }
-  
+
   return (
-    <main className="min-h-screen p-24">
-      <h1 className="mb-4 text-left text-6xl tracking-wide font-bold origin-top-left" style={{ transform: 'skew(-2deg, 2deg) scale(2.5, 1)' }}>
-        Kevin Roark <span className="inline-block text-base">Jr</span>
-        <div className="text-3xl">Monastary Website</div>
-      </h1>
-
-      <p className={styles.description}>
-        I am 31 years old (April 11, 1993) and live in Brooklyn, NY.
-        I am from Slidell, LA.
-        I enjoy playing basketball, "my little research projects," reading, riding my bike, eating and drinking.
-      </p>
-      <p className={styles.description}>
-        I work for the <a href="https://www.instagram.com/brooklynnets/?hl=en" target="_blank">Brooklyn Nets</a> in the front office.
-        My title is funny: Director of Basketball Systems and Innovation.
-        Our group is responsible for putting together the team's roster via the Draft, Free Agency, and Trades.
-        I use computer, design, and critical thinking skills to enhance and streamline the work of everyone else, like scouts and analysts.
-        Mostly it is fun and interesting work. I like the scope and duration of the problem, and I love basketball.
-      </p>
-      <p className={styles.description}>
-        I work on other things too—photographs, videos, websites, "link knots," sounds. You can see details in the projects page below.
-        I used to do this stuff way more, but I had some kind of mental breakdown / "the yips" style behavior in the summer of 2017 after
-        showing "It's Coming a Storm" at Harvestworks that, upon reflection, was a result of not dealing with a series of personal and
-        emotional issues stemming from my _unusual_ childhood. I've been working on those issues recently and am doing much better, but it is a "day at a time."
-        I am grateful for all of the love and support in my life. I have been doing my media / research work off-and-on in private since then
-        and am going to be sharing it here moving forward.
-      </p>
-      <p className={styles.description}>
-        I am an advocate for <a href="https://adultchildren.org/" target="_blank">Adult Children of Alcoholics / Dysfunctional Families (ACA)</a>.
-        I go to a meeting every Tuesday in Carroll Gardens, hit me up if you ever want to come.
-        I really love to spend time with my friends. I have three siblings: Laurie (24), Moses (16), Isabella (14). I love them too.
-      </p>
-
-      <ul>
-        <li>Wendy's Wok World Art Basel Parcours Karaoke - https://www.instagram.com/wendyswokworld/p/C7uBxCsplBJ</li>
-        <li>Cory Arcangel's /roʊˈdeɪoʊ/ Let's Play: HOLLYWOOD | https://coryarcangel.com/things-i-made/2017-006-rodeo-performance | https://rodeo.computer/ | https://coryarcangel.com/shows/century-21</li>
-        <li>Mister Shane & Dog Shadow https://www.mistershane.com/ | https://dogshadow.bandcamp.com/album/dog-years</li>
-        <li>Pleasure Seeker | From Tony Rontino's https://pleasureseeker.bandcamp.com/album/from-tony-rontinos | CLAP https://pleasureseeker.bandcamp.com/album/clap</li>
-        <li>It's Coming a Storm at Harvestworks https://www.harvestworks.org/june-22-25-nyeaf-its-coming-a-storm-an-installation-by-kevin-roark-jr/</li>
-        <li>Artforum Artguide https://artguide.artforum.com/</li>
-        <li>Very early Next.js back when Vercel was called Zeit https://nextjs.org/</li>
-        <li>Socket.IO 1.0 https://github.com/socketio/socket.io</li>
-        <li>VSCO https://www.vsco.co/</li>
-        <li>Stennis Space Center https://www.nasa.gov/stennis/</li>
-      </ul>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+    <div className="px-8 pb-6 pt-12 md:pt-24 lg:px-24">
+      <div className="max-w-full overflow-visible">
+        <h1
+          className="mb-8 w-[35vw] origin-top-left text-left text-3xl font-bold tracking-wide md:mb-16 md:text-4xl lg:text-6xl"
+          style={{ transform: 'skew(-2deg, 2deg) scale(2.5, 1)' }}
+        >
+          Kevin Roark <span className="-ml-2 inline-block text-base lg:-ml-3">Jr</span>
+          <div className="text-xl lg:text-3xl">Monastic Website</div>
+        </h1>
       </div>
-    </main>
+
+      <div className="flex flex-col items-start gap-8 xl:flex-row-reverse">
+        <ProjectHighlights />
+        <div className="max-w-4xl text-2xl leading-9 [&>p]:mb-4">
+          <p>
+            I am 31 years old (April 11, 1993) and live in New York City. I am from Slidell, LA (swamp between New
+            Orleans and Mississippi). I enjoy: playing and thinking about basketball, making photos and videos,{' '}
+            {extlink(links.github, 'designing software')}, psychoanalysis, research and organizing material,{' '}
+            {extlink(links.countryGod, '70s country music')} and {extlink(links.metalcoreGod, 'metalcore')}, my bike,
+            reading and highlighting the best parts, really good movies, outside and inside time, old and new, eating
+            and drinking.
+          </p>
+
+          <p>
+            I work for the {extlink(links.nets, 'Brooklyn Nets')} in the front office. My title (made it up):{' '}
+            <i>Director of Basketball Systems and Innovation</i>. Our group is responsible for putting together the
+            team's roster via the Draft, Free Agency, and Trades. I use computer, design, and
+            <b> critical thinking</b> skills to enhance and streamline the work of everyone else. I like the scope and
+            duration of the problem, and basketball too.
+          </p>
+
+          <p>
+            I have worked on lots of other things too—multimedia software, photos, videos, research and archival tools,
+            3D graphics, websites, sound, {extlink(links.socketio, 'Advanced JavaScript')}. You can see details in the
+            projects page in the navigation links up there. Much of it happened prior to my basketball
+            professionaliation, but it stil comes out in trickles. I have this grand vision of publishing collections of
+            links and my writing and photo prints and photo books and finishing ongoing videos on here sometime, look
+            out for that. Before Basketball, I worked with {extlink(links.vercel, 'Vercel')},{' '}
+            {extlink(links.cory, 'Cory Arcangel')}, {extlink(links.vsco, 'VSCO')}, {extlink(links.clab, 'Computer Lab')}
+            , and... others. I studied Computer Science at Columbia and went to Slidell High ;p.
+          </p>
+
+          <p>
+            I love spending time with friends & loved ones. I have three epic siblings: Laurie (25), Moses (17),
+            Isabella (15). {extlink(links.aca, 'ACA')} meetings really helped me out, I grew up in unusual circumstance
+            and had a strange run in my life for a while, doing pretty good now. I often go to a meeting on Tuesdays in
+            Carroll Gardens, hit me up if you have questions or want to come...
+          </p>
+        </div>
+      </div>
+    </div>
   )
 }

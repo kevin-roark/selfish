@@ -1,30 +1,24 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import Nav from '@/components/nav'
+import { cn } from '@/app/util/style'
 import Footer from '@/components/footer'
-
-const inter = Inter({ subsets: ['latin'] })
+import Nav from '@/components/nav'
+import type { Metadata } from 'next'
+import './globals.css'
+import { fontMono, fontSans } from './util/fonts'
 
 export const metadata: Metadata = {
-  title: 'Kevin Roark Monastary Website',
-  description: 'Kevin Roark Jr is a Basketball Professional, Software Developer, Stupid Intellectual.',
+  title: {
+    template: '%s | Kevin Roark Monastic Website',
+    default: 'Kevin Roark Monastic Website',
+  },
+  description: 'Kevin Roark is an NYC-based computer user.',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={cn('min-h-screen font-sans antialiased', fontSans.variable, fontMono.variable)}>
         <Nav />
-
-        <main className="layout-main-content">
-          {children}
-        </main>
-        
+        <main className="min-h-[calc(100vh-140px)] px-4 md:min-h-[calc(100vh-72px)]">{children}</main>
         <Footer />
       </body>
     </html>

@@ -1,19 +1,23 @@
-
 export default function Footer() {
   const items = [
     '985-718-8538',
     <a href="mailto:kevin.e.roark@gmail.com">kevin.e.roark@gmail.com</a>,
-    <a href="https://www.instagram.com/kevxxoo">https://www.instagram.com/kevxxoo</a>,
-    'Practicing Serenity These Days © 2023',
+    <a href="https://www.instagram.com/kevin_tilt">instagram.com/kevin_tilt</a>,
+    'Practicing Serenity These Days © 2024',
   ]
 
   return (
-    <footer className="w-full py-6 font-serif font-bold border-t border-gray-50">
-      <ul className="flex justify-center content-center flex-wrap">
+    <footer className="w-full py-6 px-4 font-bold text-sm tracking-wide">
+      <ul className="flex flex-col md:flex-row justify-center items-center flex-wrap gap-1 md:gap-0">
         {items.map((item, idx) => (
-          <li key={idx} className={(idx < items.length - 1 ? `after:inline-block after:mx-1 after:content-['•']`: '')}>{item}</li>
+          <li
+            key={idx}
+            className={idx < items.length - 1 ? `md:after:inline-block md:after:mx-2 md:after:content-['•']` : ''}
+          >
+            {item}
+          </li>
         ))}
       </ul>
     </footer>
-  ) 
+  )
 }
